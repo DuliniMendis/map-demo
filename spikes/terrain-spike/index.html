@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Terrain spike</title>
+<link href="https://unpkg.com/maplibre-gl@6.17.0/dist/maplibre-gl.css" rel="stylesheet">
+<style>html,body,#map{margin:0;height:100%} #hud{position:absolute;top:8px;left:8px;background:#fff;padding:6px 10px;font:13px system-ui;z-index:2}
+button{margin-right:6px}</style></head>
+<body><div id="map"></div><div id="hud">
+<button data-t="uluru">Uluru</button><button data-t="bluemtns">Blue Mountains</button><button data-t="kakadu">Kakadu</button><button data-t="grampians">Grampians</button><span id="status"></span></div>
+<script type="module">
+import * as maplibregl from "https://unpkg.com/maplibre-gl@6.17.0/dist/maplibre-gl.mjs";
+const targets={uluru:[131.0369,-25.3444],bluemtns:[150.3119,-33.7320],kakadu:[132.9,-12.8],grampians:[142.5,-37.2]};
+const map=new maplibregl.Map({container:'map',zoom:3.6,center:[134,-27],pitch:0,maxPitch:85,
+ style:{version:8,sources:{
+  sat:{type:'raster',tiles:['https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/{z}/{y}/{x}.jpg'],tileSize:256,maxzoom:14,attribution:'Sentinel-2 cloudless by EOX'},
+  dem:{type:'raster-dem',tiles:['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],encoding:'terrarium',tileSize:256,maxzoom:14,attribution:'Terrain Tiles (Mapzen/AWS)'}
+ },layers:[
+  {id:'bg',type:'background',paint:{'background-color':'#0b1a2a'}},
+  {id:'sat',type:'raster',source:'sat'},
+  {id:'hs',type:'hillshade',source:'dem',paint:{'hillshade-exaggeration':0.35}}
+ ],terrain:{source:'dem',exaggeration:1.6},
+ sky:{'sky-color':'#88bbee','horizon-color':'#ffffff','fog-color':'#ffffff','fog-ground-blend':0.6,'horizon-fog-blend':0.8,'sky-horizon-blend':0.6,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,10,1,12,0]}}});
+map.addControl(new maplibregl.NavigationControl({visualizePitch:true}));
+let marker;
+function go(k){const c=targets[k];document.getElementById('status').textContent=' flying to '+k;
+ if(marker)marker.remove(); marker=new maplibregl.Marker({color:'#e63946'}).setLngLat(c).addTo(map);
+ map.flyTo({center:c,zoom:11.5,pitch:68,bearing:-20,speed:0.7,curve:1.6});}
+document.querySelectorAll('button').forEach(b=>b.onclick=()=>go(b.dataset.t));
+map.on('load',()=>{document.getElementById('status').textContent=' loaded';});
+map.on('error',e=>{document.getElementById('status').textContent=' ERR '+(e.error&&e.error.message);});
+window.__go=go;
+</script></body></html>

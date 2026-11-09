@@ -1,0 +1,22 @@
+# deps & build
+node_modules
+dist
+dist-ssr
+coverage
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+!.env.example
+*.local
+
+# logs
+*.log
+
+# editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.sw?
