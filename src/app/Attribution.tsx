@@ -1,5 +1,5 @@
 import { useId, useState } from 'react';
-import type { AttributionEntry } from './attributionData';
+import { compactLabel, type AttributionEntry } from './attributionData';
 
 /** Always-visible compact credit line (bottom-right); expands to the full list on click. */
 export function Attribution({ entries }: { entries: AttributionEntry[] }) {
@@ -31,7 +31,7 @@ export function Attribution({ entries }: { entries: AttributionEntry[] }) {
         title={open ? 'Hide full attribution' : 'Show full attribution'}
         onClick={() => setOpen((o) => !o)}
       >
-        <span aria-hidden="true">ⓘ</span> {entries.map((e) => e.short ?? e.text).join(' · ')}
+        <span aria-hidden="true">ⓘ</span> {entries.map(compactLabel).join(' · ')}
       </button>
     </div>
   );

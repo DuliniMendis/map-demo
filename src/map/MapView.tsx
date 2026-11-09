@@ -10,12 +10,12 @@ import { OVERVIEW_CAMERA } from './style/ids';
 
 declare global {
   interface Window {
-    /** The live map, for Playwright (WS6). Only set in dev and test builds. */
+    /** The live map, for Playwright (WS6). Only set in dev and `VITE_E2E=1` builds. */
     __map?: maplibregl.Map;
   }
 }
 
-const EXPOSE_MAP = import.meta.env.DEV || import.meta.env.MODE === 'test';
+const EXPOSE_MAP = import.meta.env.DEV || import.meta.env.VITE_E2E === '1';
 
 type Status = 'loading' | 'ready' | 'unsupported' | 'lost';
 

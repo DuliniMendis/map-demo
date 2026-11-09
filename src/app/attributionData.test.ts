@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { correctionMailto } from './About';
 import {
+  compactLabel,
   DEFAULT_ATTRIBUTION,
   loadAttribution,
   MAPLIBRE_ENTRY,
@@ -10,7 +11,33 @@ import {
 import { MAX_BOUNDS, padBounds } from './mapSetup';
 
 describe('parseAttribution', () => {
-  it('accepts a bare array of objects with assorted field names', () => {
+  it("reads WS3's attribution.json shape", () => {
+    const file = {
+      generatedAt: '2026-11-09',
+      disclaimer: 'Locations are approximate…',
+      items: [
+        {
+          id: 'austlang',
+          text: 'AUSTLANG © AIATSIS, CC BY 4.0, via TLCMap',
+          url: 'https://collection.aiatsis.gov.au/austlang/search',
+          licence: 'CC BY 4.0',
+          licenceUrl: 'https://creativecommons.org/licenses/by/4.0/',
+          usedFor: 'Language locations',
+          kind: 'data',
+        },
+        {
+          id: 'mapterhorn',
+          text: '© Mapterhorn',
+          url: 'https://mapterhorn.com/attribution',
+          usedFor: 'Terrain',
+          kind: 'terrain',
+        },
+      ],
+    };
+    expect(parseAttribution(file)).toEqual(file.items);
+  });
+
+  it('tolerates a bare array and assorted field names', () => {
     expect(
       parseAttribution([
         { id: 'austlang', text: 'AUSTLANG © AIATSIS', url: 'https://x', license: 'CC BY 4.0' },
@@ -19,20 +46,8 @@ describe('parseAttribution', () => {
         { nothing: true },
       ]),
     ).toEqual([
-      {
-        id: 'austlang',
-        text: 'AUSTLANG © AIATSIS',
-        short: undefined,
-        url: 'https://x',
-        licence: 'CC BY 4.0',
-      },
-      {
-        id: 'a1',
-        text: '© Mapterhorn',
-        short: undefined,
-        url: 'https://mapterhorn.com/attribution',
-        licence: undefined,
-      },
+      { id: 'austlang', text: 'AUSTLANG © AIATSIS', url: 'https://x', licence: 'CC BY 4.0' },
+      { id: 'a1', text: '© Mapterhorn', url: 'https://mapterhorn.com/attribution' },
       { id: 'a2', text: '© OpenMapTiles' },
     ]);
   });
@@ -47,6 +62,21 @@ describe('parseAttribution', () => {
     expect(parseAttribution({ foo: 1 })).toBeNull();
     expect(parseAttribution([])).toBeNull();
     expect(parseAttribution([{ url: 'x' }])).toBeNull();
+  });
+});
+
+describe('compactLabel', () => {
+  it('shortens every bundled credit and passes unknown text through', () => {
+    expect(DEFAULT_ATTRIBUTION.map(compactLabel)).toEqual([
+      '© AIATSIS (AUSTLANG)',
+      '© Mapterhorn',
+      'Terrain Tiles (Mapzen/AWS)',
+      'Sentinel-2 cloudless by EOX',
+      '© OpenMapTiles © OpenStreetMap',
+      '© ABS',
+      '© MapLibre',
+    ]);
+    expect(compactLabel({ text: 'Something else' })).toBe('Something else');
   });
 });
 
@@ -83,7 +113,7 @@ describe('loadAttribution', () => {
   it('uses the file when it parses', async () => {
     const f = vi.fn(() => json([{ text: 'X' }]));
     expect(await loadAttribution(f as unknown as typeof fetch)).toEqual([
-      { id: 'a0', text: 'X', short: undefined, url: undefined, licence: undefined },
+      { id: 'a0', text: 'X' },
       MAPLIBRE_ENTRY,
     ]);
   });

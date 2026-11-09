@@ -30,6 +30,7 @@ export function App({ bootNationId = null }: AppProps) {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const bootId = useRef(bootNationId);
+  const aboutButtonRef = useRef<HTMLButtonElement>(null);
 
   const selected = useAppStore((s) =>
     s.selectedId === null ? null : (s.nations.find((n) => n.id === s.selectedId) ?? null),
@@ -95,11 +96,13 @@ export function App({ bootNationId = null }: AppProps) {
 
   return (
     <div className="app">
-      <aside className="app__side" aria-label="Nations & language groups">
+      <h1 className="visually-hidden">Country — First Nations of Australia in 3D</h1>
+      {/* WS4's SidePanel renders its own <aside data-testid="side-panel">; this is layout only. */}
+      <div className="app__side">
         {load.kind === 'ready' && <SidePanel />}
         {load.kind === 'loading' && <ListSkeleton />}
         {load.kind === 'error' && <LoadError message={load.message} onRetry={retry} />}
-      </aside>
+      </div>
 
       <main className="app__main">
         <MapView
@@ -113,6 +116,7 @@ export function App({ bootNationId = null }: AppProps) {
             type="button"
             className="btn overlay-panel"
             onClick={() => setAboutOpen(true)}
+            ref={aboutButtonRef}
             data-testid="about-button"
           >
             About<span className="hide-narrow"> &amp; acknowledgement</span>
@@ -138,6 +142,7 @@ export function App({ bootNationId = null }: AppProps) {
       <About
         open={aboutOpen}
         onClose={() => setAboutOpen(false)}
+        returnFocusRef={aboutButtonRef}
         attribution={attribution}
         nation={selected}
       />

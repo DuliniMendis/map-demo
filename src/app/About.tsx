@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type RefObject } from 'react';
 import type { Nation } from '../types/nation';
 import type { AttributionEntry } from './attributionData';
 
@@ -18,26 +18,33 @@ export function correctionMailto(nation: Nation | null): string {
 interface AboutProps {
   open: boolean;
   onClose: () => void;
+  /** Focused when the dialog closes (the About button). */
+  returnFocusRef?: RefObject<HTMLElement | null>;
   attribution: AttributionEntry[];
   /** Currently selected nation, pre-filled into the correction email. */
   nation: Nation | null;
 }
 
 /** About & Acknowledgement of Country (modal `<dialog>`: focus trap and Esc come for free). */
-export function About({ open, onClose, attribution, nation }: AboutProps) {
+export function About({ open, onClose, returnFocusRef, attribution, nation }: AboutProps) {
   const ref = useRef<HTMLDialogElement>(null);
+  const wasOpen = useRef(false);
 
   useEffect(() => {
     const d = ref.current;
     if (!d) return;
     if (open && !d.open) d.showModal();
     if (!open && d.open) d.close();
-  }, [open]);
+    if (!open && wasOpen.current) returnFocusRef?.current?.focus();
+    wasOpen.current = open;
+  }, [open, returnFocusRef]);
 
   return (
     <dialog
       ref={ref}
       className="about"
+      role="dialog"
+      aria-modal="true"
       aria-labelledby="about-title"
       onClose={onClose}
       onClick={(e) => {
@@ -146,6 +153,7 @@ export function About({ open, onClose, attribution, nation }: AboutProps) {
                   e.text
                 )}
                 {e.licence && !e.text.includes(e.licence) ? ` (${e.licence})` : null}
+                {e.usedFor ? <span className="about__used-for"> — {e.usedFor}</span> : null}
               </li>
             ))}
           </ul>

@@ -1,13 +1,33 @@
 import { FALLBACK_ATTRIBUTION } from './stubs/attributionFallback';
 
+/** One item of WS3's `public/data/attribution.json` (`{ generatedAt, disclaimer, items: [...] }`). */
 export interface AttributionEntry {
   id: string;
   /** Full credit line, exactly as in docs/research.md. */
   text: string;
-  /** Compact form for the always-visible footer line; falls back to `text`. */
-  short?: string;
   url?: string;
   licence?: string;
+  licenceUrl?: string;
+  /** What the source is used for, e.g. "Language locations". */
+  usedFor?: string;
+  /** Source category from WS3 (e.g. data / terrain / imagery / labels). */
+  kind?: string;
+}
+
+/** Compact footer labels, matched against the full credit text. */
+const COMPACT: [RegExp, string][] = [
+  [/AUSTLANG|AIATSIS/i, '© AIATSIS (AUSTLANG)'],
+  [/Mapterhorn/i, '© Mapterhorn'],
+  [/Mapzen|Terrain Tiles/i, 'Terrain Tiles (Mapzen/AWS)'],
+  [/EOX|Sentinel/i, 'Sentinel-2 cloudless by EOX'],
+  [/OpenStreetMap|OpenMapTiles/i, '© OpenMapTiles © OpenStreetMap'],
+  [/Bureau of Statistics|\bABS\b/i, '© ABS'],
+  [/MapLibre/i, '© MapLibre'],
+];
+
+/** Pure: short label for the always-visible footer line (the full text is one click away). */
+export function compactLabel(e: Pick<AttributionEntry, 'text'>): string {
+  return COMPACT.find(([re]) => re.test(e.text))?.[1] ?? e.text;
 }
 
 export const ATTRIBUTION_URL = `${import.meta.env.BASE_URL}data/attribution.json`;
@@ -15,20 +35,20 @@ export const ATTRIBUTION_URL = `${import.meta.env.BASE_URL}data/attribution.json
 /** Always credited; the map renderer is not part of WS3's data attribution file. */
 export const MAPLIBRE_ENTRY: AttributionEntry = {
   id: 'maplibre',
-  short: '© MapLibre',
   text: '© MapLibre',
   url: 'https://maplibre.org/',
+  usedFor: 'Map rendering',
+  kind: 'software',
 };
 
 const str = (v: unknown): string | undefined =>
   typeof v === 'string' && v.trim() ? v.trim() : undefined;
 
 /**
- * Tolerant parser for WS3's `attribution.json`, whose exact shape is not in docs/contracts.md yet.
- * Accepts a bare array or an object with one array property (`entries`, `items`, `sources`,
- * `attributions`, `attribution`); each item may be a string or an object with a text-like field
- * (`text`, `attribution`, `label`, `name`, `title`) and optional `short`, `url`/`href`/`link`,
- * `licence`/`license`. Returns null when nothing usable is found.
+ * Parser for WS3's `attribution.json`: `{ generatedAt, disclaimer, items: [{ id, text, url,
+ * licence?, licenceUrl?, usedFor, kind }] }`. Deliberately tolerant (a bare array, `entries`
+ * instead of `items`, string items, `license`/`href` spellings) so a small schema drift degrades
+ * gracefully instead of blanking the credits. Returns null when nothing usable is found.
  */
 export function parseAttribution(data: unknown): AttributionEntry[] | null {
   let list: unknown = data;
@@ -53,9 +73,11 @@ export function parseAttribution(data: unknown): AttributionEntry[] | null {
     out.push({
       id: str(o.id) ?? `a${i}`,
       text,
-      short: str(o.short),
       url: str(o.url) ?? str(o.href) ?? str(o.link),
       licence: str(o.licence) ?? str(o.license),
+      licenceUrl: str(o.licenceUrl) ?? str(o.licenseUrl),
+      usedFor: str(o.usedFor),
+      kind: str(o.kind),
     });
   });
   return out.length ? out : null;

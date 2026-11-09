@@ -30,8 +30,10 @@ export function SidePanel() {
   const items = filterNations(nations, query, stateFilter);
 
   return (
-    <div className="stub-panel" data-testid="side-panel">
-      <h1 className="stub-panel__title">Nations &amp; language groups</h1>
+    <aside className="stub-panel" data-testid="side-panel" aria-labelledby="stub-panel-title">
+      <h2 id="stub-panel-title" className="stub-panel__title">
+        Nations &amp; language groups
+      </h2>
       <div className="stub-panel__search">
         <input
           type="search"
@@ -76,7 +78,7 @@ export function SidePanel() {
         ))}
       </ul>
       <p className="stub-panel__footer">{nations.length} language groups · AUSTLANG © AIATSIS</p>
-    </div>
+    </aside>
   );
 }
 

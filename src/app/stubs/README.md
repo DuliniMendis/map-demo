@@ -28,14 +28,18 @@ When the folder is empty, delete it and this README.
    the `style:dem-fallback` map event either way, then re-applies options with `demProvider: 'aws'` so later toggles
    never undo the fallback. Mapterhorn answers **404 for open-ocean tiles**; those must not count as failures.
 2. **`StyleOptions` vs MapLibre's own `StyleOptions` type.** Import ours from `integration.ts`, not from `maplibre-gl`.
-3. **`attribution.json` shape (WS3)** is not in the contracts. `parseAttribution()` accepts a bare array or an object
-   wrapping one (`entries`/`items`/`sources`/`attributions`/`attribution`), each item a string or an object with
-   `text`|`attribution`|`label`|`name`|`title`, optional `short`, `url`|`href`|`link`, `licence`|`license`. If WS3's
-   file has a `short` field the footer line uses it. MapLibre's credit is appended unless already present.
+3. **`attribution.json` (WS3)** has the shape `{ generatedAt, disclaimer, items: [{ id, text, url, licence?,
+   licenceUrl?, usedFor, kind }] }`; `parseAttribution()` reads it (and tolerates a bare array / `entries` / string
+   items). The always-visible footer line uses `compactLabel()` (keyword → short label); About shows the full `text`,
+   licence and `usedFor`. MapLibre's credit is appended unless already present. The file's `disclaimer` is not used
+   yet (WS4's `Disclaimer` owns that copy). `stubs/attributionFallback.ts` mirrors the item shape; its `usedFor`/`kind`
+   values are guesses.
 4. **InfoCard "Back to overview" (WS4).** The contract gives `InfoCard` only `nation` and `onClose`; the shell passes
    `onClose = () => select(null)`, which keeps the camera where it is. The "Overview" button in `LayerControls`
    flies out. If WS4 adds an `onOverview` prop, wire it to `goToOverview(controller, useAppStore)` in `App.tsx`.
 5. **Marker hover map → store.** The contract's `MapController` has no hover callback, so `wiring.ts` listens to
    `mousemove`/`mouseleave` on the contract layer `nations-circle` and reads the `code` property.
-6. **SidePanel root.** `App.tsx` renders `<aside class="app__side">` and puts `<SidePanel />` inside it; WS4's
-   component should carry `data-testid="side-panel"` itself (the stub does).
+6. **SidePanel root.** WS4's `SidePanel` renders its own `<aside data-testid="side-panel">` with an `<h2>`
+   heading, so `App.tsx` wraps it in a plain layout `<div class="app__side">` and provides the page's only `<h1>`
+   (visually hidden). The stub matches.
+7. **`window.__map`** is exposed when `import.meta.env.DEV || import.meta.env.VITE_E2E === '1'` (WS6's `build:e2e`).
