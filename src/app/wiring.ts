@@ -9,14 +9,12 @@ import {
   type MapController,
   type StyleOptions,
 } from './integration';
+import { DEM_FALLBACK_EVENT } from '../map/style/ids';
+
+export { DEM_FALLBACK_EVENT };
 
 type Store = Pick<typeof useAppStore, 'getState' | 'subscribe'>;
 type State = AppState & AppActions;
-
-/** Event WS1's style fires on the map after switching the DEM to the AWS fallback. */
-export const DEM_FALLBACK_EVENT = 'style:dem-fallback';
-/** Marker layer from docs/contracts.md; features carry `code` (= Nation.id). */
-const MARKER_LAYER = 'nations-circle';
 
 export interface DemState {
   /** Provider every `applyStyleOptions` call must pass, so a fallback is never undone. */
@@ -137,24 +135,15 @@ export function wireMap(
   const offMarkerClick = controller.onMarkerClick((id) => store.getState().select(id));
 
   // Map → store hover (the controller owns marker feature-state; the store mirrors it for the list).
-  const onMarkerMove = (e: maplibregl.MapLayerMouseEvent) => {
-    const code = e.features?.[0]?.properties?.code;
-    if (typeof code === 'string' && store.getState().hoveredId !== code) {
-      store.getState().setHovered(code);
-    }
-  };
-  const onMarkerLeave = () => {
-    if (store.getState().hoveredId !== null) store.getState().setHovered(null);
-  };
-  map.on('mousemove', MARKER_LAYER, onMarkerMove);
-  map.on('mouseleave', MARKER_LAYER, onMarkerLeave);
+  const offMarkerHover = controller.onMarkerHover((id) => {
+    if (store.getState().hoveredId !== id) store.getState().setHovered(id);
+  });
 
   return () => {
     disposed = true;
     unsubscribe();
     offMarkerClick();
-    map.off('mousemove', MARKER_LAYER, onMarkerMove);
-    map.off('mouseleave', MARKER_LAYER, onMarkerLeave);
+    offMarkerHover();
   };
 }
 

@@ -99,7 +99,8 @@ export function App({ bootNationId = null }: AppProps) {
       <h1 className="visually-hidden">Country — First Nations of Australia in 3D</h1>
       {/* WS4's SidePanel renders its own <aside data-testid="side-panel">; this is layout only. */}
       <div className="app__side">
-        {load.kind === 'ready' && <SidePanel />}
+        {/* The disclaimer banner sits over the map (below), so the panel doesn't repeat it. */}
+        {load.kind === 'ready' && <SidePanel showDisclaimerBanner={false} />}
         {load.kind === 'loading' && <ListSkeleton />}
         {load.kind === 'error' && <LoadError message={load.message} onRetry={retry} />}
       </div>
@@ -130,7 +131,7 @@ export function App({ bootNationId = null }: AppProps) {
         </div>
         {showCard && (
           <div className="app__card">
-            <InfoCard nation={selected} onClose={closeCard} />
+            <InfoCard nation={selected} onClose={closeCard} onBackToOverview={onOverview} />
           </div>
         )}
         <div className="app__bottom-right">

@@ -69,12 +69,13 @@ describe('compactLabel', () => {
   it('shortens every bundled credit and passes unknown text through', () => {
     expect(DEFAULT_ATTRIBUTION.map(compactLabel)).toEqual([
       '© AIATSIS (AUSTLANG)',
+      '© ABS',
       '© Mapterhorn',
       'Terrain Tiles (Mapzen/AWS)',
       'Sentinel-2 cloudless by EOX',
       '© OpenMapTiles © OpenStreetMap',
-      '© ABS',
       '© MapLibre',
+      'Wikidata (CC0)',
     ]);
     expect(compactLabel({ text: 'Something else' })).toBe('Something else');
   });

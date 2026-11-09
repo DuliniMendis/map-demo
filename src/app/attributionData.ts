@@ -1,4 +1,4 @@
-import { FALLBACK_ATTRIBUTION } from './stubs/attributionFallback';
+import { FALLBACK_ATTRIBUTION } from './attributionFallback';
 
 /** One item of WS3's `public/data/attribution.json` (`{ generatedAt, disclaimer, items: [...] }`). */
 export interface AttributionEntry {
@@ -23,6 +23,7 @@ const COMPACT: [RegExp, string][] = [
   [/OpenStreetMap|OpenMapTiles/i, '© OpenMapTiles © OpenStreetMap'],
   [/Bureau of Statistics|\bABS\b/i, '© ABS'],
   [/MapLibre/i, '© MapLibre'],
+  [/Wikidata/i, 'Wikidata (CC0)'],
 ];
 
 /** Pure: short label for the always-visible footer line (the full text is one click away). */
