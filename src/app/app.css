@@ -1,0 +1,384 @@
+/* App shell (WS5). Colour tokens come from src/index.css; WS4's ui.css styles the panel/card. */
+
+.app {
+  --overlay-bg: color-mix(in srgb, var(--bg) 90%, transparent);
+  --overlay-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+  --accent: #c2641f;
+  --gap: 12px;
+  display: grid;
+  grid-template-columns: var(--side-width, 360px) minmax(0, 1fr);
+  grid-template-areas: 'side main';
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.app__side {
+  grid-area: side;
+  min-height: 0;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.app__main {
+  grid-area: main;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* < 900 px: map on top, list below (WS4's SidePanel may turn this into a bottom sheet). */
+@media (max-width: 899.98px) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(200px, 42%);
+    grid-template-areas: 'main' 'side';
+  }
+  .app__side {
+    border-right: 0;
+    border-top: 1px solid var(--border);
+  }
+}
+
+/* ---- Overlay slots on the map ---- */
+
+.app__top-left,
+.app__top-right,
+.app__bottom-right,
+.app__card,
+.app__banner {
+  position: absolute;
+  z-index: 2;
+}
+.app__top-left {
+  top: var(--gap);
+  left: var(--gap);
+}
+.app__top-right {
+  top: var(--gap);
+  right: var(--gap);
+}
+.app__banner {
+  top: calc(var(--gap) + 48px);
+  left: var(--gap);
+  right: calc(var(--gap) + 200px);
+  pointer-events: none;
+}
+.app__banner > * {
+  pointer-events: auto;
+}
+.app__card {
+  left: var(--gap);
+  bottom: calc(var(--gap) + 28px);
+  max-width: min(380px, calc(100% - 2 * var(--gap)));
+  max-height: calc(100% - 140px);
+  overflow-y: auto;
+}
+.app__bottom-right {
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+}
+/* Keep MapLibre's navigation control clear of the attribution line. */
+.app__main .maplibregl-ctrl-bottom-right {
+  bottom: 28px;
+}
+
+.overlay-panel {
+  background: var(--overlay-bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--overlay-shadow);
+  backdrop-filter: blur(6px);
+}
+
+.btn {
+  font: inherit;
+  min-height: 40px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--overlay-bg);
+  color: var(--fg);
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: var(--accent);
+}
+:where(.app) :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---- Layer controls ---- */
+
+.layer-controls {
+  min-width: 180px;
+  font-size: 0.9rem;
+}
+.layer-controls__toggle {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.layer-controls__body {
+  display: grid;
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+.layer-controls__body[hidden] {
+  display: none;
+}
+.layer-controls fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.layer-controls__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  cursor: pointer;
+}
+.layer-controls input[type='checkbox'],
+.layer-controls input[type='range'] {
+  accent-color: var(--accent);
+}
+.layer-controls__slider-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+}
+
+/* ---- Attribution ---- */
+
+.attribution {
+  font-size: 11px;
+  line-height: 1.35;
+  background: var(--overlay-bg);
+  color: var(--fg);
+  border-top-left-radius: 6px;
+}
+.attribution__line {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+  padding: 4px 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.attribution__list {
+  margin: 0;
+  padding: 8px 12px 4px 24px;
+  max-width: 520px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.attribution a {
+  color: inherit;
+}
+
+/* ---- Map status (loading / WebGL) ---- */
+
+.map-status {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(440px, calc(100% - 32px));
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--overlay-bg);
+  color: var(--fg);
+  box-shadow: var(--overlay-shadow);
+}
+.map-status--error {
+  display: block;
+}
+.map-status__spinner {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid var(--muted);
+  border-top-color: var(--accent);
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-status__spinner {
+    animation: none;
+  }
+}
+
+/* ---- Side panel loading / error ---- */
+
+.list-skeleton {
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+.list-skeleton > div {
+  height: 14px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--fg) 10%, transparent);
+}
+.list-skeleton__title {
+  width: 70%;
+  height: 22px !important;
+}
+.list-skeleton__search {
+  height: 40px !important;
+}
+.load-error {
+  padding: 16px;
+}
+.load-error h2 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+.load-error code {
+  font-size: 0.8rem;
+  word-break: break-word;
+}
+.load-error .btn {
+  margin-top: 12px;
+}
+
+/* ---- Toast ---- */
+
+.toast {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: 48px;
+  translate: -50% 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #1b1f24;
+  color: #fff;
+  font-size: 0.9rem;
+  box-shadow: var(--overlay-shadow);
+  transition: opacity 0.2s;
+}
+.toast[data-visible='false'] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---- About dialog ---- */
+
+.about {
+  width: min(680px, calc(100% - 32px));
+  max-height: calc(100% - 48px);
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--fg);
+  box-shadow: 0 10px 40px rgb(0 0 0 / 40%);
+}
+.about::backdrop {
+  background: rgb(0 0 0 / 55%);
+}
+.about__inner {
+  padding: 8px 24px 24px;
+}
+.about__header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  padding-top: 8px;
+}
+.about h2 {
+  margin: 8px 0;
+  font-size: 1.3rem;
+}
+.about h3 {
+  margin: 20px 0 6px;
+  font-size: 1rem;
+}
+.about p,
+.about li {
+  color: var(--fg);
+}
+.about a {
+  color: var(--accent);
+}
+.about__ack {
+  margin-top: 8px;
+  padding: 4px 16px 8px;
+  border-left: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-radius: 0 8px 8px 0;
+}
+.about__close {
+  font-size: 1.6rem;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+}
+.about__credits {
+  font-size: 0.85rem;
+}
+.about__used-for {
+  color: var(--muted);
+}
+.about__fineprint {
+  font-size: 0.8rem;
+  color: var(--muted) !important;
+}
+
+@media (max-width: 899.98px) {
+  .hide-narrow {
+    display: none;
+  }
+  .app__banner {
+    right: var(--gap);
+    top: calc(var(--gap) + 52px);
+  }
+  .app__card {
+    bottom: var(--gap);
+  }
+}
