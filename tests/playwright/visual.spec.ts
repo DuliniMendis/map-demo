@@ -25,13 +25,16 @@ test.describe('visual', () => {
   ] as const;
   for (const p of places) {
     test(`${p.name}: landscape at a fixed camera`, async ({ page }) => {
+      // A pitched terrain frame takes several seconds in CI's software WebGL, and a screenshot needs
+      // two identical frames in a row.
+      test.setTimeout(240_000);
       await page.goto('/');
       await waitForMapIdle(page);
       await page.evaluate(({ center, zoom, pitch, bearing }) => {
         window.__map!.jumpTo({ center: [center[0], center[1]], zoom, pitch, bearing });
       }, p);
       await waitForMapIdle(page);
-      await expect(page).toHaveScreenshot(`${p.name}.png`);
+      await expect(page).toHaveScreenshot(`${p.name}.png`, { timeout: 120_000 });
     });
   }
 

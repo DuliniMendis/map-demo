@@ -150,7 +150,7 @@ export function App({ bootNationId = null }: AppProps) {
             About<span className="hide-narrow"> &amp; acknowledgement</span>
           </button>
         </div>
-        <div className="app__banner">
+        <div className="app__banner cm-theme">
           <Disclaimer variant="banner" />
         </div>
         <div className="app__top-right">

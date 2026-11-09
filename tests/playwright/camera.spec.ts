@@ -51,12 +51,10 @@ test.use({
  */
 function expectWithinBudget(ms: number, max: number, what: string) {
   if (SLOW > 1) {
-    test
-      .info()
-      .annotations.push({
-        type: 'advisory',
-        description: `${what}: ${Math.round(ms)} ms (budget ${max})`,
-      });
+    test.info().annotations.push({
+      type: 'advisory',
+      description: `${what}: ${Math.round(ms)} ms (budget ${max})`,
+    });
     return;
   }
   expect(ms, what).toBeLessThanOrEqual(max);

@@ -51,12 +51,10 @@ test.describe('select a nation', () => {
     const seconds = (end.t - start.t) / 1000;
     if (SLOW > 1) {
       // CI's software WebGL runs at a few fps, so the last frame lands long after the planned duration.
-      test
-        .info()
-        .annotations.push({
-          type: 'advisory',
-          description: `re-select flight: ${seconds.toFixed(1)} s`,
-        });
+      test.info().annotations.push({
+        type: 'advisory',
+        description: `re-select flight: ${seconds.toFixed(1)} s`,
+      });
     } else {
       expect(seconds, 'PLAN.md budget: never longer than 6 s').toBeLessThanOrEqual(6);
     }
