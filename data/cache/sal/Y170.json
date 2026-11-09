@@ -1,0 +1,8 @@
+{
+  "id": "Y170",
+  "lng": 143.431496,
+  "lat": -13.921628,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "30643", "locality": "Coen", "state": "Queensland", "stateCode": "QLD" }
+}

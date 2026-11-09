@@ -1,0 +1,75 @@
+{
+  "_comment": "Per-nation camera overrides merged last by scripts/build-nations.ts. Seeded by WS3 from the point's ABS locality and general geography (not tuned visually): coastal = bearing toward land (bearing is the direction the camera faces), alpine = zoom 11 / pitch 70, flat interior = zoom 9.5. WS2 proposes tuned values via PR. Keys starting with _ are notes. Limits: zoom 8-13, pitch 0-75 (WS2 clamp).",
+  "A43": {
+    "view": { "zoom": 9.5 },
+    "_why": "Gibson Desert (Ngaanyatjarra-Giles, WA): flat; zoom out so relief reads"
+  },
+  "A82": {
+    "view": { "zoom": 9.5 },
+    "_why": "APY Lands, SA (nearest nation to Uluru): open sand plain"
+  },
+  "A9": {
+    "view": { "zoom": 9.5, "pitch": 55 },
+    "_why": "Nullarbor (Forrest, WA): very flat"
+  },
+  "D10": {
+    "view": { "zoom": 9.5 },
+    "_why": "Riverina plains (Wyalong, NSW)"
+  },
+  "S46": {
+    "view": { "zoom": 11, "pitch": 70 },
+    "_why": "Snowy Mountains (Adaminaby, NSW): alpine"
+  },
+  "S44": {
+    "view": { "zoom": 11, "pitch": 70 },
+    "_why": "Victorian Alps (Nariel Valley, VIC): alpine"
+  },
+  "S43": {
+    "view": { "zoom": 11, "pitch": 70 },
+    "_why": "Victorian Alps (Mitta Mitta, VIC): alpine"
+  },
+  "S64": {
+    "view": { "zoom": 11, "pitch": 70 },
+    "_why": "Blue Mountains (Jenolan, NSW): steep valleys"
+  },
+  "T8": {
+    "view": { "zoom": 11, "pitch": 70 },
+    "_why": "Tasmanian Central Highlands (Ouse, TAS)"
+  },
+  "T10": {
+    "view": { "zoom": 11, "pitch": 70, "bearing": 0 },
+    "_why": "South-west Tasmania near the south coast: rugged; face north, inland"
+  },
+  "L3": {
+    "view": { "bearing": 90 },
+    "_why": "Gulf St Vincent coast north of Adelaide (Calomba, SA): sea to the west, face east"
+  },
+  "W3": {
+    "view": { "bearing": 90 },
+    "_why": "Capes coast (Baudin, WA): Indian Ocean to the west, face east"
+  },
+  "K1": {
+    "view": { "zoom": 9.5, "bearing": 90 },
+    "_why": "Broome hinterland (Roebuck, WA): coast to the west, flat; face east"
+  },
+  "E30": {
+    "view": { "bearing": 90 },
+    "_why": "Point is in the Great Sandy Strait, 1.7 km west of K'gari (Fraser Island): face east onto the island"
+  },
+  "S66": {
+    "view": { "bearing": 270 },
+    "_why": "Lake Macquarie west shore (Eraring, NSW): lake and sea to the east, face west to the ranges"
+  },
+  "Y6": {
+    "view": { "bearing": 180 },
+    "_why": "Tip of Cape York (Somerset, QLD): sea to the north, face south"
+  },
+  "N153": {
+    "view": { "zoom": 9.5, "bearing": 180 },
+    "_why": "Point is offshore by the Sir Edward Pellew Group (NT): zoom out to show the islands, face the mainland"
+  },
+  "G38": {
+    "view": { "zoom": 9.5 },
+    "_why": "Mornington Island (Wellesley Islands, QLD): zoom out to show the whole island"
+  }
+}

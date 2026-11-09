@@ -1,0 +1,13 @@
+{
+  "id": "Y24",
+  "lng": 141.932428,
+  "lat": -12.558153,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31864",
+    "locality": "Mission River",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "E84",
+  "lng": 150.100032,
+  "lat": -23.532073,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "33185",
+    "locality": "Wycarbah",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

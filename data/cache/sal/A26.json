@@ -1,0 +1,13 @@
+{
+  "id": "A26",
+  "lng": 122.973062,
+  "lat": -27.645728,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50827",
+    "locality": "Lake Wells",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

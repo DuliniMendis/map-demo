@@ -1,0 +1,13 @@
+{
+  "id": "N226",
+  "lng": 130.053521,
+  "lat": -13.168228,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70228",
+    "locality": "Rakula",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

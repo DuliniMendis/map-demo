@@ -1,0 +1,13 @@
+{
+  "id": "W6",
+  "lng": 115.916579,
+  "lat": -32.898362,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51499",
+    "locality": "Wagerup",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "L2",
+  "lng": 135.439736,
+  "lat": -33.70399,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40665",
+    "locality": "Kappawanta",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

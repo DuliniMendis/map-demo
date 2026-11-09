@@ -1,0 +1,13 @@
+{
+  "id": "S26",
+  "lng": 142.33663,
+  "lat": -37.774215,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "22056",
+    "locality": "Penshurst (Vic.)",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

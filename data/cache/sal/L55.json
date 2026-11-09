@@ -1,0 +1,13 @@
+{
+  "id": "L55",
+  "lng": 138.582991,
+  "lat": -30.948402,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40931",
+    "locality": "Motpena",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

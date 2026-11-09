@@ -1,0 +1,13 @@
+{
+  "id": "E14",
+  "lng": 152.320346,
+  "lat": -28.501057,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "14064",
+    "locality": "Upper Tooloom",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

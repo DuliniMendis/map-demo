@@ -1,0 +1,13 @@
+{
+  "id": "D10",
+  "lng": 147.257346,
+  "lat": -33.90918,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "14449",
+    "locality": "Wyalong",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

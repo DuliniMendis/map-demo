@@ -1,0 +1,13 @@
+{
+  "id": "D62",
+  "lng": 148.998496,
+  "lat": -35.474957,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "80012",
+    "locality": "ACT Remainder - Paddys River",
+    "state": "Australian Capital Territory",
+    "stateCode": "ACT"
+  }
+}

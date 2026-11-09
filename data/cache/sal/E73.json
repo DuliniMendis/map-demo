@@ -1,0 +1,13 @@
+{
+  "id": "E73",
+  "lng": 152.987374,
+  "lat": -28.854031,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "10842",
+    "locality": "Casino",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

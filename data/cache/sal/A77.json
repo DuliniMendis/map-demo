@@ -1,0 +1,13 @@
+{
+  "id": "A77",
+  "lng": 118.145275,
+  "lat": -22.999689,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50726",
+    "locality": "Karijini",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

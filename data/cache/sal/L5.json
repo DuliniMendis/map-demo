@@ -1,0 +1,13 @@
+{
+  "id": "L5",
+  "lng": 139.081232,
+  "lat": -32.930161,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "41115",
+    "locality": "Parnaroo",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

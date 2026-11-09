@@ -1,0 +1,13 @@
+{
+  "id": "G40",
+  "lng": 139.817572,
+  "lat": -24.05637,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30195",
+    "locality": "Bedourie",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

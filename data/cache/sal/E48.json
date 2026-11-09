@@ -1,0 +1,13 @@
+{
+  "id": "E48",
+  "lng": 148.925257,
+  "lat": -21.982384,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31687",
+    "locality": "Lotus Creek",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

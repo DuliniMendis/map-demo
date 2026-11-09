@@ -1,0 +1,13 @@
+{
+  "id": "Y64",
+  "lng": 142.34773,
+  "lat": -14.591437,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30943",
+    "locality": "Edward River",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "C44",
+  "lng": 128.749242,
+  "lat": -23.708425,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51112",
+    "locality": "Ngaanyatjarra-Giles",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

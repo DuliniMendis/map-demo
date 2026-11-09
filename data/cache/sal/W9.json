@@ -1,0 +1,13 @@
+{
+  "id": "W9",
+  "lng": 116.123904,
+  "lat": -31.981489,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50601",
+    "locality": "Hacketts Gully",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

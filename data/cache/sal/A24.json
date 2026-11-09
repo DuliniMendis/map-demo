@@ -1,0 +1,13 @@
+{
+  "id": "A24",
+  "lng": 117.547383,
+  "lat": -25.668816,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51218",
+    "locality": "Peak Hill (WA)",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

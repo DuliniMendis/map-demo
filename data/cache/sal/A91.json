@@ -1,0 +1,13 @@
+{
+  "id": "A91",
+  "lng": 125.275504,
+  "lat": -18.622992,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51401",
+    "locality": "St George Ranges",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

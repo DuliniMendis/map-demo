@@ -1,0 +1,13 @@
+{
+  "id": "A6",
+  "lng": 123.668422,
+  "lat": -23.350912,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50540",
+    "locality": "Gibson Desert North",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

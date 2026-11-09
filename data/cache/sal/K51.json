@@ -1,0 +1,13 @@
+{
+  "id": "K51",
+  "lng": 127.850102,
+  "lat": -18.270335,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51188",
+    "locality": "Ord River",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

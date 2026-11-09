@@ -1,0 +1,13 @@
+{
+  "id": "N20",
+  "lng": 130.759749,
+  "lat": -11.563361,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70263",
+    "locality": "Tiwi Islands",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

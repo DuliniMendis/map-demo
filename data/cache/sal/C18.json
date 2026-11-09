@@ -1,0 +1,13 @@
+{
+  "id": "C18",
+  "lng": 134.505182,
+  "lat": -19.602713,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70282",
+    "locality": "Warumungu",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

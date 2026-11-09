@@ -1,0 +1,13 @@
+{
+  "id": "S31.1",
+  "lng": 143.674853,
+  "lat": -36.795611,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "21060",
+    "locality": "Goldsborough (Vic.)",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

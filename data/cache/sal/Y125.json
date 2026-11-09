@@ -1,0 +1,13 @@
+{
+  "id": "Y125",
+  "lng": 142.961227,
+  "lat": -18.197328,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31111",
+    "locality": "Georgetown (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

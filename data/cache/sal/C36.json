@@ -1,0 +1,13 @@
+{
+  "id": "C36",
+  "lng": 131.454555,
+  "lat": -16.767364,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70273",
+    "locality": "Victoria River",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

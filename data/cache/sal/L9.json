@@ -1,0 +1,13 @@
+{
+  "id": "L9",
+  "lng": 137.942217,
+  "lat": -29.999298,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40431",
+    "locality": "Farina",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "A52",
+  "lng": 125.95266,
+  "lat": -23.510384,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50721",
+    "locality": "Kanpa",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

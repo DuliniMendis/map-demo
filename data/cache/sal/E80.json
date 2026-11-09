@@ -1,0 +1,13 @@
+{
+  "id": "E80",
+  "lng": 152.55178,
+  "lat": -29.224426,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12351",
+    "locality": "Lionsville",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

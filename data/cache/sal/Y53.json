@@ -1,0 +1,8 @@
+{
+  "id": "Y53",
+  "lng": 141.927817,
+  "lat": -14.011775,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "30104", "locality": "Aurukun", "state": "Queensland", "stateCode": "QLD" }
+}

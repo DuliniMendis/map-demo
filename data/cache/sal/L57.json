@@ -1,0 +1,13 @@
+{
+  "id": "L57",
+  "lng": 142.601743,
+  "lat": -28.873144,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30416",
+    "locality": "Bulloo Downs",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

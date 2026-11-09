@@ -1,0 +1,13 @@
+{
+  "id": "S25",
+  "lng": 142.880127,
+  "lat": -38.039752,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "21767",
+    "locality": "Mortlake (Vic.)",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

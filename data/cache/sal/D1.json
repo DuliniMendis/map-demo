@@ -1,0 +1,13 @@
+{
+  "id": "D1",
+  "lng": 144.141905,
+  "lat": -35.341222,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13971",
+    "locality": "Tullakool",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

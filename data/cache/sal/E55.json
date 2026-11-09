@@ -1,0 +1,13 @@
+{
+  "id": "E55",
+  "lng": 146.047981,
+  "lat": -20.766821,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30506",
+    "locality": "Campaspe",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

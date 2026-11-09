@@ -1,0 +1,8 @@
+{
+  "id": "S30",
+  "lng": 143.695598,
+  "lat": -38.228209,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "21242", "locality": "Irrewarra", "state": "Victoria", "stateCode": "VIC" }
+}

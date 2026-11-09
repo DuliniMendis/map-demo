@@ -1,0 +1,13 @@
+{
+  "id": "A78",
+  "lng": 119.455413,
+  "lat": -22.000763,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51165",
+    "locality": "Nullagine",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "W46",
+  "lng": 114.936864,
+  "lat": -25.70595,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51645",
+    "locality": "Wooramel",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

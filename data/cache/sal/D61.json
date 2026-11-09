@@ -1,0 +1,13 @@
+{
+  "id": "D61",
+  "lng": 142.5651,
+  "lat": -32.721588,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12582",
+    "locality": "Menindee",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

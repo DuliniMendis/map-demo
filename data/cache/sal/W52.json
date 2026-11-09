@@ -1,0 +1,13 @@
+{
+  "id": "W52",
+  "lng": 115.168032,
+  "lat": -27.243445,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51460",
+    "locality": "Toolonga",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

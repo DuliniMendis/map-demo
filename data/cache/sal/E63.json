@@ -1,0 +1,13 @@
+{
+  "id": "E63",
+  "lng": 149.483617,
+  "lat": -22.893842,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31964",
+    "locality": "Mount Gardiner",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

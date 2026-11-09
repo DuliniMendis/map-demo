@@ -1,0 +1,15 @@
+{
+  "id": "E83",
+  "lng": 150.780686,
+  "lat": -23.069162,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "31020",
+    "locality": "Farnborough",
+    "state": "Queensland",
+    "stateCode": "QLD",
+    "distanceKm": 1.278
+  }
+}

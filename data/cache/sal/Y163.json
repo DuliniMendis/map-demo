@@ -1,0 +1,13 @@
+{
+  "id": "Y163",
+  "lng": 144.543199,
+  "lat": -16.120929,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31623",
+    "locality": "Lakeland",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

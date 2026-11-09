@@ -1,0 +1,13 @@
+{
+  "id": "S13",
+  "lng": 140.511749,
+  "lat": -37.225252,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40280",
+    "locality": "Coles",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

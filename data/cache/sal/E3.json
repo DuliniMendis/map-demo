@@ -1,0 +1,13 @@
+{
+  "id": "E3",
+  "lng": 152.134016,
+  "lat": -31.646951,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11260",
+    "locality": "Dingo Forest",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

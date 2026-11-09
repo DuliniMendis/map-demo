@@ -1,0 +1,13 @@
+{
+  "id": "A68",
+  "lng": 127.02387,
+  "lat": -20.489447,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51433",
+    "locality": "Tanami (WA)",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

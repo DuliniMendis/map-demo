@@ -1,0 +1,13 @@
+{
+  "id": "W8",
+  "lng": 120.59191,
+  "lat": -33.66708,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51059",
+    "locality": "Munglinup",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "L39",
+  "lng": 145.81081,
+  "lat": -24.10559,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30270",
+    "locality": "Blackall",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

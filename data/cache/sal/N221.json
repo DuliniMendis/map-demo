@@ -1,0 +1,13 @@
+{
+  "id": "N221",
+  "lng": 134.182406,
+  "lat": -12.2412,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70284",
+    "locality": "West Arnhem",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "E65",
+  "lng": 149.382434,
+  "lat": -24.465985,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32225",
+    "locality": "Oombabeer",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

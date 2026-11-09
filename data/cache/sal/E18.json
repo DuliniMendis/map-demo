@@ -1,0 +1,13 @@
+{
+  "id": "E18",
+  "lng": 153.498119,
+  "lat": -28.55439,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12839",
+    "locality": "Mullumbimby",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

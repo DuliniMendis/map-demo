@@ -1,0 +1,13 @@
+{
+  "id": "N68",
+  "lng": 132.499483,
+  "lat": -15.414291,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70246",
+    "locality": "Sturt Plateau",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

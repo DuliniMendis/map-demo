@@ -1,0 +1,13 @@
+{
+  "id": "T3",
+  "lng": 144.872146,
+  "lat": -41.245614,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "60731",
+    "locality": "West Coast",
+    "state": "Tasmania",
+    "stateCode": "TAS"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "E90",
+  "lng": 152.885895,
+  "lat": -26.769278,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "31739", "locality": "Maleny", "state": "Queensland", "stateCode": "QLD" }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "K10",
+  "lng": 124.013626,
+  "lat": -17.275981,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50924",
+    "locality": "Meda",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

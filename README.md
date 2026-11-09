@@ -58,11 +58,30 @@ CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check and unit test
 
 ## Data
 
-Until WS3 lands `public/data/nations.json`, the dev server falls back to
-[`src/data/mock-nations.json`](src/data/mock-nations.json): 10 real AUSTLANG entries, one per state and
-territory, same schema. Production builds use it too while `.env.production` sets
-`VITE_ALLOW_MOCK_DATA=1`; WS3 deletes that file when it ships the real data, after which a missing
-`nations.json` is an error.
+The app loads [`public/data/nations.json`](public/data/nations.json) (455 AUSTLANG language
+varieties with "Country today") and [`public/data/attribution.json`](public/data/attribution.json).
+Both are generated and committed; the app makes no data API calls at runtime. In production a missing
+`nations.json` is an error. The dev server still falls back to
+[`src/data/mock-nations.json`](src/data/mock-nations.json) (10 entries, same schema) if the real file
+is absent.
+
+| Command | What it does |
+|---|---|
+| `pnpm data:validate` | Offline: checks `nations.json` against a JSON Schema generated from `src/types/nation.ts`, plus ids, coordinates, localities, sort order and spot checks. `pnpm test` runs the same checks (`tests/unit/nations-data.test.ts`). |
+| `pnpm data:build` | Online: fetch → ABS lookup → Wikidata → build → validate (below). About 2 s with the committed caches, 5–15 s cold (455 ABS queries, 5 at a time). |
+
+Pipeline (`scripts/`, each runnable with `node scripts/<name>.ts`; Node 26 runs TypeScript directly):
+
+1. `fetch-austlang.ts`: downloads TLCMap layer 81 to `data/raw/austlang-tlcmap-<date>.geojson`. It never
+   overwrites a snapshot and skips writing when nothing changed; the build reads the newest one.
+2. `abs-lookup.ts --nearest`: ABS ASGS 2021 Suburbs and Localities point-in-polygon for each point,
+   cached in `data/cache/sal/<id>.json`. Points in the sea use the nearest locality within 25 km.
+   `--gpkg <file>` runs offline against the ASGS GeoPackage instead.
+3. `wikidata.ts`: English Wikipedia links via Wikidata P1252 (AUSTLANG code), cached in `data/cache/wikidata.json`.
+4. `build-nations.ts`: applies `data/cleaning.json` (synonym clean-up) and `data/overrides.json`
+   (camera views), then writes `public/data/*.json` and [`data/report.md`](data/report.md), which lists
+   counts, drops, lookups and every cleaning decision.
+5. `validate.ts`: the same checks as `pnpm data:validate`.
 
 ## Notes for workers
 

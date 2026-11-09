@@ -1,0 +1,13 @@
+{
+  "id": "Y84",
+  "lng": 143.914339,
+  "lat": -14.660318,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31622",
+    "locality": "Lakefield",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

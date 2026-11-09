@@ -1,0 +1,13 @@
+{
+  "id": "S52",
+  "lng": 149.598833,
+  "lat": -37.167133,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "14477",
+    "locality": "Yambulla",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

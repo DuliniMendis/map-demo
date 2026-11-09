@@ -1,0 +1,13 @@
+{
+  "id": "E67",
+  "lng": 152.41558,
+  "lat": -31.982637,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12184",
+    "locality": "Kiwarrak",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

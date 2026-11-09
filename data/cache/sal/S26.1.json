@@ -1,0 +1,13 @@
+{
+  "id": "S26.1",
+  "lng": 142.85945,
+  "lat": -37.06669,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "20618",
+    "locality": "Concongella",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

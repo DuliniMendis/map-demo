@@ -1,0 +1,8 @@
+{
+  "id": "S84",
+  "lng": 142.684662,
+  "lat": -36.321626,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "20291", "locality": "Boolite", "state": "Victoria", "stateCode": "VIC" }
+}

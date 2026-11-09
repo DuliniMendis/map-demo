@@ -1,0 +1,13 @@
+{
+  "id": "D53",
+  "lng": 146.907878,
+  "lat": -29.29727,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "14233",
+    "locality": "Weilmoringle",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

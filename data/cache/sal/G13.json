@@ -1,0 +1,13 @@
+{
+  "id": "G13",
+  "lng": 139.89002,
+  "lat": -20.886513,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31592",
+    "locality": "Kuridala",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

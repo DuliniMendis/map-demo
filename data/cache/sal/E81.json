@@ -1,0 +1,13 @@
+{
+  "id": "E81",
+  "lng": 151.677765,
+  "lat": -27.21169,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32467",
+    "locality": "Rosalie Plains",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

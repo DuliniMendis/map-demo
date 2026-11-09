@@ -1,0 +1,13 @@
+{
+  "id": "S64",
+  "lng": 150.048412,
+  "lat": -33.889578,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12018",
+    "locality": "Jenolan",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

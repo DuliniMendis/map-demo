@@ -1,0 +1,13 @@
+{
+  "id": "S9",
+  "lng": 140.352245,
+  "lat": -35.361136,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40746",
+    "locality": "Lameroo",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

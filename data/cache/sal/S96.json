@@ -1,0 +1,13 @@
+{
+  "id": "S96",
+  "lng": 151.219036,
+  "lat": -33.505704,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "14389",
+    "locality": "Wondabyne",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

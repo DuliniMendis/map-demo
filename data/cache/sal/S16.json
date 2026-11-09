@@ -1,0 +1,8 @@
+{
+  "id": "S16",
+  "lng": 141.643141,
+  "lat": -36.967794,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "22822", "locality": "Wombelano", "state": "Victoria", "stateCode": "VIC" }
+}

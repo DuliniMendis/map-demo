@@ -1,0 +1,13 @@
+{
+  "id": "W3",
+  "lng": 115.437853,
+  "lat": -33.856929,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50080",
+    "locality": "Baudin",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

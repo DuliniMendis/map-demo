@@ -1,0 +1,13 @@
+{
+  "id": "S43",
+  "lng": 147.521896,
+  "lat": -36.723575,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "21711",
+    "locality": "Mitta Mitta",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

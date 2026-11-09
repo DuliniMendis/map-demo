@@ -1,0 +1,13 @@
+{
+  "id": "E36",
+  "lng": 151.681688,
+  "lat": -24.266886,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32031",
+    "locality": "Mount Tom",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "E33",
+  "lng": 152.038899,
+  "lat": -24.807331,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30002",
+    "locality": "Abbotsford (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

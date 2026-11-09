@@ -1,0 +1,13 @@
+{
+  "id": "A32",
+  "lng": 128.510914,
+  "lat": -27.222843,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50087",
+    "locality": "Beadell",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

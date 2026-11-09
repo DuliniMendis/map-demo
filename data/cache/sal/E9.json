@@ -1,0 +1,13 @@
+{
+  "id": "E9",
+  "lng": 153.215774,
+  "lat": -29.463789,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13946",
+    "locality": "Townsend",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

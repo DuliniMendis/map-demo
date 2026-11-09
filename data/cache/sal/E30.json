@@ -1,0 +1,15 @@
+{
+  "id": "E30",
+  "lng": 153.03282,
+  "lat": -25.33722,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "31081",
+    "locality": "Fraser Island",
+    "state": "Queensland",
+    "stateCode": "QLD",
+    "distanceKm": 1.73
+  }
+}

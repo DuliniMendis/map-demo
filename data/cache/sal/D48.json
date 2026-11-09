@@ -1,0 +1,13 @@
+{
+  "id": "D48",
+  "lng": 143.527106,
+  "lat": -32.817938,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12000",
+    "locality": "Ivanhoe (NSW)",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

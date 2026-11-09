@@ -1,0 +1,13 @@
+{
+  "id": "E5",
+  "lng": 152.89048,
+  "lat": -30.815135,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11461",
+    "locality": "Eungai Creek",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

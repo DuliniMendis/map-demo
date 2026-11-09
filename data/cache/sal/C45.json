@@ -1,0 +1,13 @@
+{
+  "id": "C45",
+  "lng": 129.682319,
+  "lat": -16.339209,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70021",
+    "locality": "Baines",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "Y216",
+  "lng": 145.375855,
+  "lat": -17.385312,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31321",
+    "locality": "Herberton",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

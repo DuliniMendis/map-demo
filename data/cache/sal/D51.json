@@ -1,0 +1,13 @@
+{
+  "id": "D51",
+  "lng": 144.266462,
+  "lat": -29.720395,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "14144",
+    "locality": "Wanaaring",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

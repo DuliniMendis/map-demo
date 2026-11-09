@@ -1,0 +1,13 @@
+{
+  "id": "W5",
+  "lng": 118.440816,
+  "lat": -34.011092,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51461",
+    "locality": "Toompup",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

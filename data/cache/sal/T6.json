@@ -1,0 +1,8 @@
+{
+  "id": "T6",
+  "lng": 145.337395,
+  "lat": -42.476073,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "60625", "locality": "Southwest", "state": "Tasmania", "stateCode": "TAS" }
+}

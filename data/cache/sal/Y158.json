@@ -1,0 +1,13 @@
+{
+  "id": "Y158",
+  "lng": 145.299458,
+  "lat": -16.047493,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30288",
+    "locality": "Bloomfield",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

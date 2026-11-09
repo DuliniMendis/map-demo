@@ -1,0 +1,13 @@
+{
+  "id": "L1",
+  "lng": 137.591041,
+  "lat": -34.481869,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "41496",
+    "locality": "Urania",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

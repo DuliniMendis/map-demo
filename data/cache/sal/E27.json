@@ -1,0 +1,13 @@
+{
+  "id": "E27",
+  "lng": 150.835137,
+  "lat": -26.050348,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31304",
+    "locality": "Hawkwood",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

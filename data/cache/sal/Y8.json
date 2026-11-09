@@ -1,0 +1,13 @@
+{
+  "id": "Y8",
+  "lng": 142.725752,
+  "lat": -11.483776,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31432",
+    "locality": "Jardine River",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

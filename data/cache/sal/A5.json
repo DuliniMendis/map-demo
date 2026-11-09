@@ -1,0 +1,13 @@
+{
+  "id": "A5",
+  "lng": 120.595013,
+  "lat": -30.288737,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51507",
+    "locality": "Wallaroo (WA)",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

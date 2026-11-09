@@ -1,0 +1,13 @@
+{
+  "id": "G43",
+  "lng": 138.596132,
+  "lat": -22.132758,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30549",
+    "locality": "Carrandotta",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

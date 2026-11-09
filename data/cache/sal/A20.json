@@ -1,0 +1,13 @@
+{
+  "id": "A20",
+  "lng": 120.415688,
+  "lat": -26.799612,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51618",
+    "locality": "Wiluna",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

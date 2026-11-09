@@ -1,0 +1,13 @@
+{
+  "id": "S39",
+  "lng": 146.447799,
+  "lat": -38.715777,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "22300",
+    "locality": "Snake Island",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

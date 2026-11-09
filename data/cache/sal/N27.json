@@ -1,0 +1,13 @@
+{
+  "id": "N27",
+  "lng": 131.169359,
+  "lat": -14.012172,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70259",
+    "locality": "Tipperary (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

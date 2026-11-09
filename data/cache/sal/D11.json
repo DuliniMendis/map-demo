@@ -1,0 +1,13 @@
+{
+  "id": "D11",
+  "lng": 141.769794,
+  "lat": -31.489577,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11560",
+    "locality": "Fowlers Gap",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

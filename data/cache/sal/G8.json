@@ -1,0 +1,8 @@
+{
+  "id": "G8",
+  "lng": 139.713271,
+  "lat": -21.821844,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "30788", "locality": "Dajarra", "state": "Queensland", "stateCode": "QLD" }
+}

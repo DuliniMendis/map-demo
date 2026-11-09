@@ -1,0 +1,13 @@
+{
+  "id": "A94",
+  "lng": 116.210052,
+  "lat": -31.755969,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50542",
+    "locality": "Gidgegannup",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

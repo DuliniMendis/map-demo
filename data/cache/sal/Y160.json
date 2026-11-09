@@ -1,0 +1,13 @@
+{
+  "id": "Y160",
+  "lng": 145.446564,
+  "lat": -16.935237,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30244",
+    "locality": "Biboohra",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

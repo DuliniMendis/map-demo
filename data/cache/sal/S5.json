@@ -1,0 +1,13 @@
+{
+  "id": "S5",
+  "lng": 138.8922,
+  "lat": -34.862567,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40681",
+    "locality": "Kenton Valley",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

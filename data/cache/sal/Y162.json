@@ -1,0 +1,13 @@
+{
+  "id": "Y162",
+  "lng": 145.452323,
+  "lat": -16.548252,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30557",
+    "locality": "Cassowary",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

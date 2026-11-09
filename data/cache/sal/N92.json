@@ -1,0 +1,13 @@
+{
+  "id": "N92",
+  "lng": 134.479586,
+  "lat": -15.523674,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70018",
+    "locality": "Arnold (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

@@ -40,8 +40,9 @@ async function loadMock(): Promise<NationsFile> {
 }
 
 /**
- * Mock fallback is on in dev, and in production builds made with `VITE_ALLOW_MOCK_DATA=1`
- * (set in `.env.production` until WS3 lands the real file). WS3 deletes that file when `nations.json` ships.
+ * Mock fallback is on in dev only (or in a build made with `VITE_ALLOW_MOCK_DATA=1`, e.g. for a
+ * deliberately data-less preview). WS3 ships `public/data/nations.json`, so production builds load
+ * the real file and treat a missing one as an error.
  */
 const ALLOW_MOCK = import.meta.env.DEV || import.meta.env.VITE_ALLOW_MOCK_DATA === '1';
 

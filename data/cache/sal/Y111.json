@@ -1,0 +1,13 @@
+{
+  "id": "Y111",
+  "lng": 145.733427,
+  "lat": -16.941232,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31909",
+    "locality": "Mooroobool",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

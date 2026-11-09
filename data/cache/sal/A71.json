@@ -1,0 +1,13 @@
+{
+  "id": "A71",
+  "lng": 115.476224,
+  "lat": -25.804999,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50531",
+    "locality": "Gascoyne River",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

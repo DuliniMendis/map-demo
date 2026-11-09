@@ -1,0 +1,13 @@
+{
+  "id": "Y187",
+  "lng": 142.786734,
+  "lat": -11.916542,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32549",
+    "locality": "Shelburne",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

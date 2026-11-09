@@ -1,0 +1,13 @@
+{
+  "id": "L33",
+  "lng": 141.62365,
+  "lat": -25.355893,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "33095",
+    "locality": "Windorah",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

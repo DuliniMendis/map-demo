@@ -1,0 +1,8 @@
+{
+  "id": "T14",
+  "lng": 147.40243,
+  "lat": -41.13581,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "60057", "locality": "Blumont", "state": "Tasmania", "stateCode": "TAS" }
+}

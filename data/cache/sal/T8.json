@@ -1,0 +1,8 @@
+{
+  "id": "T8",
+  "lng": 146.75888,
+  "lat": -42.425061,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "60484", "locality": "Ouse", "state": "Tasmania", "stateCode": "TAS" }
+}
