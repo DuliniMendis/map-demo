@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Map · basemap style test page (WS1)</title>
+    <style>
+      html,
+      body,
+      #map {
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        font:
+          13px/1.4 system-ui,
+          sans-serif;
+        background: #0f1f37;
+      }
+      #hud {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+        max-width: 340px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+      #hud.hidden {
+        display: none;
+      }
+      #hud fieldset {
+        border: 0;
+        margin: 0 0 8px;
+        padding: 0;
+      }
+      #hud legend {
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+      #hud label {
+        margin-right: 10px;
+        white-space: nowrap;
+      }
+      #hud button {
+        margin: 0 4px 4px 0;
+      }
+      #status {
+        color: #333;
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="hud">
+      <fieldset id="layers">
+        <legend>Layers</legend>
+        <label><input type="checkbox" name="imagery" /> imagery</label>
+        <label><input type="checkbox" name="hillshade" /> hillshade</label>
+        <label><input type="checkbox" name="relief" /> relief</label>
+        <label><input type="checkbox" name="labels" /> labels</label>
+      </fieldset>
+      <fieldset>
+        <legend>Terrain</legend>
+        <label
+          >exaggeration
+          <input id="exaggeration" type="range" min="1" max="2.5" step="0.1" />
+          <output id="exaggeration-value"></output></label
+        ><br />
+        <label
+          >DEM
+          <select id="dem">
+            <option value="mapterhorn">Mapterhorn</option>
+            <option value="aws">AWS Terrain Tiles</option>
+          </select></label
+        >
+        <label><input type="checkbox" id="tiles" /> tile boundaries</label>
+      </fieldset>
+      <fieldset id="places">
+        <legend>Go to</legend>
+      </fieldset>
+      <div id="status"></div>
+    </div>
+    <script type="module" src="./dev.ts"></script>
+  </body>
+</html>
