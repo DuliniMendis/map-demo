@@ -12,10 +12,11 @@ an FPS readout. Query parameters for scripted screenshots: `?loc=uluru&l=imagery
 
 ```ts
 import '../setupMaplibre'; // before the first Map (worker URL)
-import { applyStyleOptions, buildStyle, installDemFallback, onDemFallback, MAP_OPTIONS } from './style';
+import { applyStyleOptions, buildStyle, watchDemFallback, onDemFallback } from './style/buildStyle';
+import { MAP_OPTIONS } from './style';
 
 const map = new maplibregl.Map({ container, style: buildStyle(opts), maxPitch: MAP_OPTIONS.maxPitch, ... });
-installDemFallback(map);                      // as early as possible, so the first failing tiles count
+const unwatch = watchDemFallback(map);        // right after new Map(), before load (= installDemFallback)
 onDemFallback(map, () => toast('Using backup terrain'));
 // on every store change (cheap; only touches what differs):
 applyStyleOptions(map, { ...store.layers, exaggeration: store.exaggeration, demProvider: 'mapterhorn' });
@@ -110,17 +111,27 @@ in front of the research.md string. WS5's footer can use `ATTRIBUTION_TEXT` (pla
 
 ## DEM fallback
 
-`installDemFallback(map)` watches tile errors on `dem`/`dem-shade`. After **3 consecutive** failures
-(no successful DEM tile in between) while on Mapterhorn it switches both sources to AWS and fires
-`style:dem-fallback` on the map with `{ from: 'mapterhorn', to: 'aws', error }`; subscribe with the typed
-`onDemFallback(map, cb)`. The fallback is sticky for the life of the map: later
-`applyStyleOptions(..., { demProvider: 'mapterhorn' })` calls stay on AWS, so the app shell does not
-need a `demProvider` field in the store.
+`watchDemFallback(map)` (alias of `installDemFallback`, exported from `buildStyle.ts`; returns an
+unsubscribe) watches tile errors on `dem`/`dem-shade`. Call it right after `new Map()`, before `load`.
+After **3 consecutive** outage errors (no successful DEM tile in between) while on Mapterhorn it switches
+both sources to AWS and fires `style:dem-fallback` on the map with `{ from: 'mapterhorn', to: 'aws', error }`;
+subscribe with the typed `onDemFallback(map, cb)` or `map.on('style:dem-fallback', …)`. The fallback is
+sticky for the life of the map: later `applyStyleOptions(..., { demProvider: 'mapterhorn' })` calls stay
+on AWS, and re-applying `demProvider: 'aws'` after the event is a no-op (unit-tested), so the app shell
+may or may not track the provider in its store.
 
-- MapLibre does not raise 404s as errors (it treats them as "no tile here"), so only network, CORS, 5xx
-  and decode failures count. Mapterhorn legitimately 404s at z13+ wherever only 30 m data exists (e.g.
-  around Uluru); those requests show as `Failed to load resource: 404` in the browser console and are
-  harmless. WS6: don't fail smoke tests on those console lines.
+- **What counts:** network/CORS failures (no HTTP status), 5xx, 408 and 429. **404s and other 4xx never
+  count** (`countsAsOutage`). MapLibre 6.17 itself does not even raise an `error` event for a 404 (it
+  treats it as "no tile here"); the explicit check guards against that changing.
+- **Mapterhorn 404s are normal** and happen on every session:
+  - all-ocean tiles inside the source bounds, e.g. `4/12/10`, `4/13/10` (Southern Ocean south of WA/SA)
+    and `7/117/81` (south-east of Tasmania). They can't be avoided with a rectangular `bounds` without
+    cutting off Tasmania or the Torres Strait, and Mapterhorn publishes no coverage mask;
+  - z13+ tiles wherever only 30 m data exists (most of the interior, e.g. around Uluru).
+
+  The browser logs each one as `Failed to load resource: the server responded with a status of 404`;
+  page JavaScript cannot suppress those lines. **WS6: allow-list 404 responses from
+  `tiles.mapterhorn.com`** (and the matching console lines) in smoke tests.
 - The swap (setTerrain(null) → remove layers → remove/add sources → re-add layers in place →
   setTerrain) waits for `idle`, or at most 4 s and then the next `moveend`, so it never yanks the terrain
   away mid-flight. Layers from other workstreams that use the DEM sources keep their position and paint.
@@ -222,7 +233,7 @@ Horizon haze at pitch 80°, and the same area on the AWS fallback DEM with Mapte
 
 - Labels outside Australia (PNG, Indonesia, Timor-Leste) appear where their vector tiles overlap the
   bounds; the OpenMapTiles `place` layer has no country code to filter on.
-- Mapterhorn's z13+ 404s in 30 m-only areas produce browser console noise (see above).
+- Mapterhorn 404s (all-ocean tiles, and z13+ in 30 m-only areas) produce browser console noise (see DEM fallback).
 - A manual provider switch (dev page only) briefly flattens the terrain until the new DEM tiles arrive.
 - Hairline tile-edge lines in hillshade-only mode in patchy LiDAR areas (see Quality checks).
 - The labels overlay is English-first (`name:en`, then `name`), as OpenStreetMap tags it.

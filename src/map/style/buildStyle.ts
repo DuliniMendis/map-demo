@@ -10,6 +10,7 @@ import type { StyleOptions } from './types';
 
 export type { DemFallbackEventData, StyleOptions } from './types';
 export { applyStyleOptions } from './applyStyleOptions';
+export { installDemFallback, onDemFallback, watchDemFallback } from './demFallback';
 
 /** Matches the store defaults (`DEFAULT_LAYERS`, `EXAGGERATION_DEFAULT`) plus the primary DEM. */
 export const DEFAULT_STYLE_OPTIONS: StyleOptions = {

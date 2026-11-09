@@ -3,7 +3,13 @@
 export * from './ids';
 export { applyStyleOptions, buildStyle, DEFAULT_STYLE_OPTIONS } from './buildStyle';
 export type { DemFallbackEventData, StyleOptions } from './types';
-export { DEM_FALLBACK_THRESHOLD, installDemFallback, onDemFallback } from './demFallback';
+export {
+  countsAsOutage,
+  DEM_FALLBACK_THRESHOLD,
+  installDemFallback,
+  onDemFallback,
+  watchDemFallback,
+} from './demFallback';
 export { getActiveDemProvider, hasFallenBack } from './demProvider';
 export { LABEL_LAYER_IDS } from './layers/labels';
 export { RELIEF_RAMP } from './layers/relief';

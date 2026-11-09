@@ -83,6 +83,40 @@ describe('DEM fallback', () => {
     expect(getActiveDemProvider(fm.asMap())).toBe('aws');
   });
 
+  it('never counts 404s (Mapterhorn ocean / 30 m-only tiles) or other 4xx; counts 5xx and 429', () => {
+    const { fm, map, events } = setup();
+    const httpError = (status: number) => ({
+      error: Object.assign(new Error(`HTTP ${status}`), { status }),
+      sourceId: SOURCE_DEM,
+      tile: {},
+    });
+    for (let i = 0; i < 10; i++) fm.fire('error', httpError(404));
+    fm.fire('error', httpError(403));
+    expect(getActiveDemProvider(map)).toBe('mapterhorn');
+    fm.fire('error', httpError(503));
+    fm.fire('error', httpError(429));
+    fm.fire('error', httpError(404)); // ignored, doesn't reset or count
+    fm.fire('error', httpError(502));
+    expect(getActiveDemProvider(map)).toBe('aws');
+    expect(events).toHaveLength(1);
+  });
+
+  it('watchDemFallback (WS5’s import from buildStyle) works, and re-applying aws is a no-op', async () => {
+    const { watchDemFallback } = await import('./buildStyle');
+    const fm = new FakeMap(buildStyle(DEFAULT_STYLE_OPTIONS));
+    const map = fm.asMap();
+    const unsubscribe = watchDemFallback(map);
+    fm.on('error', () => {});
+    for (let i = 0; i < DEM_FALLBACK_THRESHOLD; i++) fm.fire('error', tileError(SOURCE_DEM));
+    const swaps = fm.calls.filter((c) => c === `addSource ${SOURCE_DEM}`).length;
+    applyStyleOptions(map, { ...DEFAULT_STYLE_OPTIONS, demProvider: 'aws' });
+    applyStyleOptions(map, { ...DEFAULT_STYLE_OPTIONS, demProvider: 'aws' });
+    expect(swaps).toBe(1);
+    expect(fm.calls.filter((c) => c === `addSource ${SOURCE_DEM}`)).toHaveLength(1);
+    expect(getActiveDemProvider(map)).toBe('aws');
+    unsubscribe();
+  });
+
   it('installs once per map', () => {
     const fm = new FakeMap(buildStyle(DEFAULT_STYLE_OPTIONS));
     const a = installDemFallback(fm.asMap());

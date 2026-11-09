@@ -31,15 +31,26 @@ function onlyErrorListener(map: MlMap): boolean {
   return n <= 1;
 }
 
+/** Network/CORS errors (no status), 5xx, 408 and 429 mean the host is struggling; other 4xx don't. */
+export function countsAsOutage(error: unknown): boolean {
+  const status = (error as { status?: unknown } | undefined)?.status;
+  if (typeof status !== 'number' || status === 0) return true;
+  return status >= 500 || status === 408 || status === 429;
+}
+
 /**
  * Watch the DEM sources; after `DEM_FALLBACK_THRESHOLD` consecutive tile errors while on Mapterhorn,
  * switch both DEM sources to AWS Terrain Tiles and fire `style:dem-fallback` on the map with a
  * `DemFallbackEventData` payload (subscribe with `onDemFallback`). The fallback is sticky for the life
  * of the map: later `applyStyleOptions(..., { demProvider: 'mapterhorn' })` calls stay on AWS.
  *
- * Idempotent per map; `applyStyleOptions` calls it for you. Returns an uninstaller.
- * MapLibre does not report 404s as errors (it treats them as "no tile here"), so only real failures
- * (network, CORS, 5xx, decode) count.
+ * Idempotent per map; `applyStyleOptions` calls it too, but call it right after `new Map()` so early
+ * tile errors count. Returns an uninstaller.
+ *
+ * Only real outages count: network/CORS failures (no HTTP status), 5xx, 408 and 429. Other 4xx never
+ * count. In particular Mapterhorn answers 404 for all-ocean tiles and for z13+ tiles where only 30 m
+ * data exists; MapLibre 6.17 already treats 404 as "no tile here" and does not raise an error, and this
+ * check keeps it that way should that change.
  */
 export function installDemFallback(map: MlMap): () => void {
   const existing = installed.get(map);
@@ -51,6 +62,7 @@ export function installDemFallback(map: MlMap): () => void {
     if (onlyErrorListener(map)) console.error(ev.error);
     const { sourceId, tile } = ev as typeof ev & { sourceId?: string; tile?: unknown };
     if (!sourceId || !DEM_SOURCE_IDS.has(sourceId) || !tile) return;
+    if (!countsAsOutage(ev.error)) return;
     if (hasFallenBack(map) || getActiveDemProvider(map) !== 'mapterhorn') return;
     consecutive += 1;
     if (consecutive < DEM_FALLBACK_THRESHOLD) return;
@@ -76,6 +88,12 @@ export function installDemFallback(map: MlMap): () => void {
   installed.set(map, uninstall);
   return uninstall;
 }
+
+/**
+ * The name WS5's app shell imports (from `buildStyle`): same as `installDemFallback`. Call it right
+ * after `new Map()`, before `load`; returns an unsubscribe.
+ */
+export const watchDemFallback: (map: MlMap) => () => void = installDemFallback;
 
 /** Typed subscription to `style:dem-fallback` (e.g. to show a toast). Returns an unsubscribe. */
 export function onDemFallback(map: MlMap, cb: (data: DemFallbackEventData) => void): () => void {
