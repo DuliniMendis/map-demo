@@ -16,7 +16,8 @@ const URLS = {
 type Probe = { status: number; type: string | null; bytes: number } | { error: string };
 
 test('page fetches of every tile host are served from fixtures', async ({ page, tiles }) => {
-  await page.goto('/');
+  // A same-origin page without the map, so the only tile requests are the ones below.
+  await page.goto('/404.html');
   const results = await page.evaluate(async (urls) => {
     const out: Record<string, Probe> = {};
     for (const [k, u] of Object.entries(urls)) {

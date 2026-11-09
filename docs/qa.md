@@ -31,35 +31,37 @@ Notes:
 
 ## Test inventory
 
-Tests for features not yet on `main` are written already and marked `test.fixme(true, '<reason>')`.
+Every test below runs. A test for a feature that is not on `main` yet is marked `test.fixme(true, '<reason>')` until it lands.
 When the feature lands, delete that one line in the same PR. Status as of WS6's Phase 1 PR:
 
 | Spec | Test | Status | Lights up when |
 |---|---|---|---|
 | `boot` | shell renders: `side-panel`, `map-canvas`, live WebGL context, no console errors, no unmatched external requests | **runs** | |
-| `boot` | starts at `OVERVIEW_CAMERA` | fixme | WS5 exposes `window.__map` |
-| `boot` | terrain/imagery/labels tiles all come from fixtures | fixme | WS1 style wired by WS5 |
-| `selection` | list click → `info-card` shows `info-locality` "Calomba", `info-state` "South Australia", URL `?n=L3` | fixme | WS4 list + card, WS5 wiring and UrlSync |
-| `selection` | re-select L3 → A43: zoom dips (rise) then rises, flight ≤ 6 s | fixme | WS2 controller, `window.__map` |
-| `selection` | marker click (position from `map.project`, not pixels) selects S64 | fixme | WS2 markers, `window.__map` |
-| `selection` | keyboard: Tab into list, ArrowDown, Enter selects, Escape closes card and restores focus | fixme | WS4 |
-| `selection` | reduced motion: jump ≤ 0.4 s, no rise | fixme | WS2, `window.__map` |
-| `selection` | search by name / synonym / locality, state filter | fixme | WS4 + WS5 |
-| `selection` | deep link `?n=A43` restores; unknown `?n=` ignored | fixme | WS5 UrlSync |
-| `layers` | each `layer-toggle-<key>` flips layout `visibility` and writes `?l=` | fixme | WS1 + WS5 LayerControls |
-| `layers` | `exaggeration-slider` sets `getTerrain().exaggeration` and `?x=`; `?l=`/`?x=` restored on load | fixme | WS1 + WS5 |
-| `fallback` | Mapterhorn → HTTP 500: `style:dem-fallback` fires, "backup terrain" toast (`role=status`), AWS tiles requested | fixme | WS1 fallback + WS5 toast |
+| `boot` | starts at `OVERVIEW_CAMERA` | **runs** | |
+| `boot` | terrain/imagery/labels tiles all come from fixtures | **runs** | |
+| `selection` | list click → `info-card` shows `info-locality` "Calomba", `info-state` "South Australia", URL `?n=L3` | **runs** | |
+| `selection` | re-select L3 → A43: zoom dips (rise) then rises, flight ≤ 6 s | **runs** | |
+| `selection` | marker click (position from `map.project`, not pixels) selects S64 | **runs** | |
+| `selection` | keyboard: ArrowDown from search into the list, Enter selects, Escape closes card and keeps focus on the row | **runs** | |
+| `selection` | reduced motion: jump ≤ 0.4 s, no rise | **runs** | |
+| `selection` | search by name / synonym / locality, state filter | **runs** | |
+| `selection` | deep link `?n=A43` restores; unknown `?n=` ignored | **runs** | |
+| `layers` | each `layer-toggle-<key>` flips layout `visibility` and writes `?l=` | **runs** | |
+| `layers` | `exaggeration-slider` sets `getTerrain().exaggeration` and `?x=`; `?l=`/`?x=` restored on load | **runs** | |
+| `fallback` | Mapterhorn → HTTP 500: `style:dem-fallback` fires, "backup terrain" toast (`role=status`), AWS tiles requested | **runs** | |
 | `a11y` | axe (WCAG 2.2 AA + best practice) on the whole page at the overview | **runs** | |
-| `a11y` | axe on side panel, info card, About dialog (+ focus return); attribution names every source | fixme | WS4, WS5 |
+| `a11y` | axe on side panel, info card, About dialog (+ focus return); attribution names every source | **runs** | |
 | `visual` | `overview.png` (Linux baseline) | **runs on Linux/CI**, skipped elsewhere | |
-| `visual` | Uluru, Blue Mountains, Kakadu, Tasmania at fixed `jumpTo` cameras; mobile panel 390×844 | fixme | WS1 style + `window.__map`; WS4 responsive panel |
-| `perf` | median FPS during a flight ≥ 30 (advisory on Linux: logged as an annotation) | fixme | WS2 + `window.__map` |
+| `visual` | Uluru, Blue Mountains, Kakadu, Tasmania at fixed `jumpTo` cameras; mobile panel 390×844 | **runs on Linux/CI**, skipped elsewhere | |
+| `perf` | median FPS during a flight ≥ 30 (advisory on Linux: logged as an annotation) | **runs** | |
 | `tile-fixtures` | page and **web worker** fetches to every tile host are served from fixtures; unknown hosts are blocked | **runs** | |
 | `static` | `robots.txt` served; `404.html` renders and links home | **runs** | |
 | unit `tileRoutes` | URL → fixture mapping for Mapterhorn, AWS, EOX (`{z}/{y}/{x}`), OpenFreeMap | **runs** | |
 | unit `vercelConfig` | `vercel.json` cache headers, clean URLs, no catch-all rewrite, 404 + robots present | **runs** | |
 
-WS2 adds `tests/playwright/camera.spec.ts` (controller integration test) from its own branch.
+`camera.spec.ts` (WS2's controller test) drives `src/map/controller/dev.html`, so it runs in its own Playwright
+project (`camera-dev`) against the Vite dev server on port 4207; the rest run against `vite preview` of the
+`build:e2e` output on port 4206.
 
 ### What the e2e suite expects from other workstreams
 

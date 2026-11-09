@@ -137,4 +137,4 @@ Marker layers: source `nations`, layers `nations-circle`, `nations-label`, `nati
 
 - First render of terrain overview ≤ 3 s on broadband; nations.json (≈ 120 KB) loads in parallel with style.
 - Flight total 2.5–4.5 s; never longer than 6 s. Reduced motion: ≤ 0.4 s.
-- Keep JS bundle ≤ 400 KB gz excluding MapLibre (≈ 250 KB gz).
+- Keep JS bundle ≤ 400 KB gz excluding MapLibre (MapLibre 6.17 measures ≈ 283 KB gz).

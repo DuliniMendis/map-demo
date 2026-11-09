@@ -16,7 +16,7 @@
    - Default: the ArcGIS FeatureServer query from research.md, 5 concurrent, retry/backoff, cache to `data/cache/sal/<id>.json`.
    - Offline mode (`--gpkg path`): read the ASGS 2021 GeoPackage with `better-sqlite3` + `@turf/boolean-point-in-polygon` (or a Python 3 helper with `shapely` if easier — Python 3.9 is on the machine).
    - Also fetch state via `state_name_2021`; map to `stateCode`. Points in the sea (Torres Strait islands can fall outside SAL polygons): nearest SAL within 25 km (`--nearest` flag), else `locality: 'Offshore'` and the state from the ABS STE layer.
-4. `scripts/wikidata.ts` (optional, same PR or follow-up): SPARQL `?item wdt:P1251 ?code` → `links.wikipedia` (en sitelink) for the 456 matched items; cache responses.
+4. `scripts/wikidata.ts` (optional, same PR or follow-up): SPARQL `?item wdt:P1252 ?code` → `links.wikipedia` (en sitelink) for the 456 matched items; cache responses.
 5. `data/overrides.json` — `{ "<id>": { "view": {zoom,pitch,bearing}, "name"?: string } }` merged last. Seed with ~15 obvious ones (coastal: bearing toward land; alpine: zoom 11, pitch 70; flat interior: zoom 9.5).
 6. `scripts/validate.ts` — JSON Schema generated from `src/types/nation.ts` via `ts-json-schema-generator`; fails on duplicates, bad coords, empty `modern.locality`; prints stats (per-state counts).
 7. `public/data/attribution.json` — the exact strings from research.md with URLs and licences, consumed by WS5's footer/About.

@@ -102,3 +102,12 @@ export async function markerPagePoint(page: Page, code: string): Promise<{ x: nu
     return { x: rect.left + p.x, y: rect.top + p.y };
   }, code);
 }
+
+/**
+ * Clicks a nation in the side panel. The list is virtualised (only rows near the viewport exist in
+ * the DOM), so this searches for `query` (the nation's name) first.
+ */
+export async function selectFromList(page: Page, id: string, query: string): Promise<void> {
+  await page.getByTestId('search-input').fill(query);
+  await page.getByTestId(`nation-item-${id}`).click();
+}

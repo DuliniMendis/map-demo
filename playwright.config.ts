@@ -4,6 +4,8 @@ import { defineConfig, devices } from '@playwright/test';
 // `pnpm build:e2e` (or use `pnpm test:e2e`, which does both). See docs/qa.md.
 
 const PORT = Number(process.env.E2E_PORT ?? 4206);
+// WS2's camera.spec drives its dev page (src/map/controller/dev.html), which only the dev server serves.
+const DEV_PORT = Number(process.env.E2E_DEV_PORT ?? 4207);
 const BASE_URL = process.env.E2E_BASE_URL ?? `http://127.0.0.1:${PORT}`;
 const CI = Boolean(process.env.CI);
 
@@ -57,20 +59,41 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      testIgnore: 'camera.spec.ts',
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1280, height: 800 },
         launchOptions: { args: webglArgs },
       },
     },
-  ],
-  webServer: process.env.E2E_BASE_URL
-    ? undefined
-    : {
-        // Serves dist/ as built by `pnpm build:e2e`. Port 4206 is WS6's reserved local preview port.
-        command: `pnpm exec vite preview --host 127.0.0.1 --port ${PORT} --strictPort`,
-        url: BASE_URL,
-        reuseExistingServer: !CI,
-        timeout: 30_000,
+    {
+      name: 'camera-dev',
+      testMatch: 'camera.spec.ts',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: `http://127.0.0.1:${DEV_PORT}`,
+        viewport: { width: 1280, height: 800 },
+        launchOptions: { args: webglArgs },
       },
+    },
+  ],
+  webServer: [
+    ...(process.env.E2E_BASE_URL
+      ? []
+      : [
+          {
+            // Serves dist/ as built by `pnpm build:e2e`. Port 4206 is WS6's reserved local preview port.
+            command: `pnpm exec vite preview --host 127.0.0.1 --port ${PORT} --strictPort`,
+            url: BASE_URL,
+            reuseExistingServer: !CI,
+            timeout: 30_000,
+          },
+        ]),
+    {
+      command: `pnpm exec vite --host 127.0.0.1 --port ${DEV_PORT} --strictPort`,
+      url: `http://127.0.0.1:${DEV_PORT}/src/map/controller/dev.html`,
+      reuseExistingServer: !CI,
+      timeout: 60_000,
+    },
+  ],
 });

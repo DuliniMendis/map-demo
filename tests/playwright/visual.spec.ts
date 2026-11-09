@@ -25,7 +25,6 @@ test.describe('visual', () => {
   ] as const;
   for (const p of places) {
     test(`${p.name}: landscape at a fixed camera`, async ({ page }) => {
-      test.fixme(true, 'needs the WS1 style in MapView and window.__map (WS5)');
       await page.goto('/');
       await waitForMapIdle(page);
       await page.evaluate(({ center, zoom, pitch, bearing }) => {
@@ -37,7 +36,6 @@ test.describe('visual', () => {
   }
 
   test('mobile: panel layout at 390x844', async ({ page }) => {
-    test.fixme(true, 'needs the responsive SidePanel (WS4) and app layout breakpoints (WS5)');
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('/');
     await expect(page.getByTestId('search-input')).toBeVisible();

@@ -53,35 +53,29 @@ TypeScript is pinned to 6.0 because typescript-eslint does not support TypeScrip
 | `pnpm lint` | ESLint (typescript-eslint + react-hooks) |
 | `pnpm test` | Vitest unit tests (`src/**/*.test.ts`, `tests/unit/**`) |
 | `pnpm format` / `format:check` | Prettier write / check |
+| `pnpm data:build` | Rebuild `public/data/nations.json` and `attribution.json` from AUSTLANG, ABS and Wikidata (WS3; see `data/report.md`) |
+| `pnpm data:validate` | Validate the committed data files against the schema |
+| `pnpm build:e2e` | Production build with `VITE_E2E=1` (exposes `window.__map` for Playwright) |
+| `pnpm test:e2e` | `build:e2e`, then the Playwright suite (`tests/playwright`, see `docs/qa.md`) |
+| `pnpm size` | Bundle size budgets (`.size-limit.json`) |
+| `pnpm lhci` | Lighthouse CI against the production build |
 
-CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check and unit tests on every PR.
+CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check and unit tests, then Playwright
+(SwiftShader WebGL), bundle size and Lighthouse, on every PR and on `main`.
 
 ## Data
 
-The app loads [`public/data/nations.json`](public/data/nations.json) (455 AUSTLANG language
-varieties with "Country today") and [`public/data/attribution.json`](public/data/attribution.json).
-Both are generated and committed; the app makes no data API calls at runtime. In production a missing
-`nations.json` is an error. The dev server still falls back to
-[`src/data/mock-nations.json`](src/data/mock-nations.json) (10 entries, same schema) if the real file
-is absent.
+`public/data/nations.json` holds 455 nations and language groups built by `pnpm data:build` from AUSTLANG
+(AIATSIS, via TLCMap), ABS 2021 suburbs and localities, and Wikidata. `public/data/attribution.json` holds the
+credits the app shows. What the build cleaned or excluded is listed in `data/report.md` and `data/cleaning.json`.
 
-| Command | What it does |
-|---|---|
-| `pnpm data:validate` | Offline: checks `nations.json` against a JSON Schema generated from `src/types/nation.ts`, plus ids, coordinates, localities, sort order and spot checks. `pnpm test` runs the same checks (`tests/unit/nations-data.test.ts`). |
-| `pnpm data:build` | Online: fetch → ABS lookup → Wikidata → build → validate (below). About 2 s with the committed caches, 5–15 s cold (455 ABS queries, 5 at a time). |
+The dev server falls back to [`src/data/mock-nations.json`](src/data/mock-nations.json) (10 entries, same
+schema) if `nations.json` is missing; production builds treat a missing file as an error.
 
-Pipeline (`scripts/`, each runnable with `node scripts/<name>.ts`; Node 26 runs TypeScript directly):
+## Deploy
 
-1. `fetch-austlang.ts`: downloads TLCMap layer 81 to `data/raw/austlang-tlcmap-<date>.geojson`. It never
-   overwrites a snapshot and skips writing when nothing changed; the build reads the newest one.
-2. `abs-lookup.ts --nearest`: ABS ASGS 2021 Suburbs and Localities point-in-polygon for each point,
-   cached in `data/cache/sal/<id>.json`. Points in the sea use the nearest locality within 25 km.
-   `--gpkg <file>` runs offline against the ASGS GeoPackage instead.
-3. `wikidata.ts`: English Wikipedia links via Wikidata P1252 (AUSTLANG code), cached in `data/cache/wikidata.json`.
-4. `build-nations.ts`: applies `data/cleaning.json` (synonym clean-up) and `data/overrides.json`
-   (camera views), then writes `public/data/*.json` and [`data/report.md`](data/report.md), which lists
-   counts, drops, lookups and every cleaning decision.
-5. `validate.ts`: the same checks as `pnpm data:validate`.
+`main` deploys to production on Vercel (https://map-demo-orpin.vercel.app); every PR gets a preview. Commits
+must be authored with the email on the Vercel account, or the Hobby plan skips the build.
 
 ## Notes for workers
 

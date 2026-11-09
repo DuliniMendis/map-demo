@@ -20,7 +20,6 @@ async function visibility(page: Page, layerId: string) {
 test.describe('layer controls', () => {
   for (const key of Object.keys(LAYER_IDS) as (keyof typeof LAYER_IDS)[]) {
     test(`layer-toggle-${key} flips the layer's visibility and ?l=`, async ({ page }) => {
-      test.fixme(true, 'needs WS1 style + LayerControls (WS5) + window.__map');
       await page.goto('/');
       await waitForMapIdle(page);
       const toggle = page.getByTestId(`layer-toggle-${key}`);
@@ -36,7 +35,6 @@ test.describe('layer controls', () => {
   }
 
   test('exaggeration slider sets terrain exaggeration and ?x=', async ({ page }) => {
-    test.fixme(true, 'needs exaggeration-slider (WS5), WS1 terrain and window.__map');
     await page.goto('/');
     await waitForMapIdle(page);
     await page.getByTestId('exaggeration-slider').fill('2.2');
@@ -47,7 +45,6 @@ test.describe('layer controls', () => {
   });
 
   test('?l= and ?x= are restored on load', async ({ page }) => {
-    test.fixme(true, 'needs UrlSync (WS5), WS1 style and window.__map');
     await page.goto('/?l=labels,relief&x=2');
     await waitForMapIdle(page);
     expect(await visibility(page, LAYER_IDS.imagery)).toBe('none');

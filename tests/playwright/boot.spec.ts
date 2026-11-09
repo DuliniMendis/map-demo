@@ -34,7 +34,6 @@ test.describe('boot', () => {
   });
 
   test('starts at the overview camera', async ({ page }) => {
-    test.fixme(true, 'needs window.__map in e2e builds (WS5)');
     await page.goto('/');
     await waitForMapIdle(page);
     const cam = await getCamera(page);
@@ -46,7 +45,6 @@ test.describe('boot', () => {
   });
 
   test('requests terrain, imagery and label tiles only from fixtures', async ({ page, tiles }) => {
-    test.fixme(true, 'needs the WS1 style wired into MapView (WS1 + WS5)');
     await page.goto('/');
     await waitForMapIdle(page);
     const hosts = new Set(tiles.served.map((s) => s.host));

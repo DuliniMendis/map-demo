@@ -10,7 +10,6 @@ test.describe('tile fallback', () => {
     page,
     tiles,
   }) => {
-    test.fixme(true, 'needs WS1 DEM provider fallback + WS5 toast + window.__map');
     await page.addInitScript(() => {
       // Record the event as soon as the map exists.
       const w = window as unknown as { __demFallback?: boolean };
@@ -31,9 +30,11 @@ test.describe('tile fallback', () => {
       true,
     );
     expect(tiles.failed.length, 'Mapterhorn was tried first').toBeGreaterThanOrEqual(3);
-    expect(
-      tiles.served.some((s) => s.host === 'aws'),
-      'AWS DEM tiles requested',
-    ).toBe(true);
+    // WS1 swaps the DEM sources on the next idle (never mid-flight), so AWS tiles follow shortly.
+    await expect
+      .poll(() => tiles.served.some((s) => s.host === 'aws'), {
+        message: 'AWS DEM tiles requested',
+      })
+      .toBe(true);
   });
 });

@@ -1,5 +1,5 @@
 import { expect, test } from './support/fixtures.ts';
-import { waitForFlightEnd, recordCamera, waitForMapIdle } from './support/map.ts';
+import { recordCamera, selectFromList, waitForFlightEnd, waitForMapIdle } from './support/map.ts';
 
 // WS6 brief: record FPS during a flight with performance.now() sampling; fail if the median is
 // < 30 FPS. Software WebGL (SwiftShader) on Linux CI runners is far slower than a real GPU, so there
@@ -8,7 +8,6 @@ const MIN_MEDIAN_FPS = 30;
 const advisory = process.platform === 'linux';
 
 test('flight frame rate', async ({ page }, testInfo) => {
-  test.fixme(true, 'needs WS2 flights, WS1 terrain style and window.__map (WS5)');
   await page.goto('/?n=L3');
   await waitForMapIdle(page);
   await recordCamera(page);
@@ -21,7 +20,7 @@ test('flight frame rate', async ({ page }, testInfo) => {
     };
     requestAnimationFrame(tick);
   });
-  await page.getByTestId('nation-item-A43').click();
+  await selectFromList(page, 'A43', 'Ngaatjatjarra');
   await waitForFlightEnd(page);
   const frames = await page.evaluate(() => (window as unknown as { __frames: number[] }).__frames);
   const deltas = frames.slice(1).map((t, i) => t - frames[i]!);

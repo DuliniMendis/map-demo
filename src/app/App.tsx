@@ -92,11 +92,38 @@ export function App({ bootNationId = null }: AppProps) {
   const showCard =
     selected !== null && cameraState === 'idle' && (controller !== null || mapUnavailable);
   const onOverview = useCallback(() => goToOverview(controller, useAppStore), [controller]);
-  const closeCard = useCallback(() => useAppStore.getState().select(null), []);
+  const closeCard = useCallback(() => {
+    const store = useAppStore.getState();
+    const id = store.selectedId;
+    // The card is about to unmount; if it had focus, hand it back to the nation's row in the list.
+    const hadFocus = document.activeElement?.closest('[data-testid="info-card"]');
+    store.select(null);
+    if (hadFocus && id) {
+      const row = document.querySelector<HTMLElement>(`[data-nation-id="${CSS.escape(id)}"]`);
+      (row ?? document.querySelector<HTMLElement>('[data-testid="search-input"]'))?.focus({
+        preventScroll: true,
+      });
+    }
+  }, []);
+
+  // Esc closes the card from anywhere except text fields and dialogs (the card handles its own Esc).
+  useEffect(() => {
+    if (!showCard || aboutOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape' || e.defaultPrevented) return;
+      const t = e.target instanceof Element ? e.target : null;
+      if (t?.closest('input, select, textarea, [role="dialog"], [data-testid="info-card"]')) return;
+      closeCard();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [showCard, aboutOpen, closeCard]);
 
   return (
     <div className="app">
-      <h1 className="visually-hidden">Country — First Nations of Australia in 3D</h1>
+      <header className="visually-hidden">
+        <h1>Country — First Nations of Australia in 3D</h1>
+      </header>
       {/* WS4's SidePanel renders its own <aside data-testid="side-panel">; this is layout only. */}
       <div className="app__side">
         {/* The disclaimer banner sits over the map (below), so the panel doesn't repeat it. */}

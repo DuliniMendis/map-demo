@@ -26,21 +26,18 @@ test.describe('accessibility (axe)', () => {
   });
 
   test('side panel with search, filter and list has no violations', async ({ page }) => {
-    test.fixme(true, 'needs the WS4 SidePanel (search-input, state-filter, list) wired by WS5');
     await page.goto('/');
     await expect(page.getByTestId('search-input')).toBeVisible();
     expect(await axe(page, '[data-testid="side-panel"]')).toEqual([]);
   });
 
   test('info card has no violations', async ({ page }) => {
-    test.fixme(true, 'needs InfoCard (WS4) and ?n= deep links (WS5)');
     await page.goto('/?n=L3');
     await expect(page.getByTestId('info-card')).toBeVisible();
     expect(await axe(page, '[data-testid="info-card"]')).toEqual([]);
   });
 
   test('About dialog has no violations and traps focus', async ({ page }) => {
-    test.fixme(true, 'needs about-button and the About modal (WS5)');
     await page.goto('/');
     await page.getByTestId('about-button').click();
     const dialog = page.getByRole('dialog');
@@ -52,7 +49,6 @@ test.describe('accessibility (axe)', () => {
   });
 
   test('attribution is visible and names every data source', async ({ page }) => {
-    test.fixme(true, 'needs the attribution footer (WS5) built from attribution.json (WS3)');
     await page.goto('/');
     const attribution = page.getByTestId('attribution');
     await expect(attribution).toBeVisible();

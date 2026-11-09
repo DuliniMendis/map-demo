@@ -38,7 +38,7 @@ Terrarium decode: `(R*256 + G + B/256) − 32768` metres.
 | Source | What | Licence | Verdict |
 |---|---|---|---|
 | **AUSTLANG (AIATSIS)** via **TLCMap layer 81** — `https://tlcmap.org/layers/81/json/download` (also `/csv/download`, `/kml/download`) | 455 Point features. Properties: `language_code` (e.g. `A103`), `language_name`, `language_synonym` (comma list), `thesaurus_heading_language`, `thesaurus_heading_people`, `approximate_latitude/longitude_of_language_variety`, `uri` (AIATSIS Austlang page) | **CC BY 4.0**, creator AIATSIS, contact data@aiatsis.gov.au | **Primary dataset.** Note the AIATSIS canonical CSV (`collection.aiatsis.gov.au/datasets/austlang/001.csv`) 301‑redirects to `api.aiatsis.gov.au`, which did not resolve in DNS today. Commit a dated raw snapshot. |
-| Wikidata (P1251 = AUSTLANG code, P625 coords) | 456 items with codes, 145 with coordinates | CC0 | Supplementary: Wikipedia links, alt names, images |
+| Wikidata (P1252 = AUSTLANG code, P625 coords) | 456 items with codes, 145 with coordinates | CC0 | Supplementary: Wikipedia links, alt names, images |
 | AIATSIS Map of Indigenous Australia | the famous coloured map | © AIATSIS; licence per request; **no GIS data available** | Cannot use; link to it in About |
 | Native Land Digital API | territory polygons incl. Australia | Free key; "Data Sovereignty Treaty": no storing/distributing, non‑commercial only, attribution, disclaimer | Phase 2 optional *runtime* overlay only, behind a user‑supplied key |
 | Gambay (First Languages Australia) | 795 languages map | Licence unknown, no download | Link only |
