@@ -59,8 +59,7 @@ jobs:
         run: pnpm exec playwright install-deps chromium
       - run: pnpm build:e2e
       - name: Playwright
-        # TEMPORARY (revert after committing the baselines): bootstrap the Linux visual baselines.
-        run: pnpm exec playwright test visual --update-snapshots
+        run: pnpm exec playwright test ${{ inputs.update_snapshots && '--update-snapshots' || '' }}
       - name: Upload Playwright report
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v7
@@ -72,7 +71,7 @@ jobs:
           include-hidden-files: true
           retention-days: 14
       - name: Upload visual baselines
-        if: ${{ !cancelled() }}
+        if: ${{ inputs.update_snapshots }}
         uses: actions/upload-artifact@v7
         with:
           name: visual-baselines
