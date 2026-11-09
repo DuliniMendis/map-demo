@@ -1,5 +1,9 @@
 # Phase 3 — optional extras (pick after M5)
 
+**Picked 2026-11-10:** 2 → [WS8](WS8-nearby.md), 4 (contours + time-of-day light) → [WS7](WS7-landscape-detail.md),
+5 + 8 → [WS9](WS9-globe-tour.md). Not picked: 1 (needs the owner's Native Land API key and terms), 3 (needs a hosting
+and bandwidth decision), 6 (needs permission from language centres), 7.
+
 Each is independent and can be its own worker.
 
 1. **Native Land Digital overlay (runtime only).** Settings field for the user's own API key; fetch

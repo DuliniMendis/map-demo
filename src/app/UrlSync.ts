@@ -13,7 +13,13 @@ import type { Nation } from '../types/nation';
 type Layers = AppState['layers'];
 type LayerKey = keyof Layers;
 
-export const LAYER_KEYS: readonly LayerKey[] = ['imagery', 'labels', 'hillshade', 'relief'];
+export const LAYER_KEYS: readonly LayerKey[] = [
+  'imagery',
+  'labels',
+  'hillshade',
+  'relief',
+  'contours',
+];
 export const URL_WRITE_DEBOUNCE_MS = 300;
 
 export interface UrlState {
@@ -47,7 +53,7 @@ export function parseUrlState(search: string): UrlState {
     const known = names.filter((s): s is LayerKey => (LAYER_KEYS as string[]).includes(s));
     // `?l=` (empty) means "all layers off"; a list of only unknown names is ignored.
     if (names.length === 0 || known.length > 0) {
-      layers = { imagery: false, labels: false, hillshade: false, relief: false };
+      layers = { imagery: false, labels: false, hillshade: false, relief: false, contours: false };
       for (const k of known) layers[k] = true;
     }
   }

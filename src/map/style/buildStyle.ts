@@ -20,6 +20,9 @@ export const DEFAULT_STYLE_OPTIONS: StyleOptions = {
   relief: false,
   exaggeration: 1.5,
   demProvider: 'mapterhorn',
+  contours: false,
+  sunHour: null,
+  globe: true,
 };
 
 /**

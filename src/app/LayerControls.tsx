@@ -12,6 +12,7 @@ const LABELS: Record<keyof AppState['layers'], string> = {
   labels: 'Labels',
   hillshade: 'Hillshade',
   relief: 'Relief',
+  contours: 'Contours',
 };
 
 const startOpen = () =>

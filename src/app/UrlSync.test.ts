@@ -11,7 +11,7 @@ import {
 } from './UrlSync';
 
 const nations = mock.nations as Nation[];
-const ALL_OFF = { imagery: false, labels: false, hillshade: false, relief: false };
+const ALL_OFF = { imagery: false, labels: false, hillshade: false, relief: false, contours: false };
 const base = { selectedId: null, layers: DEFAULT_LAYERS, exaggeration: EXAGGERATION_DEFAULT };
 
 describe('parseUrlState', () => {
@@ -38,8 +38,8 @@ describe('parseUrlState', () => {
   });
 
   it('ignores unknown layer names, and a list of only unknown names', () => {
-    expect(parseUrlState('?l=imagery,contours').layers).toEqual({ ...ALL_OFF, imagery: true });
-    expect(parseUrlState('?l=contours,foo').layers).toBeNull();
+    expect(parseUrlState('?l=imagery,rainfall').layers).toEqual({ ...ALL_OFF, imagery: true });
+    expect(parseUrlState('?l=rainfall,foo').layers).toBeNull();
   });
 
   it('clamps x and ignores non-numbers', () => {
