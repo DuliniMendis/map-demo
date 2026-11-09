@@ -128,8 +128,9 @@ other platforms. On CI a missing or changed baseline fails the `e2e` job; the ac
 To create or update baselines after an intended visual change:
 1. **From CI (preferred):** Actions → CI → Run workflow → pick the branch, tick `update_snapshots`. Download
    the `visual-baselines` artifact and commit its contents into `tests/playwright/__screenshots__/`.
-   (Needs this workflow on `main`. Before that, take `*-actual.png` from a failed run's `playwright-report`
-   artifact and copy it to the baseline path printed in the failure.)
+   (Needs this workflow on `main`. Before that, use a failed run's `playwright-report` artifact: for a
+   changed baseline copy `*-actual.png`; for a missing one copy `test-results/<test>/test-failed-1.png`, to
+   the baseline path printed in the failure. The first `overview` baseline was made this way.)
 2. **Locally with Docker** (untested so far: no Docker on the dev machine; the image's Node may be older
    than `.node-version`, which is fine for building and testing):
    `docker run --rm -v "$PWD":/work -w /work mcr.microsoft.com/playwright:v1.64.1-noble bash -c "corepack enable && pnpm install --frozen-lockfile && pnpm build:e2e && pnpm exec playwright test visual --update-snapshots"`
