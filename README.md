@@ -60,7 +60,9 @@ CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check and unit test
 
 Until WS3 lands `public/data/nations.json`, the dev server falls back to
 [`src/data/mock-nations.json`](src/data/mock-nations.json): 10 real AUSTLANG entries, one per state and
-territory, same schema. Production builds require the real file.
+territory, same schema. Production builds use it too while `.env.production` sets
+`VITE_ALLOW_MOCK_DATA=1`; WS3 deletes that file when it ships the real data, after which a missing
+`nations.json` is an error.
 
 ## Notes for workers
 

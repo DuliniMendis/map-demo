@@ -41,7 +41,7 @@ async function loadMock(): Promise<NationsFile> {
 
 /**
  * Mock fallback is on in dev, and in production builds made with `VITE_ALLOW_MOCK_DATA=1`
- * (set on Vercel until WS3 lands the real file). Remove that env var once `nations.json` ships.
+ * (set in `.env.production` until WS3 lands the real file). WS3 deletes that file when `nations.json` ships.
  */
 const ALLOW_MOCK = import.meta.env.DEV || import.meta.env.VITE_ALLOW_MOCK_DATA === '1';
 
