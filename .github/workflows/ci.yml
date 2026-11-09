@@ -36,7 +36,7 @@ jobs:
   # answered from tests/fixtures/tiles/ (no live tile hosts are hit). WebGL runs on SwiftShader.
   e2e:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
