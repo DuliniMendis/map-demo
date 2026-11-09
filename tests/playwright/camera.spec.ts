@@ -31,6 +31,8 @@ declare global {
 type Ws2Window = Window & { __ws2: Ws2Debug; __map: MaplibreMap };
 
 const DEV_PAGE = '/src/map/controller/dev.html?hud=0';
+/** CI renders WebGL in software (SwiftShader) and is much slower. */
+const SLOW = process.env.CI ? 3 : 1;
 const BUDGET = { min: 2500, max: 4500, reduced: 400 };
 
 test.use({
@@ -80,7 +82,7 @@ async function openDevPage(page: Page, query = '') {
   });
   await mockTiles(page);
   await page.goto(DEV_PAGE + query);
-  await page.waitForFunction(() => window.__ws2?.ready === true, null, { timeout: 30_000 });
+  await page.waitForFunction(() => window.__ws2?.ready === true, null, { timeout: 30_000 * SLOW });
   return errors;
 }
 
@@ -227,7 +229,7 @@ test.describe('MapController (WS2)', () => {
       () => (window as Ws2Window).__ws2.controller!.cameraState === 'idle',
       null,
       {
-        timeout: 10_000,
+        timeout: 10_000 * SLOW,
       },
     );
     const center = await page.evaluate(() => (window as Ws2Window).__map.getCenter().toArray());

@@ -38,9 +38,10 @@ export default defineConfig({
   forbidOnly: CI,
   retries: CI ? 1 : 0,
   workers: CI ? 2 : undefined,
-  timeout: 30_000,
+  // CI renders WebGL in software (SwiftShader): every test is 3–5× slower than on a laptop GPU.
+  timeout: CI ? 90_000 : 30_000,
   expect: {
-    timeout: 10_000,
+    timeout: CI ? 30_000 : 10_000,
     toHaveScreenshot: { maxDiffPixelRatio: 0.02, animations: 'disabled', caret: 'hide' },
   },
   reporter: [

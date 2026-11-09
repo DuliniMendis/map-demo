@@ -4,6 +4,9 @@
 import type { Map as MaplibreMap } from 'maplibre-gl';
 import type { Page } from '@playwright/test';
 
+/** Multiplier for hard-coded waits: CI renders WebGL in software (SwiftShader) and is much slower. */
+export const SLOW = process.env.CI ? 3 : 1;
+
 declare global {
   interface Window {
     __map?: MaplibreMap;
@@ -28,7 +31,7 @@ export interface CameraSample {
 }
 
 export async function waitForMapHandle(page: Page): Promise<void> {
-  await page.waitForFunction(() => Boolean(window.__map), undefined, { timeout: 15_000 });
+  await page.waitForFunction(() => Boolean(window.__map), undefined, { timeout: 15_000 * SLOW });
 }
 
 /** Resolves once the style is loaded and the map has rendered with no tiles pending. */
@@ -77,7 +80,7 @@ export async function cameraLog(page: Page): Promise<CameraSample[]> {
 }
 
 /** Waits until the camera has started moving and then come to rest. */
-export async function waitForFlightEnd(page: Page, timeout = 10_000): Promise<void> {
+export async function waitForFlightEnd(page: Page, timeout = 10_000 * SLOW): Promise<void> {
   await page.waitForFunction(
     () => {
       const log = window.__cameraLog ?? [];

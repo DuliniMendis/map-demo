@@ -7,6 +7,7 @@ import {
   selectFromList,
   waitForFlightEnd,
   waitForMapIdle,
+  SLOW,
 } from './support/map.ts';
 
 // Real AUSTLANG ids present in both src/data/mock-nations.json and the WS3 data.
@@ -34,7 +35,7 @@ test.describe('select a nation', () => {
     await page.goto(`/?n=${KAURNA.id}`);
     // The deep-link flight starts once the overview has settled; the card shows when it lands.
     await expect(page.getByTestId('info-locality')).toHaveText(KAURNA.locality, {
-      timeout: 20_000,
+      timeout: 20_000 * SLOW,
     });
     await waitForMapIdle(page);
     const before = await getCamera(page);

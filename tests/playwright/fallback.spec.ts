@@ -1,5 +1,5 @@
 import { expect, test } from './support/fixtures.ts';
-import { waitForMapIdle } from './support/map.ts';
+import { waitForMapIdle, SLOW } from './support/map.ts';
 
 // WS1 brief: after 3 consecutive DEM tile errors, switch to AWS Terrain Tiles and emit
 // `style:dem-fallback` on the map; WS5 toasts "Using backup terrain".
@@ -23,7 +23,7 @@ test.describe('tile fallback', () => {
     });
     await page.goto('/');
     await expect(page.getByRole('status').filter({ hasText: /backup terrain/i })).toBeVisible({
-      timeout: 15_000,
+      timeout: 15_000 * SLOW,
     });
     await waitForMapIdle(page);
     expect(await page.evaluate(() => (window as { __demFallback?: boolean }).__demFallback)).toBe(
