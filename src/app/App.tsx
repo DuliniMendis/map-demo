@@ -129,10 +129,14 @@ export function App({ bootNationId = null }: AppProps) {
         <div className="app__top-right">
           <LayerControls onOverview={onOverview} />
         </div>
+        {/* WS4's card positions itself (and sits above the bottom sheet on narrow screens). */}
         {showCard && (
-          <div className="app__card">
-            <InfoCard nation={selected} onClose={closeCard} onBackToOverview={onOverview} />
-          </div>
+          <InfoCard
+            nation={selected}
+            onClose={closeCard}
+            onBackToOverview={onOverview}
+            className="app__card"
+          />
         )}
         <div className="app__bottom-right">
           <Attribution entries={attribution} />

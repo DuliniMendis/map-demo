@@ -29,14 +29,17 @@
   overflow: hidden;
 }
 
-/* < 900 px: map on top, list below (WS4's SidePanel may turn this into a bottom sheet). */
+/* < 900 px: WS4's SidePanel becomes a fixed bottom sheet (--cm-sheet-peek tall when collapsed).
+   The second row reserves the collapsed sheet's height so the map (and its attribution line)
+   ends just under it; the loading skeleton and error state render in that row before the sheet exists. */
 @media (max-width: 899.98px) {
   .app {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: minmax(0, 1fr) minmax(200px, 42%);
+    grid-template-rows: minmax(0, 1fr) var(--cm-sheet-peek, 164px);
     grid-template-areas: 'main' 'side';
   }
   .app__side {
+    overflow: visible;
     border-right: 0;
     border-top: 1px solid var(--border);
   }
@@ -47,7 +50,6 @@
 .app__top-left,
 .app__top-right,
 .app__bottom-right,
-.app__card,
 .app__banner {
   position: absolute;
   z-index: 2;
@@ -69,12 +71,13 @@
 .app__banner > * {
   pointer-events: auto;
 }
-.app__card {
-  left: var(--gap);
-  bottom: calc(var(--gap) + 28px);
-  max-width: min(380px, calc(100% - 2 * var(--gap)));
-  max-height: calc(100% - 140px);
-  overflow-y: auto;
+/* WS4's .cm-info-card is positioned already; on wide screens keep it clear of the attribution line. */
+@media (min-width: 900px) {
+  .cm-info-card.app__card {
+    left: var(--gap);
+    bottom: calc(var(--gap) + 28px);
+    max-height: calc(100% - 140px);
+  }
 }
 .app__bottom-right {
   right: 0;
@@ -377,8 +380,5 @@
   .app__banner {
     right: var(--gap);
     top: calc(var(--gap) + 52px);
-  }
-  .app__card {
-    bottom: var(--gap);
   }
 }
