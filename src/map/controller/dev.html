@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WS2 camera &amp; markers dev page</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #0b1a2a;
+        font:
+          13px/1.4 system-ui,
+          sans-serif;
+      }
+      #map {
+        position: absolute;
+        inset: 0;
+      }
+      #hud {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: 2;
+        max-width: 440px;
+        padding: 8px 10px;
+        border-radius: 6px;
+        background: rgb(255 255 255 / 0.92);
+      }
+      #hud button {
+        margin: 0 4px 4px 0;
+      }
+      #hud button[aria-pressed='true'] {
+        font-weight: 700;
+      }
+      #status {
+        margin-top: 4px;
+        font-family: ui-monospace, monospace;
+        white-space: pre-wrap;
+      }
+      body.hide-hud #hud {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map" data-testid="map-canvas"></div>
+    <div id="hud">
+      <div id="buttons"></div>
+      <label
+        ><input type="checkbox" id="reduced" /> reduced motion (overrides the OS setting)</label
+      >
+      <div id="status">loading…</div>
+    </div>
+    <script type="module" src="./dev.ts"></script>
+  </body>
+</html>
