@@ -40,22 +40,28 @@ async function loadMock(): Promise<NationsFile> {
 }
 
 /**
- * Fetches `/data/nations.json`. In dev, falls back to `src/data/mock-nations.json` when the real
- * file is missing (WS3 not landed yet). In production a missing or invalid file is an error.
+ * Mock fallback is on in dev, and in production builds made with `VITE_ALLOW_MOCK_DATA=1`
+ * (set on Vercel until WS3 lands the real file). Remove that env var once `nations.json` ships.
+ */
+const ALLOW_MOCK = import.meta.env.DEV || import.meta.env.VITE_ALLOW_MOCK_DATA === '1';
+
+/**
+ * Fetches `/data/nations.json`, falling back to `src/data/mock-nations.json` when the real file is
+ * missing and ALLOW_MOCK is set. Otherwise a missing or invalid file is an error.
  */
 export async function loadNations(fetchImpl: typeof fetch = fetch): Promise<NationsFile> {
   let res: Response | undefined;
   try {
     res = await fetchImpl(NATIONS_URL);
   } catch (err) {
-    if (import.meta.env.DEV) return loadMock();
+    if (ALLOW_MOCK) return loadMock();
     throw err;
   }
 
   // Vite's dev server answers unknown paths with index.html (200, text/html), so check the type too.
   const isJson = res.ok && (res.headers.get('content-type') ?? '').includes('json');
   if (!isJson) {
-    if (import.meta.env.DEV) {
+    if (ALLOW_MOCK) {
       console.info(`[loadNations] ${NATIONS_URL} not found; using mock data (10 nations).`);
       return loadMock();
     }
