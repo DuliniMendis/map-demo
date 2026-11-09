@@ -9,6 +9,8 @@ coverage
 .env
 .env.*
 !.env.example
+# committed on purpose: holds no secrets, only the pre-WS3 mock-data flag
+!.env.production
 *.local
 
 # logs
