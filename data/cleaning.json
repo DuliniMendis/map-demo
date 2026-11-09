@@ -1,0 +1,45 @@
+{
+  "_comment": "Synonym cleaning policy for scripts/build-nations.ts (see scripts/lib/clean.ts). AUSTLANG spellings are never altered; this file only drops non-name noise, splits merged entries, and excludes entries that must not be shown in the UI. Every action is listed in data/report.md.",
+  "drop": ["Other Australian Indigenous Languages", "Cape York Peninsula Languages", "etc"],
+  "replace": {
+    "Kwambarai\"Mole tribe\"": ["Kwambarai", "Mole tribe"],
+    "\"Cooma tribe\" Currak da bidgee": ["Cooma tribe", "Currak da bidgee"],
+    "\"Milang dialect\" Wakend": ["Milang dialect", "Wakend"],
+    "Daribalang >Goeng goeng": ["Daribalang", "Goeng goeng"],
+    "Dalabon ?Gundangbon": ["Dalabon", "Gundangbon"],
+    "Karranbal; man": ["Karranbal"],
+    "Gugu Warra; Laura Deighton tribe for Kokowara": ["Gugu Warra", "Laura Deighton tribe"],
+    "Yugambal: Ngarrabul": ["Yugambal", "Ngarrabul"],
+    "Yuggamurra for Janjula": ["Yuggamurra"],
+    "Waderi for Wadere": ["Waderi"],
+    "Coo coo warra for Laia": ["Coo coo warra"],
+    "Yuckaburra this is a local group name": ["Yuckaburra"],
+    "Kujera Gajirrawoong the Mirrawoong name for Gajirrabeng": ["Kujera Gajirrawoong"],
+    "Mirdiragoort: evidently related to Wotti wotti dialect": ["Mirdiragoort"],
+    "Mungathirri nganha from the high sandhills": ["Mungathirri nganha"],
+    "possible further name: Yaithmathang": ["Yaithmathang"],
+    "Currs Brapkut appear to be variants of Nundadjali": [],
+    "Jirkala Mining has another explanation for the name": [],
+    "Ngalkbon consist of the word for 'mouth? in the relevant language plus an element bon": [],
+    "Tatiara tribe spoke the Nalunghee language according to Mathews 1898": [],
+    "Yir Yoront name for Yiirk Thangalkl": [],
+    "not the same as Lengiti of Weipa": []
+  },
+  "dropFor": {
+    "S26.1": ["woor", "run", "rong"]
+  },
+  "exclude": [
+    {
+      "pattern": "\\btribes?\\b",
+      "reason": "contains \"tribe\" (colonial-era label; PLAN.md §8: the UI never says \"tribe\")"
+    },
+    {
+      "pattern": "\\bblacks?\\b",
+      "reason": "colonial-era racial descriptor"
+    },
+    {
+      "pattern": "nigger",
+      "reason": "historical spelling that reads as a racial slur"
+    }
+  ]
+}
