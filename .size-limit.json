@@ -1,0 +1,35 @@
+[
+  {
+    "name": "App JS, excluding MapLibre (gzip)",
+    "path": [
+      "node_modules/.cache/size-dist/assets/*.js",
+      "!node_modules/.cache/size-dist/assets/maplibre-*.js"
+    ],
+    "gzip": true,
+    "limit": "150 kB"
+  },
+  {
+    "name": "MapLibre GL main chunk (gzip)",
+    "path": "node_modules/.cache/size-dist/assets/maplibre-*.js",
+    "gzip": true,
+    "limit": "300 kB"
+  },
+  {
+    "name": "MapLibre GL worker (gzip, loaded off the main thread)",
+    "path": "node_modules/.cache/size-dist/assets/maplibre-gl-worker-*.mjs",
+    "gzip": true,
+    "limit": "160 kB"
+  },
+  {
+    "name": "CSS (gzip)",
+    "path": "node_modules/.cache/size-dist/assets/*.css",
+    "gzip": true,
+    "limit": "16 kB"
+  },
+  {
+    "name": "Total JS in the shipped build, dist/ (gzip)",
+    "path": ["dist/assets/*.js", "dist/assets/*.mjs"],
+    "gzip": true,
+    "limit": "650 kB"
+  }
+]
