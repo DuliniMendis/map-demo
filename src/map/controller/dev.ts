@@ -173,8 +173,8 @@ const ws2 = {
 };
 declare global {
   interface Window {
-    __ws2: typeof ws2;
-    __map: maplibregl.Map;
+    __ws2?: typeof ws2;
+    __map?: maplibregl.Map;
   }
 }
 window.__ws2 = ws2;

@@ -23,5 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true
   },
-  "include": ["tests", "playwright.config.ts"]
+  "include": ["tests", "playwright.config.ts"],
+  /* Type-checked by tsconfig.scripts.json with the data scripts it imports. */
+  "exclude": ["tests/unit/nations-data.test.ts"]
 }

@@ -4,6 +4,31 @@
 // Tiles are mocked (flat terrarium DEM, solid imagery, empty glyphs) so it never hits the free tile hosts;
 // set WS2_LIVE_TILES=1 to fly over the real ones. WS6 adopts this file into the Playwright config.
 import { expect, test, type Page } from '@playwright/test';
+import type { Map as MaplibreMap } from 'maplibre-gl';
+import './support/map.ts'; // declares (window as Ws2Window).__map
+
+/** The subset of the WS2 dev page's `(window as Ws2Window).__ws2` debug object (src/map/controller/dev.ts) these tests use. */
+interface Ws2Debug {
+  ready: boolean;
+  nations: { id: string; lng: number; lat: number }[];
+  controller: { cameraState: string } | null;
+  states: { s: string; at: number }[];
+  steps: { phase: 'start' | 'end'; completed?: boolean; steps?: { type: string }[] }[];
+  clicks: string[];
+  startSampling(): void;
+  stopSampling(): { zoom: number; pitch: number; centerElevation: number; t: number }[];
+  select(id: string): Promise<void>;
+  overview(): Promise<void>;
+}
+
+declare global {
+  interface Window {
+    __ws2?: Ws2Debug;
+  }
+}
+
+/** Typed handles for use inside `page.evaluate` callbacks, where the dev page has set both globals. */
+type Ws2Window = Window & { __ws2: Ws2Debug; __map: MaplibreMap };
 
 const DEV_PAGE = '/src/map/controller/dev.html?hud=0';
 const BUDGET = { min: 2500, max: 4500, reduced: 400 };
@@ -62,7 +87,7 @@ async function openDevPage(page: Page, query = '') {
 /** Selects `id` the way the app will and returns timing and camera samples for the flight. */
 async function fly(page: Page, id: string) {
   return page.evaluate(async (id) => {
-    const ws2 = window.__ws2;
+    const ws2 = (window as Ws2Window).__ws2;
     ws2.states = [];
     ws2.steps = [];
     ws2.startSampling();
@@ -70,7 +95,7 @@ async function fly(page: Page, id: string) {
     await ws2.select(id);
     const ms = performance.now() - t0;
     const samples = ws2.stopSampling();
-    const map = window.__map;
+    const map = (window as Ws2Window).__map;
     const plan = ws2.steps.find((s) => s.phase === 'start')?.steps ?? [];
     return {
       ms,
@@ -92,12 +117,12 @@ test.describe('MapController (WS2)', () => {
   test('installs the nations source and layers', async ({ page }) => {
     const errors = await openDevPage(page);
     const info = await page.evaluate(() => {
-      const map = window.__map;
+      const map = (window as Ws2Window).__map;
       const ids = map.getStyle().layers.map((l) => l.id);
       return {
         nationLayers: ids.filter((id) => id.startsWith('nations-')),
         features: map.querySourceFeatures('nations').length,
-        cameraState: window.__ws2.controller!.cameraState,
+        cameraState: (window as Ws2Window).__ws2.controller!.cameraState,
       };
     });
     expect(info.nationLayers).toEqual(['nations-selected-ring', 'nations-circle', 'nations-label']);
@@ -119,9 +144,9 @@ test.describe('MapController (WS2)', () => {
     expect(r.end.pitch).toBeCloseTo(62, 0);
     expect(r.end.bearing).toBeCloseTo(-18, 0);
     const selected = await page.evaluate(() =>
-      window.__map.getFeatureState({
+      (window as Ws2Window).__map.getFeatureState({
         source: 'nations',
-        id: window.__ws2.nations.findIndex((n) => n.id === 'Y6'),
+        id: (window as Ws2Window).__ws2.nations.findIndex((n) => n.id === 'Y6'),
       }),
     );
     expect(selected).toMatchObject({ selected: true });
@@ -146,7 +171,7 @@ test.describe('MapController (WS2)', () => {
   test('a new selection mid-flight cancels the old one', async ({ page }) => {
     await openDevPage(page);
     const r = await page.evaluate(async () => {
-      const ws2 = window.__ws2;
+      const ws2 = (window as Ws2Window).__ws2;
       ws2.states = [];
       const first = ws2.select('W9');
       await new Promise((res) => setTimeout(res, 800));
@@ -157,7 +182,7 @@ test.describe('MapController (WS2)', () => {
       return {
         firstDoneWhileFlying,
         states: ws2.states.map((s) => s.s),
-        center: window.__map.getCenter().toArray(),
+        center: (window as Ws2Window).__map.getCenter().toArray(),
       };
     });
     expect(r.firstDoneWhileFlying).toBe(true);
@@ -167,7 +192,7 @@ test.describe('MapController (WS2)', () => {
 
   test('a user drag interrupts the flight and leaves the camera idle', async ({ page }) => {
     await openDevPage(page);
-    const done = page.evaluate(() => window.__ws2.select('N198'));
+    const done = page.evaluate(() => (window as Ws2Window).__ws2.select('N198'));
     await page.waitForTimeout(1200);
     await page.mouse.move(700, 450);
     await page.mouse.down();
@@ -175,9 +200,11 @@ test.describe('MapController (WS2)', () => {
     await page.mouse.up();
     await done;
     const r = await page.evaluate(() => ({
-      state: window.__ws2.controller!.cameraState,
-      zoom: window.__map.getZoom(),
-      ends: window.__ws2.steps.filter((s) => s.phase === 'end').map((s) => s.completed),
+      state: (window as Ws2Window).__ws2.controller!.cameraState,
+      zoom: (window as Ws2Window).__map.getZoom(),
+      ends: (window as Ws2Window).__ws2.steps
+        .filter((s) => s.phase === 'end')
+        .map((s) => s.completed),
     }));
     expect(r.state).toBe('idle');
     expect(r.ends.at(-1)).toBe(false);
@@ -186,18 +213,24 @@ test.describe('MapController (WS2)', () => {
 
   test('clicking a marker reports its id and flies there', async ({ page }) => {
     await openDevPage(page);
-    await page.evaluate(() => window.__map.once('idle'));
+    await page.evaluate(() => (window as Ws2Window).__map.once('idle'));
     const p = await page.evaluate(() => {
-      const n = window.__ws2.nations.find((x) => x.id === 'L3')!;
-      const pt = window.__map.project([n.lng, n.lat]);
+      const n = (window as Ws2Window).__ws2.nations.find((x) => x.id === 'L3')!;
+      const pt = (window as Ws2Window).__map.project([n.lng, n.lat]);
       return { x: pt.x, y: pt.y };
     });
     await page.mouse.click(p.x + 3, p.y - 2); // within the hit tolerance, not dead centre
-    await expect.poll(() => page.evaluate(() => window.__ws2.clicks)).toEqual(['L3']);
-    await page.waitForFunction(() => window.__ws2.controller!.cameraState === 'idle', null, {
-      timeout: 10_000,
-    });
-    const center = await page.evaluate(() => window.__map.getCenter().toArray());
+    await expect
+      .poll(() => page.evaluate(() => (window as Ws2Window).__ws2.clicks))
+      .toEqual(['L3']);
+    await page.waitForFunction(
+      () => (window as Ws2Window).__ws2.controller!.cameraState === 'idle',
+      null,
+      {
+        timeout: 10_000,
+      },
+    );
+    const center = await page.evaluate(() => (window as Ws2Window).__map.getCenter().toArray());
     expect(center[0]).toBeCloseTo(138.408466, 3);
   });
 
@@ -206,15 +239,22 @@ test.describe('MapController (WS2)', () => {
   }) => {
     await openDevPage(page);
     await page.evaluate(async () => {
-      window.__map.jumpTo({ center: [150.048412, -33.92], zoom: 11, pitch: 75, bearing: 0 });
-      await window.__map.once('idle');
+      (window as Ws2Window).__map.jumpTo({
+        center: [150.048412, -33.92],
+        zoom: 11,
+        pitch: 75,
+        bearing: 0,
+      });
+      await (window as Ws2Window).__map.once('idle');
     });
     const p = await page.evaluate(() => {
-      const pt = window.__map.project([150.048412, -33.889578]);
+      const pt = (window as Ws2Window).__map.project([150.048412, -33.889578]);
       return { x: pt.x, y: pt.y };
     });
     await page.mouse.click(p.x, p.y);
-    await expect.poll(() => page.evaluate(() => window.__ws2.clicks)).toEqual(['S64']);
+    await expect
+      .poll(() => page.evaluate(() => (window as Ws2Window).__ws2.clicks))
+      .toEqual(['S64']);
   });
 
   test('reduced motion: a single jumpTo inside 400 ms', async ({ page }) => {
@@ -230,12 +270,12 @@ test.describe('MapController (WS2)', () => {
     await openDevPage(page);
     await fly(page, 'A43');
     const end = await page.evaluate(async () => {
-      await window.__ws2.overview();
-      const m = window.__map;
+      await (window as Ws2Window).__ws2.overview();
+      const m = (window as Ws2Window).__map;
       return {
         zoom: m.getZoom(),
         pitch: m.getPitch(),
-        state: window.__ws2.controller!.cameraState,
+        state: (window as Ws2Window).__ws2.controller!.cameraState,
       };
     });
     expect(end).toEqual({

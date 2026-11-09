@@ -8,3 +8,7 @@ docs
 *.md
 src/types/nation.ts
 src/map/style/ids.ts
+.claude
+.lighthouseci
+test-results
+playwright-report
