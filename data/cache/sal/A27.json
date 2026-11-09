@@ -1,0 +1,13 @@
+{
+  "id": "A27",
+  "lng": 123.654874,
+  "lat": -27.75221,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50341",
+    "locality": "Cosmo Newbery",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

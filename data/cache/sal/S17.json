@@ -1,0 +1,8 @@
+{
+  "id": "S17",
+  "lng": 142.120736,
+  "lat": -35.86852,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "22137", "locality": "Rainbow", "state": "Victoria", "stateCode": "VIC" }
+}

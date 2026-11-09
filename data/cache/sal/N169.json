@@ -1,0 +1,13 @@
+{
+  "id": "N169",
+  "lng": 133.585051,
+  "lat": -13.653749,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70114",
+    "locality": "Gulung Mardrulk",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

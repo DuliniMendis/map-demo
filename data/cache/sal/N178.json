@@ -1,0 +1,13 @@
+{
+  "id": "N178",
+  "lng": 131.677951,
+  "lat": -13.451842,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70044",
+    "locality": "Burrundie",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

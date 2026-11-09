@@ -1,0 +1,13 @@
+{
+  "id": "N78",
+  "lng": 133.619155,
+  "lat": -14.891247,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70093",
+    "locality": "Elsey",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

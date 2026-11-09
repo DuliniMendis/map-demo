@@ -1,0 +1,13 @@
+{
+  "id": "A58",
+  "lng": 120.029409,
+  "lat": -21.220189,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50899",
+    "locality": "Marble Bar",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

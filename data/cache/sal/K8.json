@@ -1,0 +1,13 @@
+{
+  "id": "K8",
+  "lng": 122.527413,
+  "lat": -17.232389,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51542",
+    "locality": "Waterbank",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

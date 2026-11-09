@@ -1,0 +1,13 @@
+{
+  "id": "T11",
+  "lng": 144.955727,
+  "lat": -40.666983,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "60735",
+    "locality": "West Montagu",
+    "state": "Tasmania",
+    "stateCode": "TAS"
+  }
+}

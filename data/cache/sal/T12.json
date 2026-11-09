@@ -1,0 +1,13 @@
+{
+  "id": "T12",
+  "lng": 145.373733,
+  "lat": -40.856776,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "60131",
+    "locality": "Cowrie Point",
+    "state": "Tasmania",
+    "stateCode": "TAS"
+  }
+}

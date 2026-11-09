@@ -1,0 +1,13 @@
+{
+  "id": "E51",
+  "lng": 147.475273,
+  "lat": -22.314023,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31528",
+    "locality": "Kilcummin",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

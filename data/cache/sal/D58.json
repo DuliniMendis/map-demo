@@ -1,0 +1,13 @@
+{
+  "id": "D58",
+  "lng": 145.981323,
+  "lat": -35.51201,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13061",
+    "locality": "Nyora (NSW)",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

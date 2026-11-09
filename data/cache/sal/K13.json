@@ -1,0 +1,13 @@
+{
+  "id": "K13",
+  "lng": 122.705729,
+  "lat": -17.028029,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50380",
+    "locality": "Dampier Peninsula",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

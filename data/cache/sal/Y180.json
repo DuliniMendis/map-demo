@@ -1,0 +1,15 @@
+{
+  "id": "Y180",
+  "lng": 146.789051,
+  "lat": -19.235268,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "32486",
+    "locality": "Rowes Bay",
+    "state": "Queensland",
+    "stateCode": "QLD",
+    "distanceKm": 0.19
+  }
+}

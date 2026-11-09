@@ -1,0 +1,15 @@
+{
+  "id": "N153",
+  "lng": 136.807861,
+  "lat": -15.802081,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "70220",
+    "locality": "Pellew Islands",
+    "state": "Northern Territory",
+    "stateCode": "NT",
+    "distanceKm": 6.175
+  }
+}

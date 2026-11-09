@@ -1,0 +1,13 @@
+{
+  "id": "Y95",
+  "lng": 143.220954,
+  "lat": -17.312008,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32402",
+    "locality": "Red River",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

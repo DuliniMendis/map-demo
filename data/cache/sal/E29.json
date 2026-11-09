@@ -1,0 +1,13 @@
+{
+  "id": "E29",
+  "lng": 152.667537,
+  "lat": -26.005603,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30060",
+    "locality": "Anderleigh",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

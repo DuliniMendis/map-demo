@@ -1,0 +1,13 @@
+{
+  "id": "S87",
+  "lng": 141.800483,
+  "lat": -37.389334,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "21112",
+    "locality": "Gringegalgona",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

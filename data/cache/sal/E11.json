@@ -1,0 +1,13 @@
+{
+  "id": "E11",
+  "lng": 151.050114,
+  "lat": -29.757441,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11990",
+    "locality": "Inverell",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

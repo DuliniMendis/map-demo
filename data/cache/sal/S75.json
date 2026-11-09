@@ -1,0 +1,8 @@
+{
+  "id": "S75",
+  "lng": 142.32902,
+  "lat": -38.169915,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "22712", "locality": "Warrong", "state": "Victoria", "stateCode": "VIC" }
+}

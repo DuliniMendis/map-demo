@@ -1,0 +1,13 @@
+{
+  "id": "A34",
+  "lng": 119.775031,
+  "lat": -25.57988,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50795",
+    "locality": "Kumarina",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

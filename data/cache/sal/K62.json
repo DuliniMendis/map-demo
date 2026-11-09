@@ -1,0 +1,13 @@
+{
+  "id": "K62",
+  "lng": 127.973917,
+  "lat": -15.632671,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50442",
+    "locality": "Durack (WA)",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

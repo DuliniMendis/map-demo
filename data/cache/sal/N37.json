@@ -1,0 +1,13 @@
+{
+  "id": "N37",
+  "lng": 132.093124,
+  "lat": -11.361435,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70058",
+    "locality": "Cobourg",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

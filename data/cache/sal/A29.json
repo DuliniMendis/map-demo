@@ -1,0 +1,13 @@
+{
+  "id": "A29",
+  "lng": 121.119645,
+  "lat": -25.01014,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50855",
+    "locality": "Little Sandy Desert",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

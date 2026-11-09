@@ -1,0 +1,13 @@
+{
+  "id": "W34",
+  "lng": 116.372795,
+  "lat": -23.030559,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50671",
+    "locality": "Innawanga",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

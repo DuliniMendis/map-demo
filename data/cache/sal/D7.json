@@ -1,0 +1,13 @@
+{
+  "id": "D7",
+  "lng": 143.940913,
+  "lat": -33.873186,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11877",
+    "locality": "Hatfield",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

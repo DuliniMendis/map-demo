@@ -1,0 +1,13 @@
+{
+  "id": "D40",
+  "lng": 150.446773,
+  "lat": -26.795066,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31243",
+    "locality": "Greenswamp",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "Y44",
+  "lng": 142.971983,
+  "lat": -13.398096,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30080",
+    "locality": "Archer River",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

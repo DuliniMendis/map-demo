@@ -1,0 +1,13 @@
+{
+  "id": "A22",
+  "lng": 125.346388,
+  "lat": -28.771514,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51097",
+    "locality": "Neale",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "D39",
+  "lng": 150.324896,
+  "lat": -28.621931,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "10440",
+    "locality": "Boggabilla",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

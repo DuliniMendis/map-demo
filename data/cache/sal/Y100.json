@@ -1,0 +1,13 @@
+{
+  "id": "Y100",
+  "lng": 145.450573,
+  "lat": -16.247314,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31533",
+    "locality": "Kimberley (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

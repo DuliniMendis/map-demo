@@ -1,0 +1,8 @@
+{
+  "id": "T13",
+  "lng": 146.568073,
+  "lat": -41.275549,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "60261", "locality": "Harford", "state": "Tasmania", "stateCode": "TAS" }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "D52",
+  "lng": 146.325683,
+  "lat": -29.839283,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12995",
+    "locality": "North Bourke",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "Y21",
+  "lng": 142.313168,
+  "lat": -12.40891,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "33030", "locality": "Wenlock", "state": "Queensland", "stateCode": "QLD" }
+}

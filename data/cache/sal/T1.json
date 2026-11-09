@@ -1,0 +1,13 @@
+{
+  "id": "T1",
+  "lng": 146.033582,
+  "lat": -41.32505,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "60521",
+    "locality": "Preston (Tas.)",
+    "state": "Tasmania",
+    "stateCode": "TAS"
+  }
+}

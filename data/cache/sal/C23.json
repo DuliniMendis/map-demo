@@ -1,0 +1,13 @@
+{
+  "id": "C23",
+  "lng": 136.844652,
+  "lat": -17.669228,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70068",
+    "locality": "Creswell",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

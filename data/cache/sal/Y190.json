@@ -1,0 +1,13 @@
+{
+  "id": "Y190",
+  "lng": 142.464758,
+  "lat": -10.914941,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32582",
+    "locality": "Somerset (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

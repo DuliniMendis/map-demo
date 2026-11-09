@@ -1,0 +1,13 @@
+{
+  "id": "E4",
+  "lng": 152.934012,
+  "lat": -31.069535,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13091",
+    "locality": "Old Station",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "D25",
+  "lng": 145.330811,
+  "lat": -29.759778,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11543",
+    "locality": "Fords Bridge",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

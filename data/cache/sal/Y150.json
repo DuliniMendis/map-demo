@@ -1,0 +1,13 @@
+{
+  "id": "Y150",
+  "lng": 145.995579,
+  "lat": -18.058996,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32450",
+    "locality": "Rockingham (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

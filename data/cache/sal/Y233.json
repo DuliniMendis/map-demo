@@ -1,0 +1,13 @@
+{
+  "id": "Y233",
+  "lng": 144.598423,
+  "lat": -17.210452,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30601",
+    "locality": "Chillagoe",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

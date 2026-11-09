@@ -1,0 +1,13 @@
+{
+  "id": "Y119",
+  "lng": 145.85699,
+  "lat": -17.262976,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "33161",
+    "locality": "Wooroonooran (Cairns - Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

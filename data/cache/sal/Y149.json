@@ -1,0 +1,8 @@
+{
+  "id": "Y149",
+  "lng": 145.839966,
+  "lat": -17.804287,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "31264", "locality": "Gulngai", "state": "Queensland", "stateCode": "QLD" }
+}

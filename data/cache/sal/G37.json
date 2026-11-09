@@ -1,0 +1,13 @@
+{
+  "id": "G37",
+  "lng": 138.981143,
+  "lat": -16.904907,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31097",
+    "locality": "Gangalidda",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

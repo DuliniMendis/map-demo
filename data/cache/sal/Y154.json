@@ -1,0 +1,13 @@
+{
+  "id": "Y154",
+  "lng": 146.622501,
+  "lat": -18.734102,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32260",
+    "locality": "Palm Island",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

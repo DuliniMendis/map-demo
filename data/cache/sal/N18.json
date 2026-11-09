@@ -1,0 +1,13 @@
+{
+  "id": "N18",
+  "lng": 130.390302,
+  "lat": -15.154028,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70038",
+    "locality": "Bradshaw",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

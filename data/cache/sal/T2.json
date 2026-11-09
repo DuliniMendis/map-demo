@@ -1,0 +1,13 @@
+{
+  "id": "T2",
+  "lng": 147.768715,
+  "lat": -42.503567,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "60082",
+    "locality": "Buckland (Tas.)",
+    "state": "Tasmania",
+    "stateCode": "TAS"
+  }
+}

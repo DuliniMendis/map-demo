@@ -1,0 +1,13 @@
+{
+  "id": "E40",
+  "lng": 150.151432,
+  "lat": -24.18607,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31207",
+    "locality": "Goovigen",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

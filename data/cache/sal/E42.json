@@ -1,0 +1,13 @@
+{
+  "id": "E42",
+  "lng": 150.885237,
+  "lat": -23.643691,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32800",
+    "locality": "The Narrows (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

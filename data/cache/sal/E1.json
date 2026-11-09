@@ -1,0 +1,13 @@
+{
+  "id": "E1",
+  "lng": 151.211697,
+  "lat": -32.519799,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11343",
+    "locality": "Dyrring",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

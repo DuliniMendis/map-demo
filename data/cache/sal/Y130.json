@@ -1,0 +1,15 @@
+{
+  "id": "Y130",
+  "lng": 146.169417,
+  "lat": -18.347982,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "31340",
+    "locality": "Hinchinbrook (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD",
+    "distanceKm": 0.297
+  }
+}

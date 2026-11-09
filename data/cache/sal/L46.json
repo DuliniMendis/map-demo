@@ -1,0 +1,13 @@
+{
+  "id": "L46",
+  "lng": 140.840247,
+  "lat": -26.955305,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40490",
+    "locality": "Gidgealpa",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

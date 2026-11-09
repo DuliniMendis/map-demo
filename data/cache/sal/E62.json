@@ -1,0 +1,15 @@
+{
+  "id": "E62",
+  "lng": 147.674553,
+  "lat": -19.827167,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "31268",
+    "locality": "Gumlu",
+    "state": "Queensland",
+    "stateCode": "QLD",
+    "distanceKm": 0.249
+  }
+}

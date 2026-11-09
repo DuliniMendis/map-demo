@@ -1,0 +1,13 @@
+{
+  "id": "T4",
+  "lng": 147.188133,
+  "lat": -41.667699,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "60350",
+    "locality": "Longford (Tas.)",
+    "state": "Tasmania",
+    "stateCode": "TAS"
+  }
+}

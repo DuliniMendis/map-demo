@@ -1,0 +1,13 @@
+{
+  "id": "G28",
+  "lng": 140.365116,
+  "lat": -18.132101,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30548",
+    "locality": "Carpentaria",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

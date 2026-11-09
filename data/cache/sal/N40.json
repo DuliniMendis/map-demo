@@ -1,0 +1,13 @@
+{
+  "id": "N40",
+  "lng": 132.59603,
+  "lat": -12.211678,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70140",
+    "locality": "Kakadu",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

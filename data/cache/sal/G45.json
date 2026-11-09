@@ -1,0 +1,8 @@
+{
+  "id": "G45",
+  "lng": 140.166642,
+  "lat": -18.270588,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "32667", "locality": "Stokes", "state": "Queensland", "stateCode": "QLD" }
+}

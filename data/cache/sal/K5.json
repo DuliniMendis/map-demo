@@ -1,0 +1,13 @@
+{
+  "id": "K5",
+  "lng": 125.605169,
+  "lat": -17.724741,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50760",
+    "locality": "King Leopold Ranges",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

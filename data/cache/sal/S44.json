@@ -1,0 +1,13 @@
+{
+  "id": "S44",
+  "lng": 147.692595,
+  "lat": -36.364169,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "21884",
+    "locality": "Nariel Valley",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

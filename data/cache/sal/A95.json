@@ -1,0 +1,13 @@
+{
+  "id": "A95",
+  "lng": 118.366999,
+  "lat": -29.373824,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51326",
+    "locality": "Sandstone",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

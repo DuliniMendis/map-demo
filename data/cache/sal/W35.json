@@ -1,0 +1,13 @@
+{
+  "id": "W35",
+  "lng": 116.45088,
+  "lat": -21.405484,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50519",
+    "locality": "Fortescue (WA)",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "W11",
+  "lng": 115.919361,
+  "lat": -30.857444,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51677",
+    "locality": "Yathroo",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

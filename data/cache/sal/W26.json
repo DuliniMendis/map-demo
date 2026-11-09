@@ -1,0 +1,13 @@
+{
+  "id": "W26",
+  "lng": 114.940864,
+  "lat": -22.522886,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51672",
+    "locality": "Yannarie",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "N151",
+  "lng": 136.585388,
+  "lat": -13.931089,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70012",
+    "locality": "Anindilyakwa",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

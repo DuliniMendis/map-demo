@@ -1,0 +1,13 @@
+{
+  "id": "G19",
+  "lng": 139.035777,
+  "lat": -18.533638,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31249",
+    "locality": "Gregory (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

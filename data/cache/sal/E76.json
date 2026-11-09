@@ -1,0 +1,13 @@
+{
+  "id": "E76",
+  "lng": 152.914699,
+  "lat": -28.126543,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32733",
+    "locality": "Tamrookum",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

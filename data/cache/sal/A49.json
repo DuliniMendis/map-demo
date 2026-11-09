@@ -1,0 +1,13 @@
+{
+  "id": "A49",
+  "lng": 120.470826,
+  "lat": -23.833641,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50253",
+    "locality": "Capricorn",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "A89",
+  "lng": 127.600466,
+  "lat": -19.666746,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51415",
+    "locality": "Sturt Creek",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

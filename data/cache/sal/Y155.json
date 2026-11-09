@@ -1,0 +1,13 @@
+{
+  "id": "Y155",
+  "lng": 146.817866,
+  "lat": -19.265119,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32384",
+    "locality": "Railway Estate",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

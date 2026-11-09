@@ -1,0 +1,13 @@
+{
+  "id": "E88",
+  "lng": 152.695135,
+  "lat": -27.353033,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30977",
+    "locality": "England Creek",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

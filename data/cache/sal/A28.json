@@ -1,0 +1,13 @@
+{
+  "id": "A28",
+  "lng": 130.463371,
+  "lat": -27.286141,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40022",
+    "locality": "Anangu Pitjantjatjara Yankunytjatjara",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "W17",
+  "lng": 113.805295,
+  "lat": -26.057035,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "51344",
+    "locality": "Shark Bay",
+    "state": "Western Australia",
+    "stateCode": "WA",
+    "distanceKm": 6.553
+  }
+}

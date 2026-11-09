@@ -1,0 +1,13 @@
+{
+  "id": "G26",
+  "lng": 139.552731,
+  "lat": -18.022513,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30443",
+    "locality": "Burketown",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

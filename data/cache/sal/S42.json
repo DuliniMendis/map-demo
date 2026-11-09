@@ -1,0 +1,8 @@
+{
+  "id": "S42",
+  "lng": 147.440912,
+  "lat": -38.087572,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "21639", "locality": "Meerlieu", "state": "Victoria", "stateCode": "VIC" }
+}

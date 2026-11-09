@@ -1,0 +1,13 @@
+{
+  "id": "N128",
+  "lng": 135.588614,
+  "lat": -13.86981,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70214",
+    "locality": "Numburindi",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

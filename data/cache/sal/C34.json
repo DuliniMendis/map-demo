@@ -1,0 +1,13 @@
+{
+  "id": "C34",
+  "lng": 130.480725,
+  "lat": -19.250305,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70248",
+    "locality": "Tanami (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

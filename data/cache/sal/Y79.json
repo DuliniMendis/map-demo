@@ -1,0 +1,8 @@
+{
+  "id": "Y79",
+  "lng": 144.784569,
+  "lat": -14.653637,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "32658", "locality": "Starcke", "state": "Queensland", "stateCode": "QLD" }
+}

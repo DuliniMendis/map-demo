@@ -1,0 +1,13 @@
+{
+  "id": "S8",
+  "lng": 139.375514,
+  "lat": -35.451318,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "41562",
+    "locality": "Wellington East",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

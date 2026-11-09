@@ -1,0 +1,13 @@
+{
+  "id": "C31",
+  "lng": 131.995518,
+  "lat": -17.557473,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70119",
+    "locality": "Gurindji",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

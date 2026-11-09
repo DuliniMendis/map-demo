@@ -1,0 +1,13 @@
+{
+  "id": "L31",
+  "lng": 139.498728,
+  "lat": -25.904464,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30259",
+    "locality": "Birdsville",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

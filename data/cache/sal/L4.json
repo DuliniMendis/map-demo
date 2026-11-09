@@ -1,0 +1,13 @@
+{
+  "id": "L4",
+  "lng": 138.069439,
+  "lat": -32.81783,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "41614",
+    "locality": "Wilmington",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

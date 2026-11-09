@@ -1,0 +1,8 @@
+{
+  "id": "Y12",
+  "lng": 142.116504,
+  "lat": -11.928496,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "31758", "locality": "Mapoon", "state": "Queensland", "stateCode": "QLD" }
+}

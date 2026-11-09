@@ -1,0 +1,13 @@
+{
+  "id": "G36",
+  "lng": 141.934732,
+  "lat": -17.885734,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30271",
+    "locality": "Blackbull",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

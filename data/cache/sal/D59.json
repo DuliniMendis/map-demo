@@ -1,0 +1,13 @@
+{
+  "id": "D59",
+  "lng": 142.414166,
+  "lat": -31.808488,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12367",
+    "locality": "Little Topar",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

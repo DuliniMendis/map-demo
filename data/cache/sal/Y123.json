@@ -1,0 +1,13 @@
+{
+  "id": "Y123",
+  "lng": 145.661334,
+  "lat": -17.740227,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32974",
+    "locality": "Walter Hill",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

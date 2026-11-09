@@ -1,0 +1,8 @@
+{
+  "id": "D36",
+  "lng": 152.183609,
+  "lat": -28.183476,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "33204", "locality": "Yangan", "state": "Queensland", "stateCode": "QLD" }
+}

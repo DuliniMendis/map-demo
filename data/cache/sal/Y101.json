@@ -1,0 +1,8 @@
+{
+  "id": "Y101",
+  "lng": 142.021219,
+  "lat": -15.599672,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "31759", "locality": "Maramie", "state": "Queensland", "stateCode": "QLD" }
+}

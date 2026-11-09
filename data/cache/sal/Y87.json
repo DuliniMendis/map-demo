@@ -1,0 +1,8 @@
+{
+  "id": "Y87",
+  "lng": 145.34248,
+  "lat": -16.219343,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "32154", "locality": "Noah", "state": "Queensland", "stateCode": "QLD" }
+}

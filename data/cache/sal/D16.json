@@ -1,0 +1,13 @@
+{
+  "id": "D16",
+  "lng": 140.990188,
+  "lat": -31.948011,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40912",
+    "locality": "Mooleulooloo",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

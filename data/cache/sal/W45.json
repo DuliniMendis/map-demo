@@ -1,0 +1,13 @@
+{
+  "id": "W45",
+  "lng": 119.987444,
+  "lat": -30.42931,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50818",
+    "locality": "Lake Deborah",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

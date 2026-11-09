@@ -1,0 +1,13 @@
+{
+  "id": "G35",
+  "lng": 139.489224,
+  "lat": -17.030579,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32604",
+    "locality": "South Wellesley Islands",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

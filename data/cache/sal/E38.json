@@ -1,0 +1,13 @@
+{
+  "id": "E38",
+  "lng": 149.1337,
+  "lat": -23.330161,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31436",
+    "locality": "Jellinbah",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

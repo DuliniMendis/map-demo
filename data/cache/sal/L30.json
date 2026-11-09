@@ -1,0 +1,13 @@
+{
+  "id": "L30",
+  "lng": 143.23894,
+  "lat": -26.823468,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30982",
+    "locality": "Eromanga",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

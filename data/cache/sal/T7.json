@@ -1,0 +1,8 @@
+{
+  "id": "T7",
+  "lng": 147.802052,
+  "lat": -41.516397,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "60386", "locality": "Mathinna", "state": "Tasmania", "stateCode": "TAS" }
+}

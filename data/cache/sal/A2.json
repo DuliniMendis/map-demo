@@ -1,0 +1,13 @@
+{
+  "id": "A2",
+  "lng": 121.487576,
+  "lat": -32.110218,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51127",
+    "locality": "Norseman",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

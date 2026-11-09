@@ -1,0 +1,13 @@
+{
+  "id": "S88",
+  "lng": 142.999563,
+  "lat": -35.724061,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "22402",
+    "locality": "Sutton (Vic.)",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

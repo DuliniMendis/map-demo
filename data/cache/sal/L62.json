@@ -1,0 +1,13 @@
+{
+  "id": "L62",
+  "lng": 142.952897,
+  "lat": -23.534458,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31685",
+    "locality": "Longreach (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

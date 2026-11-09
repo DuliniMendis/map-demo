@@ -1,0 +1,13 @@
+{
+  "id": "D3",
+  "lng": 149.087095,
+  "lat": -34.980296,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12902",
+    "locality": "Nanima",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

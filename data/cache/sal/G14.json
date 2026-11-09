@@ -1,0 +1,13 @@
+{
+  "id": "G14",
+  "lng": 137.462377,
+  "lat": -19.327052,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70230",
+    "locality": "Ranken",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

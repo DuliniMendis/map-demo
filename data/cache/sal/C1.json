@@ -1,0 +1,13 @@
+{
+  "id": "C1",
+  "lng": 133.522074,
+  "lat": -31.535988,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "41056",
+    "locality": "Nullarbor",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

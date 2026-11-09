@@ -1,0 +1,13 @@
+{
+  "id": "Y201",
+  "lng": 143.00438,
+  "lat": -16.073083,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32261",
+    "locality": "Palmer (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

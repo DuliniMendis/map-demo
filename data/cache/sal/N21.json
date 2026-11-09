@@ -1,0 +1,15 @@
+{
+  "id": "N21",
+  "lng": 130.8414,
+  "lat": -12.517633,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "70286",
+    "locality": "Wickham (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT",
+    "distanceKm": 2.192
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "C16",
+  "lng": 136.169147,
+  "lat": -20.152908,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70066",
+    "locality": "Costello",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

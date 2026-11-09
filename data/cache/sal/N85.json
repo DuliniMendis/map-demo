@@ -1,0 +1,13 @@
+{
+  "id": "N85",
+  "lng": 134.830744,
+  "lat": -14.746237,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70289",
+    "locality": "Wilton (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

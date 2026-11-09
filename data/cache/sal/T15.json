@@ -1,0 +1,8 @@
+{
+  "id": "T15",
+  "lng": 147.956473,
+  "lat": -42.440638,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "60690", "locality": "Triabunna", "state": "Tasmania", "stateCode": "TAS" }
+}

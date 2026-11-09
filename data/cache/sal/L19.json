@@ -1,0 +1,13 @@
+{
+  "id": "L19",
+  "lng": 142.238692,
+  "lat": -28.014415,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32156",
+    "locality": "Noccundra",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

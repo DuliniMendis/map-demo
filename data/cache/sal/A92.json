@@ -1,0 +1,13 @@
+{
+  "id": "A92",
+  "lng": 117.054111,
+  "lat": -30.963893,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50780",
+    "locality": "Koomberkine",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}
