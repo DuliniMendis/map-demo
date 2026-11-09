@@ -1,0 +1,4 @@
+# Country Map: a static site with no private paths. PR preview deployments are behind
+# Vercel Deployment Protection, so only the production site is crawlable.
+User-agent: *
+Allow: /

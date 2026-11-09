@@ -19,7 +19,12 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "data:build": "node scripts/fetch-austlang.ts && node scripts/abs-lookup.ts --nearest && node scripts/wikidata.ts && node scripts/build-nations.ts && node scripts/validate.ts",
-    "data:validate": "node scripts/validate.ts"
+    "data:validate": "node scripts/validate.ts",
+    "build:e2e": "VITE_E2E=1 pnpm build",
+    "test:e2e": "pnpm build:e2e && playwright test",
+    "test:e2e:ui": "pnpm build:e2e && playwright test --ui",
+    "size": "pnpm build && node tests/size/split-build.ts && size-limit",
+    "lhci": "pnpm build && lhci autorun && rm -rf .lighthouseci"
   },
   "dependencies": {
     "@tanstack/react-virtual": "^3.14.26",
@@ -29,8 +34,12 @@
     "zustand": "^5.1.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
     "@eslint/js": "^10.0.1",
+    "@lhci/cli": "0.15.1",
     "@maplibre/maplibre-gl-style-spec": "^26.5.1",
+    "@playwright/test": "1.64.1",
+    "@size-limit/file": "14.3.0",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/react": "^16.3.3",
     "@types/geojson": "^7946.0.16",
@@ -44,6 +53,7 @@
     "globals": "^17.14.0",
     "jsdom": "^31.0.0",
     "prettier": "^3.9.10",
+    "size-limit": "14.3.0",
     "ts-json-schema-generator": "^2.9.0",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.1",
