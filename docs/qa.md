@@ -126,6 +126,10 @@ Mapterhorn, AWS Terrain Tiles, EOX and OpenFreeMap are free services run without
 
 ## Visual baselines
 
+**Off by default (2026-11-10).** `visual.spec.ts` is skipped unless `VISUAL=1` is set. The CI workflow sets it only
+when run manually with `update_snapshots`. The committed Linux baselines predate the light theme and 3D pins, so
+regenerate them before turning the tests back on.
+
 Screenshots differ between operating systems (fonts, WebGL rasteriser), so baselines are committed for
 **Linux only** (`tests/playwright/__screenshots__/…-chromium-linux.png`) and `visual.spec.ts` is skipped on
 other platforms. On CI a missing or changed baseline fails the `e2e` job; the actual image is in the
