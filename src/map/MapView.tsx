@@ -3,7 +3,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { useEffect, useRef, useState } from 'react';
 import './setupMaplibre'; // must run before the first `new maplibregl.Map()` (worker URL)
 import { buildStyle, MapController } from '../app/integration';
-import { hasWebGL, MAX_BOUNDS } from '../app/mapSetup';
+import { constrainCamera, hasWebGL, MAX_ZOOM, MIN_ZOOM } from '../app/mapSetup';
 import { styleOptionsFrom, watchDem, wireMap } from '../app/wiring';
 import { useAppStore } from '../store/useAppStore';
 import { OVERVIEW_CAMERA } from './style/ids';
@@ -58,7 +58,13 @@ export function MapView({ onController, onDemFallback, onUnavailable }: MapViewP
         zoom: OVERVIEW_CAMERA.zoom,
         pitch: OVERVIEW_CAMERA.pitch,
         bearing: OVERVIEW_CAMERA.bearing,
-        maxBounds: MAX_BOUNDS,
+        // Not maxBounds: the globe (z < 4) ignores it. See constrainCamera in mapSetup.ts.
+        minZoom: MIN_ZOOM,
+        maxZoom: MAX_ZOOM,
+        transformConstrain: (lngLat, zoom) => {
+          const c = constrainCamera(lngLat.lng, lngLat.lat, zoom);
+          return { center: new maplibregl.LngLat(c.lng, c.lat), zoom: c.zoom };
+        },
         maxPitch: 85,
         attributionControl: false,
       });
