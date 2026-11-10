@@ -212,7 +212,7 @@ export function App({ bootNationId = null }: AppProps) {
         </div>
         <div className="app__top-right">
           {desktop && map && <TiltControl map={map} />}
-          <LayerControls onOverview={onOverview} />
+          <LayerControls onOverview={onOverview} map={map} />
         </div>
         {/* WS4's card positions itself (and sits above the bottom sheet on narrow screens). */}
         {showCard &&

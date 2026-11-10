@@ -18,6 +18,9 @@ export const SOURCE_DEM_SHADE = 'dem-shade';
 
 export const LAYER_BACKGROUND = 'background';
 
+/** Sea, lakes and rivers as a fill, under the relief; only drawn while imagery is off. */
+export const LAYER_WATER = 'water-fill';
+
 /** Fired on the Map (`map.on(DEM_FALLBACK_EVENT, e => …)`) when the DEM switches from Mapterhorn to AWS. */
 export const DEM_FALLBACK_EVENT = 'style:dem-fallback';
 
