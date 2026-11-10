@@ -6,7 +6,7 @@ the `contours` layer toggle in `LayerControls` and in `?l=`. They do nothing yet
 
 ## Goal
 1. **Contour lines** generated in the browser from the terrain DEM we already load (no new hosting), visible at
-   z ≥ 11, toggle default off (`layer-toggle-contours`).
+   z ≥ 10 (fully drawn by 10.5, where flights land; first specified as 11), toggle default off (`layer-toggle-contours`).
 2. **Time-of-day light**: a sun slider (local solar time 05:00–19:00) that moves the hillshade light to where the sun
    would be at that hour over the place you're looking at. `null` keeps today's fixed light exactly as it is.
 

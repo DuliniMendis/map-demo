@@ -128,7 +128,7 @@ const hillshadePaint = (page: Page) =>
   });
 
 test.describe('contour lines', () => {
-  test('toggle adds visible contour lines at z >= 11 above the relief, below labels', async ({
+  test('toggle adds visible contour lines at z >= 10 above the relief, below labels', async ({
     page,
     context,
   }) => {
@@ -187,11 +187,11 @@ test.describe('contour lines', () => {
     await expect(page).not.toHaveURL(/contours/);
   });
 
-  test('nothing below z11', async ({ page, context }) => {
+  test('nothing below z10', async ({ page, context }) => {
     await syntheticTerrain(context);
     await page.goto('/?l=imagery,labels,hillshade,contours');
     await waitForMapIdle(page);
-    await page.evaluate((v) => window.__map!.jumpTo({ ...v, zoom: 10.5 }), VIEW);
+    await page.evaluate((v) => window.__map!.jumpTo({ ...v, zoom: 9.5 }), VIEW);
     await waitForMapIdle(page);
     expect(await renderedContours(page)).toBe(0);
   });

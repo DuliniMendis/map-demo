@@ -9,7 +9,7 @@ import { SOURCE_BOUNDS, type DemProvider } from '../sources';
 import { NO_TRANSITION, visibility } from './visibility';
 
 /** Contours appear from this zoom. Below it the DEM is too coarse and the lines too dense. */
-export const CONTOUR_MIN_ZOOM = 11;
+export const CONTOUR_MIN_ZOOM = 10;
 /**
  * Highest zoom we generate contour tiles for; MapLibre overzooms the vector tiles beyond it. The
  * DEM behind them stops at z12 (Mapterhorn) / z13 (AWS) anyway, so z14+ tiles would add work and
@@ -28,7 +28,7 @@ const LEVEL = 'level';
  */
 export const CONTOUR_THRESHOLDS: Readonly<Record<number, readonly [minor: number, major: number]>> =
   {
-    11: [50, 250],
+    10: [50, 250],
     13: [20, 100],
   };
 
@@ -110,7 +110,7 @@ export function contourLineLayer(visible: boolean, imagery: boolean): LineLayerS
     paint: {
       'line-color': contourColors(imagery).line,
       'line-color-transition': NO_TRANSITION,
-      // Fade in over the first half zoom so they don't pop on at z11.
+      // Fade in over the first half zoom so they are fully drawn by z10.5, where nation flights land.
       'line-opacity': [
         'interpolate',
         ['linear'],

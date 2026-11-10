@@ -65,8 +65,9 @@ function freshMap() {
 
 describe('contour intervals', () => {
   it.each([
-    [10.9, null],
-    [11, { minor: 50, major: 250 }],
+    [9.9, null],
+    [10, { minor: 50, major: 250 }],
+    [10.5, { minor: 50, major: 250 }],
     [12.7, { minor: 50, major: 250 }],
     [13, { minor: 20, major: 100 }],
     [16, { minor: 20, major: 100 }],
@@ -75,7 +76,7 @@ describe('contour intervals', () => {
   it('reads the DEM where the terrain does: overzoom 1 on Mapterhorn 512 px, 0 on AWS 256 px', () => {
     expect(contourTileOptions('mapterhorn')).toMatchObject({
       overzoom: 1,
-      thresholds: { 11: [50, 250], 13: [20, 100] },
+      thresholds: { 10: [50, 250], 13: [20, 100] },
     });
     expect(contourTileOptions('aws').overzoom).toBe(0);
   });
@@ -93,7 +94,7 @@ describe('contour layers', () => {
     }
   });
 
-  it('start at z11 and label major lines in metres with the existing glyphs', () => {
+  it('start at z10 and label major lines in metres with the existing glyphs', () => {
     const lines = contourLineLayer(true, true);
     const labels = contourLabelLayer(true, true);
     expect(lines.minzoom).toBe(CONTOUR_MIN_ZOOM);
@@ -131,7 +132,7 @@ describe('contours via applyStyleOptions', () => {
     ]);
     expect(fm.getSource(SOURCE_CONTOURS)).toMatchObject({
       type: 'vector',
-      minzoom: 11,
+      minzoom: 10,
       tiles: ['contour-mapterhorn-contour://{z}/{x}/{y}?overzoom=1'],
     });
     const ids = fm.layerIds();

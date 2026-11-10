@@ -256,11 +256,11 @@ contours are switched on (`src/map/style/contours.ts`).
 
 | | |
 |---|---|
-| Source | `contours` (vector, `contour-<provider>-contour://{z}/{x}/{y}?…`), z11–13 generated, overzoomed above; `bounds` = `SOURCE_BOUNDS` |
-| Layers | `contour-lines` (line), `contour-labels` (symbol, major lines only, from z11.5), both directly above `hillshade` and below the river/border lines, WS2's markers and every label |
-| Intervals | z11–12: 50 m, major 250 m; z13+: 20 m, major 100 m (`CONTOUR_THRESHOLDS`, `contourInterval(z)`) |
+| Source | `contours` (vector, `contour-<provider>-contour://{z}/{x}/{y}?…`), z10–13 generated, overzoomed above; `bounds` = `SOURCE_BOUNDS` |
+| Layers | `contour-lines` (line), `contour-labels` (symbol, major lines only, from z10.5), both directly above `hillshade` and below the river/border lines, WS2's markers and every label |
+| Intervals | z10–12: 50 m, major 250 m; z13+: 20 m, major 100 m (`CONTOUR_THRESHOLDS`, `contourInterval(z)`) |
 | Labels | `"450 m"` (`number-format`, en-AU), `Noto Sans Regular` 9–11 px along the line, flat on the slope (`text-pitch-alignment: viewport`, rotation `map`) |
-| Look | Thin (0.35–1.4 px) and faint (opacity 0.2 minor / 0.4 major, fading in over z11–11.5). Over imagery a pale warm `rgb(255,246,230)`; with imagery off the hillshade's dark brown `rgb(58,36,20)` with a light halo on the labels |
+| Look | Thin (0.35–1.4 px) and faint (opacity 0.2 minor / 0.4 major, fading in over z10–10.5, so they are fully drawn where nation flights land). Over imagery a pale warm `rgb(255,246,230)`; with imagery off the hillshade's dark brown `rgb(58,36,20)` with a light halo on the labels |
 | Off | `visibility: none` in place; the source stays so a re-toggle is instant |
 
 **DEM reads match the terrain's.** maplibre-contour reads the DEM where the terrain mesh does, so most
