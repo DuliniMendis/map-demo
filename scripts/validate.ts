@@ -8,6 +8,7 @@
 import { existsSync } from 'node:fs';
 import { relative } from 'node:path';
 import { STATE_CODES, STATE_NAMES } from '../src/types/nation.ts';
+import type { AttributionFile } from './lib/attribution.ts';
 import type { CleaningPolicy } from './lib/clean.ts';
 import { readJson } from './lib/io.ts';
 import { ATTRIBUTION_FILE, CLEANING_FILE, NATIONS_FILE, ROOT } from './lib/paths.ts';
@@ -23,7 +24,12 @@ function main() {
     nationsSchema(),
     readJson<CleaningPolicy>(CLEANING_FILE),
   );
-  errors.push(...validateAttribution(readJson(ATTRIBUTION_FILE)));
+  const attribution = readJson<AttributionFile>(ATTRIBUTION_FILE);
+  errors.push(...validateAttribution(attribution));
+  const nations = (data as { nations?: { nearby?: unknown }[] }).nations ?? [];
+  if (nations.some((n) => n.nearby) && !attribution.items?.some((i) => i.id === 'osm-nearby')) {
+    errors.push('attribution: nations.json has OSM `nearby` data but no "osm-nearby" credit');
+  }
 
   console.log(`[validate] ${relative(ROOT, NATIONS_FILE)}: ${data.count ?? '?'} nations`);
   for (const c of STATE_CODES)
@@ -34,7 +40,7 @@ function main() {
     process.exitCode = 1;
   } else {
     console.log(
-      '[validate] OK (schema from src/types/nation.ts, ids, coordinates, localities, sort, spot checks, attribution)',
+      '[validate] OK (schema from src/types/nation.ts, ids, coordinates, localities, nearby, sort, spot checks, attribution)',
     );
   }
 }

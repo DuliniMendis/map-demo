@@ -1,12 +1,13 @@
 import { Ajv } from 'ajv';
 import { createGenerator } from 'ts-json-schema-generator';
-import type { NationsFile, StateCode } from '../../src/types/nation.ts';
+import type { Nation, NationsFile, StateCode } from '../../src/types/nation.ts';
 import { STATE_CODES, STATE_NAMES } from '../../src/types/nation.ts';
 import type { AttributionFile } from './attribution.ts';
 import type { CleaningPolicy } from './clean.ts';
 import { compileExcludes, isAustlangUrl } from './clean.ts';
 import { AUSTRALIA_BOUNDS, inBounds } from './geo.ts';
 import { byName } from './nations.ts';
+import { LANDMARK_MAX_KM, TOWN_MAX_KM } from './nearby.ts';
 import { NATION_TYPES_FILE } from './paths.ts';
 import { SPOT_CHECKS } from './spot-checks.ts';
 
@@ -94,6 +95,7 @@ export function validateNations(
     ) {
       errors.push(`${at}: peopleName "${n.peopleName}" empty or still ends with a code`);
     }
+    if (n.nearby) errors.push(...nearbyErrors(at, n.nearby));
     if (i > 0 && byName(file.nations[i - 1], n) > 0) {
       errors.push(`not sorted by name (en-AU): "${file.nations[i - 1].name}" before "${n.name}"`);
     }
@@ -109,6 +111,30 @@ export function validateNations(
     }
   }
   return { errors, perState };
+}
+
+const NEARBY_SLOTS = {
+  town: { kinds: ['city', 'town'], maxKm: TOWN_MAX_KM },
+  landmark: { kinds: ['peak', 'river', 'lake', 'range'], maxKm: LANDMARK_MAX_KM },
+} as const;
+
+/** WS8: kind fits the slot, distance within the cut-off and rounded to 1 dp, name non-empty. */
+export function nearbyErrors(at: string, nearby: NonNullable<Nation['nearby']>): string[] {
+  const errors: string[] = [];
+  if (!nearby.town && !nearby.landmark) errors.push(`${at}: nearby has neither town nor landmark`);
+  for (const slot of ['town', 'landmark'] as const) {
+    const f = nearby[slot];
+    if (!f) continue;
+    const { kinds, maxKm } = NEARBY_SLOTS[slot];
+    if (!f.name.trim()) errors.push(`${at}: nearby.${slot} has an empty name`);
+    if (!(kinds as readonly string[]).includes(f.kind))
+      errors.push(`${at}: nearby.${slot}.kind "${f.kind}" not one of ${kinds.join('|')}`);
+    if (!Number.isFinite(f.distanceKm) || f.distanceKm < 0 || f.distanceKm > maxKm)
+      errors.push(`${at}: nearby.${slot}.distanceKm ${f.distanceKm} outside 0–${maxKm}`);
+    else if (Math.round(f.distanceKm * 10) / 10 !== f.distanceKm)
+      errors.push(`${at}: nearby.${slot}.distanceKm ${f.distanceKm} not rounded to 1 dp`);
+  }
+  return errors;
 }
 
 export function validateAttribution(data: unknown): string[] {
