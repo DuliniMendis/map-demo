@@ -169,6 +169,9 @@ importers:
       '@tanstack/react-virtual':
         specifier: ^3.14.26
         version: 3.14.26(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      maplibre-contour:
+        specifier: 0.1.1
+        version: 0.1.1
       maplibre-gl:
         specifier: ^6.17.0
         version: 6.17.0
@@ -1756,6 +1759,9 @@ packages:
   make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
+
+  maplibre-contour@0.1.1:
+    resolution: {integrity: sha512-0m267124bx+LJ5zM1mpB23uvO4sCrgOb4dWgwbUbGWGsDsWNA4g93XTXPoRQga6GAD6TDI7tzyowBzdADSPusg==}
 
   maplibre-gl@6.17.0:
     resolution: {integrity: sha512-2chIZwpLGenoUQOcnm9Pk4SLbA8ppNFq8jlpXiq9vcYm3Y1wJ3fc82FL0GLwBaPYJCLzPv/mC46KEupVov75rQ==}
@@ -4274,6 +4280,8 @@ snapshots:
   make-dir@3.1.0:
     dependencies:
       semver: 6.3.2
+
+  maplibre-contour@0.1.1: {}
 
   maplibre-gl@6.17.0:
     dependencies:
