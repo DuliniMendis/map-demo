@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09",
+  "generatedAt": "2026-11-10",
   "disclaimer": "Locations are approximate single points for each language variety, from AUSTLANG. They are not boundaries, and are not suitable for native title or any land claim. \"Country today\" is the ABS 2021 suburb/locality containing (or nearest to) that point.",
   "items": [
     {
@@ -68,6 +68,15 @@
       "licence": "CC0 1.0",
       "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
       "usedFor": "Links from AUSTLANG codes to English Wikipedia articles",
+      "kind": "data"
+    },
+    {
+      "id": "osm-nearby",
+      "text": "Nearby towns and landmarks © OpenStreetMap contributors, ODbL",
+      "url": "https://www.openstreetmap.org/copyright",
+      "licence": "ODbL 1.0",
+      "licenceUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "usedFor": "\"Country today\" orientation: nearest town (place=city|town, within 100 km) and named peak, river, lake or range (within 50 km), extracted via the Overpass API at build time",
       "kind": "data"
     }
   ]

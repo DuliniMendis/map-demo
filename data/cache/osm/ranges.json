@@ -1,0 +1,1387 @@
+{
+  "class": "ranges",
+  "retrieved": "2026-11-10",
+  "osmBase": "2026-11-10T00:10:17Z",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:900];area[\"ISO3166-1\"=\"AU\"][\"admin_level\"=\"2\"]->.au;(nwr[\"natural\"=\"mountain_range\"][\"name\"](area.au);way[\"natural\"=\"ridge\"][\"name\"](area.au););out tags center qt;",
+  "licence": "ODbL 1.0 — © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)",
+  "rawBytes": 159267,
+  "rawCount": 686,
+  "clip": { "radiusKm": 50, "pointsKey": "455:68bd9320d0b7883f" },
+  "count": 398,
+  "features": [
+    {
+      "osm": "n2844344386",
+      "name": "Native Cat Range",
+      "kind": "range",
+      "at": [150.17834, -23.47704]
+    },
+    { "osm": "n3320287108", "name": "Ross Range", "kind": "range", "at": [150.77447, -23.40376] },
+    {
+      "osm": "n3472493797",
+      "name": "The Black Range",
+      "kind": "range",
+      "at": [150.19541, -23.76336]
+    },
+    {
+      "osm": "n4290197297",
+      "name": "Great Western Tiers",
+      "kind": "range",
+      "at": [146.64992, -41.73594]
+    },
+    {
+      "osm": "n4294348706",
+      "name": "New Harbour Range",
+      "kind": "range",
+      "at": [146.19312, -43.50683]
+    },
+    { "osm": "n5122070121", "name": "Musgrave Ranges", "kind": "range", "at": [131.75, -26.31] },
+    { "osm": "n5122071024", "name": "Hamersley Range", "kind": "range", "at": [118.587, -22.984] },
+    { "osm": "n13266292555", "name": "Redan Range", "kind": "range", "at": [150.69525, -23.66592] },
+    {
+      "osm": "n13266292557",
+      "name": "Razorback Range",
+      "kind": "range",
+      "at": [150.39209, -23.60044]
+    },
+    {
+      "osm": "r6791746",
+      "name": "Main Barrier Range",
+      "kind": "range",
+      "at": [141.39848, -31.49934]
+    },
+    { "osm": "r8665859", "name": "Wellington Range", "kind": "range", "at": [147.15697, -42.8952] },
+    {
+      "osm": "r8665866",
+      "name": "South Bruny Range",
+      "kind": "range",
+      "at": [147.30486, -43.41766]
+    },
+    { "osm": "r8665867", "name": "Snowy Range", "kind": "range", "at": [146.65606, -42.91403] },
+    { "osm": "r8665868", "name": "Sideling Range", "kind": "range", "at": [147.41446, -41.21294] },
+    { "osm": "r8665870", "name": "Rugby Range", "kind": "range", "at": [146.10804, -43.28074] },
+    { "osm": "r8665880", "name": "Norway Range", "kind": "range", "at": [145.922, -42.43149] },
+    { "osm": "r8665881", "name": "Norfolk Range", "kind": "range", "at": [144.98863, -41.41612] },
+    { "osm": "r8665883", "name": "Nicholas Range", "kind": "range", "at": [148.12986, -41.53512] },
+    { "osm": "r8665884", "name": "Meredith Range", "kind": "range", "at": [145.2505, -41.56247] },
+    { "osm": "r8665886", "name": "Melaleuca Range", "kind": "range", "at": [146.10027, -43.45426] },
+    { "osm": "r8665887", "name": "Meehan Range", "kind": "range", "at": [147.34087, -42.75949] },
+    { "osm": "r8665888", "name": "Maydena Range", "kind": "range", "at": [146.66688, -42.76957] },
+    { "osm": "r8665897", "name": "Grange Hills", "kind": "range", "at": [148.11265, -42.03775] },
+    { "osm": "r8665902", "name": "Erskine Range", "kind": "range", "at": [146.0186, -43.28257] },
+    { "osm": "r8665903", "name": "Engineer Range", "kind": "range", "at": [145.71746, -42.28941] },
+    { "osm": "r8665907", "name": "Dismal Range", "kind": "range", "at": [147.10032, -41.24128] },
+    { "osm": "r8665908", "name": "Dip Range", "kind": "range", "at": [145.45388, -41.03042] },
+    { "osm": "r8665909", "name": "Dial Range", "kind": "range", "at": [146.04255, -41.17945] },
+    { "osm": "r8665910", "name": "De Witt Range", "kind": "range", "at": [145.81827, -43.15476] },
+    { "osm": "r8665912", "name": "Denison Range", "kind": "range", "at": [146.29309, -42.54883] },
+    { "osm": "r8665913", "name": "Deception Range", "kind": "range", "at": [145.81733, -42.34262] },
+    { "osm": "r8665917", "name": "Companion Range", "kind": "range", "at": [146.0604, -42.97658] },
+    { "osm": "r8665919", "name": "Charles Range", "kind": "range", "at": [145.70564, -42.70547] },
+    { "osm": "r8665921", "name": "Bonds Range", "kind": "range", "at": [145.92356, -41.53054] },
+    {
+      "osm": "r8665926",
+      "name": "Crags Of Andromeda",
+      "kind": "range",
+      "at": [146.41231, -43.18571]
+    },
+    {
+      "osm": "r8665927",
+      "name": "Western Arthur Range",
+      "kind": "range",
+      "at": [146.34441, -43.16316]
+    },
+    { "osm": "r8665932", "name": "South Cape Range", "kind": "range", "at": [146.69907, -43.5835] },
+    { "osm": "r8665934", "name": "Rodway Range", "kind": "range", "at": [146.5792, -42.67107] },
+    { "osm": "r8665936", "name": "Loongana Range", "kind": "range", "at": [145.95612, -41.38502] },
+    { "osm": "r8665937", "name": "Ironbound Range", "kind": "range", "at": [146.46947, -43.49941] },
+    { "osm": "r8665938", "name": "Folded Range", "kind": "range", "at": [146.14172, -43.02697] },
+    {
+      "osm": "r8665942",
+      "name": "Black Bluff Range",
+      "kind": "range",
+      "at": [145.9259, -41.51255]
+    },
+    { "osm": "r8812595", "name": "Sisters Hills", "kind": "range", "at": [145.54095, -40.89124] },
+    {
+      "osm": "w62120589",
+      "name": "Isobel Bowden Ridge",
+      "kind": "range",
+      "at": [150.35136, -33.72554]
+    },
+    { "osm": "w138282888", "name": "Porto Ridge", "kind": "range", "at": [151.20639, -33.56021] },
+    { "osm": "w318177520", "name": "Scropes Range", "kind": "range", "at": [142.41659, -31.80231] },
+    { "osm": "w391716442", "name": "Toenail Point", "kind": "range", "at": [153.20093, -28.31335] },
+    { "osm": "w395006357", "name": "Three Tops", "kind": "range", "at": [153.27847, -28.36973] },
+    {
+      "osm": "w400902509",
+      "name": "Bellbird Ridge",
+      "kind": "range",
+      "at": [150.23461, -33.79714]
+    },
+    {
+      "osm": "w400902515",
+      "name": "Yellow Dog Ridge",
+      "kind": "range",
+      "at": [150.18871, -33.85936]
+    },
+    { "osm": "w401346862", "name": "Lucifer Ridge", "kind": "range", "at": [146.44736, -43.18998] },
+    { "osm": "w408992904", "name": "Reads Ridge", "kind": "range", "at": [148.24049, -36.33645] },
+    {
+      "osm": "w459458344",
+      "name": "Mundi Mundi Range",
+      "kind": "range",
+      "at": [141.28301, -31.7594]
+    },
+    { "osm": "w484449889", "name": "Blue Pup Spur", "kind": "range", "at": [150.18995, -33.82872] },
+    { "osm": "w484449890", "name": "Hobbles Spur", "kind": "range", "at": [150.21575, -33.80008] },
+    {
+      "osm": "w583622168",
+      "name": "Piccadilly Hills",
+      "kind": "range",
+      "at": [151.41754, -30.41978]
+    },
+    {
+      "osm": "w583622169",
+      "name": "Blenheim Hills",
+      "kind": "range",
+      "at": [151.40221, -30.44171]
+    },
+    {
+      "osm": "w583622183",
+      "name": "Honeysuckle Range",
+      "kind": "range",
+      "at": [151.27306, -30.53596]
+    },
+    {
+      "osm": "w583622188",
+      "name": "Collenya Hills",
+      "kind": "range",
+      "at": [151.16169, -30.28288]
+    },
+    {
+      "osm": "w592421516",
+      "name": "Barrier Ranges",
+      "kind": "range",
+      "at": [141.27485, -31.96226]
+    },
+    { "osm": "w592428994", "name": "Robe Range", "kind": "range", "at": [141.33425, -31.62548] },
+    { "osm": "w592629198", "name": "Slate Range", "kind": "range", "at": [141.8117, -31.33206] },
+    {
+      "osm": "w592629202",
+      "name": "Barrier Ranges",
+      "kind": "range",
+      "at": [141.76026, -31.38176]
+    },
+    {
+      "osm": "w592629209",
+      "name": "Barrier Ranges",
+      "kind": "range",
+      "at": [141.32727, -32.09138]
+    },
+    {
+      "osm": "w624043510",
+      "name": "White Monolith Range",
+      "kind": "range",
+      "at": [146.13031, -43.07707]
+    },
+    { "osm": "w624043524", "name": "Tiger Range", "kind": "range", "at": [146.41231, -42.61247] },
+    {
+      "osm": "w624043527",
+      "name": "Surveyor Range",
+      "kind": "range",
+      "at": [145.87398, -42.39208]
+    },
+    { "osm": "w624043529", "name": "Spiro Range", "kind": "range", "at": [146.39162, -43.30899] },
+    {
+      "osm": "w624043532",
+      "name": "South Picton Range",
+      "kind": "range",
+      "at": [146.58307, -43.20936]
+    },
+    { "osm": "w624043542", "name": "Ray Range", "kind": "range", "at": [146.29665, -43.41193] },
+    { "osm": "w624043545", "name": "Rattler Range", "kind": "range", "at": [147.87194, -41.26225] },
+    { "osm": "w624043550", "name": "Quakers Ranges", "kind": "range", "at": [148.07553, -40.8506] },
+    {
+      "osm": "w624043553",
+      "name": "Propstring Range",
+      "kind": "range",
+      "at": [145.87711, -43.0395]
+    },
+    {
+      "osm": "w624043559",
+      "name": "Princess Range",
+      "kind": "range",
+      "at": [145.83647, -42.60334]
+    },
+    { "osm": "w624043564", "name": "Pasco Range", "kind": "range", "at": [146.04675, -43.38383] },
+    {
+      "osm": "w624043576",
+      "name": "South West Cape Range",
+      "kind": "range",
+      "at": [146.05757, -43.4985]
+    },
+    {
+      "osm": "w624043602",
+      "name": "King Billy Range",
+      "kind": "range",
+      "at": [145.6989, -42.61839]
+    },
+    { "osm": "w624043611", "name": "Gordon Range", "kind": "range", "at": [146.36853, -42.53721] },
+    { "osm": "w624043614", "name": "Gog Range", "kind": "range", "at": [146.40312, -41.50838] },
+    { "osm": "w624043623", "name": "Elliot Range", "kind": "range", "at": [145.72828, -42.47396] },
+    { "osm": "w624043630", "name": "Den Ranges", "kind": "range", "at": [147.06676, -41.14966] },
+    { "osm": "w624043633", "name": "Dazzler Range", "kind": "range", "at": [146.69482, -41.19332] },
+    {
+      "osm": "w624043635",
+      "name": "D'aguilar Range",
+      "kind": "range",
+      "at": [145.61121, -42.57944]
+    },
+    {
+      "osm": "w624043639",
+      "name": "Campbell Range",
+      "kind": "range",
+      "at": [145.50276, -41.17681]
+    },
+    {
+      "osm": "w624043641",
+      "name": "Bathurst Range",
+      "kind": "range",
+      "at": [146.22305, -43.43413]
+    },
+    { "osm": "w624043642", "name": "Badgers Range", "kind": "range", "at": [146.3592, -41.33287] },
+    {
+      "osm": "w624043644",
+      "name": "Asbestos Range",
+      "kind": "range",
+      "at": [146.68855, -41.12685]
+    },
+    { "osm": "w624043648", "name": "Amy Range", "kind": "range", "at": [146.10565, -43.54503] },
+    { "osm": "w624043662", "name": "Crest Range", "kind": "range", "at": [146.5167, -43.28897] },
+    { "osm": "w628715497", "name": "Strumbo Range", "kind": "range", "at": [148.34214, -36.18857] },
+    { "osm": "w628715505", "name": "Munyang Range", "kind": "range", "at": [148.45583, -36.14978] },
+    { "osm": "w628715508", "name": "Toolong Range", "kind": "range", "at": [148.42738, -36.17613] },
+    { "osm": "w628715509", "name": "Farm Ridge", "kind": "range", "at": [148.42001, -36.12834] },
+    { "osm": "w628730883", "name": "Alpine Ridge", "kind": "range", "at": [148.57332, -35.90295] },
+    { "osm": "w628730885", "name": "Monaro Range", "kind": "range", "at": [148.61162, -35.88926] },
+    { "osm": "w628730888", "name": "Monaro Range", "kind": "range", "at": [148.64411, -35.9047] },
+    {
+      "osm": "w628730900",
+      "name": "Peak Back Ridge",
+      "kind": "range",
+      "at": [148.59595, -35.75696]
+    },
+    { "osm": "w628737116", "name": "Fiery Range", "kind": "range", "at": [148.53349, -35.71552] },
+    {
+      "osm": "w628737121",
+      "name": "Gurrangorambla Range",
+      "kind": "range",
+      "at": [148.69071, -35.65966]
+    },
+    { "osm": "w628737122", "name": "Wallaroo Spur", "kind": "range", "at": [148.70627, -35.57826] },
+    {
+      "osm": "w628737123",
+      "name": "Rolling Grounds Ridge",
+      "kind": "range",
+      "at": [148.73337, -35.62672]
+    },
+    {
+      "osm": "w628737124",
+      "name": "Gurrangorambla Range",
+      "kind": "range",
+      "at": [148.75416, -35.69162]
+    },
+    {
+      "osm": "w628737126",
+      "name": "Mount Kelly Spur",
+      "kind": "range",
+      "at": [148.86589, -35.69791]
+    },
+    {
+      "osm": "w628753720",
+      "name": "The High Range",
+      "kind": "range",
+      "at": [148.87818, -35.52516]
+    },
+    { "osm": "w628753728", "name": "Scabby Range", "kind": "range", "at": [148.85311, -35.75379] },
+    { "osm": "w628764179", "name": "Arsenic Ridge", "kind": "range", "at": [148.51518, -36.03202] },
+    { "osm": "w628764189", "name": "Jagumba Range", "kind": "range", "at": [148.25608, -36.02496] },
+    { "osm": "w628764239", "name": "Toolong Range", "kind": "range", "at": [148.36648, -36.05838] },
+    {
+      "osm": "w630058007",
+      "name": "Mount Hay Range",
+      "kind": "range",
+      "at": [150.45491, -33.61523]
+    },
+    {
+      "osm": "w630447824",
+      "name": "Bald Head Ridge",
+      "kind": "range",
+      "at": [150.32504, -33.58874]
+    },
+    {
+      "osm": "w630447826",
+      "name": "Burra Korain Ridge",
+      "kind": "range",
+      "at": [150.29925, -33.59503]
+    },
+    { "osm": "w635139641", "name": "Larrys Ridge", "kind": "range", "at": [148.40713, -35.90672] },
+    { "osm": "w635139644", "name": "Section Ridge", "kind": "range", "at": [148.42089, -35.86913] },
+    {
+      "osm": "w635139646",
+      "name": "Dead Mans Ridge",
+      "kind": "range",
+      "at": [148.39218, -35.86435]
+    },
+    { "osm": "w635139658", "name": "Maragle Range", "kind": "range", "at": [148.33879, -35.90475] },
+    { "osm": "w635139690", "name": "Byrons Ridge", "kind": "range", "at": [148.40666, -35.82225] },
+    { "osm": "w635139692", "name": "O'Hares Ridge", "kind": "range", "at": [148.39204, -35.83131] },
+    {
+      "osm": "w638684633",
+      "name": "Fifteen Mile Ridge",
+      "kind": "range",
+      "at": [148.41278, -36.00629]
+    },
+    { "osm": "w638684634", "name": "Snow Ridge", "kind": "range", "at": [148.36329, -35.96684] },
+    { "osm": "w659419409", "name": "Kamarah Ridge", "kind": "range", "at": [150.29029, -33.52726] },
+    { "osm": "w659419412", "name": "Jinki Ridge", "kind": "range", "at": [150.30593, -33.5367] },
+    { "osm": "w659428229", "name": "Dalpura Ridge", "kind": "range", "at": [150.31528, -33.54121] },
+    {
+      "osm": "w659428230",
+      "name": "Koombanda Ridge",
+      "kind": "range",
+      "at": [150.28682, -33.52324]
+    },
+    {
+      "osm": "w663103459",
+      "name": "Great Wall of China",
+      "kind": "range",
+      "at": [138.68819, -31.1907]
+    },
+    { "osm": "w663374748", "name": "Nebo Ridge", "kind": "range", "at": [150.51388, -33.84998] },
+    { "osm": "w663374749", "name": "Massif Ridge", "kind": "range", "at": [150.51184, -33.82089] },
+    { "osm": "w664299067", "name": "Banks Ridge", "kind": "range", "at": [150.38838, -33.58892] },
+    {
+      "osm": "w664299069",
+      "name": "Carmarthen Ridge",
+      "kind": "range",
+      "at": [150.39998, -33.57675]
+    },
+    { "osm": "w664299071", "name": "Oronga Ridge", "kind": "range", "at": [150.35846, -33.57787] },
+    { "osm": "w664299074", "name": "Yileen Spur", "kind": "range", "at": [150.33194, -33.56319] },
+    {
+      "osm": "w664299076",
+      "name": "Birrabang Ridge",
+      "kind": "range",
+      "at": [150.3253, -33.55334]
+    },
+    { "osm": "w664299078", "name": "Anvil Ridge", "kind": "range", "at": [150.3352, -33.59786] },
+    {
+      "osm": "w664299081",
+      "name": "Bald Head Ridge",
+      "kind": "range",
+      "at": [150.32685, -33.59871]
+    },
+    {
+      "osm": "w664504629",
+      "name": "Burramoko Ridge",
+      "kind": "range",
+      "at": [150.30717, -33.5969]
+    },
+    {
+      "osm": "w664504630",
+      "name": "Burra Korain Ridge",
+      "kind": "range",
+      "at": [150.28999, -33.61984]
+    },
+    { "osm": "w664504634", "name": "Lawson Ridge", "kind": "range", "at": [150.4657, -33.66744] },
+    {
+      "osm": "w664504636",
+      "name": "Rocklily Ridge",
+      "kind": "range",
+      "at": [150.40337, -33.67032]
+    },
+    { "osm": "w664504638", "name": "Urella Ridge", "kind": "range", "at": [150.41954, -33.65912] },
+    {
+      "osm": "w664504639",
+      "name": "Wirralie Ridge",
+      "kind": "range",
+      "at": [150.42009, -33.64972]
+    },
+    { "osm": "w664504640", "name": "Kolonga Ridge", "kind": "range", "at": [150.46313, -33.63168] },
+    {
+      "osm": "w664512959",
+      "name": "Fortress Ridge",
+      "kind": "range",
+      "at": [150.35436, -33.64658]
+    },
+    {
+      "osm": "w664512960",
+      "name": "Lightning Ridge",
+      "kind": "range",
+      "at": [150.3882, -33.56053]
+    },
+    {
+      "osm": "w664764013",
+      "name": "Williams Ridge",
+      "kind": "range",
+      "at": [150.41124, -33.75651]
+    },
+    { "osm": "w664764014", "name": "Bedford Ridge", "kind": "range", "at": [150.47796, -33.76604] },
+    { "osm": "w664764015", "name": "Massif Ridge", "kind": "range", "at": [150.49333, -33.84672] },
+    { "osm": "w664764016", "name": "Hall Ridge", "kind": "range", "at": [150.46493, -33.87485] },
+    {
+      "osm": "w664764017",
+      "name": "Rocky Knob Ridge",
+      "kind": "range",
+      "at": [150.43936, -33.86036]
+    },
+    { "osm": "w664764018", "name": "Red Ridge", "kind": "range", "at": [150.4506, -33.82945] },
+    { "osm": "w664764019", "name": "Lowndes Ridge", "kind": "range", "at": [150.47881, -33.80642] },
+    { "osm": "w664764022", "name": "Dadder Ridge", "kind": "range", "at": [150.53802, -33.83684] },
+    { "osm": "w664764025", "name": "Notts Ridge", "kind": "range", "at": [150.45377, -33.79778] },
+    {
+      "osm": "w664764031",
+      "name": "Goonaroi Ridge",
+      "kind": "range",
+      "at": [150.54855, -33.77592]
+    },
+    { "osm": "w664764032", "name": "St Helena Ridge", "kind": "range", "at": [150.55, -33.76363] },
+    { "osm": "w664764033", "name": "Western Ridge", "kind": "range", "at": [150.54078, -33.74629] },
+    { "osm": "w664765709", "name": "Growler Ridge", "kind": "range", "at": [150.27305, -33.82174] },
+    {
+      "osm": "w664765710",
+      "name": "White Dog Ridge",
+      "kind": "range",
+      "at": [150.25443, -33.85124]
+    },
+    {
+      "osm": "w664765711",
+      "name": "Grizzled Dog Ridge",
+      "kind": "range",
+      "at": [150.25922, -33.85318]
+    },
+    {
+      "osm": "w664765712",
+      "name": "Black Pup Ridge",
+      "kind": "range",
+      "at": [150.26345, -33.83641]
+    },
+    {
+      "osm": "w664765713",
+      "name": "Black Dog Ridge",
+      "kind": "range",
+      "at": [150.2716, -33.83704]
+    },
+    {
+      "osm": "w664765714",
+      "name": "Grey Dog Ridge",
+      "kind": "range",
+      "at": [150.26629, -33.84875]
+    },
+    {
+      "osm": "w664765715",
+      "name": "Snarling Dog Ridge",
+      "kind": "range",
+      "at": [150.29012, -33.83959]
+    },
+    { "osm": "w664765716", "name": "Red Dog Ridge", "kind": "range", "at": [150.2968, -33.83727] },
+    {
+      "osm": "w664765717",
+      "name": "Cedarland Ridge",
+      "kind": "range",
+      "at": [150.29354, -33.82623]
+    },
+    {
+      "osm": "w664765718",
+      "name": "Berrima Inga Ridge",
+      "kind": "range",
+      "at": [150.31078, -33.79349]
+    },
+    { "osm": "w664765719", "name": "Cedar Ridge", "kind": "range", "at": [150.30361, -33.79118] },
+    {
+      "osm": "w664765720",
+      "name": "Rucksack Ridge",
+      "kind": "range",
+      "at": [150.34787, -33.83468]
+    },
+    {
+      "osm": "w664765721",
+      "name": "Cedar Valley Ridge",
+      "kind": "range",
+      "at": [150.32861, -33.84038]
+    },
+    {
+      "osm": "w664765722",
+      "name": "Korrowall Ridge",
+      "kind": "range",
+      "at": [150.3332, -33.81274]
+    },
+    {
+      "osm": "w664765723",
+      "name": "Sublime Point Ridge",
+      "kind": "range",
+      "at": [150.34352, -33.75587]
+    },
+    { "osm": "w664943247", "name": "Bark Ridge", "kind": "range", "at": [150.30704, -33.88399] },
+    {
+      "osm": "w664943248",
+      "name": "Policeman Ridge",
+      "kind": "range",
+      "at": [150.32443, -33.86842]
+    },
+    {
+      "osm": "w664943249",
+      "name": "Green Hills Ridge",
+      "kind": "range",
+      "at": [150.29945, -33.85836]
+    },
+    {
+      "osm": "w664943250",
+      "name": "Shaggy Dog Ridge",
+      "kind": "range",
+      "at": [150.28956, -33.85739]
+    },
+    { "osm": "w664944134", "name": "Lyerbird Ridge", "kind": "range", "at": [150.23922, -33.7975] },
+    {
+      "osm": "w664944135",
+      "name": "Korrowall Knife Edge",
+      "kind": "range",
+      "at": [150.30238, -33.77156]
+    },
+    {
+      "osm": "w664944136",
+      "name": "Ruined Castle Ridge",
+      "kind": "range",
+      "at": [150.29345, -33.7611]
+    },
+    { "osm": "w664949449", "name": "Moorara Spur", "kind": "range", "at": [150.11665, -33.83292] },
+    { "osm": "w664949450", "name": "Diable Ridge", "kind": "range", "at": [150.09103, -33.79561] },
+    { "osm": "w664949451", "name": "Warlock Ridge", "kind": "range", "at": [150.07024, -33.80087] },
+    { "osm": "w664949452", "name": "Cams Ridge", "kind": "range", "at": [150.09768, -33.8614] },
+    {
+      "osm": "w664949453",
+      "name": "Bullagowar Ridge",
+      "kind": "range",
+      "at": [150.14407, -33.88834]
+    },
+    {
+      "osm": "w664949454",
+      "name": "Guouogang Ridge",
+      "kind": "range",
+      "at": [150.15441, -33.87949]
+    },
+    { "osm": "w664949455", "name": "Blue Dog Ridge", "kind": "range", "at": [150.2069, -33.82724] },
+    {
+      "osm": "w664949456",
+      "name": "Bees Nest Ridge",
+      "kind": "range",
+      "at": [150.11648, -33.7911]
+    },
+    { "osm": "w664949457", "name": "Cronje Ridge", "kind": "range", "at": [150.12444, -33.80468] },
+    { "osm": "w664949458", "name": "Wipcrack Spur", "kind": "range", "at": [150.14872, -33.80543] },
+    {
+      "osm": "w664949459",
+      "name": "Ironmonger Spur",
+      "kind": "range",
+      "at": [150.19057, -33.8039]
+    },
+    { "osm": "w664949460", "name": "Blue Dog Spur", "kind": "range", "at": [150.18235, -33.81479] },
+    {
+      "osm": "w664949461",
+      "name": "Cattle Dog Ridge",
+      "kind": "range",
+      "at": [150.20963, -33.81802]
+    },
+    {
+      "osm": "w664949462",
+      "name": "Brindle Dog Ridge",
+      "kind": "range",
+      "at": [150.1966, -33.84333]
+    },
+    {
+      "osm": "w664949463",
+      "name": "Brindle Pup Ridge",
+      "kind": "range",
+      "at": [150.18853, -33.85333]
+    },
+    {
+      "osm": "w664949464",
+      "name": "Yellow Pup Ridge",
+      "kind": "range",
+      "at": [150.18989, -33.87389]
+    },
+    {
+      "osm": "w664949465",
+      "name": "Howling Dog Ridge",
+      "kind": "range",
+      "at": [150.2116, -33.87264]
+    },
+    {
+      "osm": "w664949466",
+      "name": "Brown Dog Ridge",
+      "kind": "range",
+      "at": [150.21724, -33.87198]
+    },
+    {
+      "osm": "w664949467",
+      "name": "Little Dingo Ridge",
+      "kind": "range",
+      "at": [150.23582, -33.86512]
+    },
+    {
+      "osm": "w664949468",
+      "name": "Spotted Dog Ridge",
+      "kind": "range",
+      "at": [150.22891, -33.86997]
+    },
+    {
+      "osm": "w664949469",
+      "name": "Faithfull Hound Ridge",
+      "kind": "range",
+      "at": [150.23437, -33.81993]
+    },
+    {
+      "osm": "w664949470",
+      "name": "Black Horse Ridge",
+      "kind": "range",
+      "at": [150.22227, -33.81813]
+    },
+    {
+      "osm": "w664953718",
+      "name": "Lions Head Ridge",
+      "kind": "range",
+      "at": [150.39122, -33.79893]
+    },
+    { "osm": "w665718038", "name": "Gingkin Spur", "kind": "range", "at": [150.01859, -33.82489] },
+    {
+      "osm": "w665718039",
+      "name": "Binoomea Ridge",
+      "kind": "range",
+      "at": [150.02629, -33.80935]
+    },
+    { "osm": "w665720967", "name": "Ghosts Ridge", "kind": "range", "at": [150.01231, -34.02866] },
+    { "osm": "w665720968", "name": "Misery Ridge", "kind": "range", "at": [150.02443, -34.03452] },
+    { "osm": "w665720969", "name": "Colboyd Ridge", "kind": "range", "at": [150.10842, -34.0237] },
+    { "osm": "w665720970", "name": "Denis Ridge", "kind": "range", "at": [150.18073, -34.02887] },
+    {
+      "osm": "w665720971",
+      "name": "Orange Bluff Ridge",
+      "kind": "range",
+      "at": [150.17529, -34.03306]
+    },
+    {
+      "osm": "w665720972",
+      "name": "Horseshoe Ridge",
+      "kind": "range",
+      "at": [150.16879, -34.03872]
+    },
+    {
+      "osm": "w665720973",
+      "name": "Bullhead Ridge",
+      "kind": "range",
+      "at": [150.13122, -34.01844]
+    },
+    { "osm": "w665720974", "name": "Mistake Spur", "kind": "range", "at": [150.14633, -34.01273] },
+    { "osm": "w665720975", "name": "Brumby Ridge", "kind": "range", "at": [150.15797, -34.01637] },
+    { "osm": "w665720976", "name": "Roots Ridge", "kind": "range", "at": [150.17057, -34.01313] },
+    { "osm": "w665720977", "name": "Hughes Ridge", "kind": "range", "at": [150.18323, -34.00062] },
+    { "osm": "w665720978", "name": "Brennan Spur", "kind": "range", "at": [150.14592, -33.9939] },
+    { "osm": "w665720979", "name": "Cresent Spur", "kind": "range", "at": [150.05353, -33.95179] },
+    { "osm": "w665720980", "name": "Errie Spur", "kind": "range", "at": [150.10585, -34.00146] },
+    { "osm": "w665720981", "name": "Wallarra Ridge", "kind": "range", "at": [150.08343, -34.028] },
+    { "osm": "w665720982", "name": "Gogy Ridge", "kind": "range", "at": [150.07836, -34.00545] },
+    { "osm": "w665720983", "name": "Kittani Ridge", "kind": "range", "at": [150.08317, -33.98539] },
+    {
+      "osm": "w665720984",
+      "name": "Thurat Broad Ridge",
+      "kind": "range",
+      "at": [150.09071, -33.96121]
+    },
+    { "osm": "w665720985", "name": "Danae Ridge", "kind": "range", "at": [150.10706, -33.95273] },
+    { "osm": "w665720986", "name": "Crafts Ridge", "kind": "range", "at": [150.16005, -33.97826] },
+    { "osm": "w665720987", "name": "Gabes Ridge", "kind": "range", "at": [150.1694, -33.96756] },
+    {
+      "osm": "w665720988",
+      "name": "Burra Gunama Ridge",
+      "kind": "range",
+      "at": [150.1153, -33.94179]
+    },
+    { "osm": "w665720989", "name": "Thurat Ridge", "kind": "range", "at": [150.1127, -33.93328] },
+    { "osm": "w666036757", "name": "Abbott Ridge", "kind": "range", "at": [148.23691, -36.43807] },
+    { "osm": "w666036759", "name": "Hannels Ridge", "kind": "range", "at": [148.23419, -36.42503] },
+    { "osm": "w669261150", "name": "Youngal Range", "kind": "range", "at": [148.1483, -36.44909] },
+    { "osm": "w669261151", "name": "Tyrells Ridge", "kind": "range", "at": [148.14696, -36.41139] },
+    { "osm": "w669261154", "name": "Pheasant Ridge", "kind": "range", "at": [148.1349, -36.37066] },
+    { "osm": "w689111978", "name": "Nungar Ridge", "kind": "range", "at": [148.64936, -35.85496] },
+    {
+      "osm": "w689132366",
+      "name": "Gurrangorambla Range",
+      "kind": "range",
+      "at": [148.64517, -35.65115]
+    },
+    {
+      "osm": "w697914760",
+      "name": "Pineapple Ridge",
+      "kind": "range",
+      "at": [146.26815, -18.33731]
+    },
+    { "osm": "w701495938", "name": "Warlock Ridge", "kind": "range", "at": [150.0876, -33.80808] },
+    { "osm": "w713845410", "name": "Fingers Ridge", "kind": "range", "at": [146.27358, -18.34399] },
+    {
+      "osm": "w713845411",
+      "name": "Southeast Ridge",
+      "kind": "range",
+      "at": [146.2815, -18.36363]
+    },
+    {
+      "osm": "w736395996",
+      "name": "The Sisters Mountains",
+      "kind": "range",
+      "at": [146.90539, -19.43113]
+    },
+    { "osm": "w736396011", "name": "Goddard Range", "kind": "range", "at": [146.24998, -18.45375] },
+    {
+      "osm": "w756350141",
+      "name": "Eastern Arthur Range",
+      "kind": "range",
+      "at": [146.46921, -43.27106]
+    },
+    {
+      "osm": "w773912189",
+      "name": "Great Dividing Range",
+      "kind": "range",
+      "at": [152.48584, -28.25556]
+    },
+    {
+      "osm": "w773912195",
+      "name": "Great Dividing Range",
+      "kind": "range",
+      "at": [152.41467, -28.33647]
+    },
+    {
+      "osm": "w773912196",
+      "name": "Koreelah Range",
+      "kind": "range",
+      "at": [152.52193, -28.31084]
+    },
+    {
+      "osm": "w773912209",
+      "name": "Acadia Creek Ridge",
+      "kind": "range",
+      "at": [152.39225, -28.38043]
+    },
+    {
+      "osm": "w784772877",
+      "name": "Megalith Ridge",
+      "kind": "range",
+      "at": [150.00582, -34.01209]
+    },
+    {
+      "osm": "w787520392",
+      "name": "The Crosscut Saw",
+      "kind": "range",
+      "at": [146.64317, -37.15104]
+    },
+    { "osm": "w836974683", "name": "Dawson Range", "kind": "range", "at": [149.11047, -23.78244] },
+    {
+      "osm": "w836974684",
+      "name": "Expedition Range",
+      "kind": "range",
+      "at": [149.00482, -23.76236]
+    },
+    { "osm": "w838028273", "name": "Munyang Range", "kind": "range", "at": [148.5074, -36.09143] },
+    { "osm": "w838095138", "name": "Toolong Range", "kind": "range", "at": [148.33904, -35.99041] },
+    {
+      "osm": "w860591462",
+      "name": "Dallawang Ridge",
+      "kind": "range",
+      "at": [150.41663, -33.92702]
+    },
+    {
+      "osm": "w865530213",
+      "name": "Devils Staircase",
+      "kind": "range",
+      "at": [146.6686, -37.16638]
+    },
+    {
+      "osm": "w866151216",
+      "name": "Barnard's Spur",
+      "kind": "range",
+      "at": [145.82942, -17.19366]
+    },
+    { "osm": "w866151219", "name": "Meston Ridge", "kind": "range", "at": [145.83965, -17.23601] },
+    {
+      "osm": "w867288975",
+      "name": "Water Hill Range",
+      "kind": "range",
+      "at": [145.58775, -17.6319]
+    },
+    {
+      "osm": "w867288980",
+      "name": "Cardwell Range",
+      "kind": "range",
+      "at": [145.61613, -17.77633]
+    },
+    {
+      "osm": "w889118010",
+      "name": "Blue Mountains",
+      "kind": "range",
+      "at": [150.40764, -33.56713]
+    },
+    {
+      "osm": "w912714170",
+      "name": "Murmungee Basin",
+      "kind": "range",
+      "at": [146.67458, -36.41366]
+    },
+    { "osm": "w917412045", "name": "Serong Spur", "kind": "range", "at": [153.00917, -28.38026] },
+    { "osm": "w954528177", "name": "Star Extended", "kind": "range", "at": [147.06131, -36.99433] },
+    {
+      "osm": "w956229230",
+      "name": "Black Jerrys Ridge",
+      "kind": "range",
+      "at": [150.21304, -33.76052]
+    },
+    { "osm": "w959600227", "name": "Coane Range", "kind": "range", "at": [146.03551, -19.08888] },
+    {
+      "osm": "w984858709",
+      "name": "Wild Dog Mountains",
+      "kind": "range",
+      "at": [150.23512, -33.83722]
+    },
+    { "osm": "w984986217", "name": "Western Ridge", "kind": "range", "at": [147.00873, -19.27241] },
+    { "osm": "w984986220", "name": "Central Ridge", "kind": "range", "at": [147.0147, -19.25543] },
+    {
+      "osm": "w993649446",
+      "name": "Kimmerikong Ridge",
+      "kind": "range",
+      "at": [151.1702, -33.54964]
+    },
+    {
+      "osm": "w1018774524",
+      "name": "Brassy Mountains",
+      "kind": "range",
+      "at": [148.42911, -36.2469]
+    },
+    {
+      "osm": "w1047417929",
+      "name": "Mitchells Ridge",
+      "kind": "range",
+      "at": [150.2306, -33.58305]
+    },
+    { "osm": "w1054593439", "name": "Ripple Ridge", "kind": "range", "at": [150.49535, -33.88176] },
+    {
+      "osm": "w1054593442",
+      "name": "West Warragamba Wall",
+      "kind": "range",
+      "at": [150.52965, -33.91698]
+    },
+    {
+      "osm": "w1055723447",
+      "name": "Helicopter Spur",
+      "kind": "range",
+      "at": [150.53921, -33.78745]
+    },
+    { "osm": "w1072908834", "name": "West Ridge", "kind": "range", "at": [146.40344, -37.1422] },
+    { "osm": "w1078115659", "name": "Calga Ridge", "kind": "range", "at": [150.44351, -34.18483] },
+    {
+      "osm": "w1079922591",
+      "name": "Buttercup Ridge",
+      "kind": "range",
+      "at": [146.31091, -37.10067]
+    },
+    {
+      "osm": "w1079922595",
+      "name": "Blackberry Spur",
+      "kind": "range",
+      "at": [146.30068, -37.11472]
+    },
+    { "osm": "w1111029137", "name": "Hughes Spur", "kind": "range", "at": [149.98815, -33.91444] },
+    {
+      "osm": "w1111029138",
+      "name": "Ben Lomond Ridge",
+      "kind": "range",
+      "at": [150.00554, -33.91158]
+    },
+    {
+      "osm": "w1115686942",
+      "name": "Kooriecone Ridge",
+      "kind": "range",
+      "at": [150.21863, -33.90375]
+    },
+    {
+      "osm": "w1115686943",
+      "name": "Kooriecone Spur",
+      "kind": "range",
+      "at": [150.2183, -33.90937]
+    },
+    {
+      "osm": "w1117761908",
+      "name": "Morning Star Spur",
+      "kind": "range",
+      "at": [147.12958, -37.00701]
+    },
+    {
+      "osm": "w1133575954",
+      "name": "Many Points Ridge",
+      "kind": "range",
+      "at": [150.16977, -34.04959]
+    },
+    { "osm": "w1133576473", "name": "Bulga Ridge", "kind": "range", "at": [150.15854, -34.05715] },
+    {
+      "osm": "w1133576684",
+      "name": "Blue Bush Ridge",
+      "kind": "range",
+      "at": [150.14719, -34.07622]
+    },
+    {
+      "osm": "w1133576829",
+      "name": "Gold Mine Spur",
+      "kind": "range",
+      "at": [150.14963, -34.06962]
+    },
+    { "osm": "w1148833610", "name": "North Ridge", "kind": "range", "at": [146.41326, -37.13708] },
+    {
+      "osm": "w1148833611",
+      "name": "McLaughlan Shoulder",
+      "kind": "range",
+      "at": [146.43087, -37.13418]
+    },
+    {
+      "osm": "w1148833612",
+      "name": "Mirimbah Spur",
+      "kind": "range",
+      "at": [146.41716, -37.12716]
+    },
+    { "osm": "w1148833613", "name": "T C Spur", "kind": "range", "at": [146.41069, -37.11702] },
+    {
+      "osm": "w1148833614",
+      "name": "Burnt Hut Spur",
+      "kind": "range",
+      "at": [146.44169, -37.13375]
+    },
+    { "osm": "w1148833615", "name": "River Spur", "kind": "range", "at": [146.47282, -37.12666] },
+    { "osm": "w1148833616", "name": "Bluff Spur", "kind": "range", "at": [146.47627, -37.12231] },
+    { "osm": "w1148833617", "name": "Thorn Range", "kind": "range", "at": [146.59826, -37.15671] },
+    {
+      "osm": "w1149574628",
+      "name": "Queahgong Buttress",
+      "kind": "range",
+      "at": [150.15801, -33.86671]
+    },
+    {
+      "osm": "w1149574629",
+      "name": "Jenolan Buttress",
+      "kind": "range",
+      "at": [150.16235, -33.85364]
+    },
+    {
+      "osm": "w1150389442",
+      "name": "Manslaughter Ridge",
+      "kind": "range",
+      "at": [150.11335, -33.98419]
+    },
+    {
+      "osm": "w1150610686",
+      "name": "Kilpatrick Causeway",
+      "kind": "range",
+      "at": [150.13792, -33.98008]
+    },
+    {
+      "osm": "w1150610687",
+      "name": "Wallarra Heights",
+      "kind": "range",
+      "at": [150.07568, -34.00948]
+    },
+    {
+      "osm": "w1206356009",
+      "name": "Mount Kooyoora Range",
+      "kind": "range",
+      "at": [143.68553, -36.5751]
+    },
+    {
+      "osm": "w1206356947",
+      "name": "Sunday Morning Hills",
+      "kind": "range",
+      "at": [143.69106, -36.53163]
+    },
+    { "osm": "w1208273048", "name": "Rocky Ridge", "kind": "range", "at": [146.46995, -37.22371] },
+    {
+      "osm": "w1208273049",
+      "name": "Eight Mile Spur",
+      "kind": "range",
+      "at": [146.44598, -37.21219]
+    },
+    { "osm": "w1208273050", "name": "Tunnel Spur", "kind": "range", "at": [146.36701, -37.19392] },
+    {
+      "osm": "w1208273051",
+      "name": "Four Mile Spur",
+      "kind": "range",
+      "at": [146.40155, -37.17101]
+    },
+    {
+      "osm": "w1208273052",
+      "name": "Bull Lodge Spur",
+      "kind": "range",
+      "at": [146.45021, -37.15718]
+    },
+    {
+      "osm": "w1208273053",
+      "name": "Federation Slope",
+      "kind": "range",
+      "at": [146.44503, -37.15911]
+    },
+    {
+      "osm": "w1208273054",
+      "name": "Little Buller Spur",
+      "kind": "range",
+      "at": [146.43323, -37.15665]
+    },
+    {
+      "osm": "w1208273055",
+      "name": "Six Mile Spur",
+      "kind": "range",
+      "at": [146.41266, -37.17965]
+    },
+    {
+      "osm": "w1208273056",
+      "name": "Stanleys Name Spur",
+      "kind": "range",
+      "at": [146.57373, -37.13971]
+    },
+    { "osm": "w1208273057", "name": "Queen Spur", "kind": "range", "at": [146.61388, -37.13552] },
+    { "osm": "w1208273058", "name": "King Spur", "kind": "range", "at": [146.60273, -37.10891] },
+    { "osm": "w1208273059", "name": "Muesli Spur", "kind": "range", "at": [146.59664, -37.08302] },
+    {
+      "osm": "w1208273061",
+      "name": "Thirteen Mile Spur",
+      "kind": "range",
+      "at": [146.51366, -37.15507]
+    },
+    { "osm": "w1208273062", "name": "Third Spur", "kind": "range", "at": [146.51821, -37.14514] },
+    { "osm": "w1208273064", "name": "Razorback Spur", "kind": "range", "at": [146.447, -37.09592] },
+    {
+      "osm": "w1211553355",
+      "name": "Bald Hill Spur",
+      "kind": "range",
+      "at": [146.72255, -36.70492]
+    },
+    {
+      "osm": "w1211553356",
+      "name": "Sandy Creek Spur",
+      "kind": "range",
+      "at": [146.69093, -36.71639]
+    },
+    { "osm": "w1215695222", "name": "Wattle Range", "kind": "range", "at": [146.29681, -36.9282] },
+    {
+      "osm": "w1215695223",
+      "name": "McDonalds Spur",
+      "kind": "range",
+      "at": [146.32183, -36.90663]
+    },
+    { "osm": "w1221901413", "name": "Ben Lomond", "kind": "range", "at": [147.67475, -41.57135] },
+    { "osm": "w1227344130", "name": "Bald Ridge", "kind": "range", "at": [149.94292, -33.50196] },
+    {
+      "osm": "w1227493039",
+      "name": "Purgatory Spur",
+      "kind": "range",
+      "at": [146.7871, -37.67371]
+    },
+    { "osm": "w1227493040", "name": "Razorback", "kind": "range", "at": [146.78663, -37.63765] },
+    {
+      "osm": "w1227493335",
+      "name": "Playdells Spur",
+      "kind": "range",
+      "at": [146.96624, -37.58834]
+    },
+    {
+      "osm": "w1227493486",
+      "name": "Grand Final Spur",
+      "kind": "range",
+      "at": [147.02244, -37.64601]
+    },
+    { "osm": "w1267930225", "name": "White Ridge", "kind": "range", "at": [116.68304, -20.76342] },
+    { "osm": "w1282349289", "name": "Gorge Range", "kind": "range", "at": [145.61825, -18.37122] },
+    {
+      "osm": "w1282349290",
+      "name": "Seaview Range",
+      "kind": "range",
+      "at": [145.89527, -18.69572]
+    },
+    {
+      "osm": "w1282349291",
+      "name": "Princess Hills",
+      "kind": "range",
+      "at": [145.43234, -18.30907]
+    },
+    { "osm": "w1282349292", "name": "Paluma Range", "kind": "range", "at": [146.32802, -19.12802] },
+    { "osm": "w1282349293", "name": "Hervey Range", "kind": "range", "at": [146.51243, -19.40419] },
+    { "osm": "w1320043037", "name": "Linden Ridge", "kind": "range", "at": [150.49275, -33.7018] },
+    {
+      "osm": "w1320043041",
+      "name": "Mount Hay Range",
+      "kind": "range",
+      "at": [150.35302, -33.67902]
+    },
+    {
+      "osm": "w1320335357",
+      "name": "The Jaithmathangs",
+      "kind": "range",
+      "at": [147.18747, -36.88262]
+    },
+    { "osm": "w1324621273", "name": "Hat Ridge", "kind": "range", "at": [146.137, -36.91836] },
+    {
+      "osm": "w1346628660",
+      "name": "Netherby Towers",
+      "kind": "range",
+      "at": [142.55547, -37.17421]
+    },
+    {
+      "osm": "w1346628661",
+      "name": "Netherby Towers",
+      "kind": "range",
+      "at": [142.55436, -37.17345]
+    },
+    {
+      "osm": "w1365432093",
+      "name": "South West Spur",
+      "kind": "range",
+      "at": [147.17635, -36.85626]
+    },
+    { "osm": "w1365432094", "name": "East Spur", "kind": "range", "at": [147.21156, -36.85401] },
+    {
+      "osm": "w1365432314",
+      "name": "Skeleton Spur",
+      "kind": "range",
+      "at": [147.20123, -36.88828]
+    },
+    { "osm": "w1365435746", "name": "Charity Spur", "kind": "range", "at": [146.2147, -37.86054] },
+    { "osm": "w1367994883", "name": "Noble Spur", "kind": "range", "at": [146.2525, -37.59275] },
+    {
+      "osm": "w1367994887",
+      "name": "Shamrock Spur",
+      "kind": "range",
+      "at": [146.26142, -37.58978]
+    },
+    { "osm": "w1367994888", "name": "Clark Spur", "kind": "range", "at": [146.28769, -37.55927] },
+    { "osm": "w1367994890", "name": "Webster Spur", "kind": "range", "at": [146.2861, -37.58139] },
+    { "osm": "w1367998177", "name": "Tinger Spur", "kind": "range", "at": [146.22576, -37.59989] },
+    {
+      "osm": "w1368039806",
+      "name": "Cherry Tree Spur",
+      "kind": "range",
+      "at": [146.39441, -37.82269]
+    },
+    {
+      "osm": "w1368039808",
+      "name": "Cherry Tree Spur",
+      "kind": "range",
+      "at": [146.3884, -37.823]
+    },
+    { "osm": "w1370798634", "name": "Lumpy Ridge", "kind": "range", "at": [146.21632, -38.21517] },
+    {
+      "osm": "w1375818000",
+      "name": "Big Crater Ridge",
+      "kind": "range",
+      "at": [150.53436, -33.86414]
+    },
+    {
+      "osm": "w1375818001",
+      "name": "Little Crater Ridge",
+      "kind": "range",
+      "at": [150.54545, -33.85817]
+    },
+    {
+      "osm": "w1378472257",
+      "name": "Sweetwater Spur",
+      "kind": "range",
+      "at": [146.1104, -38.04254]
+    },
+    {
+      "osm": "w1389771295",
+      "name": "Mitchells Ridge",
+      "kind": "range",
+      "at": [150.23631, -33.58203]
+    },
+    {
+      "osm": "w1390296900",
+      "name": "Warriewood Escarpment",
+      "kind": "range",
+      "at": [151.28856, -33.68383]
+    },
+    {
+      "osm": "w1475994477",
+      "name": "House of Cards Ridge",
+      "kind": "range",
+      "at": [145.79945, -18.58752]
+    },
+    { "osm": "w1475997403", "name": "Rippers Ridge", "kind": "range", "at": [145.80385, -18.5656] },
+    {
+      "osm": "w1482064887",
+      "name": "Lookout Ridge",
+      "kind": "range",
+      "at": [145.80579, -18.58594]
+    },
+    { "osm": "w1486825771", "name": "Sayers Spur", "kind": "range", "at": [146.30008, -38.23486] },
+    { "osm": "w1494473310", "name": "Spades Ridge", "kind": "range", "at": [145.79641, -18.58373] },
+    { "osm": "w1513487153", "name": "T Spur", "kind": "range", "at": [147.3396, -36.77214] },
+    { "osm": "w1513487155", "name": "Duane Spur", "kind": "range", "at": [147.33566, -36.80186] },
+    { "osm": "w1513487156", "name": "Quartz Ridge", "kind": "range", "at": [147.28947, -36.75596] },
+    { "osm": "w1513487157", "name": "Horse Ridge", "kind": "range", "at": [147.31621, -36.75882] },
+    { "osm": "w1513487158", "name": "Granny Spur", "kind": "range", "at": [147.30748, -36.76716] },
+    {
+      "osm": "w1513487160",
+      "name": "The Staircase",
+      "kind": "range",
+      "at": [147.29548, -36.72031]
+    },
+    { "osm": "w1513487161", "name": "Audax Ridge", "kind": "range", "at": [147.32556, -36.72848] },
+    {
+      "osm": "w1513487162",
+      "name": "Saddle Back Spur",
+      "kind": "range",
+      "at": [147.32333, -36.7689]
+    },
+    {
+      "osm": "w1513487163",
+      "name": "Granite Flat Spur",
+      "kind": "range",
+      "at": [147.33227, -36.71262]
+    },
+    { "osm": "w1513487164", "name": "Eskdale Spur", "kind": "range", "at": [147.31429, -36.71768] },
+    {
+      "osm": "w1513922692",
+      "name": "Black Possum Spur",
+      "kind": "range",
+      "at": [147.25003, -36.79465]
+    },
+    {
+      "osm": "w1513922693",
+      "name": "The Grey Hills",
+      "kind": "range",
+      "at": [147.28077, -36.80245]
+    },
+    { "osm": "w1515284448", "name": "Snake Ridge", "kind": "range", "at": [146.92261, -36.73166] },
+    { "osm": "w1515284450", "name": "Emily Spur", "kind": "range", "at": [146.97054, -36.75219] },
+    {
+      "osm": "w1515285585",
+      "name": "Red Jacket Spur",
+      "kind": "range",
+      "at": [146.94751, -36.84553]
+    },
+    { "osm": "w1515286325", "name": "Dingo Ridge", "kind": "range", "at": [146.91483, -36.74854] },
+    {
+      "osm": "w1515304467",
+      "name": "Three Bells Spur",
+      "kind": "range",
+      "at": [146.97209, -36.75737]
+    },
+    {
+      "osm": "w1515304469",
+      "name": "Opossum Ridge",
+      "kind": "range",
+      "at": [146.94578, -36.74549]
+    },
+    {
+      "osm": "w1518697336",
+      "name": "Weston's Ridge",
+      "kind": "range",
+      "at": [147.3231, -36.74225]
+    },
+    {
+      "osm": "w1518697337",
+      "name": "Weston's North",
+      "kind": "range",
+      "at": [147.32124, -36.73929]
+    },
+    {
+      "osm": "w1518697338",
+      "name": "Green Camp Spur",
+      "kind": "range",
+      "at": [147.33749, -36.73707]
+    },
+    {
+      "osm": "w1518697339",
+      "name": "Weston's South",
+      "kind": "range",
+      "at": [147.32378, -36.74604]
+    },
+    { "osm": "w1518699333", "name": "Sunset Ridge", "kind": "range", "at": [147.32076, -36.75582] },
+    {
+      "osm": "w1519366966",
+      "name": "Bennison Spur",
+      "kind": "range",
+      "at": [146.68556, -37.50593]
+    },
+    { "osm": "w1521089673", "name": "Breadknife", "kind": "range", "at": [145.9976, -19.00829] },
+    {
+      "osm": "w1525049917",
+      "name": "Helicopter Spur",
+      "kind": "range",
+      "at": [146.57111, -37.19138]
+    },
+    { "osm": "w1525069803", "name": "High Ridge", "kind": "range", "at": [146.61359, -37.22313] },
+    { "osm": "w1525364508", "name": "Long Spur", "kind": "range", "at": [146.56052, -37.23087] },
+    { "osm": "w1525635236", "name": "Middle Ridge", "kind": "range", "at": [146.47777, -37.47217] },
+    {
+      "osm": "w1525695674",
+      "name": "Whisky Knob Spur",
+      "kind": "range",
+      "at": [146.42566, -37.47583]
+    },
+    {
+      "osm": "w1525696040",
+      "name": "Mount Shillinglaw Spur",
+      "kind": "range",
+      "at": [146.44471, -37.49687]
+    },
+    {
+      "osm": "w1525699429",
+      "name": "McMillan Spur",
+      "kind": "range",
+      "at": [146.48786, -37.51969]
+    },
+    { "osm": "w1528692188", "name": "Howitt Spur", "kind": "range", "at": [146.60929, -37.17275] },
+    {
+      "osm": "w1529506199",
+      "name": "Monument Spur",
+      "kind": "range",
+      "at": [146.52324, -37.10287]
+    },
+    {
+      "osm": "w1529509066",
+      "name": "Clear Hills Spur",
+      "kind": "range",
+      "at": [146.54244, -37.10121]
+    },
+    { "osm": "w1530494352", "name": "Flat Spur", "kind": "range", "at": [146.53579, -37.1804] },
+    {
+      "osm": "w1530494775",
+      "name": "Sixteen Mile Spur",
+      "kind": "range",
+      "at": [146.51136, -37.20277]
+    },
+    { "osm": "w1531333223", "name": "Blowfly Spur", "kind": "range", "at": [146.99859, -37.06805] },
+    {
+      "osm": "w1537402983",
+      "name": "Wonnangatta Spur",
+      "kind": "range",
+      "at": [146.72649, -37.16967]
+    },
+    {
+      "osm": "w1548989747",
+      "name": "The Long Spur",
+      "kind": "range",
+      "at": [147.37665, -36.75724]
+    },
+    {
+      "osm": "w1548993630",
+      "name": "New Country Spur",
+      "kind": "range",
+      "at": [147.3606, -36.80213]
+    },
+    { "osm": "w1549000958", "name": "Heathy Spur", "kind": "range", "at": [147.32593, -36.85954] }
+  ]
+}
