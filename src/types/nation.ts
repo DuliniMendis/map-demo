@@ -2,6 +2,13 @@
 
 export interface NationView { zoom?: number; pitch?: number; bearing?: number; }
 
+export interface NearbyFeature {
+  name: string;               // OSM name tag as published
+  kind: 'city' | 'town' | 'peak' | 'river' | 'lake' | 'range';
+  distanceKm: number;         // great-circle from the nation's point, 1 decimal place
+  bearing: 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW'; // from the nation's point to the feature
+}
+
 export interface Nation {
   id: string;                 // AUSTLANG code, e.g. "A103"  (stable key, used in URL ?n=)
   name: string;               // AUSTLANG language_name, trimmed
@@ -12,10 +19,13 @@ export interface Nation {
     locality: string;         // sal_name_2021, e.g. "Petermann"
     state: string;            // state_name_2021, e.g. "Northern Territory"
     stateCode: 'NSW'|'VIC'|'QLD'|'SA'|'WA'|'TAS'|'NT'|'ACT'|'OT';
-    nearestTown?: string;     // Phase 2 (OSM place=town/city within 100 km)
   };
   links: { austlang: string; wikipedia?: string; };
   view?: NationView;          // per-nation camera override from data/overrides.json
+  nearby?: {                  // Phase 3 (WS8): OpenStreetMap, computed at build time
+    town?: NearbyFeature;     // nearest place=city|town within 100 km
+    landmark?: NearbyFeature; // nearest named peak/river/lake/range within 50 km
+  };
   source: 'austlang';
 }
 

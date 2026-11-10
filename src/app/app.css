@@ -382,3 +382,105 @@
     top: calc(var(--gap) + 52px);
   }
 }
+
+/* ---- Globe (WS9) ---- */
+
+/* MapLibre draws no sky in globe mode (z < 4), only a thin atmosphere at the limb, so around the globe and
+   above a pitched horizon the canvas is transparent. Show the style's sky colours there (sky-color →
+   horizon-color in src/map/style/sky.ts) so zooming through z 4 doesn't flash the page background. */
+.app__main .map-canvas {
+  background: linear-gradient(to bottom, #7fb0e0, #efeae0 75%);
+}
+
+/* ---- Guided tour (WS9) ---- */
+
+.tour-button {
+  margin-left: 8px;
+}
+.tour-button[aria-pressed='true'] {
+  border-color: var(--accent);
+}
+
+/* Top-left, under the About / Tour buttons, in the top half of the map: clear of the layer controls
+   (top-right), the selected marker (map centre) and the info card (bottom half, see below). */
+.tour-panel {
+  position: absolute;
+  z-index: 3;
+  top: calc(var(--gap) + 52px);
+  left: var(--gap);
+  width: min(380px, calc(100% - 2 * var(--gap) - 216px));
+  max-height: calc(50% - 72px);
+  overflow-y: auto;
+  display: grid;
+  gap: 8px;
+  padding: 12px 14px;
+}
+.tour-panel:focus-visible {
+  outline: 2px solid var(--accent);
+}
+.tour-panel p,
+.tour-panel h2 {
+  margin: 0;
+}
+.tour-panel__count {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.tour-panel__title {
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+.tour-panel__narration {
+  margin-top: 4px !important;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.tour-panel__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tour-panel__controls .btn {
+  min-height: 36px;
+  padding: 4px 10px;
+}
+.tour-panel__controls .btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.tour-panel__controls [data-testid='tour-stop'] {
+  margin-left: auto;
+}
+.tour-panel__note {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* The panel takes the disclaimer banner's place while the tour runs (it repeats the "approximate
+   locations" note, and the info card has its own disclaimer line); the banner comes back afterwards. */
+.app__main:has(> .tour-panel) .app__banner {
+  display: none;
+}
+
+/* While the tour runs the panel owns the top half of the map (it ends at most 8 px above the centre, where
+   the selected marker is), so the info card keeps to the bottom half and scrolls if it is long. */
+@media (min-width: 900px) {
+  .app__main:has(> .tour-panel) .cm-info-card.app__card {
+    max-height: calc(50% - 40px - var(--gap));
+  }
+}
+
+@media (max-width: 899.98px) {
+  .app__main:has(> .tour-panel) .cm-info-card {
+    max-height: calc((100dvh - var(--cm-sheet-peek, 164px)) / 2 - 28px);
+  }
+  .tour-panel {
+    right: var(--gap);
+    width: auto;
+    padding: 10px 12px;
+    gap: 6px;
+  }
+  .tour-panel__narration {
+    font-size: 0.85rem;
+  }
+}

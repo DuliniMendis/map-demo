@@ -34,6 +34,13 @@ map-demo/
 ```ts
 export interface NationView { zoom?: number; pitch?: number; bearing?: number; }
 
+export interface NearbyFeature {
+  name: string;               // OSM name tag as published
+  kind: 'city' | 'town' | 'peak' | 'river' | 'lake' | 'range';
+  distanceKm: number;         // great-circle from the nation's point, 1 decimal place
+  bearing: 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW'; // from the nation's point to the feature
+}
+
 export interface Nation {
   id: string;                 // AUSTLANG code, e.g. "A103"  (stable key, used in URL ?n=)
   name: string;               // AUSTLANG language_name, trimmed
@@ -44,10 +51,13 @@ export interface Nation {
     locality: string;         // sal_name_2021, e.g. "Petermann"
     state: string;            // state_name_2021, e.g. "Northern Territory"
     stateCode: 'NSW'|'VIC'|'QLD'|'SA'|'WA'|'TAS'|'NT'|'ACT'|'OT';
-    nearestTown?: string;     // Phase 2 (OSM place=town/city within 100 km)
   };
   links: { austlang: string; wikipedia?: string; };
   view?: NationView;          // per-nation camera override from data/overrides.json
+  nearby?: {                  // Phase 3 (WS8): OpenStreetMap, computed at build time
+    town?: NearbyFeature;     // nearest place=city|town within 100 km
+    landmark?: NearbyFeature; // nearest named peak/river/lake/range within 50 km
+  };
   source: 'austlang';
 }
 
@@ -70,14 +80,18 @@ interface AppState {
   cameraState: 'idle' | 'flying';
   query: string;                   // search text
   stateFilter: Nation['modern']['stateCode'] | 'ALL';
-  layers: { imagery: boolean; labels: boolean; hillshade: boolean; relief: boolean; };
+  layers: { imagery: boolean; labels: boolean; hillshade: boolean; relief: boolean; contours: boolean; };
   exaggeration: number;            // 1.0–2.5, default 1.5
   reducedMotion: boolean;          // from matchMedia
+  sunHour: number | null;          // Phase 3 (WS7): local solar hour 5–19; null = fixed default light
+  tour: { status: 'off' | 'playing' | 'paused'; index: number }; // Phase 3 (WS9)
   select(id: string | null): void;
   setHovered(id: string | null): void;
   setCameraState(s: AppState['cameraState']): void;
   setQuery(q: string): void; setStateFilter(f: AppState['stateFilter']): void;
   toggleLayer(k: keyof AppState['layers']): void; setExaggeration(n: number): void;
+  setSunHour(h: number | null): void;   // clamped to 5–19 (clampSunHour)
+  setTour(t: Partial<AppState['tour']>): void;
 }
 ```
 
@@ -87,7 +101,11 @@ Selectors (pure, unit-tested by WS4): `filterNations(nations, query, stateFilter
 
 ```ts
 // src/map/style/buildStyle.ts
-export interface StyleOptions { imagery: boolean; labels: boolean; hillshade: boolean; relief: boolean; exaggeration: number; demProvider: 'mapterhorn' | 'aws'; }
+export interface StyleOptions { imagery: boolean; labels: boolean; hillshade: boolean; relief: boolean; exaggeration: number; demProvider: 'mapterhorn' | 'aws';
+  contours: boolean;        // Phase 3 (WS7)
+  sunHour: number | null;   // Phase 3 (WS7)
+  globe: boolean;           // Phase 3 (WS9); the app always passes true
+}
 export function buildStyle(o: StyleOptions): maplibregl.StyleSpecification;
 export function applyStyleOptions(map: maplibregl.Map, o: StyleOptions): void; // in-place toggles, no setStyle
 // src/map/style/ids.ts  — exported constants
@@ -128,10 +146,11 @@ Marker layers: source `nations`, layers `nations-circle`, `nations-label`, `nati
 ```
 
 `data-testid`s (WS6 tests rely on these): `side-panel`, `search-input`, `state-filter`, `nation-item-<id>`, `info-card`, `info-locality`, `info-state`, `map-canvas`, `layer-toggle-<key>`, `exaggeration-slider`, `about-button`, `attribution`.
+Phase 3: `sun-slider`, `sun-reset` (WS7); `info-nearby` (WS8); `tour-button`, `tour-panel`, `tour-next`, `tour-prev`, `tour-pause`, `tour-stop` (WS9).
 
 ## URL state (WS5)
 
-`?n=<Nation.id>` selected nation; `?l=imagery,labels` enabled layers (omit = defaults); `?x=1.5` exaggeration. Read on boot, write with `history.replaceState` (debounced 300 ms). Unknown id → ignore, show overview.
+`?n=<Nation.id>` selected nation; `?l=imagery,labels` enabled layers incl. `contours` (omit = defaults); `?x=1.5` exaggeration; `?t=14.5` sun hour (Phase 3, WS7; omit = default light). The tour is not in the URL. Read on boot, write with `history.replaceState` (debounced 300 ms). Unknown id → ignore, show overview.
 
 ## Events / timing budget
 

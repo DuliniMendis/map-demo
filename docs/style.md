@@ -237,3 +237,88 @@ Horizon haze at pitch 80°, and the same area on the AWS fallback DEM with Mapte
 - A manual provider switch (dev page only) briefly flattens the terrain until the new DEM tiles arrive.
 - Hairline tile-edge lines in hillshade-only mode in patchy LiDAR areas (see Quality checks).
 - The labels overlay is English-first (`name:en`, then `name`), as OpenStreetMap tags it.
+
+## Phase 3 (WS7): contour lines and time-of-day light
+
+Both are runtime options of `applyStyleOptions` (`contours`, `sunHour` in `StyleOptions`); `buildStyle`
+is unchanged and never contains them (the contour source needs a protocol registered first, and the
+sun needs the map centre). The style dev page has a contours checkbox, a sun slider and `?t=<hour>`.
+
+### Contour lines
+
+Generated in the browser from the DEM we already load, by
+[maplibre-contour](https://github.com/onthegomap/maplibre-contour) 0.1.1 (BSD-3-Clause, onthegomap).
+It registers a MapLibre protocol, fetches and decodes DEM tiles in its own web worker (a blob URL built
+into the package, so it works the same under `vite` dev and `vite build`), runs marching squares and
+hands MapLibre ready-made vector tiles. Works with MapLibre 6.17, Mapterhorn's terrarium **WebP** and
+the AWS terrarium PNG fallback. The library (9.9 KB gz) is a separate chunk, downloaded the first time
+contours are switched on (`src/map/style/contours.ts`).
+
+| | |
+|---|---|
+| Source | `contours` (vector, `contour-<provider>-contour://{z}/{x}/{y}?…`), z10–13 generated, overzoomed above; `bounds` = `SOURCE_BOUNDS` |
+| Layers | `contour-lines` (line), `contour-labels` (symbol, major lines only, from z10.5), both directly above `hillshade` and below the river/border lines, WS2's markers and every label |
+| Intervals | z10–12: 50 m, major 250 m; z13+: 20 m, major 100 m (`CONTOUR_THRESHOLDS`, `contourInterval(z)`) |
+| Labels | `"450 m"` (`number-format`, en-AU), `Noto Sans Regular` 9–11 px along the line, flat on the slope (`text-pitch-alignment: viewport`, rotation `map`) |
+| Look | Thin (0.35–1.4 px) and faint (opacity 0.2 minor / 0.4 major, fading in over z10–10.5, so they are fully drawn where nation flights land). Over imagery a pale warm `rgb(255,246,230)`; with imagery off the hillshade's dark brown `rgb(58,36,20)` with a light halo on the labels |
+| Off | `visibility: none` in place; the source stays so a re-toggle is instant |
+
+**DEM reads match the terrain's.** maplibre-contour reads the DEM where the terrain mesh does, so most
+of its fetches are URLs the browser already has (Mapterhorn sends `cache-control: public,
+max-age=604800`):
+
+- Mapterhorn (512 px): the terrain loads z−1 tiles; contours use `overzoom: 1` (a zN contour tile from a
+  quadrant of the z(N−1) DEM tile, needing ≤ 3 neighbours instead of 8). DEM capped at **z12**, because
+  Mapterhorn 404s z13+ wherever only 30 m data exists (most of the interior).
+- AWS (256 px, fallback): the terrain loads zN at view zoom N, so `overzoom: 0`, DEM capped at z13.
+- On `style:dem-fallback` (or whenever `applyStyleOptions` sees the AWS provider) the contour source is
+  replaced with the AWS one, in place, at the same layer position.
+
+Measured in `tests/playwright/landscape.spec.ts` (synthetic DEM, Katoomba, z11.5, pitch 60°, bearing
+−18°, 1280×800): the terrain + hillshade loaded **25 DEM tiles (23 URLs)** for the view; switching
+contours on made **20 DEM fetches, 10 of them URLs the terrain had already loaded** (HTTP-cache hits in a
+real browser) and **10 new URLs** (neighbours along the edges of the view). So contours add about
++40 % DEM traffic at that view, not +100 %. The spec asserts new URLs ≤ terrain URLs.
+
+Frame rate with the style dev page at Blue Mountains (z12.6, pitch 66°, 1280×800, live tiles, Apple
+M5 Max, headless Chromium on Metal), mean over a 6 s continuous pan: **59.9 fps** without contours,
+**60.0 fps** with (the display cap).
+
+Note: nation views arrive at z10.5 (WS2's `DEFAULT_VIEW`), so contours appear once you zoom in a step.
+
+| On imagery | On relief |
+|---|---|
+| ![](style/ws7-bluemtns-contours-imagery.jpg) | ![](style/ws7-bluemtns-contours-relief.jpg) |
+
+### Time-of-day light
+
+`sunHour` (store, 5–19, local **apparent** solar time: 12:00 = sun due north/south) moves the
+hillshade light to where the sun is at that hour, today (eastern Australian calendar date), over the
+selected nation's point, or else the map centre — fixed when the slider moves, never re-computed on
+pan (`src/map/style/lighting.ts`). `sunPosition(lat, lng, date, hour)` uses the NOAA solar-calculator
+formulas (declination, equation of time, refraction) and is unit-tested against reference positions
+for Sydney, Uluru, Hobart and Darwin.
+
+| Paint | `sunHour: null` (default, unchanged) | `sunHour` set |
+|---|---|---|
+| `hillshade-illumination-direction` | 315 | sun azimuth (0.5° steps) |
+| `hillshade-illumination-anchor` | `viewport` | `map` (the light stays with the land as the camera turns) |
+| `hillshade-exaggeration` | 0.35 / 0.6 (imagery on/off) | × 1.5 at the horizon → × 1 at 45° → × 0.75 near the zenith |
+| `hillshade-highlight-color` | `rgba(255,244,224,0.35)` / `#fff4e0` | towards golden `#ffc27a` as the sun drops below 45° |
+| `hillshade-shadow-color` | `#3a2414` | towards a cool dusk `#2b1d2e` as the sun drops |
+
+`hillshade-illumination-altitude` exists in MapLibre 6.17 but the `standard` hillshade method (ours)
+ignores it; only `basic`/`combined`/`igor`/`multidirectional` read it, and switching method would change
+today's default look. So altitude is expressed through strength and colour instead (table above). No
+sky tint (optional in the brief; not done). The shadow colour now has a zero-length transition like
+the other runtime-changed hillshade paint (see "No paint transitions" above).
+
+UI: "Light (sun time)" slider (`sun-slider`, 15-minute steps, `aria-valuetext` "7:30 am") and a
+"Default light" button (`sun-reset`) in the layer controls; URL `?t=14.5`, omitted for the default.
+
+Grampians (Gariwerd), Halls Gap, 10 November, relief + hillshade (top) and imagery + hillshade:
+
+| 07:00 | 12:00 | 18:00 | default |
+|---|---|---|---|
+| ![](style/ws7-grampians-0700-relief.jpg) | ![](style/ws7-grampians-1200-relief.jpg) | ![](style/ws7-grampians-1800-relief.jpg) | ![](style/ws7-grampians-default-relief.jpg) |
+| ![](style/ws7-grampians-0700-imagery.jpg) | ![](style/ws7-grampians-1200-imagery.jpg) | ![](style/ws7-grampians-1800-imagery.jpg) | |

@@ -16,6 +16,9 @@ Start with [`PLAN.md`](PLAN.md), then [`docs/contracts.md`](docs/contracts.md), 
 | WS4 | Side panel & info card | [`docs/workstreams/WS4-side-panel.md`](docs/workstreams/WS4-side-panel.md) |
 | WS5 | App shell & integration | [`docs/workstreams/WS5-app-shell.md`](docs/workstreams/WS5-app-shell.md) |
 | WS6 | QA, performance, deploy | [`docs/workstreams/WS6-qa-deploy.md`](docs/workstreams/WS6-qa-deploy.md) |
+| WS7 | Phase 3: contours, time-of-day light | [`docs/workstreams/WS7-landscape-detail.md`](docs/workstreams/WS7-landscape-detail.md) |
+| WS8 | Phase 3: nearest town & landmark | [`docs/workstreams/WS8-nearby.md`](docs/workstreams/WS8-nearby.md) |
+| WS9 | Phase 3: globe view, guided tour | [`docs/workstreams/WS9-globe-tour.md`](docs/workstreams/WS9-globe-tour.md) |
 
 Research, licences and attribution strings: [`docs/research.md`](docs/research.md).
 

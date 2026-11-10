@@ -3,6 +3,7 @@ import { SOURCE_DEM, SOURCE_DEM_SHADE, SOURCE_IMAGERY, SOURCE_LABELS } from './i
 import { backgroundLayer, imageryLayer } from './layers/base';
 import { hillshadeLayer } from './layers/hillshade';
 import { labelLayers } from './layers/labels';
+import { styleProjection } from './projection';
 import { reliefLayer } from './layers/relief';
 import { sky } from './sky';
 import { demSource, GLYPHS_URL, imagerySource, labelsSource } from './sources';
@@ -20,6 +21,9 @@ export const DEFAULT_STYLE_OPTIONS: StyleOptions = {
   relief: false,
   exaggeration: 1.5,
   demProvider: 'mapterhorn',
+  contours: false,
+  sunHour: null,
+  globe: true,
 };
 
 /**
@@ -50,5 +54,6 @@ export function buildStyle(o: StyleOptions): StyleSpecification {
     ],
     terrain: { source: SOURCE_DEM, exaggeration: o.exaggeration },
     sky: sky(),
+    projection: styleProjection(o.globe),
   };
 }

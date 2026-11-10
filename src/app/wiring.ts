@@ -23,10 +23,16 @@ export interface DemState {
 }
 
 export function styleOptionsFrom(
-  s: Pick<AppState, 'layers' | 'exaggeration'>,
+  s: Pick<AppState, 'layers' | 'exaggeration' | 'sunHour'>,
   demProvider: StyleOptions['demProvider'],
 ): StyleOptions {
-  return { ...s.layers, exaggeration: s.exaggeration, demProvider };
+  return {
+    ...s.layers,
+    exaggeration: s.exaggeration,
+    sunHour: s.sunHour,
+    globe: true,
+    demProvider,
+  };
 }
 
 /** Resolves when the map has finished loading tiles and is not moving. */
@@ -127,7 +133,11 @@ export function wireMap(
     // Re-targeting mid-flight is allowed: the controller cancels the current animation.
     if (s.selectedId !== prev.selectedId) fly(s.selectedId, prev.selectedId);
     if (s.hoveredId !== prev.hoveredId) controller.setHovered(s.hoveredId);
-    if (s.layers !== prev.layers || s.exaggeration !== prev.exaggeration) {
+    if (
+      s.layers !== prev.layers ||
+      s.exaggeration !== prev.exaggeration ||
+      s.sunHour !== prev.sunHour
+    ) {
       applyStyleOptions(map, styleOptionsFrom(s, dem.provider()));
     }
   });
