@@ -134,7 +134,7 @@ legibility. At pitch 75 `'map'` lays the disc flat on the ground and it collapse
 |---|---|
 | ![](camera/pitch-s64-behind-viewport.jpg) | ![](camera/pitch-s64-behind-map.jpg) |
 
-**Hit testing.** Clicks and hover query `nations-circle` in an 8 px box (markers are 3–7 px). MapLibre 6.17's
+**Hit testing.** Clicks and hover query `nations-circle` in an 8 px box (markers are 4–8 px). MapLibre 6.17's
 `queryRenderedFeatures` returns *no* circle features at all above about 70° pitch (measured: works at 64–70°,
 empty at 72°+, with and without terrain, both alignments), even though they are drawn. Above 60° pitch a
 miss falls back to projecting every nation with `map.project` (terrain-aware) and taking the nearest within

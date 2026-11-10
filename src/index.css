@@ -8,32 +8,38 @@
     Arial,
     sans-serif;
   line-height: 1.45;
-  /* One dark theme in the colours of the Aboriginal flag: black ground, red for selection and active
-     states, yellow for the sun-like accents (pins, focus, links). */
-  color-scheme: dark;
+  /* One light theme with the colours of the Aboriginal flag as accents: black for text and focus, red for
+     selection and active states, yellow for the pins, link underlines and hover highlights. Yellow is never
+     used for text (it is 1.6:1 on white). */
+  color-scheme: light;
   --side-width: 360px;
 
   --flag-black: #000000;
   --flag-red: #e03c31; /* Pantone 179 C */
   --flag-yellow: #ffc72c; /* Pantone 123 C */
 
-  --bg: #0a0a0a;
-  --bg-raised: #131313;
-  --bg-hover: #1b1b1b;
-  --fg: #f4f2ee;
-  --muted: #a39f99; /* 7:1 on --bg */
-  --border: #262626;
-  --border-strong: #3a3a3a;
+  --bg: #fbfaf8;
+  --bg-raised: #ffffff;
+  --bg-hover: #f2f0ec;
+  --fg: #141414;
+  --muted: #5f5a54; /* 6.6:1 on --bg */
+  --border: #e6e3de;
+  --border-strong: #cbc7c0;
 
-  --accent: var(--flag-red); /* indicators, selected state, active borders (not small text) */
-  --accent-text: var(--flag-yellow); /* links and accent text: 12:1 on --bg */
-  --focus: var(--flag-yellow);
-  --selected-bg: rgb(224 60 49 / 14%);
-  --chip-bg: #161616;
+  --accent: var(
+    --flag-red
+  ); /* selected state, active borders, sliders and checkboxes (4:1 on white) */
+  --accent-text: var(--fg); /* links are black text … */
+  --link-underline: var(--flag-yellow); /* … with a yellow underline */
+  --focus: var(--flag-black);
+  --selected-bg: rgb(224 60 49 / 8%);
+  --chip-bg: #f5f3ef;
+  --hover-bg: var(--flag-yellow);
+  --hover-fg: var(--flag-black);
 
-  --glass: rgb(10 10 10 / 82%);
-  --card-bg: rgb(10 10 10 / 92%);
-  --shadow: 0 12px 32px rgb(0 0 0 / 50%);
+  --glass: rgb(255 255 255 / 86%);
+  --card-bg: rgb(255 255 255 / 96%);
+  --shadow: 0 10px 30px rgb(20 16 10 / 14%);
   --radius: 8px;
   --radius-sm: 6px;
 }

@@ -1,4 +1,5 @@
-// Nation markers: one GeoJSON source and three layers (docs/contracts.md "Camera & markers").
+// Nation markers: one GeoJSON source and five layers (docs/contracts.md "Camera & markers"): a ground shadow,
+// the selection ring, the pin, a specular highlight that makes it read as a sphere, and the label.
 // The layer specs and GeoJSON builder are pure (unit-tested); MarkersLayer wires them onto a map.
 
 import type { FeatureCollection, Point } from 'geojson';
@@ -10,25 +11,58 @@ export const SOURCE_NATIONS = 'nations';
 export const LAYER_NATIONS_CIRCLE = 'nations-circle';
 export const LAYER_NATIONS_RING = 'nations-selected-ring';
 export const LAYER_NATIONS_LABEL = 'nations-label';
-/** Bottom to top. The ring sits under the circle so it reads as a halo. */
-export const NATIONS_LAYER_IDS = [LAYER_NATIONS_RING, LAYER_NATIONS_CIRCLE, LAYER_NATIONS_LABEL];
+export const LAYER_NATIONS_SHADOW = 'nations-shadow';
+export const LAYER_NATIONS_HIGHLIGHT = 'nations-highlight';
+/** Bottom to top. The ring sits under the circle so it reads as a halo. Only the circle takes pointer input. */
+export const NATIONS_LAYER_IDS = [
+  LAYER_NATIONS_SHADOW,
+  LAYER_NATIONS_RING,
+  LAYER_NATIONS_CIRCLE,
+  LAYER_NATIONS_HIGHLIGHT,
+  LAYER_NATIONS_LABEL,
+];
 
 /** Aboriginal flag colours (see src/index.css): yellow pins, red selection ring, black outlines. */
 export const MARKER_COLORS = {
   fill: '#ffc72c', // flag yellow
-  fillHover: '#ffe28a',
-  stroke: '#000000',
+  fillHover: '#ffd75e',
+  stroke: '#7a5200', // deep gold rim: reads as the shaded edge of a sphere
   selectedStroke: '#000000',
   ring: '#e03c31', // flag red
+  highlight: '#ffffff',
+  shadow: '#000000',
   labelText: '#ffffff',
   labelHalo: '#000000',
 } as const;
 
-/** Circle radius 3 px at z3 → 7 px at z10 (linear, clamped outside). */
+/** Circle radius 4 px at z3 → 8 px at z10 (linear, clamped outside). */
 const RADIUS_STOPS: [number, number][] = [
-  [3, 3],
-  [10, 7],
+  [3, 4],
+  [10, 8],
 ];
+
+/** `circle-translate` growing with the pin: `[dx, dy]` per px of radius at each radius stop. */
+function translateExpression(
+  dx: number,
+  dy: number,
+): maplibregl.PropertyValueSpecification<[number, number]> {
+  return [
+    'interpolate',
+    ['linear'],
+    ['zoom'],
+    ...RADIUS_STOPS.flatMap(([z, r]) => [z, ['literal', [dx * r, dy * r]]]),
+  ] as unknown as maplibregl.PropertyValueSpecification<[number, number]>;
+}
+
+/** `circle-radius` as a fraction of the pin's radius. */
+function scaledRadius(k: number): maplibregl.ExpressionSpecification {
+  return [
+    'interpolate',
+    ['linear'],
+    ['zoom'],
+    ...RADIUS_STOPS.flatMap(([z, r]) => [z, r * k]),
+  ] as maplibregl.ExpressionSpecification;
+}
 export const LABEL_MIN_ZOOM = 6.5;
 export const PULSE_MS = 1200;
 /** Ring offset (px beyond the circle radius) when the pulse has settled. */
@@ -95,6 +129,22 @@ export interface MarkerLayerOptions {
 export function markerLayerSpecs(opts: MarkerLayerOptions = {}): maplibregl.LayerSpecification[] {
   const layers: maplibregl.LayerSpecification[] = [
     {
+      // Soft shadow lying on the ground, offset down-right: it flattens into an ellipse as the map tilts,
+      // which is what makes the pins read as objects standing on the terrain.
+      id: LAYER_NATIONS_SHADOW,
+      type: 'circle',
+      source: SOURCE_NATIONS,
+      paint: {
+        'circle-radius': scaledRadius(1.15),
+        'circle-color': MARKER_COLORS.shadow,
+        'circle-opacity': 0.35,
+        'circle-blur': 0.7,
+        'circle-translate': translateExpression(0.35, 0.5),
+        'circle-pitch-alignment': 'map',
+        'circle-pitch-scale': 'viewport',
+      },
+    },
+    {
       id: LAYER_NATIONS_RING,
       type: 'circle',
       source: SOURCE_NATIONS,
@@ -118,14 +168,29 @@ export function markerLayerSpecs(opts: MarkerLayerOptions = {}): maplibregl.Laye
       paint: {
         'circle-radius': radiusExpression(0),
         'circle-color': ['case', hovered, MARKER_COLORS.fillHover, MARKER_COLORS.fill],
-        'circle-opacity': ['case', ['any', hovered, selected], 1, 0.85],
+        'circle-opacity': 1,
         'circle-stroke-color': [
           'case',
           selected,
           MARKER_COLORS.selectedStroke,
           MARKER_COLORS.stroke,
         ],
-        'circle-stroke-width': ['case', selected, 2.5, 1],
+        'circle-stroke-width': ['case', selected, 2, 1],
+        'circle-pitch-alignment': 'viewport',
+        'circle-pitch-scale': 'viewport',
+      },
+    },
+    {
+      // Specular highlight up and to the left of centre: turns the flat disc into a lit sphere.
+      id: LAYER_NATIONS_HIGHLIGHT,
+      type: 'circle',
+      source: SOURCE_NATIONS,
+      paint: {
+        'circle-radius': scaledRadius(0.45),
+        'circle-color': MARKER_COLORS.highlight,
+        'circle-opacity': 0.85,
+        'circle-blur': 0.9,
+        'circle-translate': translateExpression(-0.3, -0.32),
         'circle-pitch-alignment': 'viewport',
         'circle-pitch-scale': 'viewport',
       },
@@ -160,7 +225,7 @@ export function markerLayerSpecs(opts: MarkerLayerOptions = {}): maplibregl.Laye
   return layers;
 }
 
-/** Hit tolerance around the pointer: markers are 3–7 px, too small to hit exactly. */
+/** Hit tolerance around the pointer: markers are 4–8 px, too small to hit exactly. */
 const HIT_PX = 8;
 /** Above this pitch, a miss in queryRenderedFeatures falls back to projecting the points (see projectedHit). */
 const PROJECTED_HIT_MIN_PITCH = 60;

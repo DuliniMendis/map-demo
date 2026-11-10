@@ -145,6 +145,11 @@ export function SidePanel({ showDisclaimerBanner = true, className }: SidePanelP
         <h2 id={`${id}-title`} className="cm-panel__title">
           Nations &amp; language groups
         </h2>
+        {nations.length > 0 && (
+          <span className="cm-badge cm-badge--ink" aria-hidden="true">
+            {fmt.format(nations.length)}
+          </span>
+        )}
       </header>
 
       {showDisclaimerBanner && !collapsed && <Disclaimer variant="banner" />}

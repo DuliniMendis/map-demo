@@ -142,7 +142,13 @@ test.describe('MapController (WS2)', () => {
         cameraState: (window as Ws2Window).__ws2.controller!.cameraState,
       };
     });
-    expect(info.nationLayers).toEqual(['nations-selected-ring', 'nations-circle', 'nations-label']);
+    expect(info.nationLayers).toEqual([
+      'nations-shadow',
+      'nations-selected-ring',
+      'nations-circle',
+      'nations-highlight',
+      'nations-label',
+    ]);
     expect(info.cameraState).toBe('idle');
     expect(errors).toEqual([]);
   });

@@ -43,10 +43,6 @@ export interface NationListProps {
   ref?: Ref<NationListHandle>;
 }
 
-function rowMeta(n: Nation): string {
-  return `${n.modern.locality}, ${n.modern.stateCode}`;
-}
-
 export function NationList({
   items,
   nations,
@@ -250,8 +246,14 @@ export function NationList({
         }}
         onMouseEnter={() => onHover?.(n.id)}
       >
-        <span className="cm-row__name">{n.name}</span>
-        <span className="cm-row__meta">{rowMeta(n)}</span>
+        <span className="cm-row__text">
+          <span className="cm-row__name">{n.name}</span>
+          <span className="cm-row__meta">{n.modern.locality}</span>
+        </span>
+        <span className="cm-badge cm-badge--soft cm-row__state" title={n.modern.state}>
+          <span className="cm-visually-hidden">, </span>
+          {n.modern.stateCode}
+        </span>
       </div>
     );
   };
