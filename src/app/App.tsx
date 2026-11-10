@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import type * as maplibregl from 'maplibre-gl';
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { loadNations } from '../data/loadNations';
 import { MapView } from '../map/MapView';
 import { useAppStore } from '../store/useAppStore';
@@ -7,11 +8,21 @@ import { Attribution } from './Attribution';
 import { DEFAULT_ATTRIBUTION, loadAttribution, type AttributionEntry } from './attributionData';
 import { Disclaimer, InfoCard, SidePanel, type MapController } from './integration';
 import { LayerControls } from './LayerControls';
+import { PinnedCard } from './PinnedCard';
 import { ListSkeleton, LoadError, Toast } from './LoadStates';
 import { resolveBootSelection, startUrlWriter } from './UrlSync';
 import { TourButton, TourPanel } from './tour/Tour';
 import { goToOverview } from './wiring';
 import './app.css';
+
+/** Wide enough for the card to pop up next to its pin; below this WS4 docks it above the bottom sheet. */
+const DESKTOP_QUERY = '(min-width: 900px)';
+function subscribeDesktop(cb: () => void) {
+  const mq = window.matchMedia(DESKTOP_QUERY);
+  mq.addEventListener('change', cb);
+  return () => mq.removeEventListener('change', cb);
+}
+const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
 
 type LoadState = { kind: 'loading' } | { kind: 'ready' } | { kind: 'error'; message: string };
 
@@ -27,6 +38,8 @@ export function App({ bootNationId = null }: AppProps) {
   const [attempt, setAttempt] = useState(0);
   const [attribution, setAttribution] = useState<AttributionEntry[]>(DEFAULT_ATTRIBUTION);
   const [controller, setController] = useState<MapController | null>(null);
+  const [map, setMap] = useState<maplibregl.Map | null>(null);
+  const desktop = useSyncExternalStore(subscribeDesktop, isDesktop, () => false);
   const [mapUnavailable, setMapUnavailable] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
@@ -136,6 +149,7 @@ export function App({ bootNationId = null }: AppProps) {
       <main className="app__main">
         <MapView
           onController={setController}
+          onMap={setMap}
           onDemFallback={onDemFallback}
           onUnavailable={onMapUnavailable}
         />
@@ -159,14 +173,24 @@ export function App({ bootNationId = null }: AppProps) {
           <LayerControls onOverview={onOverview} />
         </div>
         {/* WS4's card positions itself (and sits above the bottom sheet on narrow screens). */}
-        {showCard && (
-          <InfoCard
-            nation={selected}
-            onClose={closeCard}
-            onBackToOverview={onOverview}
-            className="app__card"
-          />
-        )}
+        {showCard &&
+          (desktop && map ? (
+            <PinnedCard map={map} nation={selected}>
+              <InfoCard
+                nation={selected}
+                onClose={closeCard}
+                onBackToOverview={onOverview}
+                className="app__card"
+              />
+            </PinnedCard>
+          ) : (
+            <InfoCard
+              nation={selected}
+              onClose={closeCard}
+              onBackToOverview={onOverview}
+              className="app__card"
+            />
+          ))}
         <div className="app__bottom-right">
           <Attribution entries={attribution} />
         </div>

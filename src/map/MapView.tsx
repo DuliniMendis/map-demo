@@ -22,6 +22,8 @@ type Status = 'loading' | 'ready' | 'unsupported' | 'lost';
 export interface MapViewProps {
   /** Called with the controller once the map has loaded, and with null on teardown. */
   onController?: (c: MapController | null) => void;
+  /** Called with the map once it has loaded, and with null on teardown (the info card follows its pin). */
+  onMap?: (map: maplibregl.Map | null) => void;
   /** Called when the terrain source falls back to the backup provider. */
   onDemFallback?: () => void;
   /** Called when there will be no map (no WebGL, or the GL context was lost). */
@@ -32,13 +34,13 @@ export interface MapViewProps {
  * Thin wrapper: owns the MapLibre Map, hands it to the MapController on `load`, and wires both to
  * the store (src/app/wiring.ts). Style, camera and markers live in WS1/WS2 modules.
  */
-export function MapView({ onController, onDemFallback, onUnavailable }: MapViewProps) {
+export function MapView({ onController, onMap, onDemFallback, onUnavailable }: MapViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<Status>(() => (hasWebGL() ? 'loading' : 'unsupported'));
   // Latest callbacks without re-creating the map when the parent re-renders.
-  const callbacks = useRef({ onController, onDemFallback, onUnavailable });
+  const callbacks = useRef({ onController, onMap, onDemFallback, onUnavailable });
   useEffect(() => {
-    callbacks.current = { onController, onDemFallback, onUnavailable };
+    callbacks.current = { onController, onMap, onDemFallback, onUnavailable };
   });
   useEffect(() => {
     if (status === 'unsupported' || status === 'lost') callbacks.current.onUnavailable?.();
@@ -99,6 +101,7 @@ export function MapView({ onController, onDemFallback, onUnavailable }: MapViewP
       unwire = wireMap(map, controller, store, dem);
       setStatus('ready');
       callbacks.current.onController?.(controller);
+      callbacks.current.onMap?.(map);
     });
 
     return () => {
@@ -106,6 +109,7 @@ export function MapView({ onController, onDemFallback, onUnavailable }: MapViewP
       dem.dispose();
       controller?.destroy();
       if (controller) callbacks.current.onController?.(null);
+      callbacks.current.onMap?.(null);
       if (EXPOSE_MAP && window.__map === map) delete window.__map;
       map.remove();
     };

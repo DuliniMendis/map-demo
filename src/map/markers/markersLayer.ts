@@ -13,14 +13,15 @@ export const LAYER_NATIONS_LABEL = 'nations-label';
 /** Bottom to top. The ring sits under the circle so it reads as a halo. */
 export const NATIONS_LAYER_IDS = [LAYER_NATIONS_RING, LAYER_NATIONS_CIRCLE, LAYER_NATIONS_LABEL];
 
+/** Aboriginal flag colours (see src/index.css): yellow pins, red selection ring, black outlines. */
 export const MARKER_COLORS = {
-  fill: '#c8742c', // ochre
-  fillHover: '#f4a259',
-  stroke: '#2a1608',
-  selectedStroke: '#ffffff',
-  ring: '#ffffff',
-  labelText: '#fff8ee',
-  labelHalo: '#2a1608',
+  fill: '#ffc72c', // flag yellow
+  fillHover: '#ffe28a',
+  stroke: '#000000',
+  selectedStroke: '#000000',
+  ring: '#e03c31', // flag red
+  labelText: '#ffffff',
+  labelHalo: '#000000',
 } as const;
 
 /** Circle radius 3 px at z3 → 7 px at z10 (linear, clamped outside). */
@@ -103,7 +104,7 @@ export function markerLayerSpecs(opts: MarkerLayerOptions = {}): maplibregl.Laye
         'circle-radius-transition': { duration: 0, delay: 0 },
         'circle-color': 'rgba(0,0,0,0)',
         'circle-stroke-color': MARKER_COLORS.ring,
-        'circle-stroke-width': 2,
+        'circle-stroke-width': 2.5,
         'circle-stroke-opacity': 0.9,
         'circle-stroke-opacity-transition': { duration: 0, delay: 0 },
         'circle-pitch-alignment': 'viewport',

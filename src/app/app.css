@@ -1,9 +1,8 @@
 /* App shell (WS5). Colour tokens come from src/index.css; WS4's ui.css styles the panel/card. */
 
 .app {
-  --overlay-bg: color-mix(in srgb, var(--bg) 90%, transparent);
-  --overlay-shadow: 0 2px 10px rgb(0 0 0 / 25%);
-  --accent: #c2641f;
+  --overlay-bg: var(--glass);
+  --overlay-shadow: 0 4px 16px rgb(0 0 0 / 35%);
   --gap: 12px;
   display: grid;
   grid-template-columns: var(--side-width, 360px) minmax(0, 1fr);
@@ -79,6 +78,90 @@
     max-height: calc(100% - 140px);
   }
 }
+
+/* ---- Desktop: the info card pops up from its pin (PinnedCard.tsx, pinPlacement.ts) ---- */
+
+.pin-card {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: min(360px, calc(100% - 2 * var(--gap)));
+  max-height: calc(100% - 108px);
+}
+.pin-card[data-placement='docked'] {
+  left: var(--gap);
+  bottom: calc(var(--gap) + 28px);
+  animation: pin-fade 160ms ease-out both;
+}
+.pin-card > .cm-info-card.app__card {
+  position: relative;
+  z-index: 1;
+  inset: auto;
+  width: 100%;
+  min-height: 0;
+  max-height: 100%;
+}
+.pin-card:not([data-placement='docked']) {
+  animation: pin-pop 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.pin-card[data-placement='above'] {
+  transform-origin: var(--pin-tail) calc(100% + 16px);
+}
+.pin-card[data-placement='below'] {
+  transform-origin: var(--pin-tail) -16px;
+}
+.pin-card[data-placement='right'] {
+  transform-origin: -16px var(--pin-tail);
+}
+.pin-card[data-placement='left'] {
+  transform-origin: calc(100% + 16px) var(--pin-tail);
+}
+
+/* A small diamond under the card's edge, pointing at the pin. */
+.pin-card__tail {
+  position: absolute;
+  z-index: 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  rotate: 45deg;
+}
+.pin-card[data-placement='above'] .pin-card__tail {
+  bottom: -6px;
+  left: calc(var(--pin-tail) - 6px);
+}
+.pin-card[data-placement='below'] .pin-card__tail {
+  top: -6px;
+  left: calc(var(--pin-tail) - 6px);
+  border-color: var(--accent);
+}
+.pin-card[data-placement='right'] .pin-card__tail {
+  left: -6px;
+  top: calc(var(--pin-tail) - 6px);
+}
+.pin-card[data-placement='left'] .pin-card__tail {
+  right: -6px;
+  top: calc(var(--pin-tail) - 6px);
+}
+
+@keyframes pin-pop {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+@keyframes pin-fade {
+  from {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pin-card:not([data-placement='docked']) {
+    animation-name: pin-fade;
+  }
+}
 .app__bottom-right {
   right: 0;
   bottom: 0;
@@ -88,31 +171,56 @@
 .app__main .maplibregl-ctrl-bottom-right {
   bottom: 28px;
 }
+/* MapLibre's zoom/compass buttons in the app's dark glass. */
+.app__main .maplibregl-ctrl-group {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--overlay-bg);
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+.app__main .maplibregl-ctrl-group button + button {
+  border-top: 1px solid var(--border);
+}
+.app__main .maplibregl-ctrl-group button:hover {
+  background-color: var(--bg-hover);
+}
+.app__main .maplibregl-ctrl-icon {
+  filter: invert(1) brightness(0.9);
+}
 
 .overlay-panel {
   background: var(--overlay-bg);
   color: var(--fg);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--radius);
   box-shadow: var(--overlay-shadow);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
 }
 
 .btn {
   font: inherit;
-  min-height: 40px;
+  font-size: 14px;
+  font-weight: 520;
+  letter-spacing: 0.01em;
+  min-height: 36px;
   padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   background: var(--overlay-bg);
   color: var(--fg);
   cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition:
+    border-color 120ms ease,
+    color 120ms ease;
 }
 .btn:hover {
-  border-color: var(--accent);
+  border-color: var(--flag-yellow);
+  color: var(--flag-yellow);
 }
 :where(.app) :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--focus);
   outline-offset: 2px;
 }
 
@@ -137,10 +245,13 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 40px;
+  min-height: 36px;
   padding: 8px 12px;
   cursor: pointer;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 560;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .layer-controls__body {
   display: grid;
@@ -164,9 +275,11 @@
   min-height: 32px;
   cursor: pointer;
 }
-.layer-controls input[type='checkbox'],
+.layer-controls input[type='checkbox'] {
+  accent-color: var(--flag-red);
+}
 .layer-controls input[type='range'] {
-  accent-color: var(--accent);
+  accent-color: var(--flag-yellow);
 }
 .layer-controls__slider-label {
   display: flex;
@@ -181,8 +294,9 @@
   font-size: 11px;
   line-height: 1.35;
   background: var(--overlay-bg);
-  color: var(--fg);
-  border-top-left-radius: 6px;
+  color: var(--muted);
+  border-top-left-radius: var(--radius-sm);
+  backdrop-filter: blur(12px);
 }
 .attribution__line {
   all: unset;
@@ -219,10 +333,12 @@
   gap: 10px;
   max-width: min(440px, calc(100% - 32px));
   padding: 12px 16px;
-  border-radius: 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
   background: var(--overlay-bg);
   color: var(--fg);
   box-shadow: var(--overlay-shadow);
+  backdrop-filter: blur(12px);
 }
 .map-status--error {
   display: block;
@@ -232,8 +348,8 @@
   height: 16px;
   flex: none;
   border-radius: 50%;
-  border: 2px solid var(--muted);
-  border-top-color: var(--accent);
+  border: 2px solid var(--border-strong);
+  border-top-color: var(--flag-yellow);
   animation: spin 0.9s linear infinite;
 }
 @keyframes spin {
@@ -290,10 +406,13 @@
   bottom: 48px;
   translate: -50% 0;
   padding: 8px 14px;
-  border-radius: 999px;
-  background: #1b1f24;
-  color: #fff;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--flag-yellow);
+  background: var(--overlay-bg);
+  color: var(--fg);
   font-size: 0.9rem;
+  backdrop-filter: blur(12px);
   box-shadow: var(--overlay-shadow);
   transition: opacity 0.2s;
 }
@@ -309,13 +428,15 @@
   max-height: calc(100% - 48px);
   padding: 0;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-top: 2px solid var(--accent);
+  border-radius: var(--radius);
   background: var(--bg);
   color: var(--fg);
-  box-shadow: 0 10px 40px rgb(0 0 0 / 40%);
+  box-shadow: var(--shadow);
 }
 .about::backdrop {
-  background: rgb(0 0 0 / 55%);
+  background: rgb(0 0 0 / 65%);
+  backdrop-filter: blur(2px);
 }
 .about__inner {
   padding: 8px 24px 24px;
@@ -342,14 +463,16 @@
   color: var(--fg);
 }
 .about a {
-  color: var(--accent);
+  color: var(--accent-text);
+  text-decoration-color: rgb(255 199 44 / 40%);
+  text-underline-offset: 3px;
 }
 .about__ack {
   margin-top: 8px;
   padding: 4px 16px 8px;
-  border-left: 4px solid var(--accent);
-  background: color-mix(in srgb, var(--accent) 8%, transparent);
-  border-radius: 0 8px 8px 0;
+  border-left: 2px solid var(--flag-yellow);
+  background: var(--bg-raised);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 .about__close {
   font-size: 1.6rem;
@@ -357,10 +480,13 @@
   width: 40px;
   height: 40px;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--fg);
+  color: var(--muted);
   cursor: pointer;
+}
+.about__close:hover {
+  color: var(--fg);
 }
 .about__credits {
   font-size: 0.85rem;
@@ -398,7 +524,8 @@
   margin-left: 8px;
 }
 .tour-button[aria-pressed='true'] {
-  border-color: var(--accent);
+  border-color: var(--flag-yellow);
+  color: var(--flag-yellow);
 }
 
 /* Top-left, under the About / Tour buttons, in the top half of the map: clear of the layer controls
@@ -415,15 +542,20 @@
   gap: 8px;
   padding: 12px 14px;
 }
+.tour-panel {
+  border-top: 2px solid var(--accent);
+}
 .tour-panel:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--focus);
 }
 .tour-panel p,
 .tour-panel h2 {
   margin: 0;
 }
 .tour-panel__count {
-  font-size: 0.8rem;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--muted);
 }
 .tour-panel__title {
@@ -463,9 +595,10 @@
 }
 
 /* While the tour runs the panel owns the top half of the map (it ends at most 8 px above the centre, where
-   the selected marker is), so the info card keeps to the bottom half and scrolls if it is long. */
+   the selected marker is), so a docked info card keeps to the bottom half and scrolls if it is long. A card
+   pinned beside its marker sits right of the map centre, clear of the panel. */
 @media (min-width: 900px) {
-  .app__main:has(> .tour-panel) .cm-info-card.app__card {
+  .app__main:has(> .tour-panel) .pin-card[data-placement='docked'] {
     max-height: calc(50% - 40px - var(--gap));
   }
 }
