@@ -4,7 +4,7 @@ import './ui.css';
 export const DISCLAIMER_TEXT =
   'Locations are approximate single points from AUSTLANG and do not represent boundaries or native title.';
 
-/** `localStorage` key for the banner dismissal. The only thing the app stores. */
+/** `localStorage` key for the banner dismissal (the app also stores the Vision and sound choices). */
 export const DISCLAIMER_STORAGE_KEY = 'country-map:disclaimer-dismissed';
 
 function readDismissed(): boolean {

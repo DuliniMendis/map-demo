@@ -1,0 +1,257 @@
+/* Landing "Vision" modal and the sound toggle. Tokens come from src/index.css. */
+
+.vision {
+  width: min(720px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 0;
+  border-radius: 14px;
+  background: var(--bg);
+  color: var(--fg);
+  box-shadow:
+    0 24px 60px rgb(20 16 10 / 28%),
+    0 0 0 1px rgb(20 16 10 / 8%);
+}
+.vision[open] {
+  animation: vision-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.vision::backdrop {
+  background: rgb(20 16 10 / 45%);
+  backdrop-filter: blur(3px);
+}
+@keyframes vision-in {
+  from {
+    opacity: 0;
+    translate: 0 16px;
+    scale: 0.98;
+  }
+}
+
+.vision__art {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 1200 / 470;
+  max-height: 36vh; /* keep the actions in view on short screens */
+  max-height: 36dvh;
+  overflow: hidden;
+  background: #f6dcb0; /* the drawing's sky, while it loads */
+}
+.vision__art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 62%;
+}
+.vision[open] .vision__art img {
+  animation: vision-drift 30s ease-in-out infinite alternate;
+}
+@keyframes vision-drift {
+  to {
+    scale: 1.06;
+    translate: -1.5% 0;
+  }
+}
+/* Soft fade from the picture into the text. */
+.vision__art::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 22%;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}
+.vision__close {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 80%);
+  color: var(--fg);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgb(20 16 10 / 18%);
+}
+.vision__close:hover {
+  background: var(--hover-bg);
+  color: var(--hover-fg);
+}
+
+.vision__body {
+  padding: 4px 32px 28px;
+}
+.vision__eyebrow {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 3px;
+  border-bottom: 3px solid var(--flag-yellow);
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.vision h2 {
+  margin: 10px 0 10px;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 780;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+.vision__lede {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+/* Three short ideas, each topped with one of the flag's colours. */
+.vision__pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.vision__pillars li {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  padding-top: 10px;
+  border-top: 3px solid var(--flag-black);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+.vision__pillars li:nth-child(2) {
+  border-top-color: var(--flag-red);
+}
+.vision__pillars li:nth-child(3) {
+  border-top-color: var(--flag-yellow);
+}
+.vision__pillars strong {
+  font-size: 0.95rem;
+}
+.vision__pillars span {
+  color: var(--muted);
+}
+
+.vision__sound {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  background: rgb(255 199 44 / 16%);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.vision__sound input {
+  flex: none;
+  margin: 2px 0 0;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--flag-red);
+  cursor: pointer;
+}
+
+.vision__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.vision__primary {
+  font: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  min-height: 44px;
+  padding: 10px 22px;
+  border: 1px solid var(--flag-black);
+  border-radius: 999px;
+  background: var(--flag-black);
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+.vision__primary:hover {
+  border-color: var(--hover-bg);
+  background: var(--hover-bg);
+  color: var(--hover-fg);
+}
+.vision__actions .btn {
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  backdrop-filter: none;
+}
+.vision :focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .vision {
+    width: calc(100% - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+  .vision__body {
+    padding: 0 20px 22px;
+  }
+  .vision__pillars {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .vision__primary {
+    flex: 1 1 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vision[open],
+  .vision[open] .vision__art img {
+    animation: none;
+  }
+}
+
+/* ---- Vision button and sound toggle: first in the top-left row on desktop, bottom-left on narrow screens ---- */
+
+.sound-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  padding: 0;
+  vertical-align: top;
+}
+.app__bottom-left {
+  position: absolute;
+  z-index: 2;
+  left: var(--gap, 12px);
+  bottom: 38px; /* above the attribution line, level with MapLibre's zoom buttons */
+  display: flex;
+  gap: 8px;
+}
+.sound-toggle[aria-pressed='false'] {
+  color: var(--muted);
+}
+
+.app__top-left .sound-toggle {
+  margin-left: 8px;
+}
+.app__top-left .vision-button {
+  margin-right: 8px;
+}

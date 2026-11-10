@@ -170,8 +170,12 @@ export function About({ open, onClose, returnFocusRef, attribution, nation }: Ab
             .
           </p>
           <p className="about__fineprint">
+            The welcome drawing was made for this map, and the birdsong, water and wind are
+            synthesised in your browser — no recordings are downloaded.
+          </p>
+          <p className="about__fineprint">
             No analytics and no cookies. Your browser only remembers that you dismissed the
-            disclaimer.
+            disclaimer and the welcome screen, and whether you turned the sound off.
           </p>
         </section>
       </div>

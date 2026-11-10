@@ -11,7 +11,9 @@ import { LayerControls } from './LayerControls';
 import { PinnedCard } from './PinnedCard';
 import { ListSkeleton, LoadError, Toast } from './LoadStates';
 import { resolveBootSelection, startUrlWriter } from './UrlSync';
-import { TourButton, TourPanel } from './tour/Tour';
+import { TourButton, TourPanel, tourDriver } from './tour/Tour';
+import { ambient } from './vision/ambient';
+import { SoundToggle, Vision, hasSeenVision, markVisionSeen } from './vision/Vision';
 import { goToOverview } from './wiring';
 import './app.css';
 
@@ -42,9 +44,13 @@ export function App({ bootNationId = null }: AppProps) {
   const desktop = useSyncExternalStore(subscribeDesktop, isDesktop, () => false);
   const [mapUnavailable, setMapUnavailable] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  // The Vision modal greets first-time visitors; afterwards it opens from its button.
+  const [visionOpen, setVisionOpen] = useState(() => !hasSeenVision());
   const [toast, setToast] = useState<string | null>(null);
   const bootId = useRef(bootNationId);
   const aboutButtonRef = useRef<HTMLButtonElement>(null);
+  const visionButtonRef = useRef<HTMLButtonElement>(null);
+  const dialogOpen = aboutOpen || visionOpen;
 
   const selected = useAppStore((s) =>
     s.selectedId === null ? null : (s.nations.find((n) => n.id === s.selectedId) ?? null),
@@ -89,6 +95,9 @@ export function App({ bootNationId = null }: AppProps) {
     };
   }, []);
 
+  // Ambient sound starts with the visitor's first click or key press (browsers block it before then).
+  useEffect(() => ambient().armOnFirstGesture(), []);
+
   useEffect(() => {
     if (!toast) return;
     const t = setTimeout(() => setToast(null), TOAST_MS);
@@ -106,6 +115,14 @@ export function App({ bootNationId = null }: AppProps) {
   const showCard =
     selected !== null && cameraState === 'idle' && (controller !== null || mapUnavailable);
   const onOverview = useCallback(() => goToOverview(controller, useAppStore), [controller]);
+  const closeVision = useCallback(() => {
+    markVisionSeen();
+    setVisionOpen(false);
+  }, []);
+  const startTourFromVision = useCallback(() => {
+    closeVision();
+    tourDriver().dispatch({ type: 'start' });
+  }, [closeVision]);
   const closeCard = useCallback(() => {
     const store = useAppStore.getState();
     const id = store.selectedId;
@@ -122,7 +139,7 @@ export function App({ bootNationId = null }: AppProps) {
 
   // Esc closes the card from anywhere except text fields and dialogs (the card handles its own Esc).
   useEffect(() => {
-    if (!showCard || aboutOpen) return;
+    if (!showCard || dialogOpen) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== 'Escape' || e.defaultPrevented) return;
       const t = e.target instanceof Element ? e.target : null;
@@ -131,7 +148,19 @@ export function App({ bootNationId = null }: AppProps) {
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [showCard, aboutOpen, closeCard]);
+  }, [showCard, dialogOpen, closeCard]);
+
+  const visionButton = (
+    <button
+      type="button"
+      className="btn overlay-panel vision-button"
+      onClick={() => setVisionOpen(true)}
+      ref={visionButtonRef}
+      data-testid="vision-button"
+    >
+      Vision
+    </button>
+  );
 
   return (
     <div className="app">
@@ -155,6 +184,7 @@ export function App({ bootNationId = null }: AppProps) {
         />
 
         <div className="app__top-left">
+          {desktop && visionButton}
           <button
             type="button"
             className="btn overlay-panel"
@@ -165,7 +195,15 @@ export function App({ bootNationId = null }: AppProps) {
             About<span className="hide-narrow"> &amp; acknowledgement</span>
           </button>
           <TourButton />
+          {desktop && <SoundToggle />}
         </div>
+        {/* Narrow screens have no room beside the layer controls: Vision and sound sit bottom-left. */}
+        {!desktop && (
+          <div className="app__bottom-left">
+            {visionButton}
+            <SoundToggle />
+          </div>
+        )}
         <div className="app__banner cm-theme">
           <Disclaimer variant="banner" />
         </div>
@@ -195,7 +233,7 @@ export function App({ bootNationId = null }: AppProps) {
           <Attribution entries={attribution} />
         </div>
         <Toast message={toast} />
-        <TourPanel aboutOpen={aboutOpen} onOverview={onOverview} />
+        <TourPanel aboutOpen={dialogOpen} onOverview={onOverview} />
       </main>
 
       <About
@@ -204,6 +242,12 @@ export function App({ bootNationId = null }: AppProps) {
         returnFocusRef={aboutButtonRef}
         attribution={attribution}
         nation={selected}
+      />
+      <Vision
+        open={visionOpen}
+        onClose={closeVision}
+        onStartTour={load.kind === 'ready' ? startTourFromVision : undefined}
+        returnFocusRef={visionButtonRef}
       />
     </div>
   );

@@ -41,7 +41,7 @@ export function TourButton() {
 }
 
 export interface TourPanelProps {
-  /** The About dialog is open: opening it pauses the tour. */
+  /** The About or Vision dialog is open: opening one pauses the tour. */
   aboutOpen: boolean;
   /** Clears the selection and flies back to the overview (App's "Overview" action). */
   onOverview: () => void;
