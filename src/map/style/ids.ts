@@ -20,3 +20,10 @@ export const LAYER_BACKGROUND = 'background';
 
 /** Fired on the Map (`map.on(DEM_FALLBACK_EVENT, e => …)`) when the DEM switches from Mapterhorn to AWS. */
 export const DEM_FALLBACK_EVENT = 'style:dem-fallback';
+
+// ---- WS7 additions (Phase 3) ----
+
+/** Vector contour tiles generated in the browser from the DEM (maplibre-contour); added at runtime. */
+export const SOURCE_CONTOURS = 'contours';
+export const LAYER_CONTOUR_LINES = 'contour-lines';
+export const LAYER_CONTOUR_LABELS = 'contour-labels';

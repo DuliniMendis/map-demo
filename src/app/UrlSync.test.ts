@@ -12,11 +12,16 @@ import {
 
 const nations = mock.nations as Nation[];
 const ALL_OFF = { imagery: false, labels: false, hillshade: false, relief: false, contours: false };
-const base = { selectedId: null, layers: DEFAULT_LAYERS, exaggeration: EXAGGERATION_DEFAULT };
+const base = {
+  selectedId: null,
+  layers: DEFAULT_LAYERS,
+  exaggeration: EXAGGERATION_DEFAULT,
+  sunHour: null,
+};
 
 describe('parseUrlState', () => {
   it('returns nulls for an empty query', () => {
-    expect(parseUrlState('')).toEqual({ n: null, layers: null, exaggeration: null });
+    expect(parseUrlState('')).toEqual({ n: null, layers: null, exaggeration: null, sunHour: null });
   });
 
   it('reads n, l and x', () => {
@@ -24,7 +29,16 @@ describe('parseUrlState', () => {
       n: 'L3',
       layers: { ...ALL_OFF, imagery: true, relief: true },
       exaggeration: 2.1,
+      sunHour: null,
     });
+  });
+
+  it('reads t (sun hour), clamped to 5–19, ignoring non-numbers', () => {
+    expect(parseUrlState('?t=14.5').sunHour).toBe(14.5);
+    expect(parseUrlState('?t=3').sunHour).toBe(5);
+    expect(parseUrlState('?t=23').sunHour).toBe(19);
+    expect(parseUrlState('?t=noon').sunHour).toBeNull();
+    expect(parseUrlState('?t=').sunHour).toBeNull();
   });
 
   it('accepts ids with dots and an encoded comma list', () => {
@@ -65,8 +79,15 @@ describe('serialiseUrlState', () => {
         selectedId: 'S31.1',
         layers: { ...ALL_OFF, relief: true, imagery: true },
         exaggeration: 2.0000001,
+        sunHour: null,
       }),
     ).toBe('?n=S31.1&l=imagery,relief&x=2');
+  });
+
+  it('writes t in quarter hours and omits it for the default light', () => {
+    expect(serialiseUrlState({ ...base, sunHour: 14.5 })).toBe('?t=14.5');
+    expect(serialiseUrlState({ ...base, sunHour: 7.26 })).toBe('?t=7.25');
+    expect(serialiseUrlState({ ...base, sunHour: null }, '?t=9')).toBe('');
   });
 
   it('writes an empty l when every layer is off', () => {
@@ -74,7 +95,7 @@ describe('serialiseUrlState', () => {
   });
 
   it('keeps unrelated params and drops stale n/l/x', () => {
-    expect(serialiseUrlState(base, '?debug=1&n=L3&x=2')).toBe('?debug=1');
+    expect(serialiseUrlState(base, '?debug=1&n=L3&x=2&t=8')).toBe('?debug=1');
   });
 
   it('round-trips through parseUrlState', () => {
@@ -82,9 +103,10 @@ describe('serialiseUrlState', () => {
       selectedId: 'W9',
       layers: { ...ALL_OFF, labels: true, hillshade: true },
       exaggeration: 1.8,
+      sunHour: 17.75,
     };
     const parsed = parseUrlState(serialiseUrlState(state));
-    expect(parsed).toEqual({ n: 'W9', layers: state.layers, exaggeration: 1.8 });
+    expect(parsed).toEqual({ n: 'W9', layers: state.layers, exaggeration: 1.8, sunHour: 17.75 });
   });
 });
 
@@ -101,11 +123,12 @@ describe('store integration', () => {
   beforeEach(() => useAppStore.setState(initial, true));
   afterEach(() => vi.useRealTimers());
 
-  it('applyUrlToStore sets layers/exaggeration and returns the requested id', () => {
-    expect(applyUrlToStore(useAppStore, '?n=L3&l=relief&x=2.2')).toBe('L3');
+  it('applyUrlToStore sets layers/exaggeration/sun hour and returns the requested id', () => {
+    expect(applyUrlToStore(useAppStore, '?n=L3&l=relief,contours&x=2.2&t=6.75')).toBe('L3');
     const s = useAppStore.getState();
-    expect(s.layers).toEqual({ ...ALL_OFF, relief: true });
+    expect(s.layers).toEqual({ ...ALL_OFF, relief: true, contours: true });
     expect(s.exaggeration).toBe(2.2);
+    expect(s.sunHour).toBe(6.75);
     expect(s.selectedId).toBeNull(); // selection waits for nations
   });
 
@@ -134,14 +157,23 @@ describe('store integration', () => {
     expect(replaceState).toHaveBeenCalledTimes(2);
     expect(replaceState).toHaveBeenLastCalledWith(null, '', '/?n=L3&x=2');
 
+    // The sun hour is written, and dropped again on reset.
+    useAppStore.getState().setSunHour(18.25);
+    vi.advanceTimersByTime(300);
+    expect(replaceState).toHaveBeenLastCalledWith(null, '', '/?n=L3&x=2&t=18.25');
+    useAppStore.getState().setSunHour(null);
+    vi.advanceTimersByTime(300);
+    expect(replaceState).toHaveBeenLastCalledWith(null, '', '/?n=L3&x=2');
+    const writes = replaceState.mock.calls.length;
+
     // Unrelated store changes don't write.
     useAppStore.getState().setQuery('kaurna');
     vi.advanceTimersByTime(1000);
-    expect(replaceState).toHaveBeenCalledTimes(2);
+    expect(replaceState).toHaveBeenCalledTimes(writes);
 
     stop();
     useAppStore.getState().select('W9');
     vi.advanceTimersByTime(1000);
-    expect(replaceState).toHaveBeenCalledTimes(2);
+    expect(replaceState).toHaveBeenCalledTimes(writes);
   });
 });

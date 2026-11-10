@@ -13,6 +13,7 @@ import {
   SOURCE_DEM_SHADE,
 } from './ids';
 import { LABEL_LAYER_IDS } from './layers/labels';
+import { setSunLocationHint } from './lighting';
 
 const D = DEFAULT_STYLE_OPTIONS;
 const markers: CircleLayerSpecification = {
@@ -112,5 +113,88 @@ describe('applyStyleOptions', () => {
     fm.loadStyle(buildStyle(D));
     expect(fm.getLayoutProperty(LAYER_IMAGERY, 'visibility')).toBe('visible');
     expect(fm.getLayoutProperty(LAYER_LABELS_FIRST, 'visibility')).toBe('none');
+  });
+});
+
+describe('applyStyleOptions: time-of-day light (sunHour)', () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+    // A fixed "today" (todayInAustralia reads the clock): 21 December, summer solstice.
+    vi.setSystemTime(new Date('2026-12-20T22:00:00Z'));
+    setSunLocationHint(null);
+  });
+  afterEach(() => vi.useRealTimers());
+
+  const paint = (fm: FakeMap, prop: string) => fm.getPaintProperty(LAYER_HILLSHADE, prop);
+  const DEFAULT_PAINT = {
+    'hillshade-illumination-direction': 315,
+    'hillshade-illumination-anchor': 'viewport',
+    'hillshade-exaggeration': 0.35,
+    'hillshade-highlight-color': 'rgba(255, 244, 224, 0.35)',
+    'hillshade-shadow-color': '#3a2414',
+  };
+
+  it("null keeps every paint value at today's defaults (no calls)", () => {
+    const fm = freshMap();
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: null });
+    expect(fm.calls).toEqual([]);
+    for (const [k, v] of Object.entries(DEFAULT_PAINT)) expect(paint(fm, k)).toBe(v);
+  });
+
+  it('a sun hour lights from the sun azimuth over the map centre, anchored to the map', () => {
+    const fm = freshMap();
+    fm.center = { lng: 150.3, lat: -33.75 }; // Blue Mountains
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: 7 });
+    expect(paint(fm, 'hillshade-illumination-anchor')).toBe('map');
+    const am = paint(fm, 'hillshade-illumination-direction') as number;
+    expect(am).toBeGreaterThan(100); // summer sunrise: well south of east
+    expect(am).toBeLessThan(125);
+    // Low sun: stronger relief than the default.
+    expect(paint(fm, 'hillshade-exaggeration') as number).toBeGreaterThan(0.35);
+
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: 18 });
+    const pm = paint(fm, 'hillshade-illumination-direction') as number;
+    expect(pm).toBeGreaterThan(235);
+    expect(pm).toBeLessThan(260);
+  });
+
+  it('fixes the place when the hour changes, not on pan', () => {
+    const fm = freshMap();
+    fm.center = { lng: 146.4, lat: -43.18 }; // Tasmania
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: 12 });
+    const tas = paint(fm, 'hillshade-exaggeration');
+    fm.center = { lng: 130.8, lat: -12.46 }; // pan to Darwin; e.g. imagery toggles re-apply
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: 12, labels: false });
+    expect(paint(fm, 'hillshade-exaggeration')).toBe(tas);
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: 12.25 }); // slider moved: now Darwin
+    expect(paint(fm, 'hillshade-exaggeration')).not.toBe(tas);
+  });
+
+  it('prefers the location hint (selected nation) over the map centre', () => {
+    const a = freshMap();
+    const b = freshMap();
+    a.center = { lng: 130.8, lat: -12.46 };
+    b.center = { lng: 130.8, lat: -12.46 };
+    applyStyleOptions(a.asMap(), { ...D, sunHour: 9 });
+    setSunLocationHint({ lng: 146.4, lat: -43.18 });
+    applyStyleOptions(b.asMap(), { ...D, sunHour: 9 });
+    expect(paint(b, 'hillshade-illumination-direction')).not.toBe(
+      paint(a, 'hillshade-illumination-direction'),
+    );
+  });
+
+  it('null after a sun hour restores the exact defaults, for both imagery settings', () => {
+    const fm = freshMap();
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: 6.5, imagery: false });
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: null, imagery: false });
+    expect(paint(fm, 'hillshade-illumination-direction')).toBe(315);
+    expect(paint(fm, 'hillshade-illumination-anchor')).toBe('viewport');
+    expect(paint(fm, 'hillshade-exaggeration')).toBe(0.6);
+    expect(paint(fm, 'hillshade-highlight-color')).toBe('#fff4e0');
+    expect(paint(fm, 'hillshade-shadow-color')).toBe('#3a2414');
+    applyStyleOptions(fm.asMap(), { ...D, sunHour: 17 });
+    applyStyleOptions(fm.asMap(), D);
+    for (const [k, v] of Object.entries(DEFAULT_PAINT)) expect(paint(fm, k)).toBe(v);
+    expect(fm.calls).not.toContain('setStyle');
   });
 });

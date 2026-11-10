@@ -62,6 +62,16 @@
         <label><input type="checkbox" name="hillshade" /> hillshade</label>
         <label><input type="checkbox" name="relief" /> relief</label>
         <label><input type="checkbox" name="labels" /> labels</label>
+        <label><input type="checkbox" name="contours" /> contours (z ≥ 11)</label>
+      </fieldset>
+      <fieldset>
+        <legend>Light</legend>
+        <label
+          >sun
+          <input id="sun" type="range" min="5" max="19" step="0.25" />
+          <output id="sun-value"></output
+        ></label>
+        <button type="button" id="sun-reset">default</button>
       </fieldset>
       <fieldset>
         <legend>Terrain</legend>

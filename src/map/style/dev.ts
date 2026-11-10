@@ -1,6 +1,7 @@
 // Dev-only test page for the basemap style: http://localhost:5173/src/map/style/dev.html
-// Query params (all optional): loc=<place key>, l=imagery,labels,hillshade,relief (or l=none),
-// x=<exaggeration>, dem=mapterhorn|aws, hud=0 (hide controls, for screenshots).
+// Query params (all optional): loc=<place key>, l=imagery,labels,hillshade,relief,contours (or
+// l=none), x=<exaggeration>, t=<sun hour 5–19>, dem=mapterhorn|aws, hud=0 (hide controls, for
+// screenshots).
 // Exposes `window.__dev` for scripted screenshots / FPS checks.
 import '../setupMaplibre';
 import * as maplibregl from 'maplibre-gl';
@@ -14,6 +15,7 @@ import {
 import { installDemFallback, onDemFallback } from './demFallback';
 import { getActiveDemProvider } from './demProvider';
 import { OVERVIEW_CAMERA } from './ids';
+import { formatSunHour } from './lighting';
 import { MAP_OPTIONS } from './sky';
 import type { DemProvider } from './sources';
 
@@ -58,7 +60,9 @@ const opts: StyleOptions = {
     labels: enabled.has('labels'),
     hillshade: enabled.has('hillshade'),
     relief: enabled.has('relief'),
+    contours: enabled.has('contours'),
   }),
+  sunHour: params.get('t') === null ? null : Number(params.get('t')),
   exaggeration: Number(params.get('x') ?? DEFAULT_STYLE_OPTIONS.exaggeration),
   demProvider: (params.get('dem') as DemProvider | null) ?? DEFAULT_STYLE_OPTIONS.demProvider,
 };
@@ -74,6 +78,8 @@ const map = new maplibregl.Map({
 });
 // What the app shell should do too: watch for DEM failures from the first tile on.
 installDemFallback(map);
+// Contours and the sun light are applied at runtime (after style.load), never by buildStyle.
+applyStyleOptions(map, opts);
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
 map.addControl(new maplibregl.ScaleControl({}), 'bottom-left');
 
@@ -86,12 +92,16 @@ const layerBoxes = [...document.querySelectorAll<HTMLInputElement>('#layers inpu
 const slider = $<HTMLInputElement>('#exaggeration');
 const sliderOut = $<HTMLOutputElement>('#exaggeration-value');
 const demSelect = $<HTMLSelectElement>('#dem');
+const sun = $<HTMLInputElement>('#sun');
+const sunOut = $<HTMLOutputElement>('#sun-value');
 
 function syncHud() {
   for (const box of layerBoxes) box.checked = opts[box.name as keyof StyleOptions] as boolean;
   slider.value = String(opts.exaggeration);
   sliderOut.value = opts.exaggeration.toFixed(1);
   demSelect.value = opts.demProvider;
+  sun.value = String(opts.sunHour ?? 12);
+  sunOut.value = opts.sunHour === null ? 'default light' : formatSunHour(opts.sunHour);
 }
 
 function apply(next: Partial<StyleOptions>) {
@@ -103,6 +113,8 @@ function apply(next: Partial<StyleOptions>) {
 for (const box of layerBoxes) box.onchange = () => apply({ [box.name]: box.checked });
 slider.oninput = () => apply({ exaggeration: Number(slider.value) });
 demSelect.onchange = () => apply({ demProvider: demSelect.value as DemProvider });
+sun.oninput = () => apply({ sunHour: Number(sun.value) });
+$<HTMLButtonElement>('#sun-reset').onclick = () => apply({ sunHour: null });
 $<HTMLInputElement>('#tiles').onchange = (e) =>
   (map.showTileBoundaries = (e.target as HTMLInputElement).checked);
 

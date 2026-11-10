@@ -15,3 +15,13 @@ export { LABEL_LAYER_IDS } from './layers/labels';
 export { RELIEF_RAMP } from './layers/relief';
 export { MAP_OPTIONS } from './sky';
 export { ATTRIBUTION_TEXT, DEM_PROVIDERS, SOURCE_BOUNDS, type DemProvider } from './sources';
+// WS7 (Phase 3): contour lines and time-of-day light.
+export { CONTOUR_THRESHOLDS, contourInterval } from './layers/contours';
+export {
+  formatSunHour,
+  setSunLocationHint,
+  sunPosition,
+  sunPositionAt,
+  todayInAustralia,
+  type SunPosition,
+} from './lighting';

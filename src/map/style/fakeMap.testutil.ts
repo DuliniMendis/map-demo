@@ -17,6 +17,8 @@ export class FakeMap {
   terrain: TerrainSpecification | null = null;
   moving = false;
   tilesLoaded = true;
+  /** Camera centre returned by getCenter (WS7's sun light is computed for it). */
+  center = { lng: 134, lat: -26.5 };
   calls: string[] = [];
   _listeners: Record<string, Listener[]> = {};
   _oneTimeListeners: Record<string, Listener[]> = {};
@@ -63,6 +65,9 @@ export class FakeMap {
   // ---- state ----
   isMoving() {
     return this.moving;
+  }
+  getCenter() {
+    return { ...this.center };
   }
   loaded() {
     return this.style !== null && this.tilesLoaded;
