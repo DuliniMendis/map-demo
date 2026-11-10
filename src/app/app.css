@@ -383,6 +383,15 @@
   }
 }
 
+/* ---- Globe (WS9) ---- */
+
+/* MapLibre draws no sky in globe mode (z < 4), only a thin atmosphere at the limb, so around the globe and
+   above a pitched horizon the canvas is transparent. Show the style's sky colours there (sky-color →
+   horizon-color in src/map/style/sky.ts) so zooming through z 4 doesn't flash the page background. */
+.app__main .map-canvas {
+  background: linear-gradient(to bottom, #7fb0e0, #efeae0 75%);
+}
+
 /* ---- Guided tour (WS9) ---- */
 
 .tour-button {
@@ -393,8 +402,7 @@
 }
 
 /* Top-left, under the About / Tour buttons, in the top half of the map: clear of the layer controls
-   (top-right), the selected marker (map centre) and the info card (bottom half, see below). It sits over the
-   first-visit disclaimer banner, so it repeats the "approximate locations" note. */
+   (top-right), the selected marker (map centre) and the info card (bottom half, see below). */
 .tour-panel {
   position: absolute;
   z-index: 3;
@@ -446,6 +454,12 @@
 .tour-panel__note {
   font-size: 0.75rem;
   color: var(--muted);
+}
+
+/* The panel takes the disclaimer banner's place while the tour runs (it repeats the "approximate
+   locations" note, and the info card has its own disclaimer line); the banner comes back afterwards. */
+.app__main:has(> .tour-panel) .app__banner {
+  display: none;
 }
 
 /* While the tour runs the panel owns the top half of the map (it ends at most 8 px above the centre, where

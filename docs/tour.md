@@ -34,6 +34,8 @@ A unit test (`src/app/tour/tour.test.ts`) fails if a narration below no longer m
   is the island stop. Worth raising with WS3 / the data owner.
 - **People names** are shown exactly as in `nations.json` (`thesaurus_heading_people`), including "Palawa
   people" for South-western Tasmanian and the doubled "Djagaraga language group (Djagaraga people)" pattern.
+- **Disclaimer banner during the tour:** the tour panel takes the first-visit banner's place while it is up
+  (see Behaviour). OK, or should the panel move instead?
 - **Order and choice of stops:** north → west → south → east, chosen for state coverage, landscape variety and
   existing camera overrides (`data/overrides.json`). The ACT is not included (the brief asks for every state
   and the NT).
@@ -148,9 +150,69 @@ A unit test (`src/app/tour/tour.test.ts`) fails if a narration below no longer m
   tour panel only pauses (the info card stays); elsewhere it also closes the card as before.
 - **Reduced motion:** the tour starts paused and never auto-advances; Prev / Next still work and use the
   reduced-motion jump.
-- The panel sits top-left under the About / Tour buttons, so it never covers the info card (bottom-left on
-  wide screens, above the bottom sheet on narrow ones) or the selected marker (map centre: the panel is capped
-  at half the map height). It covers the first-visit disclaimer banner while the tour runs, so it repeats
-  "Approximate locations from AUSTLANG."
+- The panel sits top-left under the About / Tour buttons, in the top half of the map (it ends at least 8 px
+  above the centre, where the selected marker is). While the tour runs the info card keeps to the bottom half
+  (it scrolls if long), so neither covers the other or the marker, on desktop and mobile. The first-visit
+  disclaimer banner is hidden while the panel is up (it comes back afterwards); the panel repeats
+  "Approximate locations from AUSTLANG." and the info card keeps its own disclaimer line. **Owner: OK to hide
+  the banner during the tour?**
 - The stop count, name and narration are one `aria-live="polite"` region, so a screen reader reads each new
   stop. The tour is not in the URL.
+
+## Screenshots
+
+Headless Chromium (ANGLE/Metal), live tiles, 1280×800 and 390×844.
+
+| Tour, desktop (stop 1, paused) | Tour, mobile (stop 2) |
+|---|---|
+| ![](tour/tour-desktop.jpg) | ![](tour/tour-mobile.jpg) |
+
+# Globe view (WS9)
+
+`src/map/style/projection.ts`: the style's `projection` is
+`['interpolate', ['linear'], ['zoom'], 3, 'vertical-perspective', 4, 'mercator']`, so MapLibre 6.17 draws a
+globe at z ≤ 3, blends to flat Web Mercator between z 3 and 4, and is fully flat from z 4 in (every nation view
+is z 8–13). `StyleOptions.globe: false` gives the old mercator style. (MapLibre's own `type: 'globe'` preset only
+flattens at z 11–12, which would curve every nation view.)
+
+| Zoomed out (z 2.2) | Overview (z 3.7, 30 % globe) | Overview pitched 55° |
+|---|---|---|
+| ![](tour/globe-z2.jpg) | ![](tour/overview-globe.jpg) | ![](tour/overview-pitched.jpg) |
+
+| z 3.3 (70 % globe) | z 3.85 (15 %) | z 4.2 (flat) |
+|---|---|---|
+| ![](tour/transition-z3.3.jpg) | ![](tour/transition-z3.85.jpg) | ![](tour/transition-z4.2.jpg) |
+
+## Compatibility checks (2026-11-10, headless Chromium on Apple M5 Max, live tiles unless noted)
+
+- **Overview camera:** unchanged (`OVERVIEW_CAMERA`, z 3.7); it now renders as a 30 % globe (gentle curvature).
+  Boot test's "starts at the overview camera" passes.
+- **maxBounds:** MapLibre 6.17 ignores `maxBounds` while it renders a globe ("Globe: TODO: respect _lngRange,
+  _latRange" in `vertical_perspective_transform.ts`). Measured: at z 2.5 the camera could be moved to Africa,
+  and on zooming past z 4 it snapped ~7,500 km back to the bounds. Replaced in `src/app/mapSetup.ts` /
+  `MapView.tsx` by a `transformConstrain` that clamps the camera **centre** to Australia + sea room
+  (`CENTER_BOUNDS`, 104.5–162.5° E, 49.5–4.5° S) at every zoom, plus `minZoom: 2`. Same rule on both sides of
+  z 4, so no jump. `MAX_BOUNDS` is kept (exported, still unit-tested by WS5) but no longer passed to the map.
+- **Terrain and sky at the overview:** terrain stays on (3D at the pitched overview). MapLibre draws no sky in
+  globe mode (only a thin atmosphere at the limb), and logs once "calculateFogMatrix is not supported on globe
+  projection" (a warning, not an error: distance fog is skipped on the globe). The map container now shows the
+  style's sky colours as a CSS gradient so the area around the globe and above a pitched horizon isn't the page
+  background.
+- **Markers and hit testing:** `circle-pitch-alignment: 'viewport'` markers render on the globe. Clicking a
+  marker (position from `map.project`) selects it at the overview (z 3.7) and at z 2.5; `queryRenderedFeatures`
+  around the projected point finds the right nation. Rendered marker centres were within ~2 px of `map.project`
+  at pitch 0, up to ~9 px at pitch 50 at z 3.7 (MapLibre's globe↔mercator blend); the 8 px hit box covers the
+  common case.
+- **Rise step across z 4:** WS2's rise floors at z 4.2, so nation → nation flights stay flat (W9 → T2: min z 4.17).
+  The flights that cross z 4 are overview → nation and nation → overview. Screenshots at z 3.999 and z 4.0 are
+  visually identical (no visible jump). One caveat: `map.project()` (and so a probe point) jumps ~20–60 px at
+  the switch because it uses the pure globe transform while rendering blends; it does not show on screen.
+  The **first** crossing in a session has one ~46 ms frame (shader variants for the flat map); later
+  crossings stay at 16–20 ms.
+- **DEM fallback:** `fallback.spec.ts` (Mapterhorn → 500 → AWS, toast) passes with the globe style.
+- **Frame rate at the overview:** 60 fps during a 2 s `easeTo` (bearing + pitch) at z 3.7; flights p95
+  17.5–17.8 ms. `perf.spec.ts` passes.
+- **Visual baselines:** `overview.png` (Linux) will change because the overview is now a 30 % globe; not
+  regenerated here (macOS can't make Linux baselines). Regenerate from CI.
+- **Seen, not fixed (WS1):** the imagery has `bounds` around Australia, so on the zoomed-out globe a straight
+  imagery edge is visible in the ocean (to the west at z 2–3.3).

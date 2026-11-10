@@ -1,3 +1,4 @@
+import AxeBuilder from '@axe-core/playwright';
 import type { Locator, Page } from '@playwright/test';
 import { expect, test } from './support/fixtures.ts';
 import { getCamera, selectFromList, SLOW, waitForMapIdle } from './support/map.ts';
@@ -112,6 +113,20 @@ test.describe('guided tour', () => {
     await page.getByTestId('tour-next').click();
     await expectStop(panel, 2, STOP2.name);
     await expect(page.getByTestId('info-locality')).toHaveText(STOP2.locality, { timeout: LAND });
+  });
+
+  test('tour panel has no axe violations; narration is a polite live region', async ({ page }) => {
+    const panel = await startTour(page);
+    await expect(page.getByTestId('info-locality')).toHaveText(STOP1.locality, { timeout: LAND });
+    await expect(panel.locator('[aria-live="polite"]')).toContainText(STOP1.name);
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+      .include('[data-testid="tour-panel"]')
+      .include('[data-testid="tour-button"]')
+      .analyze();
+    expect(violations.map((v) => ({ id: v.id, targets: v.nodes.map((n) => n.target) }))).toEqual(
+      [],
+    );
   });
 
   for (const [label, viewport] of [

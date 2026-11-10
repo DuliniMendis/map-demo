@@ -151,9 +151,8 @@ export function TourPanel({ aboutOpen, onOverview }: TourPanelProps) {
           data-testid="tour-prev"
           onClick={() => dispatch({ type: 'prev' })}
           disabled={tour.index === 0}
-          aria-label="Previous stop"
         >
-          ‹ Prev
+          <span aria-hidden="true">‹ </span>Prev
         </button>
         <button
           type="button"
@@ -171,9 +170,8 @@ export function TourPanel({ aboutOpen, onOverview }: TourPanelProps) {
           data-testid="tour-next"
           onClick={() => dispatch({ type: 'next' })}
           disabled={atEnd}
-          aria-label="Next stop"
         >
-          Next ›
+          Next<span aria-hidden="true"> ›</span>
         </button>
         <button type="button" className="btn" data-testid="tour-stop" onClick={end}>
           End tour
