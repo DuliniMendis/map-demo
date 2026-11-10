@@ -1,9 +1,10 @@
 import type { Map as MlMap } from 'maplibre-gl';
+import { syncContours } from './contours';
 import { installDemFallback } from './demFallback';
 import { hasFallenBack, requestDemProvider } from './demProvider';
 import { LAYER_HILLSHADE, LAYER_IMAGERY, LAYER_RELIEF, SOURCE_DEM } from './ids';
-import { hillshadeExaggeration, hillshadeHighlight } from './layers/hillshade';
 import { LABEL_LAYER_IDS } from './layers/labels';
+import { applyLighting } from './lighting';
 import { reliefOpacity } from './layers/relief';
 import { visibility } from './layers/visibility';
 import type { StyleOptions } from './types';
@@ -35,7 +36,8 @@ function setPaint(map: MlMap, id: string, prop: PaintProp, value: number | strin
 
 /**
  * Bring a map built from `buildStyle` in line with `o`, in place: layer visibility, the
- * imagery-dependent hillshade/relief strengths, terrain exaggeration and DEM provider. Never calls
+ * imagery-dependent hillshade/relief strengths, the time-of-day light, terrain exaggeration, DEM
+ * provider and contour lines. Never calls
  * `setStyle`, so other workstreams' sources and layers survive. Cheap to call on every store change
  * (it only touches what differs). Calls made before the style has loaded are applied on `style.load`
  * (latest wins). Also installs the DEM fallback watcher (`installDemFallback`).
@@ -61,8 +63,8 @@ export function applyStyleOptions(map: MlMap, o: StyleOptions): void {
   setVisible(map, LAYER_RELIEF, o.relief);
   for (const id of LABEL_LAYER_IDS) setVisible(map, id, o.labels);
 
-  setPaint(map, LAYER_HILLSHADE, 'hillshade-exaggeration', hillshadeExaggeration(o.imagery));
-  setPaint(map, LAYER_HILLSHADE, 'hillshade-highlight-color', hillshadeHighlight(o.imagery));
+  // Hillshade strength/colours (imagery-dependent) and the time-of-day light (WS7, lighting.ts).
+  applyLighting(map, o);
   setPaint(map, LAYER_RELIEF, 'color-relief-opacity', reliefOpacity(o.imagery));
 
   const terrain = map.getTerrain();
@@ -71,5 +73,8 @@ export function applyStyleOptions(map: MlMap, o: StyleOptions): void {
   }
 
   // After an automatic fallback, stay on AWS even if the caller still asks for Mapterhorn.
-  requestDemProvider(map, hasFallenBack(map) ? 'aws' : o.demProvider);
+  const provider = hasFallenBack(map) ? 'aws' : o.demProvider;
+  requestDemProvider(map, provider);
+  // Contour lines (WS7, contours.ts), read from the same DEM provider as the terrain.
+  syncContours(map, { contours: o.contours, imagery: o.imagery, provider });
 }
