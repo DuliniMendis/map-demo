@@ -5,6 +5,7 @@ import { LAYER_HILLSHADE, LAYER_IMAGERY, LAYER_RELIEF, SOURCE_DEM } from './ids'
 import { hillshadeExaggeration, hillshadeHighlight } from './layers/hillshade';
 import { LABEL_LAYER_IDS } from './layers/labels';
 import { reliefOpacity } from './layers/relief';
+import { applyProjection } from './projection';
 import { visibility } from './layers/visibility';
 import type { StyleOptions } from './types';
 
@@ -69,6 +70,8 @@ export function applyStyleOptions(map: MlMap, o: StyleOptions): void {
   if (!terrain || terrain.source !== SOURCE_DEM || terrain.exaggeration !== o.exaggeration) {
     map.setTerrain({ source: SOURCE_DEM, exaggeration: o.exaggeration });
   }
+
+  applyProjection(map, o.globe);
 
   // After an automatic fallback, stay on AWS even if the caller still asks for Mapterhorn.
   requestDemProvider(map, hasFallenBack(map) ? 'aws' : o.demProvider);
