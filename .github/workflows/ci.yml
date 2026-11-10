@@ -33,8 +33,10 @@ jobs:
       - run: pnpm test
 
   # Playwright against the production build served by `vite preview`. Every third-party tile request is
-  # answered from tests/fixtures/tiles/ (no live tile hosts are hit). WebGL runs on SwiftShader.
+  # answered from tests/fixtures/tiles/ (no live tile hosts are hit). WebGL runs on SwiftShader (no GPU),
+  # which takes 20+ minutes, so this job runs only on demand: Actions -> CI -> Run workflow.
   e2e:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

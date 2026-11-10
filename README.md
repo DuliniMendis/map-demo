@@ -63,8 +63,10 @@ TypeScript is pinned to 6.0 because typescript-eslint does not support TypeScrip
 | `pnpm size` | Bundle size budgets (`.size-limit.json`) |
 | `pnpm lhci` | Lighthouse CI against the production build |
 
-CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check and unit tests, then Playwright
-(SwiftShader WebGL), bundle size and Lighthouse, on every PR and on `main`.
+CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check, unit tests, bundle size and Lighthouse on
+every PR and on `main`. The Playwright e2e suite runs only on demand (Actions → CI → Run workflow): GitHub's
+runners have no GPU, so the 3D map renders in software and the suite takes 20+ minutes. Run `pnpm test:e2e`
+locally before merging changes to the map, camera or UI.
 
 ## Data
 
