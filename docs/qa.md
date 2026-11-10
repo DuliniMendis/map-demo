@@ -5,6 +5,10 @@ Owner: WS6. Brief: [`docs/workstreams/WS6-qa-deploy.md`](workstreams/WS6-qa-depl
 
 ## Running the checks
 
+On CI, `check`, `size` and `lighthouse` run on every PR and push to `main`. The `e2e` job runs **only on demand**
+(Actions → CI → Run workflow, optionally with `update_snapshots`): without a GPU the runner renders WebGL in
+software and the suite takes 20+ minutes. Run `pnpm test:e2e` locally before merging map, camera or UI changes.
+
 | Command | What it does | Where outputs go |
 |---|---|---|
 | `pnpm test` | Vitest unit tests (`src/**/*.test.ts`, `tests/unit/**/*.test.ts`) | terminal |
@@ -202,7 +206,7 @@ record the date, macOS/Safari versions and findings here.
 
 Before promoting a build to production (merging to `main`):
 
-- [ ] CI green: `check`, `e2e`, `size`, `lighthouse`. No new `test.fixme` without a reason; none left for features that have shipped.
+- [ ] CI green: `check`, `size`, `lighthouse`, and a manual `e2e` run (Run workflow) on the release commit. No new `test.fixme` without a reason; none left for features that have shipped.
 - [ ] Attribution visible on the map at all times and complete (AUSTLANG/AIATSIS, Mapterhorn, AWS Terrain Tiles, EOX Sentinel‑2 cloudless, OpenMapTiles/OpenStreetMap, ABS, MapLibre), strings exactly as in `docs/research.md`.
 - [ ] Disclaimer ("approximate locations, not boundaries") shows on first visit (clear `localStorage`) and in the info card.
 - [ ] Data report from WS3 reviewed: 455 entries, every entry has coordinates, locality and state; schema validation passes; spot-check 5 random entries against AUSTLANG.
