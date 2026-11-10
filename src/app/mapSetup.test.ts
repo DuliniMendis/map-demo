@@ -38,6 +38,8 @@ describe('constrainCamera (replaces maxBounds, which the globe ignores)', () => 
   it('clamps zoom and survives bad input', () => {
     expect(constrainCamera(134, -26, 0).zoom).toBe(MIN_ZOOM);
     expect(constrainCamera(134, -26, 30).zoom).toBe(MAX_ZOOM);
+    expect(constrainCamera(134, -26, 16).zoom).toBe(MAX_ZOOM);
+    expect(MAX_ZOOM).toBeLessThan(15); // past the imagery's real detail it's only blur
     const c = constrainCamera(Number.NaN, Number.NaN, Number.NaN);
     expect(Number.isFinite(c.lng) && Number.isFinite(c.lat)).toBe(true);
     expect(c.zoom).toBe(MIN_ZOOM);

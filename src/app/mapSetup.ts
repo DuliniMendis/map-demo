@@ -1,4 +1,5 @@
 import { AUSTRALIA_BOUNDS } from '../map/style/ids';
+import { IMAGERY_MAX_ZOOM } from '../map/style/sources';
 
 type Bounds = [[number, number], [number, number]];
 
@@ -33,8 +34,11 @@ export const CENTER_BOUNDS: Bounds = padBounds(AUSTRALIA_BOUNDS, 8, 5);
 
 /** Furthest zoom-out: the whole globe with Australia on it. */
 export const MIN_ZOOM = 2;
-/** MapLibre's default. */
-export const MAX_ZOOM = 22;
+/**
+ * Furthest zoom-in: half a level past the imagery's real resolution. Beyond that the satellite
+ * photo is just stretched and reads as a blur, so stop there.
+ */
+export const MAX_ZOOM = IMAGERY_MAX_ZOOM + 0.5;
 
 /**
  * Pure camera constraint for the Map's `transformConstrain` option: clamps the centre into
