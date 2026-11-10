@@ -36,8 +36,10 @@ describe('markerLayerSpecs', () => {
     const specs = markerLayerSpecs();
     expect(specs.map((l) => l.id)).toEqual(NATIONS_LAYER_IDS);
     expect(NATIONS_LAYER_IDS).toEqual([
+      'nations-shadow',
       LAYER_NATIONS_RING,
       LAYER_NATIONS_CIRCLE,
+      'nations-highlight',
       LAYER_NATIONS_LABEL,
     ]);
     for (const l of specs) expect((l as { source: string }).source).toBe(SOURCE_NATIONS);
@@ -60,8 +62,10 @@ describe('markerLayerSpecs', () => {
 
   it('withLabels: false drops the label layer; textFont is configurable', () => {
     expect(markerLayerSpecs({ withLabels: false }).map((l) => l.id)).toEqual([
+      'nations-shadow',
       LAYER_NATIONS_RING,
       LAYER_NATIONS_CIRCLE,
+      'nations-highlight',
     ]);
     const label = markerLayerSpecs({ textFont: ['Open Sans Bold'] }).at(-1) as {
       layout: Record<string, unknown>;
@@ -71,9 +75,15 @@ describe('markerLayerSpecs', () => {
 });
 
 describe('expressions', () => {
-  it('radius ramps 3 px at z3 → 7 px at z10, plus an offset', () => {
-    expect(radiusExpression()).toEqual(['interpolate', ['linear'], ['zoom'], 3, 3, 10, 7]);
-    expect(radiusExpression(5)).toEqual(['interpolate', ['linear'], ['zoom'], 3, 8, 10, 12]);
+  it('radius ramps 4 px at z3 → 8 px at z10, plus an offset', () => {
+    expect(radiusExpression()).toEqual(['interpolate', ['linear'], ['zoom'], 3, 4, 10, 8]);
+    expect(radiusExpression(5)).toEqual(['interpolate', ['linear'], ['zoom'], 3, 9, 10, 13]);
+  });
+
+  it('only the pin itself takes pointer input; shadow and highlight are decoration', () => {
+    const ids = markerLayerSpecs().map((l) => l.id);
+    expect(ids.indexOf('nations-shadow')).toBeLessThan(ids.indexOf(LAYER_NATIONS_CIRCLE));
+    expect(ids.indexOf('nations-highlight')).toBe(ids.indexOf(LAYER_NATIONS_CIRCLE) + 1);
   });
 
   it('ring filter matches only the selected code', () => {

@@ -39,8 +39,8 @@ describe('InfoCard nearby', () => {
       .getAllByRole('listitem')
       .map((li) => li.textContent);
     expect(items).toEqual([
-      'Near Alice Springs (town, 12 km NE)',
-      'Landmark: Mount Sonder (peak, 8 km W)',
+      'Near Alice Springs, town, 12 km NE',
+      'Landmark Mount Sonder, peak, 8 km W',
     ]);
     expect(el.textContent).toMatch(/for orientation only \(OpenStreetMap\)/);
     // It sits in the "Country today" fact, after the ABS locality.
@@ -54,7 +54,7 @@ describe('InfoCard nearby', () => {
       h(InfoCard, { nation: { ...base, nearby: { town } }, onClose() {} }),
     );
     const items = within(screen.getByTestId('info-nearby')).getAllByRole('listitem');
-    expect(items.map((li) => li.textContent)).toEqual(['Near Queanbeyan (city, 31 km NE)']);
+    expect(items.map((li) => li.textContent)).toEqual(['Near Queanbeyan, city, 31 km NE']);
     unmount();
 
     const landmark = {
@@ -65,7 +65,7 @@ describe('InfoCard nearby', () => {
     } as const;
     render(h(InfoCard, { nation: { ...base, nearby: { landmark } }, onClose() {} }));
     expect(screen.getByTestId('info-nearby').textContent).toContain(
-      'Landmark: Murrumbidgee River (river, under 1 km)',
+      'Landmark Murrumbidgee River, river, under 1 km',
     );
     expect(screen.getByTestId('info-nearby').textContent).not.toContain('Near ');
     cleanup();

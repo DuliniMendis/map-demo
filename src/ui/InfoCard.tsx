@@ -30,6 +30,20 @@ export function formatNearby(f: NearbyFeature): string {
   return `${f.name} (${f.kind}, ${formatNearbyDistance(f)})`;
 }
 
+/** One nearby place: a kind badge, the OSM name and the distance. Reads "Near Alice Springs, town, 12 km NE". */
+function NearbyItem({ label, f }: { label: 'Near' | 'Landmark'; f: NearbyFeature }) {
+  return (
+    <li className="cm-nearby__item">
+      <span className="cm-visually-hidden">{label} </span>
+      <span className="cm-nearby__name">{f.name}</span>
+      <span className="cm-visually-hidden">, </span>
+      <span className="cm-badge cm-badge--soft">{f.kind}</span>
+      <span className="cm-visually-hidden">, </span>
+      <span className="cm-nearby__dist">{formatNearbyDistance(f)}</span>
+    </li>
+  );
+}
+
 function ExternalLink({ href, children }: { href: string; children: string }) {
   return (
     <a className="cm-link" href={href} target="_blank" rel="noopener noreferrer">
@@ -78,8 +92,13 @@ export function InfoCard({ nation, onClose, onBackToOverview, className }: InfoC
     >
       <header className="cm-info-card__header">
         <div>
-          <p className="cm-eyebrow">
-            AUSTLANG <span className="cm-code">{nation.id}</span>
+          <p className="cm-badges">
+            <span className="cm-badge cm-badge--ink">
+              AUSTLANG <span className="cm-code">{nation.id}</span>
+            </span>
+            <span className="cm-badge cm-badge--red" title={nation.modern.state}>
+              {nation.modern.stateCode}
+            </span>
           </p>
           <h2 id={`${id}-title`} className="cm-info-card__title">
             {title}
@@ -119,9 +138,9 @@ export function InfoCard({ nation, onClose, onBackToOverview, className }: InfoC
             {(nation.nearby?.town || nation.nearby?.landmark) && (
               <div className="cm-nearby" data-testid="info-nearby">
                 <ul className="cm-nearby__list">
-                  {nation.nearby.town && <li>Near {formatNearby(nation.nearby.town)}</li>}
+                  {nation.nearby.town && <NearbyItem label="Near" f={nation.nearby.town} />}
                   {nation.nearby.landmark && (
-                    <li>Landmark: {formatNearby(nation.nearby.landmark)}</li>
+                    <NearbyItem label="Landmark" f={nation.nearby.landmark} />
                   )}
                 </ul>
                 <span className="cm-fact__note">
@@ -131,7 +150,7 @@ export function InfoCard({ nation, onClose, onBackToOverview, className }: InfoC
             )}
           </dd>
         </div>
-        <div className="cm-fact">
+        <div className="cm-fact cm-fact--inline">
           <dt>Approximate centre</dt>
           <dd>
             {formatCoord(nation.lat, 'N', 'S')}, {formatCoord(nation.lng, 'E', 'W')}
@@ -164,26 +183,28 @@ export function InfoCard({ nation, onClose, onBackToOverview, className }: InfoC
         )}
       </dl>
 
-      <ul className="cm-info-card__links">
-        <li>
-          <ExternalLink href={nation.links.austlang}>AUSTLANG entry</ExternalLink>
-        </li>
-        {nation.links.wikipedia && (
+      <footer className="cm-info-card__footer">
+        <ul className="cm-info-card__links">
           <li>
-            <ExternalLink href={nation.links.wikipedia}>Wikipedia</ExternalLink>
+            <ExternalLink href={nation.links.austlang}>AUSTLANG entry</ExternalLink>
           </li>
+          {nation.links.wikipedia && (
+            <li>
+              <ExternalLink href={nation.links.wikipedia}>Wikipedia</ExternalLink>
+            </li>
+          )}
+        </ul>
+
+        <Disclaimer variant="inline" />
+
+        {onBackToOverview && (
+          <div className="cm-info-card__actions">
+            <button type="button" className="cm-button" onClick={onBackToOverview}>
+              Back to overview
+            </button>
+          </div>
         )}
-      </ul>
-
-      <Disclaimer variant="inline" />
-
-      {onBackToOverview && (
-        <div className="cm-info-card__actions">
-          <button type="button" className="cm-button" onClick={onBackToOverview}>
-            Back to overview
-          </button>
-        </div>
-      )}
+      </footer>
     </section>
   );
 }
