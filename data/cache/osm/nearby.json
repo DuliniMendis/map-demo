@@ -6,6 +6,12 @@
       "count": 1194,
       "committed": 1004
     },
+    "villages": {
+      "retrieved": "2026-11-10",
+      "osmBase": "2026-11-10T00:28:34Z",
+      "count": 1860,
+      "committed": 1616
+    },
     "peaks": {
       "retrieved": "2026-11-10",
       "osmBase": "2026-11-10T00:04:19Z",
@@ -43,23 +49,23 @@
     "A11": {
       "lng": 122.722975,
       "lat": -29.231154,
-      "town": { "name": "Laverton", "kind": "town", "distanceKm": 74.1, "bearing": "NW" },
+      "town": { "name": "Mount Margaret", "kind": "village", "distanceKm": 71.4, "bearing": "NW" },
       "landmark": { "name": "Wilga Hill", "kind": "peak", "distanceKm": 22, "bearing": "NW" },
-      "osm": { "town": "n109554176", "landmark": "n3020142530" }
+      "osm": { "town": "n1999409507", "landmark": "n3020142530" }
     },
     "A13": {
       "lng": 116.721527,
       "lat": -28.826758,
-      "town": { "name": "Perenjori", "kind": "town", "distanceKm": 80.3, "bearing": "SW" },
+      "town": { "name": "Yalgoo", "kind": "village", "distanceKm": 54.3, "bearing": "N" },
       "landmark": { "name": "Cotmise Hill", "kind": "peak", "distanceKm": 13.5, "bearing": "SW" },
-      "osm": { "town": "n1858188628", "landmark": "n3020140123" }
+      "osm": { "town": "n304964737", "landmark": "n3020140123" }
     },
     "A14": {
       "lng": 117.185325,
       "lat": -28.593308,
-      "town": { "name": "Mount Magnet", "kind": "town", "distanceKm": 87.5, "bearing": "NE" },
+      "town": { "name": "Yalgoo", "kind": "village", "distanceKm": 56.6, "bearing": "NW" },
       "landmark": { "name": "Wardiacca Hill", "kind": "peak", "distanceKm": 18.4, "bearing": "NE" },
-      "osm": { "town": "n303581637", "landmark": "n3020142460" }
+      "osm": { "town": "n304964737", "landmark": "n3020142460" }
     },
     "A16": {
       "lng": 120.345365,
@@ -77,16 +83,21 @@
     "A2": {
       "lng": 121.487576,
       "lat": -32.110218,
-      "town": { "name": "Norseman", "kind": "town", "distanceKm": 29.2, "bearing": "E" },
+      "town": { "name": "Iragul", "kind": "village", "distanceKm": 19.6, "bearing": "E" },
       "landmark": { "name": "Mount Thirsty", "kind": "peak", "distanceKm": 17.1, "bearing": "E" },
-      "osm": { "town": "n5432456986", "landmark": "n3020141718" }
+      "osm": { "town": "n2034443580", "landmark": "n3020141718" }
     },
     "A20": {
       "lng": 120.415688,
       "lat": -26.799612,
-      "town": { "name": "Wiluna", "kind": "town", "distanceKm": 29.8, "bearing": "NW" },
+      "town": {
+        "name": "Wiluna Gold Village",
+        "kind": "village",
+        "distanceKm": 23.2,
+        "bearing": "NW"
+      },
       "landmark": { "name": "Lake Way", "kind": "lake", "distanceKm": 1.8, "bearing": "S" },
-      "osm": { "town": "n316177556", "landmark": "r55429" }
+      "osm": { "town": "n599908457", "landmark": "r55429" }
     },
     "A21": {
       "lng": 122.702008,
@@ -115,14 +126,26 @@
     "A26": {
       "lng": 122.973062,
       "lat": -27.645728,
+      "town": {
+        "name": "Gruyere Mine Village",
+        "kind": "village",
+        "distanceKm": 92.9,
+        "bearing": "SE"
+      },
       "landmark": { "name": "Gibson Hill", "kind": "peak", "distanceKm": 5.7, "bearing": "N" },
-      "osm": { "landmark": "n3020140460" }
+      "osm": { "town": "n7210810212", "landmark": "n3020140460" }
     },
     "A27": {
       "lng": 123.654874,
       "lat": -27.75221,
+      "town": {
+        "name": "Gruyere Mine Village",
+        "kind": "village",
+        "distanceKm": 34.6,
+        "bearing": "SE"
+      },
       "landmark": { "name": "Cowderoy Hill", "kind": "peak", "distanceKm": 5.5, "bearing": "S" },
-      "osm": { "landmark": "n3020140131" }
+      "osm": { "town": "n7210810212", "landmark": "n3020140131" }
     },
     "A28": {
       "lng": 130.463371,
@@ -170,8 +193,9 @@
     "A43": {
       "lng": 128.541993,
       "lat": -25.081125,
+      "town": { "name": "Warakurna", "kind": "village", "distanceKm": 27.2, "bearing": "W" },
       "landmark": { "name": "Giles Creek", "kind": "river", "distanceKm": 11.6, "bearing": "NE" },
-      "osm": { "landmark": "w187122513" }
+      "osm": { "town": "n493230506", "landmark": "w187122513" }
     },
     "A49": {
       "lng": 120.470826,
@@ -183,17 +207,22 @@
     "A5": {
       "lng": 120.595013,
       "lat": -30.288737,
-      "town": { "name": "Coolgardie", "kind": "town", "distanceKm": 91.5, "bearing": "SE" },
+      "town": {
+        "name": "Sandy Ridge Village",
+        "kind": "village",
+        "distanceKm": 50.2,
+        "bearing": "W"
+      },
       "landmark": { "name": "Mount Carnage", "kind": "peak", "distanceKm": 35.8, "bearing": "E" },
-      "osm": { "town": "n345132637", "landmark": "n3020140873" }
+      "osm": { "town": "n13766839478", "landmark": "n3020140873" }
     },
     "A52": { "lng": 125.95266, "lat": -23.510384 },
     "A55": {
       "lng": 120.16084,
       "lat": -22.239089,
-      "town": { "name": "Nullagine", "kind": "town", "distanceKm": 39.4, "bearing": "N" },
+      "town": { "name": "Irrungadji", "kind": "village", "distanceKm": 38.8, "bearing": "N" },
       "landmark": { "name": "Mount Maggie", "kind": "peak", "distanceKm": 15.7, "bearing": "N" },
-      "osm": { "town": "n303690935", "landmark": "n3020141232" }
+      "osm": { "town": "n2031102658", "landmark": "n3020141232" }
     },
     "A56": {
       "lng": 121.045724,
@@ -246,14 +275,16 @@
     "A62": {
       "lng": 123.052411,
       "lat": -22.234789,
+      "town": { "name": "Parnngurr", "kind": "village", "distanceKm": 79.8, "bearing": "SW" },
       "landmark": { "name": "Rudall River", "kind": "river", "distanceKm": 8.5, "bearing": "NW" },
-      "osm": { "landmark": "w334595047" }
+      "osm": { "town": "n1965413111", "landmark": "w334595047" }
     },
     "A68": {
       "lng": 127.02387,
       "lat": -20.489447,
+      "town": { "name": "Mulan", "kind": "village", "distanceKm": 73.4, "bearing": "NE" },
       "landmark": { "name": "Fisher Bluff", "kind": "peak", "distanceKm": 40.6, "bearing": "S" },
-      "osm": { "landmark": "n3020052679" }
+      "osm": { "town": "n1963287647", "landmark": "n3020052679" }
     },
     "A69": {
       "lng": 129.046456,
@@ -271,23 +302,33 @@
     "A76": {
       "lng": 118.504254,
       "lat": -22.557802,
-      "town": { "name": "Tom Price", "kind": "town", "distanceKm": 74, "bearing": "W" },
+      "town": {
+        "name": "Packsaddle Village",
+        "kind": "village",
+        "distanceKm": 55.1,
+        "bearing": "SE"
+      },
       "landmark": { "name": "Mount Windell", "kind": "peak", "distanceKm": 11.1, "bearing": "S" },
-      "osm": { "town": "n30499095", "landmark": "n3020141857" }
+      "osm": { "town": "n5705053187", "landmark": "n3020141857" }
     },
     "A77": {
       "lng": 118.145275,
       "lat": -22.999689,
-      "town": { "name": "Tom Price", "kind": "town", "distanceKm": 49.6, "bearing": "NW" },
+      "town": {
+        "name": "Innawonga Community",
+        "kind": "village",
+        "distanceKm": 26.6,
+        "bearing": "W"
+      },
       "landmark": { "name": "Turee Creek", "kind": "river", "distanceKm": 1.5, "bearing": "NW" },
-      "osm": { "town": "n30499095", "landmark": "w480830936" }
+      "osm": { "town": "n2036203522", "landmark": "w480830936" }
     },
     "A78": {
       "lng": 119.455413,
       "lat": -22.000763,
-      "town": { "name": "Nullagine", "kind": "town", "distanceKm": 68.4, "bearing": "E" },
+      "town": { "name": "Hillside Station", "kind": "village", "distanceKm": 31.5, "bearing": "N" },
       "landmark": { "name": "Red Hill", "kind": "peak", "distanceKm": 4.6, "bearing": "S" },
-      "osm": { "town": "n303690935", "landmark": "n3020142084" }
+      "osm": { "town": "n3937392145", "landmark": "n3020142084" }
     },
     "A79": {
       "lng": 119.078264,
@@ -312,35 +353,36 @@
     "A85": {
       "lng": 122.362917,
       "lat": -22.909591,
+      "town": { "name": "Parnngurr", "kind": "village", "distanceKm": 26.2, "bearing": "NE" },
       "landmark": { "name": "The Dome", "kind": "peak", "distanceKm": 22.1, "bearing": "E" },
-      "osm": { "landmark": "n3020142245" }
+      "osm": { "town": "n1965413111", "landmark": "n3020142245" }
     },
     "A89": {
       "lng": 127.600466,
       "lat": -19.666746,
-      "town": { "name": "Balgo", "kind": "town", "distanceKm": 66.4, "bearing": "SE" },
+      "town": { "name": "Billiluna", "kind": "village", "distanceKm": 13.9, "bearing": "NE" },
       "landmark": { "name": "Falconer Hills", "kind": "peak", "distanceKm": 18.9, "bearing": "N" },
-      "osm": { "town": "n1963287620", "landmark": "n3020150755" }
+      "osm": { "town": "n560943513", "landmark": "n3020150755" }
     },
     "A9": { "lng": 128.153493, "lat": -31.29303 },
     "A91": {
       "lng": 125.275504,
       "lat": -18.622992,
-      "town": { "name": "Fitzroy Crossing", "kind": "town", "distanceKm": 56.8, "bearing": "NE" },
+      "town": { "name": "Djugerari", "kind": "village", "distanceKm": 47.5, "bearing": "SE" },
       "landmark": {
         "name": "Mardoowarra Fitzroy River",
         "kind": "river",
         "distanceKm": 12,
         "bearing": "N"
       },
-      "osm": { "town": "n3806574898", "landmark": "w190578795" }
+      "osm": { "town": "n2043483086", "landmark": "w190578795" }
     },
     "A92": {
       "lng": 117.054111,
       "lat": -30.963893,
-      "town": { "name": "Dowerin", "kind": "town", "distanceKm": 25.8, "bearing": "S" },
+      "town": { "name": "Cadoux", "kind": "village", "distanceKm": 22.9, "bearing": "N" },
       "landmark": { "name": "Wattengutten Hill", "kind": "peak", "distanceKm": 6, "bearing": "W" },
-      "osm": { "town": "n2428936154", "landmark": "n3020142480" }
+      "osm": { "town": "n3329196480", "landmark": "n3020142480" }
     },
     "A94": {
       "lng": 116.210052,
@@ -352,8 +394,14 @@
     "A95": {
       "lng": 118.366999,
       "lat": -29.373824,
+      "town": {
+        "name": "Penny West Mine Village",
+        "kind": "village",
+        "distanceKm": 74.6,
+        "bearing": "NE"
+      },
       "landmark": { "name": "Meergoon Hill", "kind": "peak", "distanceKm": 29.6, "bearing": "NW" },
-      "osm": { "landmark": "n3020140731" }
+      "osm": { "town": "n10250506717", "landmark": "n3020140731" }
     },
     "A96": {
       "lng": 119.281125,
@@ -377,9 +425,9 @@
     "C1": {
       "lng": 133.522074,
       "lat": -31.535988,
-      "town": { "name": "Penong", "kind": "town", "distanceKm": 65.1, "bearing": "SW" },
+      "town": { "name": "Yarilena", "kind": "village", "distanceKm": 63.2, "bearing": "S" },
       "landmark": { "name": "Koonibba Hill", "kind": "peak", "distanceKm": 40.4, "bearing": "S" },
-      "osm": { "town": "n1784630437", "landmark": "n7907193929" }
+      "osm": { "town": "n10221144498", "landmark": "n7907193929" }
     },
     "C16": {
       "lng": 136.169147,
@@ -391,17 +439,17 @@
     "C18": {
       "lng": 134.505182,
       "lat": -19.602713,
-      "town": { "name": "Tennant Creek", "kind": "town", "distanceKm": 33.4, "bearing": "W" },
+      "town": { "name": "Kargaru", "kind": "village", "distanceKm": 32.7, "bearing": "W" },
       "landmark": { "name": "Mount Rugged", "kind": "peak", "distanceKm": 18.9, "bearing": "SW" },
-      "osm": { "town": "n1852930060", "landmark": "n3020151465" }
+      "osm": { "town": "n4560577000", "landmark": "n3020151465" }
     },
     "C23": { "lng": 136.844652, "lat": -17.669228 },
     "C27": {
       "lng": 130.255177,
       "lat": -16.59038,
-      "town": { "name": "Bulla", "kind": "town", "distanceKm": 94.5, "bearing": "N" },
+      "town": { "name": "Yarralin", "kind": "village", "distanceKm": 68.7, "bearing": "E" },
       "landmark": { "name": "Wickham River", "kind": "river", "distanceKm": 22.2, "bearing": "S" },
-      "osm": { "town": "n3450255725", "landmark": "w258025653" }
+      "osm": { "town": "n3268092465", "landmark": "w258025653" }
     },
     "C3": {
       "lng": 133.415357,
@@ -412,17 +460,17 @@
     "C30": {
       "lng": 130.405901,
       "lat": -17.748535,
-      "town": { "name": "Daguragu", "kind": "town", "distanceKm": 57.4, "bearing": "NE" },
+      "town": { "name": "Kalkarindji", "kind": "village", "distanceKm": 56.4, "bearing": "NE" },
       "landmark": { "name": "Toms Rock", "kind": "peak", "distanceKm": 5.3, "bearing": "NW" },
-      "osm": { "town": "n3269040386", "landmark": "n3020152357" }
+      "osm": { "town": "n1993453059", "landmark": "n3020152357" }
     },
     "C31": { "lng": 131.995518, "lat": -17.557473 },
     "C32": {
       "lng": 130.511755,
       "lat": -16.556038,
-      "town": { "name": "Daguragu", "kind": "town", "distanceKm": 99, "bearing": "S" },
+      "town": { "name": "Yarralin", "kind": "village", "distanceKm": 41.3, "bearing": "E" },
       "landmark": { "name": "Humbert River", "kind": "river", "distanceKm": 11.3, "bearing": "NE" },
-      "osm": { "town": "n3269040386", "landmark": "w320357254" }
+      "osm": { "town": "n3268092465", "landmark": "w320357254" }
     },
     "C34": { "lng": 130.480725, "lat": -19.250305 },
     "C35": {
@@ -434,21 +482,21 @@
     "C36": {
       "lng": 131.454555,
       "lat": -16.767364,
-      "town": { "name": "Daguragu", "kind": "town", "distanceKm": 98.5, "bearing": "SW" },
+      "town": { "name": "Nitjpurru", "kind": "village", "distanceKm": 25.4, "bearing": "W" },
       "landmark": {
         "name": "Armstrong River",
         "kind": "river",
         "distanceKm": 3.8,
         "bearing": "NW"
       },
-      "osm": { "town": "n3269040386", "landmark": "w508645125" }
+      "osm": { "town": "n3724595383", "landmark": "w508645125" }
     },
     "C37": {
       "lng": 129.647824,
       "lat": -16.341586,
-      "town": { "name": "Bulla", "kind": "town", "distanceKm": 76.5, "bearing": "NE" },
+      "town": { "name": "Amanbidji", "kind": "village", "distanceKm": 10.2, "bearing": "S" },
       "landmark": { "name": "Nippers Knob", "kind": "peak", "distanceKm": 5.2, "bearing": "SW" },
-      "osm": { "town": "n3450255725", "landmark": "n3020151559" }
+      "osm": { "town": "n3297011362", "landmark": "n3020151559" }
     },
     "C38": {
       "lng": 129.735599,
@@ -465,34 +513,35 @@
     "C44": {
       "lng": 128.749242,
       "lat": -23.708425,
+      "town": { "name": "Tjukurla", "kind": "village", "distanceKm": 71.2, "bearing": "S" },
       "landmark": { "name": "Mount Greene", "kind": "peak", "distanceKm": 46.4, "bearing": "N" },
-      "osm": { "landmark": "n3020053565" }
+      "osm": { "town": "n8847078565", "landmark": "n3020053565" }
     },
     "C45": {
       "lng": 129.682319,
       "lat": -16.339209,
-      "town": { "name": "Bulla", "kind": "town", "distanceKm": 74.3, "bearing": "NE" },
+      "town": { "name": "Amanbidji", "kind": "village", "distanceKm": 12.1, "bearing": "SW" },
       "landmark": {
         "name": "West Baines River",
         "kind": "river",
         "distanceKm": 1.9,
         "bearing": "NE"
       },
-      "osm": { "town": "n3450255725", "landmark": "w190351521" }
+      "osm": { "town": "n3297011362", "landmark": "w190351521" }
     },
     "D1": {
       "lng": 144.141905,
       "lat": -35.341222,
-      "town": { "name": "Moulamein", "kind": "town", "distanceKm": 29.6, "bearing": "N" },
+      "town": { "name": "Murrabit", "kind": "village", "distanceKm": 26.7, "bearing": "SW" },
       "landmark": { "name": "Niemur River", "kind": "river", "distanceKm": 6.7, "bearing": "N" },
-      "osm": { "town": "n113722975", "landmark": "w678077313" }
+      "osm": { "town": "n1781016992", "landmark": "w678077313" }
     },
     "D10": {
       "lng": 147.257346,
       "lat": -33.90918,
-      "town": { "name": "West Wyalong", "kind": "town", "distanceKm": 5.1, "bearing": "W" },
+      "town": { "name": "Wyalong", "kind": "village", "distanceKm": 2.2, "bearing": "SW" },
       "landmark": { "name": "Billys Lookout", "kind": "peak", "distanceKm": 23.4, "bearing": "N" },
-      "osm": { "town": "n230586779", "landmark": "n3019436848" }
+      "osm": { "town": "n2016091967", "landmark": "n3019436848" }
     },
     "D11": {
       "lng": 141.769794,
@@ -504,35 +553,35 @@
     "D16": {
       "lng": 140.990188,
       "lat": -31.948011,
-      "town": { "name": "Broken Hill", "kind": "city", "distanceKm": 43.5, "bearing": "E" },
+      "town": { "name": "Cockburn", "kind": "village", "distanceKm": 14.4, "bearing": "S" },
       "landmark": { "name": "Bomangaldy Hill", "kind": "peak", "distanceKm": 18.5, "bearing": "E" },
-      "osm": { "town": "n113763535", "landmark": "n3008901810" }
+      "osm": { "town": "n1550038625", "landmark": "n3008901810" }
     },
     "D25": {
       "lng": 145.330811,
       "lat": -29.759778,
-      "town": { "name": "Bourke", "kind": "town", "distanceKm": 69.6, "bearing": "SE" },
+      "town": { "name": "North Bourke", "kind": "village", "distanceKm": 67.9, "bearing": "SE" },
       "landmark": { "name": "Green Creek", "kind": "river", "distanceKm": 2.2, "bearing": "S" },
-      "osm": { "town": "n113460906", "landmark": "w863261374" }
+      "osm": { "town": "n113465161", "landmark": "w863261374" }
     },
     "D26": {
       "lng": 146.268656,
       "lat": -29.780229,
-      "town": { "name": "Bourke", "kind": "town", "distanceKm": 46.7, "bearing": "SW" },
+      "town": { "name": "North Bourke", "kind": "village", "distanceKm": 42.7, "bearing": "SW" },
       "landmark": { "name": "Quartpot Sandhill", "kind": "peak", "distanceKm": 12, "bearing": "S" },
-      "osm": { "town": "n113460906", "landmark": "n3019437855" }
+      "osm": { "town": "n113465161", "landmark": "n3019437855" }
     },
     "D29": {
       "lng": 151.441561,
       "lat": -28.618861,
-      "town": { "name": "Texas", "kind": "town", "distanceKm": 36.8, "bearing": "SW" },
+      "town": { "name": "Amiens", "kind": "village", "distanceKm": 36.3, "bearing": "E" },
       "landmark": {
         "name": "Mount Bullaganang",
         "kind": "peak",
         "distanceKm": 4.6,
         "bearing": "NW"
       },
-      "osm": { "town": "n1971192126", "landmark": "n2844296349" }
+      "osm": { "town": "n4072833980", "landmark": "n2844296349" }
     },
     "D3": {
       "lng": 149.087095,
@@ -558,9 +607,9 @@
     "D36": {
       "lng": 152.183609,
       "lat": -28.183476,
-      "town": { "name": "Warwick", "kind": "city", "distanceKm": 15.2, "bearing": "W" },
+      "town": { "name": "Yangan", "kind": "village", "distanceKm": 3, "bearing": "SE" },
       "landmark": { "name": "Mount Sturt", "kind": "peak", "distanceKm": 2.3, "bearing": "NE" },
-      "osm": { "town": "n1817489924", "landmark": "n2844330504" }
+      "osm": { "town": "n1277936430", "landmark": "n2844330504" }
     },
     "D39": {
       "lng": 150.324896,
@@ -572,64 +621,66 @@
     "D40": {
       "lng": 150.446773,
       "lat": -26.795066,
-      "town": { "name": "Chinchilla", "kind": "town", "distanceKm": 18.4, "bearing": "E" },
+      "town": { "name": "Columboola", "kind": "village", "distanceKm": 17.3, "bearing": "NW" },
       "landmark": {
         "name": "Condamine River",
         "kind": "river",
         "distanceKm": 3.6,
         "bearing": "SE"
       },
-      "osm": { "town": "n291767248", "landmark": "w149724655" }
+      "osm": { "town": "n5246890365", "landmark": "w149724655" }
     },
     "D48": {
       "lng": 143.527106,
       "lat": -32.817938,
-      "town": { "name": "Ivanhoe", "kind": "town", "distanceKm": 72.8, "bearing": "E" },
+      "town": { "name": "Darnick", "kind": "village", "distanceKm": 9.8, "bearing": "E" },
       "landmark": { "name": "Sayers Lake", "kind": "lake", "distanceKm": 27, "bearing": "NW" },
-      "osm": { "town": "n113465238", "landmark": "r12010966" }
+      "osm": { "town": "n113465201", "landmark": "r12010966" }
     },
     "D49": {
       "lng": 146.395208,
       "lat": -29.105453,
+      "town": { "name": "Weilmoringle", "kind": "village", "distanceKm": 53, "bearing": "E" },
       "landmark": { "name": "Lake Tank", "kind": "lake", "distanceKm": 26.7, "bearing": "E" },
-      "osm": { "landmark": "r11579520" }
+      "osm": { "town": "n113765393", "landmark": "r11579520" }
     },
     "D50": {
       "lng": 145.952442,
       "lat": -29.871731,
-      "town": { "name": "Bourke", "kind": "town", "distanceKm": 24.4, "bearing": "S" },
+      "town": { "name": "North Bourke", "kind": "village", "distanceKm": 19.6, "bearing": "S" },
       "landmark": { "name": "The Dry Lake", "kind": "lake", "distanceKm": 5.9, "bearing": "N" },
-      "osm": { "town": "n113460906", "landmark": "r11773233" }
+      "osm": { "town": "n113465161", "landmark": "r11773233" }
     },
     "D51": {
       "lng": 144.266462,
       "lat": -29.720395,
+      "town": { "name": "Wanaaring", "kind": "village", "distanceKm": 11.5, "bearing": "W" },
       "landmark": {
         "name": "Cuttaburra Creek",
         "kind": "river",
         "distanceKm": 9.4,
         "bearing": "E"
       },
-      "osm": { "landmark": "w782860692" }
+      "osm": { "town": "n426709719", "landmark": "w782860692" }
     },
     "D52": {
       "lng": 146.325683,
       "lat": -29.839283,
-      "town": { "name": "Bourke", "kind": "town", "distanceKm": 46.3, "bearing": "SW" },
+      "town": { "name": "North Bourke", "kind": "village", "distanceKm": 42.9, "bearing": "SW" },
       "landmark": {
         "name": "Quartpot Sandhill",
         "kind": "peak",
         "distanceKm": 5.4,
         "bearing": "SW"
       },
-      "osm": { "town": "n113460906", "landmark": "n3019437855" }
+      "osm": { "town": "n113465161", "landmark": "n3019437855" }
     },
     "D53": {
       "lng": 146.907878,
       "lat": -29.29727,
-      "town": { "name": "Brewarrina", "kind": "town", "distanceKm": 74.1, "bearing": "S" },
+      "town": { "name": "Weilmoringle", "kind": "village", "distanceKm": 6.5, "bearing": "N" },
       "landmark": { "name": "Culgoa River", "kind": "river", "distanceKm": 2.2, "bearing": "NW" },
-      "osm": { "town": "n3406571490", "landmark": "w333938364" }
+      "osm": { "town": "n113765393", "landmark": "w333938364" }
     },
     "D58": {
       "lng": 145.981323,
@@ -660,16 +711,16 @@
     "D62": {
       "lng": 148.998496,
       "lat": -35.474957,
-      "town": { "name": "Tuggeranong", "kind": "town", "distanceKm": 10.4, "bearing": "NE" },
+      "town": { "name": "Tharwa", "kind": "village", "distanceKm": 7.5, "bearing": "SE" },
       "landmark": { "name": "Paddy's River", "kind": "river", "distanceKm": 0.3, "bearing": "S" },
-      "osm": { "town": "n27286755", "landmark": "w363818256" }
+      "osm": { "town": "n186947418", "landmark": "w363818256" }
     },
     "D64": {
       "lng": 151.476272,
       "lat": -30.127552,
-      "town": { "name": "Guyra", "kind": "town", "distanceKm": 21.3, "bearing": "SE" },
+      "town": { "name": "Ben Lomond", "kind": "village", "distanceKm": 21, "bearing": "NE" },
       "landmark": { "name": "Chippenham", "kind": "peak", "distanceKm": 14.5, "bearing": "SE" },
-      "osm": { "town": "n90142932", "landmark": "n10801058825" }
+      "osm": { "town": "n2322919894", "landmark": "n10801058825" }
     },
     "D66": {
       "lng": 148.197097,
@@ -681,23 +732,23 @@
     "D7": {
       "lng": 143.940913,
       "lat": -33.873186,
-      "town": { "name": "Balranald", "kind": "town", "distanceKm": 92, "bearing": "S" },
+      "town": { "name": "Maude", "kind": "village", "distanceKm": 74.6, "bearing": "SE" },
       "landmark": { "name": "Box Creek", "kind": "river", "distanceKm": 21.2, "bearing": "S" },
-      "osm": { "town": "n113393311", "landmark": "w1157294959" }
+      "osm": { "town": "n1954340019", "landmark": "w1157294959" }
     },
     "D8": {
       "lng": 142.721745,
       "lat": -33.753156,
-      "town": { "name": "Gol Gol", "kind": "town", "distanceKm": 66, "bearing": "SW" },
+      "town": { "name": "Pooncarie", "kind": "village", "distanceKm": 43.7, "bearing": "N" },
       "landmark": { "name": "Arumpo Creek", "kind": "river", "distanceKm": 20.4, "bearing": "SE" },
-      "osm": { "town": "n117211122", "landmark": "w1034002031" }
+      "osm": { "town": "n117211266", "landmark": "w1034002031" }
     },
     "D9": {
       "lng": 144.400027,
       "lat": -34.418687,
-      "town": { "name": "Hay", "kind": "town", "distanceKm": 41.9, "bearing": "E" },
+      "town": { "name": "Maude", "kind": "village", "distanceKm": 11, "bearing": "SW" },
       "landmark": { "name": "Darcoola Creek", "kind": "river", "distanceKm": 1.6, "bearing": "SW" },
-      "osm": { "town": "n1887069258", "landmark": "w1197580399" }
+      "osm": { "town": "n1954340019", "landmark": "w1197580399" }
     },
     "E1": {
       "lng": 151.211697,
@@ -709,9 +760,9 @@
     "E10": {
       "lng": 153.187844,
       "lat": -29.686723,
-      "town": { "name": "Grafton", "kind": "city", "distanceKm": 24.6, "bearing": "W" },
+      "town": { "name": "Tucabia", "kind": "village", "distanceKm": 8.1, "bearing": "W" },
       "landmark": { "name": "Ben Lomond", "kind": "peak", "distanceKm": 3.2, "bearing": "S" },
-      "osm": { "town": "n3834031650", "landmark": "n3973708873" }
+      "osm": { "town": "n1999890056", "landmark": "n3973708873" }
     },
     "E11": {
       "lng": 151.050114,
@@ -723,28 +774,28 @@
     "E14": {
       "lng": 152.320346,
       "lat": -28.501057,
-      "town": { "name": "Killarney", "kind": "town", "distanceKm": 18.6, "bearing": "N" },
+      "town": { "name": "Legume", "kind": "village", "distanceKm": 10.7, "bearing": "N" },
       "landmark": { "name": "Koreelah Creek", "kind": "river", "distanceKm": 0.7, "bearing": "N" },
-      "osm": { "town": "n21386961", "landmark": "w147251132" }
+      "osm": { "town": "n21386956", "landmark": "w147251132" }
     },
     "E15": {
       "lng": 152.866814,
       "lat": -28.533264,
-      "town": { "name": "Kyogle", "kind": "town", "distanceKm": 16.5, "bearing": "SE" },
+      "town": { "name": "Eden Creek", "kind": "village", "distanceKm": 7, "bearing": "SE" },
       "landmark": { "name": "Richmond River", "kind": "river", "distanceKm": 7.3, "bearing": "NE" },
-      "osm": { "town": "n21384337", "landmark": "w136255351" }
+      "osm": { "town": "n114643942", "landmark": "w136255351" }
     },
     "E15.1": {
       "lng": 153.23611,
       "lat": -28.732615,
-      "town": { "name": "Lismore", "kind": "city", "distanceKm": 9.4, "bearing": "SE" },
+      "town": { "name": "The Channon", "kind": "village", "distanceKm": 7.7, "bearing": "NE" },
       "landmark": {
         "name": "Goolmangar Creek",
         "kind": "river",
         "distanceKm": 0.9,
         "bearing": "W"
       },
-      "osm": { "town": "n114651471", "landmark": "w174427451" }
+      "osm": { "town": "n2014962027", "landmark": "w174427451" }
     },
     "E16": {
       "lng": 152.228225,
@@ -756,9 +807,9 @@
     "E16.2": {
       "lng": 152.507922,
       "lat": -28.887612,
-      "town": { "name": "Tabulam", "kind": "town", "distanceKm": 5.9, "bearing": "E" },
+      "town": { "name": "Jubullum Village", "kind": "village", "distanceKm": 2.1, "bearing": "E" },
       "landmark": { "name": "Timbarra River", "kind": "river", "distanceKm": 2.2, "bearing": "SE" },
-      "osm": { "town": "n356157522", "landmark": "w106468039" }
+      "osm": { "town": "n11221818201", "landmark": "w106468039" }
     },
     "E18": {
       "lng": 153.498119,
@@ -775,58 +826,58 @@
     "E2": {
       "lng": 151.996946,
       "lat": -32.486841,
-      "town": { "name": "Bulahdelah", "kind": "town", "distanceKm": 21.4, "bearing": "NE" },
+      "town": { "name": "Booral", "kind": "village", "distanceKm": 4.1, "bearing": "NW" },
       "landmark": { "name": "Karuah River", "kind": "river", "distanceKm": 3, "bearing": "W" },
-      "osm": { "town": "n114993617", "landmark": "w11716931" }
+      "osm": { "town": "n2625771074", "landmark": "w11716931" }
     },
     "E24": {
       "lng": 152.928192,
       "lat": -27.221081,
-      "town": { "name": "Dayboro", "kind": "town", "distanceKm": 10.6, "bearing": "W" },
+      "town": { "name": "Narangba", "kind": "village", "distanceKm": 3.7, "bearing": "NE" },
       "landmark": { "name": "Lake Gaffney", "kind": "lake", "distanceKm": 1.6, "bearing": "SE" },
-      "osm": { "town": "n315257817", "landmark": "w326214319" }
+      "osm": { "town": "n613328939", "landmark": "w326214319" }
     },
     "E27": {
       "lng": 150.835137,
       "lat": -26.050348,
-      "town": { "name": "Mundubbera", "kind": "town", "distanceKm": 69.1, "bearing": "NE" },
+      "town": { "name": "Allies Creek", "kind": "village", "distanceKm": 27.8, "bearing": "E" },
       "landmark": { "name": "Auburn River", "kind": "river", "distanceKm": 18.8, "bearing": "NW" },
-      "osm": { "town": "n3827133799", "landmark": "w1206332728" }
+      "osm": { "town": "n4183789749", "landmark": "w1206332728" }
     },
     "E29": {
       "lng": 152.667537,
       "lat": -26.005603,
-      "town": { "name": "Gympie", "kind": "city", "distanceKm": 20.5, "bearing": "S" },
+      "town": { "name": "Gunalda", "kind": "village", "distanceKm": 10.2, "bearing": "W" },
       "landmark": { "name": "Black Knob", "kind": "peak", "distanceKm": 2.9, "bearing": "S" },
-      "osm": { "town": "n1882969315", "landmark": "n2844423114" }
+      "osm": { "town": "n1883015247", "landmark": "n2844423114" }
     },
     "E3": {
       "lng": 152.134016,
       "lat": -31.646951,
-      "town": { "name": "Wingham", "kind": "town", "distanceKm": 32.8, "bearing": "SE" },
+      "town": { "name": "Mount George", "kind": "village", "distanceKm": 27, "bearing": "S" },
       "landmark": { "name": "Rowley", "kind": "peak", "distanceKm": 2.4, "bearing": "E" },
-      "osm": { "town": "n114385126", "landmark": "n5279183976" }
+      "osm": { "town": "n114384464", "landmark": "n5279183976" }
     },
     "E30": {
       "lng": 153.03282,
       "lat": -25.33722,
-      "town": { "name": "River Heads", "kind": "town", "distanceKm": 14.7, "bearing": "SW" },
+      "town": { "name": "Kingfisher Bay", "kind": "village", "distanceKm": 6.1, "bearing": "S" },
       "landmark": { "name": "Urang Creek", "kind": "river", "distanceKm": 2.7, "bearing": "NE" },
-      "osm": { "town": "n6035839598", "landmark": "w299452488" }
+      "osm": { "town": "n827070405", "landmark": "w299452488" }
     },
     "E32": {
       "lng": 151.790315,
       "lat": -24.904801,
-      "town": { "name": "Mount Perry", "kind": "town", "distanceKm": 34, "bearing": "SW" },
+      "town": { "name": "Monduran", "kind": "village", "distanceKm": 13.8, "bearing": "NE" },
       "landmark": { "name": "Kolan River", "kind": "river", "distanceKm": 5.8, "bearing": "NE" },
-      "osm": { "town": "n1081231027", "landmark": "w379508822" }
+      "osm": { "town": "n6036337357", "landmark": "w379508822" }
     },
     "E33": {
       "lng": 152.038899,
       "lat": -24.807331,
-      "town": { "name": "Moore Park", "kind": "town", "distanceKm": 25.7, "bearing": "NE" },
+      "town": { "name": "Bucca", "kind": "village", "distanceKm": 9.9, "bearing": "SE" },
       "landmark": { "name": "Kolan River", "kind": "river", "distanceKm": 6.2, "bearing": "SE" },
-      "osm": { "town": "n3612994443", "landmark": "w175975466" }
+      "osm": { "town": "n3686396743", "landmark": "w175975466" }
     },
     "E36": {
       "lng": 151.681688,
@@ -857,9 +908,9 @@
     "E40": {
       "lng": 150.151432,
       "lat": -24.18607,
-      "town": { "name": "Biloela", "kind": "town", "distanceKm": 43.8, "bearing": "SE" },
+      "town": { "name": "Goovigen", "kind": "village", "distanceKm": 14.3, "bearing": "E" },
       "landmark": { "name": "Don River", "kind": "river", "distanceKm": 9.1, "bearing": "NW" },
-      "osm": { "town": "n247805969", "landmark": "w1216662576" }
+      "osm": { "town": "n1821324177", "landmark": "w1216662576" }
     },
     "E42": {
       "lng": 150.885237,
@@ -885,14 +936,14 @@
     "E5": {
       "lng": 152.89048,
       "lat": -30.815135,
-      "town": { "name": "Macksville", "kind": "town", "distanceKm": 12.3, "bearing": "N" },
+      "town": { "name": "Eungai Creek", "kind": "village", "distanceKm": 2.1, "bearing": "SW" },
       "landmark": {
         "name": "Mount Yarrahapinni",
         "kind": "peak",
         "distanceKm": 2.8,
         "bearing": "E"
       },
-      "osm": { "town": "n61770196", "landmark": "n2189565539" }
+      "osm": { "town": "n114655903", "landmark": "n2189565539" }
     },
     "E51": {
       "lng": 147.475273,
@@ -904,16 +955,16 @@
     "E55": {
       "lng": 146.047981,
       "lat": -20.766821,
-      "town": { "name": "Pentland", "kind": "town", "distanceKm": 72.7, "bearing": "W" },
+      "town": { "name": "Homestead", "kind": "village", "distanceKm": 60.8, "bearing": "NW" },
       "landmark": { "name": "Mount Malakoff", "kind": "peak", "distanceKm": 16.6, "bearing": "NE" },
-      "osm": { "town": "n1789411259", "landmark": "n2844376723" }
+      "osm": { "town": "n10560895321", "landmark": "n2844376723" }
     },
     "E57": {
       "lng": 148.703782,
       "lat": -21.298575,
-      "town": { "name": "Pinnacle", "kind": "town", "distanceKm": 16.7, "bearing": "N" },
+      "town": { "name": "Septimus", "kind": "village", "distanceKm": 10.4, "bearing": "NE" },
       "landmark": { "name": "Mount Jimmy Jack", "kind": "peak", "distanceKm": 8.1, "bearing": "E" },
-      "osm": { "town": "n2306066827", "landmark": "n1714038326" }
+      "osm": { "town": "n1665764062", "landmark": "n1714038326" }
     },
     "E61": {
       "lng": 147.110559,
@@ -925,14 +976,14 @@
     "E62": {
       "lng": 147.674553,
       "lat": -19.827167,
-      "town": { "name": "Home Hill", "kind": "town", "distanceKm": 32.7, "bearing": "NW" },
+      "town": { "name": "Gumlu", "kind": "village", "distanceKm": 5.8, "bearing": "S" },
       "landmark": {
         "name": "Yellow Gin Creek",
         "kind": "river",
         "distanceKm": 14.2,
         "bearing": "W"
       },
-      "osm": { "town": "n2138810432", "landmark": "w426754344" }
+      "osm": { "town": "n10561389384", "landmark": "w426754344" }
     },
     "E63": {
       "lng": 149.483617,
@@ -956,14 +1007,14 @@
     "E65": {
       "lng": 149.382434,
       "lat": -24.465985,
-      "town": { "name": "Moura", "kind": "town", "distanceKm": 61, "bearing": "E" },
+      "town": { "name": "Woorabinda", "kind": "village", "distanceKm": 37.8, "bearing": "N" },
       "landmark": {
         "name": "Mount Dromedary",
         "kind": "peak",
         "distanceKm": 19.3,
         "bearing": "SW"
       },
-      "osm": { "town": "n1832972322", "landmark": "n13246698096" }
+      "osm": { "town": "n4113177510", "landmark": "n13246698096" }
     },
     "E67": {
       "lng": 152.41558,
@@ -975,16 +1026,16 @@
     "E68": {
       "lng": 151.781461,
       "lat": -29.527793,
-      "town": { "name": "Glen Innes", "kind": "town", "distanceKm": 23.8, "bearing": "S" },
+      "town": { "name": "Deepwater", "kind": "village", "distanceKm": 11.2, "bearing": "NE" },
       "landmark": { "name": "Severn River", "kind": "river", "distanceKm": 1.8, "bearing": "SW" },
-      "osm": { "town": "n59848698", "landmark": "w191757501" }
+      "osm": { "town": "n2022643013", "landmark": "w191757501" }
     },
     "E70": {
       "lng": 151.940737,
       "lat": -30.422361,
-      "town": { "name": "Armidale", "kind": "city", "distanceKm": 28.3, "bearing": "W" },
+      "town": { "name": "Wollomombi", "kind": "village", "distanceKm": 14.2, "bearing": "SE" },
       "landmark": { "name": "Mount Davidson", "kind": "peak", "distanceKm": 0.7, "bearing": "SW" },
-      "osm": { "town": "n59851594", "landmark": "n3019437413" }
+      "osm": { "town": "n333283803", "landmark": "n3019437413" }
     },
     "E73": {
       "lng": 152.987374,
@@ -996,42 +1047,42 @@
     "E75": {
       "lng": 153.421793,
       "lat": -28.921505,
-      "town": { "name": "Alstonville", "kind": "town", "distanceKm": 9.1, "bearing": "N" },
+      "town": { "name": "Wardell", "kind": "village", "distanceKm": 5.3, "bearing": "SE" },
       "landmark": {
         "name": "Buckombil Mountain",
         "kind": "peak",
         "distanceKm": 1.5,
         "bearing": "S"
       },
-      "osm": { "town": "n113745328", "landmark": "n3019436938" }
+      "osm": { "town": "n2003938805", "landmark": "n3019436938" }
     },
     "E76": {
       "lng": 152.914699,
       "lat": -28.126543,
-      "town": { "name": "Beaudesert", "kind": "town", "distanceKm": 17.3, "bearing": "NE" },
+      "town": { "name": "Kooralbyn", "kind": "village", "distanceKm": 8.6, "bearing": "NW" },
       "landmark": { "name": "Logan River", "kind": "river", "distanceKm": 1.4, "bearing": "SE" },
-      "osm": { "town": "n1590167442", "landmark": "w531586604" }
+      "osm": { "town": "n1260290764", "landmark": "w531586604" }
     },
     "E8": {
       "lng": 152.111087,
       "lat": -30.059012,
-      "town": { "name": "Guyra", "kind": "town", "distanceKm": 45.9, "bearing": "SW" },
+      "town": { "name": "Ben Lomond", "kind": "village", "distanceKm": 43.7, "bearing": "W" },
       "landmark": { "name": "Sara River", "kind": "river", "distanceKm": 4.8, "bearing": "NE" },
-      "osm": { "town": "n90142932", "landmark": "w445611740" }
+      "osm": { "town": "n2322919894", "landmark": "w445611740" }
     },
     "E80": {
       "lng": 152.55178,
       "lat": -29.224426,
-      "town": { "name": "Tabulam", "kind": "town", "distanceKm": 37.5, "bearing": "N" },
+      "town": { "name": "Gordon Brook", "kind": "village", "distanceKm": 26.2, "bearing": "S" },
       "landmark": { "name": "Clarence River", "kind": "river", "distanceKm": 0.1, "bearing": "SE" },
-      "osm": { "town": "n356157522", "landmark": "w38272745" }
+      "osm": { "town": "n114203415", "landmark": "w38272745" }
     },
     "E81": {
       "lng": 151.677765,
       "lat": -27.21169,
-      "town": { "name": "Oakey", "kind": "town", "distanceKm": 25.3, "bearing": "S" },
+      "town": { "name": "Kulpi", "kind": "village", "distanceKm": 3.6, "bearing": "NE" },
       "landmark": { "name": "Boah Peak", "kind": "peak", "distanceKm": 13.7, "bearing": "SE" },
-      "osm": { "town": "n298323860", "landmark": "n2844292420" }
+      "osm": { "town": "n1635672089", "landmark": "n2844292420" }
     },
     "E82": {
       "lng": 150.966847,
@@ -1057,26 +1108,26 @@
     "E88": {
       "lng": 152.695135,
       "lat": -27.353033,
-      "town": { "name": "Fernvale", "kind": "town", "distanceKm": 12.2, "bearing": "S" },
+      "town": { "name": "Mount Nebo", "kind": "village", "distanceKm": 9.8, "bearing": "SE" },
       "landmark": {
         "name": "Northbrook Mountain",
         "kind": "peak",
         "distanceKm": 4.5,
         "bearing": "NE"
       },
-      "osm": { "town": "n60833087", "landmark": "n5427974701" }
+      "osm": { "town": "n60819338", "landmark": "n5427974701" }
     },
     "E9": {
       "lng": 153.215774,
       "lat": -29.463789,
-      "town": { "name": "Maclean", "kind": "town", "distanceKm": 1.6, "bearing": "NW" },
+      "town": { "name": "Townsend", "kind": "village", "distanceKm": 0.2, "bearing": "SE" },
       "landmark": {
         "name": "Clarence River South Arm",
         "kind": "river",
         "distanceKm": 1.5,
         "bearing": "SW"
       },
-      "osm": { "town": "n1123085163", "landmark": "w335327145" }
+      "osm": { "town": "n2352704836", "landmark": "w335327145" }
     },
     "E90": {
       "lng": 152.885895,
@@ -1093,9 +1144,9 @@
     "E92": {
       "lng": 152.682885,
       "lat": -29.485675,
-      "town": { "name": "Grafton", "kind": "city", "distanceKm": 33.3, "bearing": "SE" },
+      "town": { "name": "Gordon Brook", "kind": "village", "distanceKm": 6.3, "bearing": "NW" },
       "landmark": { "name": "Clarence River", "kind": "river", "distanceKm": 1.9, "bearing": "S" },
-      "osm": { "town": "n3834031650", "landmark": "w96780425" }
+      "osm": { "town": "n114203415", "landmark": "w96780425" }
     },
     "G13": {
       "lng": 139.89002,
@@ -1107,13 +1158,14 @@
     "G14": {
       "lng": 137.462377,
       "lat": -19.327052,
+      "town": { "name": "Avon Downs", "kind": "village", "distanceKm": 78.3, "bearing": "S" },
       "landmark": {
         "name": "Loves Hole Creek",
         "kind": "river",
         "distanceKm": 23.3,
         "bearing": "E"
       },
-      "osm": { "landmark": "w1413414617" }
+      "osm": { "town": "n4385186055", "landmark": "w1413414617" }
     },
     "G15": {
       "lng": 139.064819,
@@ -1145,20 +1197,21 @@
     "G29": {
       "lng": 141.815588,
       "lat": -16.052435,
+      "town": { "name": "Kowanyama", "kind": "village", "distanceKm": 64.5, "bearing": "N" },
       "landmark": { "name": "Staaten River", "kind": "river", "distanceKm": 44.9, "bearing": "S" },
-      "osm": { "landmark": "w590880278" }
+      "osm": { "town": "n617908618", "landmark": "w590880278" }
     },
     "G35": {
       "lng": 139.489224,
       "lat": -17.030579,
-      "town": { "name": "Burketown", "kind": "town", "distanceKm": 79.1, "bearing": "S" },
+      "town": { "name": "Gununa", "kind": "village", "distanceKm": 52.2, "bearing": "NW" },
       "landmark": {
         "name": "Inspection Hill",
         "kind": "peak",
         "distanceKm": 17.6,
         "bearing": "SE"
       },
-      "osm": { "town": "n311295795", "landmark": "n3020388437" }
+      "osm": { "town": "n11846879286", "landmark": "n3020388437" }
     },
     "G36": {
       "lng": 141.934732,
@@ -1172,12 +1225,18 @@
       },
       "osm": { "town": "n247814528", "landmark": "w669601840" }
     },
-    "G37": { "lng": 138.981143, "lat": -16.904907 },
+    "G37": {
+      "lng": 138.981143,
+      "lat": -16.904907,
+      "town": { "name": "Gununa", "kind": "village", "distanceKm": 34, "bearing": "NE" },
+      "osm": { "town": "n11846879286" }
+    },
     "G38": {
       "lng": 139.458891,
       "lat": -16.564314,
+      "town": { "name": "Gununa", "kind": "village", "distanceKm": 31.7, "bearing": "W" },
       "landmark": { "name": "Archies Creek", "kind": "river", "distanceKm": 1.1, "bearing": "SW" },
-      "osm": { "landmark": "w839540341" }
+      "osm": { "town": "n11846879286", "landmark": "w839540341" }
     },
     "G40": {
       "lng": 139.817572,
@@ -1189,20 +1248,21 @@
     "G41": {
       "lng": 138.810456,
       "lat": -21.260278,
-      "town": { "name": "Dajarra", "kind": "town", "distanceKm": 87.4, "bearing": "SE" },
+      "town": { "name": "Urandangi", "kind": "village", "distanceKm": 64.1, "bearing": "SW" },
       "landmark": {
         "name": "Mount Woodhouse",
         "kind": "peak",
         "distanceKm": 38.1,
         "bearing": "NE"
       },
-      "osm": { "town": "n250290275", "landmark": "n2844263951" }
+      "osm": { "town": "n2035856194", "landmark": "n2844263951" }
     },
     "G43": {
       "lng": 138.596132,
       "lat": -22.132758,
+      "town": { "name": "Urandangi", "kind": "village", "distanceKm": 64.9, "bearing": "NW" },
       "landmark": { "name": "Georgina River", "kind": "river", "distanceKm": 2.2, "bearing": "NE" },
-      "osm": { "landmark": "w1410322466" }
+      "osm": { "town": "n2035856194", "landmark": "w1410322466" }
     },
     "G44": {
       "lng": 139.747863,
@@ -1233,16 +1293,16 @@
     "G47": {
       "lng": 138.682737,
       "lat": -17.851446,
-      "town": { "name": "Burketown", "kind": "town", "distanceKm": 92.3, "bearing": "E" },
+      "town": { "name": "Doomadgee", "kind": "village", "distanceKm": 18.4, "bearing": "SE" },
       "landmark": { "name": "Nicholson River", "kind": "river", "distanceKm": 6.2, "bearing": "S" },
-      "osm": { "town": "n311295795", "landmark": "w175794141" }
+      "osm": { "town": "n1863502756", "landmark": "w175794141" }
     },
     "G8": {
       "lng": 139.713271,
       "lat": -21.821844,
-      "town": { "name": "Dajarra", "kind": "town", "distanceKm": 25, "bearing": "NW" },
+      "town": { "name": "The Monument", "kind": "village", "distanceKm": 21.6, "bearing": "E" },
       "landmark": { "name": "Wills Creek", "kind": "river", "distanceKm": 1.3, "bearing": "SW" },
-      "osm": { "town": "n250290275", "landmark": "w1390303940" }
+      "osm": { "town": "n2406646803", "landmark": "w1390303940" }
     },
     "K1": {
       "lng": 122.6253,
@@ -1254,15 +1314,16 @@
     "K10": {
       "lng": 124.013626,
       "lat": -17.275981,
-      "town": { "name": "Derby", "kind": "town", "distanceKm": 41, "bearing": "W" },
+      "town": { "name": "Mowanjum", "kind": "village", "distanceKm": 34.4, "bearing": "W" },
       "landmark": { "name": "Meda River", "kind": "river", "distanceKm": 3.1, "bearing": "NE" },
-      "osm": { "town": "n316203762", "landmark": "w312219166" }
+      "osm": { "town": "n5705053182", "landmark": "w312219166" }
     },
     "K13": {
       "lng": 122.705729,
       "lat": -17.028029,
+      "town": { "name": "Beagle Bay", "kind": "village", "distanceKm": 6.6, "bearing": "NW" },
       "landmark": { "name": "King Peaks", "kind": "peak", "distanceKm": 29.2, "bearing": "W" },
-      "osm": { "landmark": "n3020150839" }
+      "osm": { "town": "n2068000597", "landmark": "n3020150839" }
     },
     "K21": {
       "lng": 129.705915,
@@ -1273,14 +1334,16 @@
     "K30": {
       "lng": 129.353716,
       "lat": -17.235154,
+      "town": { "name": "Amanbidji", "kind": "village", "distanceKm": 94, "bearing": "N" },
       "landmark": { "name": "Mount Copley", "kind": "peak", "distanceKm": 18.2, "bearing": "SE" },
-      "osm": { "landmark": "n3020151105" }
+      "osm": { "town": "n3297011362", "landmark": "n3020151105" }
     },
     "K33": {
       "lng": 127.977866,
       "lat": -16.377114,
+      "town": { "name": "Argyle Village", "kind": "village", "distanceKm": 59.4, "bearing": "SE" },
       "landmark": { "name": "Dunham River", "kind": "river", "distanceKm": 2.4, "bearing": "SE" },
-      "osm": { "landmark": "w190362029" }
+      "osm": { "town": "n1537610615", "landmark": "w190362029" }
     },
     "K37.1": {
       "lng": 129.274694,
@@ -1292,9 +1355,14 @@
     "K4": {
       "lng": 122.491505,
       "lat": -17.515181,
-      "town": { "name": "Broome", "kind": "city", "distanceKm": 56.7, "bearing": "SW" },
+      "town": {
+        "name": "Goolarabooloo Millibinyarri",
+        "kind": "village",
+        "distanceKm": 46,
+        "bearing": "SW"
+      },
       "landmark": { "name": "Mount Jowlaenga", "kind": "peak", "distanceKm": 48.9, "bearing": "E" },
-      "osm": { "town": "n53919243", "landmark": "n3020151346" }
+      "osm": { "town": "n2039806578", "landmark": "n3020151346" }
     },
     "K48": {
       "lng": 122.536112,
@@ -1313,62 +1381,63 @@
     "K51": {
       "lng": 127.850102,
       "lat": -18.270335,
+      "town": { "name": "Halls Creek", "kind": "village", "distanceKm": 19.9, "bearing": "W" },
       "landmark": { "name": "Elvire River", "kind": "river", "distanceKm": 0.8, "bearing": "NE" },
-      "osm": { "landmark": "w190364622" }
+      "osm": { "town": "n331329919", "landmark": "w190364622" }
     },
     "K54": {
       "lng": 122.997184,
       "lat": -17.970094,
-      "town": { "name": "Broome", "kind": "city", "distanceKm": 81.8, "bearing": "W" },
+      "town": { "name": "Bidan", "kind": "village", "distanceKm": 40.4, "bearing": "NE" },
       "landmark": { "name": "Blue Hills", "kind": "peak", "distanceKm": 21.5, "bearing": "E" },
-      "osm": { "town": "n53919243", "landmark": "n3020150657" }
+      "osm": { "town": "n2066334118", "landmark": "n3020150657" }
     },
     "K6": {
       "lng": 126.179024,
       "lat": -18.59097,
-      "town": { "name": "Fitzroy Crossing", "kind": "town", "distanceKm": 78.3, "bearing": "NW" },
+      "town": { "name": "Kupartiya", "kind": "village", "distanceKm": 34.2, "bearing": "S" },
       "landmark": { "name": "Teichert Hills", "kind": "peak", "distanceKm": 12.2, "bearing": "SW" },
-      "osm": { "town": "n3806574898", "landmark": "n3020152021" }
+      "osm": { "town": "n2007420065", "landmark": "n3020152021" }
     },
     "K62": {
       "lng": 127.973917,
       "lat": -15.632671,
-      "town": { "name": "Kununurra", "kind": "town", "distanceKm": 83.4, "bearing": "E" },
+      "town": { "name": "Wyndham", "kind": "village", "distanceKm": 22.8, "bearing": "NE" },
       "landmark": {
         "name": "False Mount Cockburn",
         "kind": "peak",
         "distanceKm": 1.5,
         "bearing": "SE"
       },
-      "osm": { "town": "n30480122", "landmark": "n3020150757" }
+      "osm": { "town": "n30480029", "landmark": "n3020150757" }
     },
     "K63": {
       "lng": 128.251368,
       "lat": -16.309513,
-      "town": { "name": "Kununurra", "kind": "town", "distanceKm": 79.2, "bearing": "NE" },
+      "town": { "name": "Argyle Village", "kind": "village", "distanceKm": 46.1, "bearing": "SE" },
       "landmark": { "name": "Mcphee Creek", "kind": "river", "distanceKm": 4.4, "bearing": "SE" },
-      "osm": { "town": "n30480122", "landmark": "w254655452" }
+      "osm": { "town": "n1537610615", "landmark": "w254655452" }
     },
     "K8": {
       "lng": 122.527413,
       "lat": -17.232389,
-      "town": { "name": "Broome", "kind": "city", "distanceKm": 86.7, "bearing": "S" },
+      "town": { "name": "Bobieding", "kind": "village", "distanceKm": 30.9, "bearing": "N" },
       "landmark": { "name": "King Peaks", "kind": "peak", "distanceKm": 20.5, "bearing": "NW" },
-      "osm": { "town": "n53919243", "landmark": "n3020150839" }
+      "osm": { "town": "n2055677619", "landmark": "n3020150839" }
     },
     "K9": {
       "lng": 123.134158,
       "lat": -17.26474,
-      "town": { "name": "Derby", "kind": "town", "distanceKm": 52.7, "bearing": "E" },
+      "town": { "name": "Bidan", "kind": "village", "distanceKm": 42.4, "bearing": "S" },
       "landmark": { "name": "Bells Tower", "kind": "peak", "distanceKm": 21.3, "bearing": "W" },
-      "osm": { "town": "n316203762", "landmark": "n3020150638" }
+      "osm": { "town": "n2066334118", "landmark": "n3020150638" }
     },
     "L1": {
       "lng": 137.591041,
       "lat": -34.481869,
-      "town": { "name": "Maitland", "kind": "town", "distanceKm": 14.2, "bearing": "NE" },
+      "town": { "name": "Port Victoria", "kind": "village", "distanceKm": 9.9, "bearing": "W" },
       "landmark": { "name": "Bagnall Hill", "kind": "peak", "distanceKm": 16.4, "bearing": "N" },
-      "osm": { "town": "n893482581", "landmark": "n3008901742" }
+      "osm": { "town": "n441127292", "landmark": "n3008901742" }
     },
     "L15": {
       "lng": 142.66888,
@@ -1459,21 +1528,23 @@
     "L45": {
       "lng": 141.244009,
       "lat": -27.513283,
-      "town": { "name": "Durham Downs", "kind": "town", "distanceKm": 81.2, "bearing": "NE" },
+      "town": { "name": "Innamincka", "kind": "village", "distanceKm": 56.2, "bearing": "SW" },
       "landmark": { "name": "Cooper Creek", "kind": "river", "distanceKm": 8.7, "bearing": "S" },
-      "osm": { "town": "n3128663965", "landmark": "w194574384" }
+      "osm": { "town": "n1956101841", "landmark": "w194574384" }
     },
     "L46": {
       "lng": 140.840247,
       "lat": -26.955305,
+      "town": { "name": "Innamincka", "kind": "village", "distanceKm": 88.5, "bearing": "S" },
       "landmark": { "name": "King Lookout", "kind": "peak", "distanceKm": 20.6, "bearing": "W" },
-      "osm": { "landmark": "n3020388447" }
+      "osm": { "town": "n1956101841", "landmark": "n3020388447" }
     },
     "L47": {
       "lng": 139.962541,
       "lat": -27.322753,
+      "town": { "name": "Innamincka", "kind": "village", "distanceKm": 89.7, "bearing": "SE" },
       "landmark": { "name": "Cooper Creek", "kind": "river", "distanceKm": 10.4, "bearing": "S" },
-      "osm": { "landmark": "w654138943" }
+      "osm": { "town": "n1956101841", "landmark": "w654138943" }
     },
     "L48": {
       "lng": 140.960083,
@@ -1512,13 +1583,14 @@
     "L53": {
       "lng": 136.025876,
       "lat": -27.722173,
+      "town": { "name": "Oodnadatta", "kind": "village", "distanceKm": 60.3, "bearing": "W" },
       "landmark": {
         "name": "Tarracalena Dome",
         "kind": "peak",
         "distanceKm": 5.5,
         "bearing": "SE"
       },
-      "osm": { "landmark": "n3020054227" }
+      "osm": { "town": "n1969399263", "landmark": "n3020054227" }
     },
     "L54": {
       "lng": 137.585473,
@@ -1567,9 +1639,9 @@
     "L9": {
       "lng": 137.942217,
       "lat": -29.999298,
-      "town": { "name": "Leigh Creek", "kind": "town", "distanceKm": 79.5, "bearing": "SE" },
+      "town": { "name": "Marree", "kind": "village", "distanceKm": 40.8, "bearing": "N" },
       "landmark": { "name": "South Hill", "kind": "peak", "distanceKm": 8, "bearing": "S" },
-      "osm": { "town": "n3442199307", "landmark": "n3020054184" }
+      "osm": { "town": "n1971392381", "landmark": "n3020054184" }
     },
     "N112": {
       "lng": 135.41163,
@@ -1625,22 +1697,23 @@
     "N153": {
       "lng": 136.807861,
       "lat": -15.802081,
+      "town": { "name": "Bujan", "kind": "village", "distanceKm": 52.5, "bearing": "S" },
       "landmark": { "name": "McArthur River", "kind": "river", "distanceKm": 13.7, "bearing": "W" },
-      "osm": { "landmark": "w1189127666" }
+      "osm": { "town": "n4402455451", "landmark": "w1189127666" }
     },
     "N159": {
       "lng": 129.816949,
       "lat": -14.40514,
-      "town": { "name": "Wadeye", "kind": "town", "distanceKm": 36.7, "bearing": "NW" },
+      "town": { "name": "Palumpa", "kind": "village", "distanceKm": 9.1, "bearing": "NE" },
       "landmark": { "name": "Table Hill", "kind": "peak", "distanceKm": 15.3, "bearing": "SW" },
-      "osm": { "town": "n3299599887", "landmark": "n3020152008" }
+      "osm": { "town": "n3300469024", "landmark": "n3020152008" }
     },
     "N164": {
       "lng": 130.051308,
       "lat": -13.721022,
-      "town": { "name": "Bulgul", "kind": "town", "distanceKm": 69.9, "bearing": "N" },
+      "town": { "name": "Woodycupaldiya", "kind": "village", "distanceKm": 16.3, "bearing": "S" },
       "landmark": { "name": "Mount Greenwood", "kind": "peak", "distanceKm": 3.9, "bearing": "SE" },
-      "osm": { "town": "n4402617619", "landmark": "n3020151195" }
+      "osm": { "town": "n4065480940", "landmark": "n3020151195" }
     },
     "N169": {
       "lng": 133.585051,
@@ -1657,16 +1730,16 @@
     "N171": {
       "lng": 133.429477,
       "lat": -12.678797,
-      "town": { "name": "Jabiru", "kind": "town", "distanceKm": 64.3, "bearing": "W" },
+      "town": { "name": "Gunbalanya", "kind": "village", "distanceKm": 56.7, "bearing": "NW" },
       "landmark": { "name": "Mount Howship", "kind": "peak", "distanceKm": 35.8, "bearing": "NW" },
-      "osm": { "town": "n324836496", "landmark": "n3020151228" }
+      "osm": { "town": "n1889003274", "landmark": "n3020151228" }
     },
     "N173": {
       "lng": 134.041422,
       "lat": -12.267662,
-      "town": { "name": "Milingimbi", "kind": "town", "distanceKm": 97.2, "bearing": "E" },
+      "town": { "name": "Maningrida", "kind": "village", "distanceKm": 31.3, "bearing": "NE" },
       "landmark": { "name": "Table Hill", "kind": "peak", "distanceKm": 5.6, "bearing": "N" },
-      "osm": { "town": "n4509505384", "landmark": "n3020152007" }
+      "osm": { "town": "n2178065154", "landmark": "n3020152007" }
     },
     "N176": {
       "lng": 132.253808,
@@ -1703,26 +1776,26 @@
     "N18": {
       "lng": 130.390302,
       "lat": -15.154028,
-      "town": { "name": "Bulla", "kind": "town", "distanceKm": 77.7, "bearing": "SW" },
+      "town": { "name": "Timber Creek", "kind": "village", "distanceKm": 56.7, "bearing": "S" },
       "landmark": {
         "name": "Mount Millik Monmir",
         "kind": "peak",
         "distanceKm": 5.6,
         "bearing": "SW"
       },
-      "osm": { "town": "n3450255725", "landmark": "n3020151401" }
+      "osm": { "town": "n1842599418", "landmark": "n3020151401" }
     },
     "N180": {
       "lng": 132.648685,
       "lat": -11.91768,
-      "town": { "name": "Jabiru", "kind": "town", "distanceKm": 86.5, "bearing": "S" },
+      "town": { "name": "Gunbalanya", "kind": "village", "distanceKm": 63.1, "bearing": "SE" },
       "landmark": {
         "name": "Murgenella Creek",
         "kind": "river",
         "distanceKm": 3.3,
         "bearing": "N"
       },
-      "osm": { "town": "n324836496", "landmark": "w236955930" }
+      "osm": { "town": "n1889003274", "landmark": "w236955930" }
     },
     "N181": {
       "lng": 131.923538,
@@ -1733,15 +1806,21 @@
     "N183": {
       "lng": 133.172526,
       "lat": -11.555481,
+      "town": { "name": "Warruwi", "kind": "village", "distanceKm": 25.9, "bearing": "SE" },
       "landmark": {
         "name": "Murgenella Creek",
         "kind": "river",
         "distanceKm": 43.7,
         "bearing": "SW"
       },
-      "osm": { "landmark": "w236955930" }
+      "osm": { "town": "n1957241752", "landmark": "w236955930" }
     },
-    "N184": { "lng": 132.907422, "lat": -11.070926 },
+    "N184": {
+      "lng": 132.907422,
+      "lat": -11.070926,
+      "town": { "name": "Warruwi", "kind": "village", "distanceKm": 83.1, "bearing": "SE" },
+      "osm": { "town": "n1957241752" }
+    },
     "N188": {
       "lng": 132.418407,
       "lat": -11.245845,
@@ -1751,16 +1830,16 @@
     "N189": {
       "lng": 130.537467,
       "lat": -12.92761,
-      "town": { "name": "Bulgul", "kind": "town", "distanceKm": 47.8, "bearing": "SW" },
+      "town": { "name": "Crab Claw Island", "kind": "village", "distanceKm": 25.7, "bearing": "N" },
       "landmark": { "name": "Finess River", "kind": "river", "distanceKm": 12.8, "bearing": "W" },
-      "osm": { "town": "n4402617619", "landmark": "w1179749395" }
+      "osm": { "town": "n4681048957", "landmark": "w1179749395" }
     },
     "N19": {
       "lng": 130.542327,
       "lat": -16.072628,
-      "town": { "name": "Bulla", "kind": "town", "distanceKm": 63.7, "bearing": "NW" },
+      "town": { "name": "Timber Creek", "kind": "village", "distanceKm": 46.8, "bearing": "N" },
       "landmark": { "name": "Bullita Hill", "kind": "peak", "distanceKm": 8.1, "bearing": "SW" },
-      "osm": { "town": "n3450255725", "landmark": "n3020150675" }
+      "osm": { "town": "n1842599418", "landmark": "n3020150675" }
     },
     "N190": {
       "lng": 134.661921,
@@ -1772,43 +1851,43 @@
     "N191": {
       "lng": 134.488378,
       "lat": -12.107131,
-      "town": { "name": "Milingimbi", "kind": "town", "distanceKm": 47, "bearing": "E" },
-      "osm": { "town": "n4509505384" }
+      "town": { "name": "Maningrida", "kind": "village", "distanceKm": 29.1, "bearing": "W" },
+      "osm": { "town": "n2178065154" }
     },
     "N198": {
       "lng": 136.009858,
       "lat": -12.712465,
-      "town": { "name": "Galiwinku", "kind": "town", "distanceKm": 90.3, "bearing": "NW" },
+      "town": { "name": "Gapuwiyak", "kind": "village", "distanceKm": 32.5, "bearing": "NW" },
       "landmark": { "name": "Lake Evella", "kind": "lake", "distanceKm": 31.6, "bearing": "NW" },
-      "osm": { "town": "n1856545166", "landmark": "w242167975" }
+      "osm": { "town": "n6051889695", "landmark": "w242167975" }
     },
     "N199": {
       "lng": 135.95812,
       "lat": -12.654045,
-      "town": { "name": "Galiwinku", "kind": "town", "distanceKm": 81.9, "bearing": "NW" },
+      "town": { "name": "Gapuwiyak", "kind": "village", "distanceKm": 23.9, "bearing": "NW" },
       "landmark": { "name": "Lake Evella", "kind": "lake", "distanceKm": 23, "bearing": "NW" },
-      "osm": { "town": "n1856545166", "landmark": "w242167975" }
+      "osm": { "town": "n6051889695", "landmark": "w242167975" }
     },
     "N20": {
       "lng": 130.759749,
       "lat": -11.563361,
-      "town": { "name": "Pickertaramoor", "kind": "town", "distanceKm": 26.4, "bearing": "SE" },
+      "town": { "name": "Milikapiti", "kind": "village", "distanceKm": 18.3, "bearing": "NW" },
       "landmark": { "name": "Peaked Hill", "kind": "peak", "distanceKm": 28, "bearing": "W" },
-      "osm": { "town": "n4539560800", "landmark": "n3020151590" }
+      "osm": { "town": "n317396023", "landmark": "n3020151590" }
     },
     "N201": {
       "lng": 133.563606,
       "lat": -12.481126,
-      "town": { "name": "Jabiru", "kind": "town", "distanceKm": 81.8, "bearing": "W" },
+      "town": { "name": "Gunbalanya", "kind": "village", "distanceKm": 58.1, "bearing": "W" },
       "landmark": { "name": "Nimbuwah", "kind": "peak", "distanceKm": 39.5, "bearing": "NW" },
-      "osm": { "town": "n324836496", "landmark": "n3020151558" }
+      "osm": { "town": "n1889003274", "landmark": "n3020151558" }
     },
     "N202": {
       "lng": 136.421305,
       "lat": -12.147403,
-      "town": { "name": "Nhulunbuy", "kind": "town", "distanceKm": 38.7, "bearing": "E" },
+      "town": { "name": "Dhalinybuy", "kind": "village", "distanceKm": 29.6, "bearing": "S" },
       "landmark": { "name": "Mount Bonner", "kind": "peak", "distanceKm": 16.6, "bearing": "E" },
-      "osm": { "town": "n594445489", "landmark": "n3020151045" }
+      "osm": { "town": "n10560884714", "landmark": "n3020151045" }
     },
     "N21": {
       "lng": 130.8414,
@@ -1820,50 +1899,55 @@
     "N215": {
       "lng": 130.073675,
       "lat": -13.652772,
-      "town": { "name": "Bulgul", "kind": "town", "distanceKm": 62.1, "bearing": "N" },
+      "town": { "name": "Woodycupaldiya", "kind": "village", "distanceKm": 24.2, "bearing": "S" },
       "landmark": { "name": "Docherty Creek", "kind": "river", "distanceKm": 8.7, "bearing": "SE" },
-      "osm": { "town": "n4402617619", "landmark": "w692969778" }
+      "osm": { "town": "n4065480940", "landmark": "w692969778" }
     },
     "N221": {
       "lng": 134.182406,
       "lat": -12.2412,
-      "town": { "name": "Milingimbi", "kind": "town", "distanceKm": 81.6, "bearing": "E" },
+      "town": { "name": "Maningrida", "kind": "village", "distanceKm": 21.5, "bearing": "N" },
       "landmark": { "name": "Table Hill", "kind": "peak", "distanceKm": 17.4, "bearing": "W" },
-      "osm": { "town": "n4509505384", "landmark": "n3020152007" }
+      "osm": { "town": "n2178065154", "landmark": "n3020152007" }
     },
     "N223": {
       "lng": 132.978249,
       "lat": -12.312678,
-      "town": { "name": "Jabiru", "kind": "town", "distanceKm": 43, "bearing": "S" },
+      "town": { "name": "Gunbalanya", "kind": "village", "distanceKm": 8.3, "bearing": "E" },
       "landmark": {
         "name": "East Alligator River",
         "kind": "river",
         "distanceKm": 2.1,
         "bearing": "W"
       },
-      "osm": { "town": "n324836496", "landmark": "w314777429" }
+      "osm": { "town": "n1889003274", "landmark": "w314777429" }
     },
     "N226": {
       "lng": 130.053521,
       "lat": -13.168228,
-      "town": { "name": "Bulgul", "kind": "town", "distanceKm": 11.6, "bearing": "NE" },
+      "town": {
+        "name": "Channel Point Community",
+        "kind": "village",
+        "distanceKm": 7.5,
+        "bearing": "E"
+      },
       "landmark": { "name": "Bobs Knob", "kind": "peak", "distanceKm": 35.6, "bearing": "E" },
-      "osm": { "town": "n4402617619", "landmark": "n3020150661" }
+      "osm": { "town": "n4063525248", "landmark": "n3020150661" }
     },
     "N229": { "lng": 133.197321, "lat": -15.900874 },
     "N27": {
       "lng": 131.169359,
       "lat": -14.012172,
-      "town": { "name": "Pine Creek", "kind": "town", "distanceKm": 74.9, "bearing": "E" },
+      "town": { "name": "Daly River", "kind": "village", "distanceKm": 59.5, "bearing": "NW" },
       "landmark": { "name": "Daly River", "kind": "river", "distanceKm": 5.3, "bearing": "E" },
-      "osm": { "town": "n31562954", "landmark": "w325552352" }
+      "osm": { "town": "n3745334332", "landmark": "w325552352" }
     },
     "N28": {
       "lng": 130.857093,
       "lat": -15.590178,
-      "town": { "name": "Bulla", "kind": "town", "distanceKm": 89.7, "bearing": "W" },
+      "town": { "name": "Timber Creek", "kind": "village", "distanceKm": 41, "bearing": "W" },
       "landmark": { "name": "Victoria River", "kind": "river", "distanceKm": 2.5, "bearing": "N" },
-      "osm": { "town": "n3450255725", "landmark": "w16533442" }
+      "osm": { "town": "n1842599418", "landmark": "w16533442" }
     },
     "N37": {
       "lng": 132.093124,
@@ -1881,53 +1965,54 @@
     "N38": {
       "lng": 131.877598,
       "lat": -14.441,
-      "town": { "name": "Katherine", "kind": "town", "distanceKm": 41.6, "bearing": "E" },
+      "town": { "name": "Rockhole", "kind": "village", "distanceKm": 34.4, "bearing": "E" },
       "landmark": { "name": "Hornet Hill", "kind": "peak", "distanceKm": 9.6, "bearing": "NE" },
-      "osm": { "town": "n32621006", "landmark": "n3020150812" }
+      "osm": { "town": "n8881126036", "landmark": "n3020150812" }
     },
     "N39": {
       "lng": 132.69622,
       "lat": -11.612947,
+      "town": { "name": "Warruwi", "kind": "village", "distanceKm": 75.7, "bearing": "E" },
       "landmark": { "name": "Bay Hill", "kind": "peak", "distanceKm": 9.6, "bearing": "NW" },
-      "osm": { "landmark": "n3020150633" }
+      "osm": { "town": "n1957241752", "landmark": "n3020150633" }
     },
     "N40": {
       "lng": 132.59603,
       "lat": -12.211678,
-      "town": { "name": "Jabiru", "kind": "town", "distanceKm": 57.6, "bearing": "SE" },
+      "town": { "name": "Gunbalanya", "kind": "village", "distanceKm": 51.3, "bearing": "E" },
       "landmark": { "name": "Cooper Creek", "kind": "river", "distanceKm": 14.5, "bearing": "NE" },
-      "osm": { "town": "n324836496", "landmark": "w444572544" }
+      "osm": { "town": "n1889003274", "landmark": "w444572544" }
     },
     "N42.1": {
       "lng": 132.70213,
       "lat": -12.765911,
-      "town": { "name": "Jabiru", "kind": "town", "distanceKm": 17.8, "bearing": "NE" },
+      "town": { "name": "Djirrbiyak", "kind": "village", "distanceKm": 7.9, "bearing": "NE" },
       "landmark": {
         "name": "Nourlangie Creek",
         "kind": "river",
         "distanceKm": 0.9,
         "bearing": "W"
       },
-      "osm": { "town": "n324836496", "landmark": "w324987353" }
+      "osm": { "town": "n4429629174", "landmark": "w324987353" }
     },
     "N47": {
       "lng": 132.873612,
       "lat": -11.950287,
-      "town": { "name": "Jabiru", "kind": "town", "distanceKm": 80.6, "bearing": "S" },
+      "town": { "name": "Gunbalanya", "kind": "village", "distanceKm": 46, "bearing": "SE" },
       "landmark": { "name": "Cooper Creek", "kind": "river", "distanceKm": 8.7, "bearing": "S" },
-      "osm": { "town": "n324836496", "landmark": "w444572544" }
+      "osm": { "town": "n1889003274", "landmark": "w444572544" }
     },
     "N51": {
       "lng": 132.563654,
       "lat": -12.469899,
-      "town": { "name": "Jabiru", "kind": "town", "distanceKm": 37.3, "bearing": "SE" },
+      "town": { "name": "Djirrbiyak", "kind": "village", "distanceKm": 36.1, "bearing": "SE" },
       "landmark": {
         "name": "South Aligator River",
         "kind": "river",
         "distanceKm": 13.9,
         "bearing": "W"
       },
-      "osm": { "town": "n324836496", "landmark": "w25907852" }
+      "osm": { "town": "n4429629174", "landmark": "w25907852" }
     },
     "N60": {
       "lng": 134.029309,
@@ -1944,34 +2029,37 @@
     "N64": {
       "lng": 133.364008,
       "lat": -11.813898,
+      "town": { "name": "Warruwi", "kind": "village", "distanceKm": 18.5, "bearing": "N" },
       "landmark": { "name": "Nimbuwah", "kind": "peak", "distanceKm": 42, "bearing": "S" },
-      "osm": { "landmark": "n3020151558" }
+      "osm": { "town": "n1957241752", "landmark": "n3020151558" }
     },
     "N68": {
       "lng": 132.499483,
       "lat": -15.414291,
+      "town": { "name": "Mataranka", "kind": "village", "distanceKm": 81.6, "bearing": "NE" },
       "landmark": { "name": "Dry River", "kind": "river", "distanceKm": 30.5, "bearing": "NW" },
-      "osm": { "landmark": "w693726579" }
+      "osm": { "town": "n32620998", "landmark": "w693726579" }
     },
     "N69": {
       "lng": 133.893891,
       "lat": -11.932246,
+      "town": { "name": "Maningrida", "kind": "village", "distanceKm": 38.6, "bearing": "E" },
       "landmark": { "name": "Table Hill", "kind": "peak", "distanceKm": 35, "bearing": "SE" },
-      "osm": { "landmark": "n3020152007" }
+      "osm": { "town": "n2178065154", "landmark": "n3020152007" }
     },
     "N70": {
       "lng": 134.386599,
       "lat": -12.398007,
-      "town": { "name": "Milingimbi", "kind": "town", "distanceKm": 66.6, "bearing": "NE" },
+      "town": { "name": "Maningrida", "kind": "village", "distanceKm": 42.2, "bearing": "NW" },
       "landmark": { "name": "Table Hill", "kind": "peak", "distanceKm": 44.1, "bearing": "NW" },
-      "osm": { "town": "n4509505384", "landmark": "n3020152007" }
+      "osm": { "town": "n2178065154", "landmark": "n3020152007" }
     },
     "N75": {
       "lng": 134.286706,
       "lat": -12.228413,
-      "town": { "name": "Milingimbi", "kind": "town", "distanceKm": 70.2, "bearing": "E" },
+      "town": { "name": "Maningrida", "kind": "village", "distanceKm": 20.6, "bearing": "N" },
       "landmark": { "name": "Table Hill", "kind": "peak", "distanceKm": 28.6, "bearing": "W" },
-      "osm": { "town": "n4509505384", "landmark": "n3020152007" }
+      "osm": { "town": "n2178065154", "landmark": "n3020152007" }
     },
     "N77": {
       "lng": 134.270753,
@@ -1983,15 +2071,16 @@
     "N78": {
       "lng": 133.619155,
       "lat": -14.891247,
+      "town": { "name": "Mataranka", "kind": "village", "distanceKm": 59.2, "bearing": "W" },
       "landmark": { "name": "Mount Sir James", "kind": "peak", "distanceKm": 5.4, "bearing": "NE" },
-      "osm": { "landmark": "n3020151482" }
+      "osm": { "town": "n32620998", "landmark": "n3020151482" }
     },
     "N80": {
       "lng": 134.36422,
       "lat": -12.084457,
-      "town": { "name": "Milingimbi", "kind": "town", "distanceKm": 60.5, "bearing": "E" },
+      "town": { "name": "Maningrida", "kind": "village", "distanceKm": 15.4, "bearing": "W" },
       "landmark": { "name": "Table Hill", "kind": "peak", "distanceKm": 40, "bearing": "W" },
-      "osm": { "town": "n4509505384", "landmark": "n3020152007" }
+      "osm": { "town": "n2178065154", "landmark": "n3020152007" }
     },
     "N82": {
       "lng": 134.58071,
@@ -2017,34 +2106,35 @@
     "N92": {
       "lng": 134.479586,
       "lat": -15.523674,
-      "town": { "name": "Rittarangu", "kind": "town", "distanceKm": 91, "bearing": "N" },
+      "town": { "name": "Minyerri", "kind": "village", "distanceKm": 54.3, "bearing": "NW" },
       "landmark": { "name": "Hodgson River", "kind": "river", "distanceKm": 36.8, "bearing": "W" },
-      "osm": { "town": "n4547187354", "landmark": "w448300966" }
+      "osm": { "town": "n3340904403", "landmark": "w448300966" }
     },
     "N94.1": {
       "lng": 134.863498,
       "lat": -12.337894,
-      "town": { "name": "Milingimbi", "kind": "town", "distanceKm": 26.7, "bearing": "N" },
+      "town": { "name": "Wulkabimirri", "kind": "village", "distanceKm": 5, "bearing": "SE" },
       "landmark": { "name": "Glyde River", "kind": "river", "distanceKm": 13.6, "bearing": "E" },
-      "osm": { "town": "n4509505384", "landmark": "w694044373" }
+      "osm": { "town": "n13280086394", "landmark": "w694044373" }
     },
     "N97": {
       "lng": 135.004581,
       "lat": -12.761853,
-      "town": { "name": "Milingimbi", "kind": "town", "distanceKm": 73.7, "bearing": "N" },
+      "town": { "name": "Wulkabimirri", "kind": "village", "distanceKm": 46.5, "bearing": "N" },
       "landmark": { "name": "Goyder River", "kind": "river", "distanceKm": 31, "bearing": "N" },
-      "osm": { "town": "n4509505384", "landmark": "w455842894" }
+      "osm": { "town": "n13280086394", "landmark": "w455842894" }
     },
     "N99": {
       "lng": 135.930683,
       "lat": -15.708562,
+      "town": { "name": "Borroloola", "kind": "village", "distanceKm": 55.9, "bearing": "SE" },
       "landmark": {
         "name": "Limestone Creek",
         "kind": "river",
         "distanceKm": 35.1,
         "bearing": "W"
       },
-      "osm": { "landmark": "w1033729599" }
+      "osm": { "town": "n3824830161", "landmark": "w1033729599" }
     },
     "S1": {
       "lng": 138.850946,
@@ -2056,9 +2146,9 @@
     "S11": {
       "lng": 139.569097,
       "lat": -36.089402,
-      "town": { "name": "Meningie", "kind": "town", "distanceKm": 49.2, "bearing": "NW" },
+      "town": { "name": "Salt Creek", "kind": "village", "distanceKm": 8.3, "bearing": "SE" },
       "landmark": { "name": "Coorong", "kind": "lake", "distanceKm": 22.8, "bearing": "NW" },
-      "osm": { "town": "n2286763988", "landmark": "w329596878" }
+      "osm": { "town": "n268437845", "landmark": "w329596878" }
     },
     "S13": {
       "lng": 140.511749,
@@ -2070,9 +2160,9 @@
     "S16": {
       "lng": 141.643141,
       "lat": -36.967794,
-      "town": { "name": "Edenhope", "kind": "town", "distanceKm": 32.3, "bearing": "W" },
+      "town": { "name": "Douglas", "kind": "village", "distanceKm": 10.6, "bearing": "SE" },
       "landmark": { "name": "Polpara Lake", "kind": "lake", "distanceKm": 3.7, "bearing": "W" },
-      "osm": { "town": "n621866750", "landmark": "w329686681" }
+      "osm": { "town": "n1745357063", "landmark": "w329686681" }
     },
     "S17": {
       "lng": 142.120736,
@@ -2084,9 +2174,9 @@
     "S2": {
       "lng": 138.711249,
       "lat": -35.460735,
-      "town": { "name": "Goolwa", "kind": "town", "distanceKm": 7.9, "bearing": "SE" },
+      "town": { "name": "Middleton", "kind": "village", "distanceKm": 5.6, "bearing": "S" },
       "landmark": { "name": "McFarlane Hill", "kind": "peak", "distanceKm": 1.3, "bearing": "S" },
-      "osm": { "town": "n251075951", "landmark": "n3008902505" }
+      "osm": { "town": "n14161773275", "landmark": "n3008902505" }
     },
     "S24": {
       "lng": 141.728279,
@@ -2131,9 +2221,9 @@
     "S28": {
       "lng": 142.838463,
       "lat": -34.777635,
-      "town": { "name": "Robinvale", "kind": "town", "distanceKm": 22.3, "bearing": "N" },
+      "town": { "name": "Annuello", "kind": "village", "distanceKm": 8.6, "bearing": "S" },
       "landmark": { "name": "Lake Carpul", "kind": "lake", "distanceKm": 7.3, "bearing": "NE" },
-      "osm": { "town": "n94421814", "landmark": "w148428141" }
+      "osm": { "town": "n2053932005", "landmark": "w148428141" }
     },
     "S3": {
       "lng": 139.204265,
@@ -2183,61 +2273,61 @@
     "S41": {
       "lng": 146.579627,
       "lat": -37.872508,
-      "town": { "name": "Heyfield", "kind": "town", "distanceKm": 21.7, "bearing": "SE" },
+      "town": { "name": "Walhalla", "kind": "village", "distanceKm": 13.7, "bearing": "SW" },
       "landmark": { "name": "Murderers Hill", "kind": "peak", "distanceKm": 3.1, "bearing": "NW" },
-      "osm": { "town": "n59728919", "landmark": "n3008339624" }
+      "osm": { "town": "n2939016806", "landmark": "n3008339624" }
     },
     "S42": {
       "lng": 147.440912,
       "lat": -38.087572,
-      "town": { "name": "Paynesville", "kind": "town", "distanceKm": 31.4, "bearing": "NE" },
+      "town": { "name": "Loch Sport", "kind": "village", "distanceKm": 13.6, "bearing": "E" },
       "landmark": { "name": "McLennan Strait", "kind": "lake", "distanceKm": 0.8, "bearing": "N" },
-      "osm": { "town": "n1912364980", "landmark": "r12622857" }
+      "osm": { "town": "n3153661836", "landmark": "r12622857" }
     },
     "S43": {
       "lng": 147.521896,
       "lat": -36.723575,
-      "town": { "name": "Mount Beauty", "kind": "town", "distanceKm": 31.4, "bearing": "W" },
+      "town": { "name": "Falls Creek", "kind": "village", "distanceKm": 26.5, "bearing": "SW" },
       "landmark": { "name": "Mount Cooper", "kind": "peak", "distanceKm": 2.5, "bearing": "SE" },
-      "osm": { "town": "n2385074315", "landmark": "n3005052251" }
+      "osm": { "town": "n243920369", "landmark": "n3005052251" }
     },
     "S44": {
       "lng": 147.692595,
       "lat": -36.364169,
-      "town": { "name": "Corryong", "kind": "town", "distanceKm": 26.5, "bearing": "NE" },
+      "town": { "name": "Cudgewa", "kind": "village", "distanceKm": 20.4, "bearing": "N" },
       "landmark": { "name": "Mount Saint John", "kind": "peak", "distanceKm": 8, "bearing": "E" },
-      "osm": { "town": "n207729497", "landmark": "n3002570175" }
+      "osm": { "town": "n686358258", "landmark": "n3002570175" }
     },
     "S46": {
       "lng": 148.767375,
       "lat": -35.902188,
-      "town": { "name": "Bredbo", "kind": "town", "distanceKm": 34.5, "bearing": "E" },
+      "town": { "name": "Adaminaby", "kind": "village", "distanceKm": 10.4, "bearing": "S" },
       "landmark": {
         "name": "Murrumbidgee River",
         "kind": "river",
         "distanceKm": 1.8,
         "bearing": "E"
       },
-      "osm": { "town": "n85714246", "landmark": "w153108461" }
+      "osm": { "town": "n113372218", "landmark": "w153108461" }
     },
     "S5": {
       "lng": 138.8922,
       "lat": -34.862567,
-      "town": { "name": "Gumeracha", "kind": "town", "distanceKm": 4.5, "bearing": "N" },
+      "town": { "name": "Kenton Valley", "kind": "village", "distanceKm": 0.8, "bearing": "N" },
       "landmark": { "name": "River Torrens", "kind": "river", "distanceKm": 4.7, "bearing": "N" },
-      "osm": { "town": "n1894341295", "landmark": "w173273055" }
+      "osm": { "town": "n5674778801", "landmark": "w173273055" }
     },
     "S52": {
       "lng": 149.598833,
       "lat": -37.167133,
-      "town": { "name": "Eden", "kind": "town", "distanceKm": 29.3, "bearing": "NE" },
+      "town": { "name": "Towamba", "kind": "village", "distanceKm": 12.6, "bearing": "NE" },
       "landmark": {
         "name": "Wallagaraugh River",
         "kind": "river",
         "distanceKm": 5.2,
         "bearing": "S"
       },
-      "osm": { "town": "n113254689", "landmark": "w151174125" }
+      "osm": { "town": "n3178512160", "landmark": "w151174125" }
     },
     "S54": {
       "lng": 149.88544,
@@ -2256,23 +2346,23 @@
     "S64": {
       "lng": 150.048412,
       "lat": -33.889578,
-      "town": { "name": "Oberon", "kind": "town", "distanceKm": 27.1, "bearing": "NW" },
+      "town": { "name": "Jenolan Caves", "kind": "village", "distanceKm": 8.1, "bearing": "N" },
       "landmark": { "name": "Green Hillock", "kind": "peak", "distanceKm": 1, "bearing": "E" },
-      "osm": { "town": "n33547125", "landmark": "n10924028664" }
+      "osm": { "town": "n113707646", "landmark": "n10924028664" }
     },
     "S66": {
       "lng": 151.526674,
       "lat": -33.055058,
-      "town": { "name": "Awaba", "kind": "town", "distanceKm": 5.4, "bearing": "N" },
+      "town": { "name": "Dora Creek", "kind": "village", "distanceKm": 4, "bearing": "SW" },
       "landmark": { "name": "Dora Creek", "kind": "river", "distanceKm": 3.2, "bearing": "S" },
-      "osm": { "town": "n116956128", "landmark": "w336673396" }
+      "osm": { "town": "n25940534", "landmark": "w336673396" }
     },
     "S75": {
       "lng": 142.32902,
       "lat": -38.169915,
-      "town": { "name": "Woolsthorpe", "kind": "town", "distanceKm": 9.1, "bearing": "E" },
+      "town": { "name": "Hawkesdale", "kind": "village", "distanceKm": 7.1, "bearing": "N" },
       "landmark": { "name": "Moyne River", "kind": "river", "distanceKm": 6.3, "bearing": "NW" },
-      "osm": { "town": "n321882442", "landmark": "w182799362" }
+      "osm": { "town": "n1516284100", "landmark": "w182799362" }
     },
     "S8": {
       "lng": 139.375514,
@@ -2284,9 +2374,9 @@
     "S81": {
       "lng": 141.634233,
       "lat": -37.843211,
-      "town": { "name": "Coleraine", "kind": "town", "distanceKm": 27.5, "bearing": "N" },
+      "town": { "name": "Digby", "kind": "village", "distanceKm": 10.1, "bearing": "NW" },
       "landmark": { "name": "Phillip Knoll", "kind": "peak", "distanceKm": 4.5, "bearing": "S" },
-      "osm": { "town": "n595869190", "landmark": "n12063033156" }
+      "osm": { "town": "n535134021", "landmark": "n12063033156" }
     },
     "S84": {
       "lng": 142.684662,
@@ -2303,23 +2393,23 @@
     "S86": {
       "lng": 142.798815,
       "lat": -37.413949,
-      "town": { "name": "Willaura", "kind": "town", "distanceKm": 15.4, "bearing": "S" },
+      "town": { "name": "Maroona", "kind": "village", "distanceKm": 6.1, "bearing": "SE" },
       "landmark": { "name": "Mount Moornambool", "kind": "peak", "distanceKm": 3, "bearing": "N" },
-      "osm": { "town": "n1778816094", "landmark": "n3008902687" }
+      "osm": { "town": "n1244297136", "landmark": "n3008902687" }
     },
     "S87": {
       "lng": 141.800483,
       "lat": -37.389334,
-      "town": { "name": "Coleraine", "kind": "town", "distanceKm": 25.4, "bearing": "SW" },
+      "town": { "name": "Balmoral", "kind": "village", "distanceKm": 16.1, "bearing": "N" },
       "landmark": { "name": "Mount Dundas", "kind": "peak", "distanceKm": 12.8, "bearing": "SE" },
-      "osm": { "town": "n595869190", "landmark": "n3008902594" }
+      "osm": { "town": "n966358245", "landmark": "n3008902594" }
     },
     "S88": {
       "lng": 142.999563,
       "lat": -35.724061,
-      "town": { "name": "Sea Lake", "kind": "town", "distanceKm": 27.8, "bearing": "NW" },
+      "town": { "name": "Berriwillock", "kind": "village", "distanceKm": 10, "bearing": "N" },
       "landmark": { "name": "Tchum Lakes", "kind": "lake", "distanceKm": 29.6, "bearing": "S" },
-      "osm": { "town": "n287497593", "landmark": "w259003803" }
+      "osm": { "town": "n312681507", "landmark": "w259003803" }
     },
     "S9": {
       "lng": 140.352245,
@@ -2331,14 +2421,14 @@
     "S90": {
       "lng": 146.634195,
       "lat": -36.810184,
-      "town": { "name": "Myrtleford", "kind": "town", "distanceKm": 28.8, "bearing": "N" },
+      "town": { "name": "Whitfield", "kind": "village", "distanceKm": 20.2, "bearing": "W" },
       "landmark": {
         "name": "Dandongadale River",
         "kind": "river",
         "distanceKm": 0.4,
         "bearing": "NW"
       },
-      "osm": { "town": "n2884764953", "landmark": "w1444146778" }
+      "osm": { "town": "n106945273", "landmark": "w1444146778" }
     },
     "S96": {
       "lng": 151.219036,
@@ -2362,9 +2452,9 @@
     "W13": {
       "lng": 114.687957,
       "lat": -28.100476,
-      "town": { "name": "Northampton", "kind": "town", "distanceKm": 28.2, "bearing": "S" },
+      "town": { "name": "Binnu", "kind": "village", "distanceKm": 6.6, "bearing": "N" },
       "landmark": { "name": "Hutt River", "kind": "river", "distanceKm": 5.7, "bearing": "SW" },
-      "osm": { "town": "n820041016", "landmark": "w387017690" }
+      "osm": { "town": "n5948952360", "landmark": "w387017690" }
     },
     "W15": {
       "lng": 114.799097,
@@ -2390,15 +2480,16 @@
     "W2": {
       "lng": 117.564632,
       "lat": -34.721824,
-      "town": { "name": "Mount Barker", "kind": "town", "distanceKm": 14.3, "bearing": "NE" },
+      "town": { "name": "Narrikup", "kind": "village", "distanceKm": 13.8, "bearing": "SE" },
       "landmark": { "name": "Hay River", "kind": "river", "distanceKm": 1.6, "bearing": "SE" },
-      "osm": { "town": "n201351779", "landmark": "w160773887" }
+      "osm": { "town": "n1940197471", "landmark": "w160773887" }
     },
     "W24": {
       "lng": 115.115208,
       "lat": -23.047941,
+      "town": { "name": "Lyndon", "kind": "village", "distanceKm": 66.5, "bearing": "S" },
       "landmark": { "name": "Yannarie River", "kind": "river", "distanceKm": 5.4, "bearing": "W" },
-      "osm": { "landmark": "w620881465" }
+      "osm": { "town": "n4244383703", "landmark": "w620881465" }
     },
     "W25": {
       "lng": 116.680116,
@@ -2416,9 +2507,9 @@
     "W3": {
       "lng": 115.437853,
       "lat": -33.856929,
-      "town": { "name": "Busselton", "kind": "city", "distanceKm": 25, "bearing": "N" },
+      "town": { "name": "Jarrahwood", "kind": "village", "distanceKm": 22, "bearing": "E" },
       "landmark": { "name": "Chapman Hill", "kind": "peak", "distanceKm": 11.2, "bearing": "NW" },
-      "osm": { "town": "n82448311", "landmark": "n3020140055" }
+      "osm": { "town": "n673874153", "landmark": "n3020140055" }
     },
     "W30": {
       "lng": 115.686013,
@@ -2430,20 +2521,21 @@
     "W34": {
       "lng": 116.372795,
       "lat": -23.030559,
+      "town": { "name": "Diamond Camp", "kind": "village", "distanceKm": 82.2, "bearing": "NE" },
       "landmark": { "name": "Peak Edgar", "kind": "peak", "distanceKm": 3.2, "bearing": "W" },
-      "osm": { "landmark": "n3020141973" }
+      "osm": { "town": "n7474907346", "landmark": "n3020141973" }
     },
     "W35": {
       "lng": 116.45088,
       "lat": -21.405484,
-      "town": { "name": "Karratha", "kind": "town", "distanceKm": 85, "bearing": "NE" },
+      "town": { "name": "Pannawonica", "kind": "village", "distanceKm": 29, "bearing": "SW" },
       "landmark": {
         "name": "Fortescue River",
         "kind": "river",
         "distanceKm": 2.4,
         "bearing": "NE"
       },
-      "osm": { "town": "n3887250742", "landmark": "w628000503" }
+      "osm": { "town": "n501461440", "landmark": "w628000503" }
     },
     "W37": {
       "lng": 117.868177,
@@ -2454,9 +2546,9 @@
     "W4": {
       "lng": 116.698302,
       "lat": -33.984155,
-      "town": { "name": "Muradup", "kind": "town", "distanceKm": 30.3, "bearing": "NE" },
+      "town": { "name": "Tonebridge", "kind": "village", "distanceKm": 27.7, "bearing": "S" },
       "landmark": { "name": "Tone River", "kind": "river", "distanceKm": 15.7, "bearing": "SE" },
-      "osm": { "town": "n1245880820", "landmark": "w228283781" }
+      "osm": { "town": "n5786926986", "landmark": "w228283781" }
     },
     "W44": {
       "lng": 118.267419,
@@ -2472,8 +2564,14 @@
     "W45": {
       "lng": 119.987444,
       "lat": -30.42931,
+      "town": {
+        "name": "Sandy Ridge Village",
+        "kind": "village",
+        "distanceKm": 10.8,
+        "bearing": "NE"
+      },
       "landmark": { "name": "Mount Dimer", "kind": "peak", "distanceKm": 11.3, "bearing": "NW" },
-      "osm": { "landmark": "n3020141037" }
+      "osm": { "town": "n13766839478", "landmark": "n3020141037" }
     },
     "W46": {
       "lng": 114.936864,
@@ -2492,8 +2590,9 @@
     "W49": {
       "lng": 116.188478,
       "lat": -21.84553,
+      "town": { "name": "Pannawonica", "kind": "village", "distanceKm": 27, "bearing": "NE" },
       "landmark": { "name": "Mount Dempster", "kind": "peak", "distanceKm": 6.7, "bearing": "NE" },
-      "osm": { "landmark": "n3020140928" }
+      "osm": { "town": "n501461440", "landmark": "n3020140928" }
     },
     "W5": {
       "lng": 118.440816,
@@ -2517,9 +2616,9 @@
     "W6": {
       "lng": 115.916579,
       "lat": -32.898362,
-      "town": { "name": "Waroona", "kind": "town", "distanceKm": 6.2, "bearing": "N" },
+      "town": { "name": "Hamel", "kind": "village", "distanceKm": 2.9, "bearing": "N" },
       "landmark": { "name": "Samson Brook", "kind": "river", "distanceKm": 3.5, "bearing": "NE" },
-      "osm": { "town": "n217713210", "landmark": "w185916864" }
+      "osm": { "town": "n3938739098", "landmark": "w185916864" }
     },
     "W7": {
       "lng": 117.128232,
@@ -2538,35 +2637,37 @@
     "W9": {
       "lng": 116.123904,
       "lat": -31.981489,
-      "town": { "name": "Kelmscott", "kind": "town", "distanceKm": 18.1, "bearing": "SW" },
+      "town": { "name": "Mount Helena", "kind": "village", "distanceKm": 14.1, "bearing": "NE" },
       "landmark": { "name": "Mount Gunjin", "kind": "peak", "distanceKm": 1, "bearing": "SE" },
-      "osm": { "town": "n181304750", "landmark": "n1825363582" }
+      "osm": { "town": "n1493309476", "landmark": "n1825363582" }
     },
     "Y10": {
       "lng": 143.067117,
       "lat": -12.022135,
+      "town": { "name": "Lockhart River", "kind": "village", "distanceKm": 90, "bearing": "S" },
       "landmark": { "name": "Conical Hill", "kind": "peak", "distanceKm": 12.6, "bearing": "NE" },
-      "osm": { "landmark": "n3020387606" }
+      "osm": { "town": "n4096467817", "landmark": "n3020387606" }
     },
     "Y100": {
       "lng": 145.450573,
       "lat": -16.247314,
-      "town": { "name": "Cape Tribulation", "kind": "town", "distanceKm": 17.7, "bearing": "N" },
+      "town": { "name": "Wonga Beach", "kind": "village", "distanceKm": 11.9, "bearing": "S" },
       "landmark": { "name": "Mount Alexandra", "kind": "peak", "distanceKm": 1.5, "bearing": "E" },
-      "osm": { "town": "n286716905", "landmark": "n2842152260" }
+      "osm": { "town": "n2030400000", "landmark": "n2842152260" }
     },
     "Y101": {
       "lng": 142.021219,
       "lat": -15.599672,
+      "town": { "name": "Kowanyama", "kind": "village", "distanceKm": 32.5, "bearing": "NW" },
       "landmark": { "name": "Mitchell River", "kind": "river", "distanceKm": 6.5, "bearing": "NE" },
-      "osm": { "landmark": "w188406556" }
+      "osm": { "town": "n617908618", "landmark": "w188406556" }
     },
     "Y106": {
       "lng": 145.508454,
       "lat": -16.737168,
-      "town": { "name": "Kuranda", "kind": "town", "distanceKm": 16.2, "bearing": "SE" },
+      "town": { "name": "Kowrowa", "kind": "village", "distanceKm": 10.4, "bearing": "SE" },
       "landmark": { "name": "Mount Mar", "kind": "peak", "distanceKm": 7.4, "bearing": "NE" },
-      "osm": { "town": "n2060753757", "landmark": "n2842152696" }
+      "osm": { "town": "n6624481347", "landmark": "n2842152696" }
     },
     "Y111": {
       "lng": 145.733427,
@@ -2618,9 +2719,9 @@
     "Y129": {
       "lng": 146.391953,
       "lat": -19.147356,
-      "town": { "name": "Townsville", "kind": "city", "distanceKm": 47, "bearing": "E" },
+      "town": { "name": "Mutarnee", "kind": "village", "distanceKm": 24.3, "bearing": "NW" },
       "landmark": { "name": "Godwins Peak", "kind": "peak", "distanceKm": 3.6, "bearing": "N" },
-      "osm": { "town": "n31446304", "landmark": "n2844352636" }
+      "osm": { "town": "n4074283389", "landmark": "n2844352636" }
     },
     "Y130": {
       "lng": 146.169417,
@@ -2632,9 +2733,9 @@
     "Y134": {
       "lng": 145.797936,
       "lat": -18.437509,
-      "town": { "name": "Cardwell", "kind": "town", "distanceKm": 30.9, "bearing": "NE" },
+      "town": { "name": "Abergowrie", "kind": "village", "distanceKm": 10.2, "bearing": "SE" },
       "landmark": { "name": "Herbert River", "kind": "river", "distanceKm": 1, "bearing": "W" },
-      "osm": { "town": "n2552260501", "landmark": "w176714709" }
+      "osm": { "town": "n4072794517", "landmark": "w176714709" }
     },
     "Y149": {
       "lng": 145.839966,
@@ -2653,9 +2754,9 @@
     "Y150": {
       "lng": 145.995579,
       "lat": -18.058996,
-      "town": { "name": "Tully", "kind": "town", "distanceKm": 15.9, "bearing": "NW" },
+      "town": { "name": "Tully Heads", "kind": "village", "distanceKm": 8.5, "bearing": "NE" },
       "landmark": { "name": "Murray River", "kind": "river", "distanceKm": 1.7, "bearing": "S" },
-      "osm": { "town": "n248118704", "landmark": "w611546998" }
+      "osm": { "town": "n2300379108", "landmark": "w611546998" }
     },
     "Y151": {
       "lng": 146.051441,
@@ -2708,21 +2809,21 @@
     "Y160": {
       "lng": 145.446564,
       "lat": -16.935237,
-      "town": { "name": "Mareeba", "kind": "town", "distanceKm": 6.9, "bearing": "S" },
+      "town": { "name": "Biboohra", "kind": "village", "distanceKm": 3.6, "bearing": "NW" },
       "landmark": { "name": "Barron River", "kind": "river", "distanceKm": 2.2, "bearing": "SW" },
-      "osm": { "town": "n245382244", "landmark": "w173372697" }
+      "osm": { "town": "n3877283827", "landmark": "w173372697" }
     },
     "Y161": {
       "lng": 145.210664,
       "lat": -16.649676,
-      "town": { "name": "Mossman", "kind": "town", "distanceKm": 27.1, "bearing": "NE" },
+      "town": { "name": "Mount Molloy", "kind": "village", "distanceKm": 13, "bearing": "E" },
       "landmark": {
         "name": "Lighthouse Mountain",
         "kind": "peak",
         "distanceKm": 0.8,
         "bearing": "E"
       },
-      "osm": { "town": "n169580856", "landmark": "n2842152243" }
+      "osm": { "town": "n1330393601", "landmark": "n2842152243" }
     },
     "Y162": {
       "lng": 145.452323,
@@ -2734,14 +2835,14 @@
     "Y163": {
       "lng": 144.543199,
       "lat": -16.120929,
-      "town": { "name": "Wujal Wujal", "kind": "town", "distanceKm": 85.2, "bearing": "E" },
+      "town": { "name": "Lakeland", "kind": "village", "distanceKm": 44.4, "bearing": "NE" },
       "landmark": {
         "name": "South Palmer River",
         "kind": "river",
         "distanceKm": 1.8,
         "bearing": "E"
       },
-      "osm": { "town": "n850633998", "landmark": "w188406566" }
+      "osm": { "town": "n848390438", "landmark": "w188406566" }
     },
     "Y167": {
       "lng": 145.280104,
@@ -2760,8 +2861,9 @@
     "Y169": {
       "lng": 142.879671,
       "lat": -12.188161,
+      "town": { "name": "Lockhart River", "kind": "village", "distanceKm": 83.3, "bearing": "SE" },
       "landmark": { "name": "Middle Peak", "kind": "peak", "distanceKm": 29, "bearing": "N" },
-      "osm": { "landmark": "n2842152253" }
+      "osm": { "town": "n4096467817", "landmark": "n2842152253" }
     },
     "Y17": {
       "lng": 142.653904,
@@ -2785,27 +2887,30 @@
     "Y172": {
       "lng": 141.93747,
       "lat": -14.429895,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 62.4, "bearing": "SW" },
       "landmark": { "name": "Kendall River", "kind": "river", "distanceKm": 24.2, "bearing": "N" },
-      "osm": { "landmark": "w489773312" }
+      "osm": { "town": "n3243293313", "landmark": "w489773312" }
     },
     "Y173": {
       "lng": 141.905442,
       "lat": -14.189514,
-      "town": { "name": "Aurukun", "kind": "town", "distanceKm": 94.7, "bearing": "N" },
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 84.7, "bearing": "S" },
       "landmark": { "name": "Kendall River", "kind": "river", "distanceKm": 1.1, "bearing": "SW" },
-      "osm": { "town": "n617907426", "landmark": "w489773312" }
+      "osm": { "town": "n3243293313", "landmark": "w489773312" }
     },
     "Y176": {
       "lng": 141.651297,
       "lat": -14.558867,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 38.1, "bearing": "S" },
       "landmark": { "name": "Chapman River", "kind": "river", "distanceKm": 38.2, "bearing": "S" },
-      "osm": { "landmark": "w221644309" }
+      "osm": { "town": "n3243293313", "landmark": "w221644309" }
     },
     "Y178": {
       "lng": 141.654912,
       "lat": -14.486699,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 46.1, "bearing": "S" },
       "landmark": { "name": "Holroyd River", "kind": "river", "distanceKm": 30.3, "bearing": "N" },
-      "osm": { "landmark": "w489773313" }
+      "osm": { "town": "n3243293313", "landmark": "w489773313" }
     },
     "Y180": {
       "lng": 146.789051,
@@ -2817,9 +2922,9 @@
     "Y183": {
       "lng": 142.32873,
       "lat": -11.584849,
-      "town": { "name": "Bamaga", "kind": "town", "distanceKm": 77.6, "bearing": "N" },
+      "town": { "name": "Injinoo", "kind": "village", "distanceKm": 75.4, "bearing": "N" },
       "landmark": { "name": "Dulhunty River", "kind": "river", "distanceKm": 28.5, "bearing": "S" },
-      "osm": { "town": "n244301764", "landmark": "w1029498825" }
+      "osm": { "town": "n519654324", "landmark": "w1029498825" }
     },
     "Y187": {
       "lng": 142.786734,
@@ -2890,8 +2995,9 @@
     "Y200": {
       "lng": 141.731565,
       "lat": -14.877184,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 12.1, "bearing": "W" },
       "landmark": { "name": "Chapman River", "kind": "river", "distanceKm": 5, "bearing": "SW" },
-      "osm": { "landmark": "w221644309" }
+      "osm": { "town": "n3243293313", "landmark": "w221644309" }
     },
     "Y201": {
       "lng": 143.00438,
@@ -2899,7 +3005,12 @@
       "landmark": { "name": "Palmer River", "kind": "river", "distanceKm": 0.5, "bearing": "N" },
       "osm": { "landmark": "w188406515" }
     },
-    "Y203": { "lng": 141.48342, "lat": -15.815809 },
+    "Y203": {
+      "lng": 141.48342,
+      "lat": -15.815809,
+      "town": { "name": "Kowanyama", "kind": "village", "distanceKm": 47.1, "bearing": "NE" },
+      "osm": { "town": "n617908618" }
+    },
     "Y206": {
       "lng": 142.391757,
       "lat": -16.265659,
@@ -2909,19 +3020,21 @@
     "Y207": {
       "lng": 141.828208,
       "lat": -15.145514,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 35.2, "bearing": "NW" },
       "landmark": {
         "name": "Mitchell River",
         "kind": "river",
         "distanceKm": 11.8,
         "bearing": "SW"
       },
-      "osm": { "landmark": "w188406580" }
+      "osm": { "town": "n3243293313", "landmark": "w188406580" }
     },
     "Y209": {
       "lng": 141.723542,
       "lat": -15.395142,
+      "town": { "name": "Kowanyama", "kind": "village", "distanceKm": 9.3, "bearing": "S" },
       "landmark": { "name": "Mitchell River", "kind": "river", "distanceKm": 15, "bearing": "NE" },
-      "osm": { "landmark": "w188406587" }
+      "osm": { "town": "n617908618", "landmark": "w188406587" }
     },
     "Y21": {
       "lng": 142.313168,
@@ -2933,20 +3046,23 @@
     "Y210": {
       "lng": 141.665747,
       "lat": -14.931001,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 5.9, "bearing": "NW" },
       "landmark": { "name": "Chapman River", "kind": "river", "distanceKm": 2.3, "bearing": "N" },
-      "osm": { "landmark": "w221644309" }
+      "osm": { "town": "n3243293313", "landmark": "w221644309" }
     },
     "Y214": {
       "lng": 141.61694,
       "lat": -15.301274,
+      "town": { "name": "Kowanyama", "kind": "village", "distanceKm": 23.9, "bearing": "SE" },
       "landmark": { "name": "Mitchell River", "kind": "river", "distanceKm": 8.1, "bearing": "N" },
-      "osm": { "landmark": "w188406580" }
+      "osm": { "town": "n617908618", "landmark": "w188406580" }
     },
     "Y215": {
       "lng": 141.646167,
       "lat": -14.952619,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 6.4, "bearing": "NW" },
       "landmark": { "name": "Chapman River", "kind": "river", "distanceKm": 3.5, "bearing": "N" },
-      "osm": { "landmark": "w221644309" }
+      "osm": { "town": "n3243293313", "landmark": "w221644309" }
     },
     "Y216": {
       "lng": 145.375855,
@@ -2958,15 +3074,16 @@
     "Y219": {
       "lng": 144.825575,
       "lat": -15.678742,
-      "town": { "name": "Cooktown", "kind": "town", "distanceKm": 51.2, "bearing": "NE" },
+      "town": { "name": "Lakeland", "kind": "village", "distanceKm": 20.5, "bearing": "S" },
       "landmark": { "name": "Deighton River", "kind": "river", "distanceKm": 0, "bearing": "SW" },
-      "osm": { "town": "n248103256", "landmark": "w192394102" }
+      "osm": { "town": "n848390438", "landmark": "w192394102" }
     },
     "Y224": {
       "lng": 141.639783,
       "lat": -14.6475,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 28.1, "bearing": "S" },
       "landmark": { "name": "Chapman River", "kind": "river", "distanceKm": 28.6, "bearing": "S" },
-      "osm": { "landmark": "w221644309" }
+      "osm": { "town": "n3243293313", "landmark": "w221644309" }
     },
     "Y23": {
       "lng": 141.686741,
@@ -2985,16 +3102,16 @@
     "Y232": {
       "lng": 142.624092,
       "lat": -10.683089,
-      "town": { "name": "Bamaga", "kind": "town", "distanceKm": 34.4, "bearing": "SW" },
+      "town": { "name": "Seisia", "kind": "village", "distanceKm": 33.4, "bearing": "SW" },
       "landmark": { "name": "Mount Adolphus", "kind": "peak", "distanceKm": 6.8, "bearing": "NE" },
-      "osm": { "town": "n244301764", "landmark": "n3020388466" }
+      "osm": { "town": "n244301758", "landmark": "n3020388466" }
     },
     "Y233": {
       "lng": 144.598423,
       "lat": -17.210452,
-      "town": { "name": "Mount Garnet", "kind": "town", "distanceKm": 75.2, "bearing": "SE" },
+      "town": { "name": "Chillagoe", "kind": "village", "distanceKm": 10.2, "bearing": "NW" },
       "landmark": { "name": "Chillagoe Creek", "kind": "river", "distanceKm": 7.7, "bearing": "W" },
-      "osm": { "town": "n1402185162", "landmark": "w1387288968" }
+      "osm": { "town": "n4074574918", "landmark": "w1387288968" }
     },
     "Y24": {
       "lng": 141.932428,
@@ -3042,16 +3159,16 @@
     "Y28": {
       "lng": 142.062319,
       "lat": -12.649109,
-      "town": { "name": "Weipa", "kind": "town", "distanceKm": 20.8, "bearing": "W" },
+      "town": { "name": "Napranum", "kind": "village", "distanceKm": 19.3, "bearing": "W" },
       "landmark": { "name": "Wenlock River", "kind": "river", "distanceKm": 28.4, "bearing": "N" },
-      "osm": { "town": "n2157032995", "landmark": "w332827217" }
+      "osm": { "town": "n14109805206", "landmark": "w332827217" }
     },
     "Y29": {
       "lng": 142.724573,
       "lat": -12.70041,
-      "town": { "name": "Weipa", "kind": "town", "distanceKm": 92.8, "bearing": "W" },
+      "town": { "name": "Lockhart River", "kind": "village", "distanceKm": 67.7, "bearing": "E" },
       "landmark": { "name": "Wenlock River", "kind": "river", "distanceKm": 7.9, "bearing": "NE" },
-      "osm": { "town": "n2157032995", "landmark": "w332827217" }
+      "osm": { "town": "n4096467817", "landmark": "w332827217" }
     },
     "Y31": {
       "lng": 141.986622,
@@ -3063,21 +3180,22 @@
     "Y37": {
       "lng": 142.405851,
       "lat": -12.750938,
-      "town": { "name": "Weipa", "kind": "town", "distanceKm": 59.3, "bearing": "W" },
+      "town": { "name": "Napranum", "kind": "village", "distanceKm": 56.7, "bearing": "W" },
       "landmark": { "name": "Wenlock River", "kind": "river", "distanceKm": 25.7, "bearing": "N" },
-      "osm": { "town": "n2157032995", "landmark": "w332827217" }
+      "osm": { "town": "n14109805206", "landmark": "w332827217" }
     },
     "Y41": {
       "lng": 142.170406,
       "lat": -12.96826,
-      "town": { "name": "Weipa", "kind": "town", "distanceKm": 49, "bearing": "NW" },
-      "osm": { "town": "n2157032995" }
+      "town": { "name": "Napranum", "kind": "village", "distanceKm": 44, "bearing": "NW" },
+      "osm": { "town": "n14109805206" }
     },
     "Y43": {
       "lng": 141.650986,
       "lat": -14.420628,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 53.4, "bearing": "S" },
       "landmark": { "name": "Holroyd River", "kind": "river", "distanceKm": 23, "bearing": "N" },
-      "osm": { "landmark": "w489773313" }
+      "osm": { "town": "n3243293313", "landmark": "w489773313" }
     },
     "Y44": {
       "lng": 142.971983,
@@ -3143,8 +3261,9 @@
     "Y59": {
       "lng": 141.792189,
       "lat": -14.489781,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 49.2, "bearing": "S" },
       "landmark": { "name": "Kendall River", "kind": "river", "distanceKm": 33.1, "bearing": "N" },
-      "osm": { "landmark": "w489773312" }
+      "osm": { "town": "n3243293313", "landmark": "w489773312" }
     },
     "Y6": {
       "lng": 142.520342,
@@ -3156,8 +3275,9 @@
     "Y64": {
       "lng": 142.34773,
       "lat": -14.591437,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 85.3, "bearing": "SW" },
       "landmark": { "name": "Kindle River", "kind": "river", "distanceKm": 40.8, "bearing": "NE" },
-      "osm": { "landmark": "w221959757" }
+      "osm": { "town": "n3243293313", "landmark": "w221959757" }
     },
     "Y66": {
       "lng": 143.566877,
@@ -3169,32 +3289,35 @@
     "Y69": {
       "lng": 141.787015,
       "lat": -14.909011,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 17.9, "bearing": "W" },
       "landmark": { "name": "Chapman River", "kind": "river", "distanceKm": 10.3, "bearing": "W" },
-      "osm": { "landmark": "w221644309" }
+      "osm": { "town": "n3243293313", "landmark": "w221644309" }
     },
     "Y7": {
       "lng": 142.294158,
       "lat": -11.314463,
-      "town": { "name": "Bamaga", "kind": "town", "distanceKm": 48.4, "bearing": "N" },
+      "town": { "name": "Injinoo", "kind": "village", "distanceKm": 45.5, "bearing": "N" },
       "landmark": { "name": "Jardine River", "kind": "river", "distanceKm": 19.2, "bearing": "N" },
-      "osm": { "town": "n244301764", "landmark": "w1343833060" }
+      "osm": { "town": "n519654324", "landmark": "w1343833060" }
     },
     "Y71": {
       "lng": 144.109684,
       "lat": -14.767501,
+      "town": { "name": "Laura", "kind": "village", "distanceKm": 95.4, "bearing": "S" },
       "landmark": {
         "name": "North Kennedy River",
         "kind": "river",
         "distanceKm": 2.6,
         "bearing": "W"
       },
-      "osm": { "landmark": "w1035330476" }
+      "osm": { "town": "n244399885", "landmark": "w1035330476" }
     },
     "Y72": {
       "lng": 141.712047,
       "lat": -15.125738,
+      "town": { "name": "Pormpuraaw", "kind": "village", "distanceKm": 26.9, "bearing": "N" },
       "landmark": { "name": "Mitchell River", "kind": "river", "distanceKm": 11.1, "bearing": "S" },
-      "osm": { "landmark": "w188406580" }
+      "osm": { "town": "n3243293313", "landmark": "w188406580" }
     },
     "Y73": {
       "lng": 142.698643,
@@ -3205,20 +3328,21 @@
     "Y74": {
       "lng": 144.031379,
       "lat": -15.38019,
+      "town": { "name": "Laura", "kind": "village", "distanceKm": 48.9, "bearing": "SE" },
       "landmark": {
         "name": "Koolburra Mountain",
         "kind": "peak",
         "distanceKm": 13.8,
         "bearing": "NW"
       },
-      "osm": { "landmark": "n2842812029" }
+      "osm": { "town": "n244399885", "landmark": "n2842812029" }
     },
     "Y79": {
       "lng": 144.784569,
       "lat": -14.653637,
-      "town": { "name": "Hope Vale", "kind": "town", "distanceKm": 79.5, "bearing": "SE" },
+      "town": { "name": "Lizard Island", "kind": "village", "distanceKm": 71.4, "bearing": "E" },
       "landmark": { "name": "Brown Peak", "kind": "peak", "distanceKm": 5.9, "bearing": "NE" },
-      "osm": { "town": "n2296973502", "landmark": "n2842812016" }
+      "osm": { "town": "n10795311117", "landmark": "n2842812016" }
     },
     "Y8": {
       "lng": 142.725752,
@@ -3230,9 +3354,9 @@
     "Y80": {
       "lng": 144.612261,
       "lat": -15.094032,
-      "town": { "name": "Hope Vale", "kind": "town", "distanceKm": 58.1, "bearing": "SE" },
+      "town": { "name": "Laura", "kind": "village", "distanceKm": 54.9, "bearing": "S" },
       "landmark": { "name": "Mount Jack", "kind": "peak", "distanceKm": 11.2, "bearing": "SE" },
-      "osm": { "town": "n2296973502", "landmark": "n2842152673" }
+      "osm": { "town": "n244399885", "landmark": "n2842152673" }
     },
     "Y83": {
       "lng": 142.654334,
@@ -3254,15 +3378,16 @@
     "Y87": {
       "lng": 145.34248,
       "lat": -16.219343,
-      "town": { "name": "Cape Tribulation", "kind": "town", "distanceKm": 19.3, "bearing": "NE" },
+      "town": { "name": "Daintree Village", "kind": "village", "distanceKm": 4, "bearing": "SW" },
       "landmark": { "name": "Daintree River", "kind": "river", "distanceKm": 2.9, "bearing": "SE" },
-      "osm": { "town": "n286716905", "landmark": "w173271431" }
+      "osm": { "town": "n286457390", "landmark": "w173271431" }
     },
     "Y93": {
       "lng": 141.806153,
       "lat": -16.050901,
+      "town": { "name": "Kowanyama", "kind": "village", "distanceKm": 64.2, "bearing": "N" },
       "landmark": { "name": "Staaten River", "kind": "river", "distanceKm": 45.1, "bearing": "S" },
-      "osm": { "landmark": "w590880278" }
+      "osm": { "town": "n617908618", "landmark": "w590880278" }
     },
     "Y94": {
       "lng": 143.461325,
@@ -3284,14 +3409,14 @@
     "Y98": {
       "lng": 145.076712,
       "lat": -16.226319,
-      "town": { "name": "Wujal Wujal", "kind": "town", "distanceKm": 40.5, "bearing": "NE" },
+      "town": { "name": "Daintree Village", "kind": "village", "distanceKm": 26.1, "bearing": "E" },
       "landmark": {
         "name": "Daintree River",
         "kind": "river",
         "distanceKm": 10.2,
         "bearing": "SE"
       },
-      "osm": { "town": "n850633998", "landmark": "w1390771499" }
+      "osm": { "town": "n286457390", "landmark": "w1390771499" }
     },
     "T2": {
       "lng": 147.768715,
@@ -3317,16 +3442,16 @@
     "T13": {
       "lng": 146.568073,
       "lat": -41.275549,
-      "town": { "name": "Port Sorell", "kind": "town", "distanceKm": 12.4, "bearing": "N" },
+      "town": { "name": "Sassafras", "kind": "village", "distanceKm": 6.2, "bearing": "W" },
       "landmark": { "name": "Rubicon River", "kind": "river", "distanceKm": 0.4, "bearing": "SW" },
-      "osm": { "town": "n27120296", "landmark": "w1448098118" }
+      "osm": { "town": "n599538913", "landmark": "w1448098118" }
     },
     "T12": {
       "lng": 145.373733,
       "lat": -40.856776,
-      "town": { "name": "Smithton", "kind": "town", "distanceKm": 20.7, "bearing": "W" },
+      "town": { "name": "Forest", "kind": "village", "distanceKm": 10.5, "bearing": "W" },
       "landmark": { "name": "Black River", "kind": "river", "distanceKm": 5.5, "bearing": "NW" },
-      "osm": { "town": "n1018838500", "landmark": "w201857626" }
+      "osm": { "town": "n2064034908", "landmark": "w201857626" }
     },
     "T11": {
       "lng": 144.955727,
@@ -3338,47 +3463,47 @@
     "T10": {
       "lng": 146.071287,
       "lat": -43.400361,
-      "town": { "name": "Geeveston", "kind": "town", "distanceKm": 74.1, "bearing": "E" },
+      "town": { "name": "Strathgordon", "kind": "village", "distanceKm": 70.5, "bearing": "N" },
       "landmark": { "name": "Pasco Range", "kind": "range", "distanceKm": 2.7, "bearing": "NW" },
-      "osm": { "town": "n251550834", "landmark": "w624043564" }
+      "osm": { "town": "n4294350225", "landmark": "w624043564" }
     },
     "T1": {
       "lng": 146.033582,
       "lat": -41.32505,
-      "town": { "name": "Ulverstone", "kind": "town", "distanceKm": 21.9, "bearing": "NE" },
+      "town": { "name": "Sprent", "kind": "village", "distanceKm": 12.5, "bearing": "NE" },
       "landmark": { "name": "River Leven", "kind": "river", "distanceKm": 2, "bearing": "SW" },
-      "osm": { "town": "n32011608", "landmark": "w258992704" }
+      "osm": { "town": "n2823811661", "landmark": "w258992704" }
     },
     "T3": {
       "lng": 144.872146,
       "lat": -41.245614,
-      "town": { "name": "Smithton", "kind": "town", "distanceKm": 49.8, "bearing": "NE" },
+      "town": { "name": "Arthur River", "kind": "village", "distanceKm": 27.7, "bearing": "NW" },
       "landmark": {
         "name": "Frankland River",
         "kind": "river",
         "distanceKm": 2.3,
         "bearing": "NE"
       },
-      "osm": { "town": "n1018838500", "landmark": "w1173234586" }
+      "osm": { "town": "n603338828", "landmark": "w1173234586" }
     },
     "T4": {
       "lng": 147.188133,
       "lat": -41.667699,
-      "town": { "name": "Longford", "kind": "town", "distanceKm": 9.9, "bearing": "NW" },
+      "town": { "name": "Cressy", "kind": "village", "distanceKm": 9.3, "bearing": "W" },
       "landmark": {
         "name": "Macquarie River",
         "kind": "river",
         "distanceKm": 3.9,
         "bearing": "NW"
       },
-      "osm": { "town": "n321959920", "landmark": "w217505961" }
+      "osm": { "town": "n600650926", "landmark": "w217505961" }
     },
     "T5": {
       "lng": 146.997736,
       "lat": -43.225544,
-      "town": { "name": "Geeveston", "kind": "town", "distanceKm": 8.9, "bearing": "NW" },
+      "town": { "name": "Port Huon", "kind": "village", "distanceKm": 8.1, "bearing": "N" },
       "landmark": { "name": "Flowerpot Hill", "kind": "peak", "distanceKm": 0.5, "bearing": "S" },
-      "osm": { "town": "n251550834", "landmark": "n2964280770" }
+      "osm": { "town": "n2092109048", "landmark": "n2964280770" }
     },
     "T6": {
       "lng": 145.337395,
@@ -3390,14 +3515,14 @@
     "T7": {
       "lng": 147.802052,
       "lat": -41.516397,
-      "town": { "name": "Fingal", "kind": "town", "distanceKm": 19.6, "bearing": "SE" },
+      "town": { "name": "Mathinna", "kind": "village", "distanceKm": 8.6, "bearing": "NE" },
       "landmark": {
         "name": "Tower Hill (West Tower)",
         "kind": "peak",
         "distanceKm": 3.7,
         "bearing": "SE"
       },
-      "osm": { "town": "n413289246", "landmark": "n2360180166" }
+      "osm": { "town": "n2620633328", "landmark": "n2360180166" }
     },
     "T8": {
       "lng": 146.75888,
@@ -3409,14 +3534,14 @@
     "T9": {
       "lng": 148.059323,
       "lat": -41.082511,
-      "town": { "name": "Branxholm", "kind": "town", "distanceKm": 28.1, "bearing": "W" },
+      "town": { "name": "Gladstone", "kind": "village", "distanceKm": 14.3, "bearing": "N" },
       "landmark": {
         "name": "Great Musselroe River",
         "kind": "river",
         "distanceKm": 0.5,
         "bearing": "SE"
       },
-      "osm": { "town": "n377996730", "landmark": "w421586590" }
+      "osm": { "town": "n1830388319", "landmark": "w421586590" }
     }
   }
 }

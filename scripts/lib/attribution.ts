@@ -38,7 +38,7 @@ export const OSM_NEARBY_ATTRIBUTION: AttributionItem = {
   licence: 'ODbL 1.0',
   licenceUrl: 'https://opendatacommons.org/licenses/odbl/1-0/',
   usedFor:
-    '"Country today" orientation: nearest town (place=city|town, within 100 km) and named peak, river, lake or range (within 50 km), extracted via the Overpass API at build time',
+    '"Country today" orientation: nearest town or village (place=city|town|village, within 100 km) and named peak, river, lake or range (within 50 km), extracted via the Overpass API at build time',
   kind: 'data',
 };
 

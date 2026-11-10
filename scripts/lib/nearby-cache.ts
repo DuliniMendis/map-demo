@@ -3,7 +3,7 @@ import type { NearbyResult, StoredFeature } from './nearby.ts';
 import { OSM_CACHE_DIR } from './paths.ts';
 
 /** One Overpass query per class, in this order. */
-export const OSM_CLASSES = ['towns', 'peaks', 'rivers', 'lakes', 'ranges'] as const;
+export const OSM_CLASSES = ['towns', 'villages', 'peaks', 'rivers', 'lakes', 'ranges'] as const;
 export type OsmClass = (typeof OSM_CLASSES)[number];
 
 export const snapshotFile = (cls: OsmClass): string => join(OSM_CACHE_DIR, `${cls}.json`);

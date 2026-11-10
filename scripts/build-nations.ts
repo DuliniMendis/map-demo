@@ -528,7 +528,7 @@ function nearbySection(
       ]),
     ),
     '',
-    `- Nearest \`place=city|town\` within ${TOWN_MAX_KM} km: **${pct(withTown.length)}**`,
+    `- Nearest \`place=city|town|village\` within ${TOWN_MAX_KM} km (nearest wins, whatever the class): **${pct(withTown.length)}**`,
     `- Nearest named peak / river / lake / range within ${LANDMARK_MAX_KM} km: **${pct(withLm.length)}**`,
     `- Both: ${both}; neither (no \`nearby\` field): ${neither}`,
   );
@@ -553,7 +553,7 @@ function nearbySection(
       .join(', ')}`,
     '',
     table(
-      ['Code', 'State / territory', 'Nations', 'With town', 'With landmark'],
+      ['Code', 'State / territory', 'Nations', 'With town or village', 'With landmark'],
       STATE_CODES.map((c) => {
         const inState = nations.filter((x) => x.modern.stateCode === c);
         return [
@@ -575,7 +575,7 @@ function nearbySection(
   const noLm = nations.filter((x) => !x.nearby?.landmark);
   out.push('', '### Oddities', '');
   out.push(
-    `**No town within ${TOWN_MAX_KM} km** (${noTown.length}): ` +
+    `**No city, town or village within ${TOWN_MAX_KM} km** (${noTown.length}): ` +
       (noTown.map((x) => `${label(x.id)} (${place(x.id)})`).join('; ') || 'none') +
       '.',
     '',

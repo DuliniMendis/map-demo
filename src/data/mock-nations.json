@@ -19,10 +19,10 @@
       },
       "nearby": {
         "town": {
-          "name": "Tuggeranong",
-          "kind": "town",
-          "distanceKm": 10.4,
-          "bearing": "NE"
+          "name": "Tharwa",
+          "kind": "village",
+          "distanceKm": 7.5,
+          "bearing": "SE"
         },
         "landmark": {
           "name": "Paddy's River",
@@ -63,10 +63,10 @@
       },
       "nearby": {
         "town": {
-          "name": "Oberon",
-          "kind": "town",
-          "distanceKm": 27.1,
-          "bearing": "NW"
+          "name": "Jenolan Caves",
+          "kind": "village",
+          "distanceKm": 8.1,
+          "bearing": "N"
         },
         "landmark": {
           "name": "Green Hillock",
@@ -471,6 +471,12 @@
         "austlang": "https://collection.aiatsis.gov.au/austlang/language/a43"
       },
       "nearby": {
+        "town": {
+          "name": "Warakurna",
+          "kind": "village",
+          "distanceKm": 27.2,
+          "bearing": "W"
+        },
         "landmark": {
           "name": "Giles Creek",
           "kind": "river",

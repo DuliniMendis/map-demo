@@ -276,32 +276,33 @@ Orientation only: today’s (mostly colonial) place names, shown in the info car
 | Class | Overpass query run | OSM data as of | Named features (Australia) | Committed (within cut-off of a nation) |
 |---|---|---|---|---|
 | towns | 2026-11-10 | 2026-11-10T00:02:10Z | 1194 | 1004 |
+| villages | 2026-11-10 | 2026-11-10T00:28:34Z | 1860 | 1616 |
 | peaks | 2026-11-10 | 2026-11-10T00:04:19Z | 16785 | 7512 |
 | rivers | 2026-11-10 | 2026-11-10T00:06:20Z | 40724 | 11698 |
 | lakes | 2026-11-10 | 2026-11-10T00:09:19Z | 2091 | 770 |
 | ranges | 2026-11-10 | 2026-11-10T00:10:17Z | 686 | 398 |
 
-- Nearest `place=city|town` within 100 km: **337 of 455 (74 %)**
+- Nearest `place=city|town|village` within 100 km (nearest wins, whatever the class): **394 of 455 (87 %)**
 - Nearest named peak / river / lake / range within 50 km: **439 of 455 (96 %)**
-- Both: 334; neither (no `nearby` field): 13
-- Median distance: town 33.4 km, landmark 8.1 km
-- By kind: town 318, river 226, peak 191, lake 19, city 19, range 3
+- Both: 388; neither (no `nearby` field): 10
+- Median distance: town 26.7 km, landmark 8.1 km
+- By kind: village 227, river 226, peak 191, town 160, lake 19, city 7, range 3
 
-| Code | State / territory | Nations | With town | With landmark |
+| Code | State / territory | Nations | With town or village | With landmark |
 |---|---|---|---|---|
-| NSW | New South Wales | 52 | 49 | 52 |
+| NSW | New South Wales | 52 | 51 | 52 |
 | VIC | Victoria | 22 | 22 | 22 |
-| QLD | Queensland | 166 | 120 | 163 |
-| SA | South Australia | 28 | 19 | 28 |
-| WA | Western Australia | 87 | 54 | 83 |
+| QLD | Queensland | 166 | 146 | 163 |
+| SA | South Australia | 28 | 22 | 28 |
+| WA | Western Australia | 87 | 69 | 83 |
 | TAS | Tasmania | 15 | 15 | 15 |
-| NT | Northern Territory | 84 | 57 | 75 |
+| NT | Northern Territory | 84 | 68 | 75 |
 | ACT | Australian Capital Territory | 1 | 1 | 1 |
 | OT | Other Territories | 0 | 0 | 0 |
 
 ### Oddities
 
-**No town within 100 km** (118): W34 Binigura / Pinikura (Innawanga, WA); A69 Bunara (Tanami (NT), NT); A28 Bunggura (Anangu Pitjantjatjara Yankunytjatjara, SA); W24 Burduna (Yannarie, WA); L19 Dhiraila (Noccundra, QLD); A26 Djalgandi (Lake Wells, WA); C31 Eastern Mudburra (Gurindji, NT); N188 Garig (Cobourg, NT); Y71 Gugu Rarmul (Lakefield, QLD); Y74 Gugu Yawa (Laura (Qld), QLD); G29 Gundara (Yagoonya, QLD); C23 Gunindirri (Creswell, NT); A24 Gurduwanga (Peak Hill (WA), WA); A59 Ibarga (Telfer, WA); N184 Ilgar (West Arnhem, NT); G14 Indjilandji (Ranken, NT); Y17 Itinadyana (Shelburne, QLD); N39 Iwaidja (West Arnhem, NT); W49 Jadira (Fortescue (WA), WA); W44 Janadjina (Peak Hill (WA), WA); G43 Kapula (Carrandotta, QLD); L15 Karenggapa (Tibooburra, NSW); C34 Kartangarurru (Tanami (NT), NT); Y210 Kirka (Pormpuraaw, QLD); A52 Kiyajarra (Kanpa, WA); Y209 Kok Wap (Kowanyama, QLD); C3 Kokatha (Ingomar, SA); Y203 Koko Babangk (Yagoonya, QLD); Y93 Koko Dhawa (Yagoonya, QLD); Y224 Kugu Mu'inh (Pormpuraaw, QLD); Y43 Kugu Muminh (Pormpuraaw, QLD); Y59 KUGU NGANHCARA (Pormpuraaw, QLD); Y176 Kugu Uwanh (Pormpuraaw, QLD); Y178 Kugu Yi'anh (Pormpuraaw, QLD); A68 Kukatja (Tanami (WA), WA); Y94 Kuku Mini (Palmer (Qld), QLD); Y84 Kuku Thaypan (Lakefield, QLD); K33 Kuluwarrang (Durack (WA), WA); N69 Kunbarlang (West Arnhem, NT); D49 Kungakuri (Enngonia, NSW); Y83 KUNJEN (Maramie, QLD); A85 Kurajarra (Telfer, WA); Y95 Kutjal (Red River, QLD); Y69 Kuuk Thaayorre (Pormpuraaw, QLD); Y215 Kuuk Thaayunth (Pormpuraaw, QLD); Y200 Kuuk Yak (Pormpuraaw, QLD); Y169 Kuuku I'yu (Shelburne, QLD); C35 Kuwarranyji (Victoria River, NT); G38 Lardil (Wellesley Islands, QLD); A6 Maduwongga (Gibson Desert North, WA); L62 Malintji (Longreach (Qld), QLD); K30 Malngin (Buchanan (NT), NT); N183 Manangkarri (West Arnhem, NT); N78 Mangarrayi (Elsey, NT); A34 Mangu (Kumarina, WA); A22 Marawa (Neale, WA); Y156 Marrett River language (Lakefield, QLD); L33 Marula (Windorah, QLD); L47 Matja (Gidgealpa, SA); N64 Mawng (West Arnhem, NT); L51 Mikiri-nganha (Simpson (NT), NT); L57 Minkabari (Bulloo Downs, QLD); A9 Mirning (Forrest (WA), WA); A27 Mudalga (Cosmo Newbery, WA); A8 Murunitja (Forrest (WA), WA); Y187 Mutyanthi (Shelburne, QLD); A32 Nakako (Beadell, WA); A37 Nanadjara (Little Sandy Desert, WA); A17 Nangadadjara / Nyanganyatjara (Neale, WA); A95 Natingero (Sandstone, WA); A43 Ngaatjatjarra (Ngaanyatjarra-Giles, WA); A3 Ngadjumaya / Ngadju (Balladonia, WA); N229 Ngalarrunga (Birdum, NT); L48 Ngananhina (Gidgealpa, SA); N179 Ngardawuli (Cobourg, NT); C38 Ngardilypa (Tanami (NT), NT); N121 Ngarnka (Arnold (NT), NT); L46 Nhirrpi (Gidgealpa, SA); K13 Nyul Nyul (Dampier Peninsula, WA); Y199 Ogh Alungul (Lakefield, QLD); Y201 Ogh Awarrangg (Palmer (Qld), QLD); Y171 Ogh Igadj (Maramie, QLD); Y198 Ogh Ikarranggal (Lakefield, QLD); Y206 Ogh Undjan (Maramie, QLD); Y64 Pakanh (Edward River, QLD); L53 Piltapalta (Macumba, SA); D51 Purukuri (Wanaaring, NSW); W25 Thiin (West Lyons River, WA); Y194 Utyangikwathiya (Mapoon, QLD); Y207 Uw El (Kowanyama, QLD); Y73 Uw Olkola (Maramie, QLD); Y101 Uw Oykangand (Maramie, QLD); Y193 Uyungkuthi (Shelburne, QLD); G15 Wakabunga (Camooweal, QLD); L52 Wangkakupa (Anna Creek, SA); A103 Wangkatja (Plumridge Lakes, WA); L54 Wangkatyaka (Kalamurina, SA); K21 Wanyjirra (Buchanan (NT), NT); C17 Warlmanpa (Tanami East, NT); A62 Warnman (Telfer, WA); W45 Watjanmay (Lake Deborah, WA); K51 Wawarl (Ord River, WA); A29 Wawula (Little Sandy Desert, WA); C39 Wawulya (Lake Mackay, NT); C44 Wenamba (Ngaanyatjarra-Giles, WA); Y172 Wik Iyanh (Aurukun, QLD); N99 Wilingura (McArthur, NT); A82 Wirdjaragandja (Anangu Pitjantjatjara Yankunytjatjara, SA); N181 Wurdang (Cobourg, NT); N37 Wurrugu (Cobourg, NT); Y10 Wuthathi (Shelburne, QLD); G37 Yangkaal (Gangalidda, QLD); N68 Yangman (Sturt Plateau, NT); N153 Yanyuwa (Pellew Islands, NT); W37 Yindjibarndi (Chichester (WA), WA); A79 Yinhawangka / Innawonga (Capricorn, WA); Y72 Yir Yoront (Kowanyama, QLD); Y214 Yirrk-Thangalkl (Kowanyama, QLD).
+**No city, town or village within 100 km** (61): A69 Bunara (Tanami (NT), NT); A28 Bunggura (Anangu Pitjantjatjara Yankunytjatjara, SA); L19 Dhiraila (Noccundra, QLD); C31 Eastern Mudburra (Gurindji, NT); N188 Garig (Cobourg, NT); C23 Gunindirri (Creswell, NT); A24 Gurduwanga (Peak Hill (WA), WA); A59 Ibarga (Telfer, WA); Y17 Itinadyana (Shelburne, QLD); W44 Janadjina (Peak Hill (WA), WA); L15 Karenggapa (Tibooburra, NSW); C34 Kartangarurru (Tanami (NT), NT); A52 Kiyajarra (Kanpa, WA); C3 Kokatha (Ingomar, SA); Y94 Kuku Mini (Palmer (Qld), QLD); Y84 Kuku Thaypan (Lakefield, QLD); Y83 KUNJEN (Maramie, QLD); Y95 Kutjal (Red River, QLD); C35 Kuwarranyji (Victoria River, NT); A6 Maduwongga (Gibson Desert North, WA); L62 Malintji (Longreach (Qld), QLD); A34 Mangu (Kumarina, WA); A22 Marawa (Neale, WA); Y156 Marrett River language (Lakefield, QLD); L33 Marula (Windorah, QLD); L51 Mikiri-nganha (Simpson (NT), NT); L57 Minkabari (Bulloo Downs, QLD); A9 Mirning (Forrest (WA), WA); A8 Murunitja (Forrest (WA), WA); Y187 Mutyanthi (Shelburne, QLD); A32 Nakako (Beadell, WA); A37 Nanadjara (Little Sandy Desert, WA); A17 Nangadadjara / Nyanganyatjara (Neale, WA); A3 Ngadjumaya / Ngadju (Balladonia, WA); N229 Ngalarrunga (Birdum, NT); L48 Ngananhina (Gidgealpa, SA); N179 Ngardawuli (Cobourg, NT); C38 Ngardilypa (Tanami (NT), NT); N121 Ngarnka (Arnold (NT), NT); Y199 Ogh Alungul (Lakefield, QLD); Y201 Ogh Awarrangg (Palmer (Qld), QLD); Y171 Ogh Igadj (Maramie, QLD); Y198 Ogh Ikarranggal (Lakefield, QLD); Y206 Ogh Undjan (Maramie, QLD); W25 Thiin (West Lyons River, WA); Y194 Utyangikwathiya (Mapoon, QLD); Y73 Uw Olkola (Maramie, QLD); Y193 Uyungkuthi (Shelburne, QLD); G15 Wakabunga (Camooweal, QLD); L52 Wangkakupa (Anna Creek, SA); A103 Wangkatja (Plumridge Lakes, WA); L54 Wangkatyaka (Kalamurina, SA); K21 Wanyjirra (Buchanan (NT), NT); C17 Warlmanpa (Tanami East, NT); A29 Wawula (Little Sandy Desert, WA); C39 Wawulya (Lake Mackay, NT); A82 Wirdjaragandja (Anangu Pitjantjatjara Yankunytjatjara, SA); N181 Wurdang (Cobourg, NT); N37 Wurrugu (Cobourg, NT); W37 Yindjibarndi (Chichester (WA), WA); A79 Yinhawangka / Innawonga (Capricorn, WA).
 
 **No landmark within 50 km** (16): C31 Eastern Mudburra (Gurindji, NT); N191 Gun-narta (West Arnhem, NT); C23 Gunindirri (Creswell, NT); N184 Ilgar (West Arnhem, NT); C34 Kartangarurru (Tanami (NT), NT); A52 Kiyajarra (Kanpa, WA); Y203 Koko Babangk (Yagoonya, QLD); Y41 Mbiywom (Archer River, QLD); L51 Mikiri-nganha (Simpson (NT), NT); A9 Mirning (Forrest (WA), WA); A8 Murunitja (Forrest (WA), WA); A32 Nakako (Beadell, WA); N229 Ngalarrunga (Birdum, NT); C16 Wakaya (Costello, NT); C17 Warlmanpa (Tanami East, NT); G37 Yangkaal (Gangalidda, QLD).
 
@@ -309,7 +310,7 @@ Orientation only: today’s (mostly colonial) place names, shown in the info car
 
 **Dual or compound OSM names, kept exactly as published** (2): T7 Ben Lomond → "Tower Hill (West Tower)" (peak); Y119 Madjay → "Centre Peak (Bellenden Ker Range)" (peak).
 
-**Towns nearest to the most nations:** Weipa (town) 13, Milingimbi (town) 10, Aurukun (town) 10, Jabiru (town) 8, Bamaga (town) 8, Bulla (town) 6, Broome (city) 5, Bourke (town) 4.
+**Towns nearest to the most nations:** Pormpuraaw (village) 14, Aurukun (town) 9, Weipa (town) 9, Maningrida (village) 7, Gunbalanya (village) 6, Kowanyama (village) 6, Bamaga (town) 5, North Bourke (village) 4.
 
 Method notes: distances are great-circle from the AUSTLANG point, 1 decimal place; bearings are the 8-point initial bearing from the point to the feature. Rivers (`waterway=river` ways) are measured to the nearest point on the line (simplified to 10 m); lakes (`natural=water` + `water=lake`) and ranges (`natural=ridge|mountain_range`) to the Overpass centre, so a point on the shore of a large lake can read further than it looks. Only ways tagged `name` are used: an unnamed river way that belongs to a named waterway relation is not.
 

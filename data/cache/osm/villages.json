@@ -1,0 +1,3430 @@
+{
+  "class": "villages",
+  "retrieved": "2026-11-10",
+  "osmBase": "2026-11-10T00:28:34Z",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:900];area[\"ISO3166-1\"=\"AU\"][\"admin_level\"=\"2\"]->.au;node[\"place\"=\"village\"][\"name\"](area.au);out qt;",
+  "licence": "ODbL 1.0 — © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)",
+  "rawBytes": 478075,
+  "rawCount": 1860,
+  "clip": { "radiusKm": 100, "pointsKey": "455:68bd9320d0b7883f" },
+  "count": 1616,
+  "features": [
+    { "osm": "n17025194", "name": "Bonny Hills", "kind": "village", "at": [152.8339, -31.58781] },
+    { "osm": "n17087889", "name": "Bungwahl", "kind": "village", "at": [152.44507, -32.38693] },
+    { "osm": "n20968399", "name": "Lapstone", "kind": "village", "at": [150.64157, -33.77434] },
+    { "osm": "n20968400", "name": "Glenbrook", "kind": "village", "at": [150.62249, -33.76707] },
+    { "osm": "n20968402", "name": "Warrimoo", "kind": "village", "at": [150.60122, -33.72355] },
+    {
+      "osm": "n20968403",
+      "name": "Valley Heights",
+      "kind": "village",
+      "at": [150.58349, -33.70773]
+    },
+    { "osm": "n20968406", "name": "Linden", "kind": "village", "at": [150.49578, -33.71311] },
+    { "osm": "n20968407", "name": "Woodford", "kind": "village", "at": [150.48109, -33.73497] },
+    { "osm": "n20968409", "name": "Lawson", "kind": "village", "at": [150.42956, -33.71969] },
+    { "osm": "n20968410", "name": "Bullaburra", "kind": "village", "at": [150.4138, -33.72486] },
+    { "osm": "n21381161", "name": "Fingal", "kind": "village", "at": [153.56648, -28.20051] },
+    { "osm": "n21383485", "name": "Uki", "kind": "village", "at": [153.33056, -28.41528] },
+    { "osm": "n21384336", "name": "Cawongla", "kind": "village", "at": [153.09785, -28.60059] },
+    { "osm": "n21386956", "name": "Legume", "kind": "village", "at": [152.30806, -28.40528] },
+    { "osm": "n21517026", "name": "Greenmount", "kind": "village", "at": [151.90542, -27.78666] },
+    { "osm": "n21682051", "name": "Mooball", "kind": "village", "at": [153.49188, -28.4436] },
+    {
+      "osm": "n25939779",
+      "name": "Yarrawonga Park",
+      "kind": "village",
+      "at": [151.54498, -33.10112]
+    },
+    { "osm": "n25939781", "name": "Silverwater", "kind": "village", "at": [151.56009, -33.10291] },
+    { "osm": "n25940288", "name": "Brightwaters", "kind": "village", "at": [151.54607, -33.11453] },
+    { "osm": "n25940289", "name": "Mirrabooka", "kind": "village", "at": [151.55521, -33.11008] },
+    { "osm": "n25940290", "name": "Sunshine", "kind": "village", "at": [151.56246, -33.11358] },
+    { "osm": "n25940291", "name": "Bonnells Bay", "kind": "village", "at": [151.52917, -33.10785] },
+    {
+      "osm": "n25940292",
+      "name": "Morisset Park",
+      "kind": "village",
+      "at": [151.53282, -33.12144]
+    },
+    { "osm": "n25940534", "name": "Dora Creek", "kind": "village", "at": [151.50188, -33.08416] },
+    { "osm": "n25941637", "name": "Rathmines", "kind": "village", "at": [151.59565, -33.03953] },
+    {
+      "osm": "n25941638",
+      "name": "Fishing Point",
+      "kind": "village",
+      "at": [151.59547, -33.05225]
+    },
+    { "osm": "n25954457", "name": "Shoal Bay", "kind": "village", "at": [152.17486, -32.72441] },
+    { "osm": "n25954656", "name": "Fingal Bay", "kind": "village", "at": [152.16876, -32.74704] },
+    { "osm": "n25955227", "name": "Anna Bay", "kind": "village", "at": [152.08902, -32.77791] },
+    { "osm": "n25955778", "name": "Tea Gardens", "kind": "village", "at": [152.15569, -32.66227] },
+    { "osm": "n25955809", "name": "Hawks Nest", "kind": "village", "at": [152.17805, -32.67219] },
+    { "osm": "n25975136", "name": "Valla Beach", "kind": "village", "at": [153.00788, -30.59248] },
+    { "osm": "n25977550", "name": "Sandy Beach", "kind": "village", "at": [153.19828, -30.15] },
+    {
+      "osm": "n25977551",
+      "name": "Emerald Beach",
+      "kind": "village",
+      "at": [153.18806, -30.16944]
+    },
+    { "osm": "n25982940", "name": "Ulmarra", "kind": "village", "at": [153.029, -29.63055] },
+    { "osm": "n25988466", "name": "Evans Head", "kind": "village", "at": [153.43121, -29.11741] },
+    { "osm": "n26392887", "name": "Cowan", "kind": "village", "at": [151.16986, -33.58883] },
+    { "osm": "n29804937", "name": "Bangalow", "kind": "village", "at": [153.52186, -28.68675] },
+    {
+      "osm": "n29891603",
+      "name": "Hastings Point",
+      "kind": "village",
+      "at": [153.57402, -28.35887]
+    },
+    { "osm": "n30201112", "name": "Gundaroo", "kind": "village", "at": [149.26727, -35.02528] },
+    { "osm": "n30480029", "name": "Wyndham", "kind": "village", "at": [128.12362, -15.4868] },
+    { "osm": "n31147914", "name": "Meckering", "kind": "village", "at": [117.01008, -31.62944] },
+    { "osm": "n31198746", "name": "Boat Harbour", "kind": "village", "at": [152.10887, -32.78682] },
+    {
+      "osm": "n31432426",
+      "name": "Adelaide River",
+      "kind": "village",
+      "at": [131.10701, -13.23877]
+    },
+    { "osm": "n32620998", "name": "Mataranka", "kind": "village", "at": [133.06906, -14.92788] },
+    { "osm": "n33839944", "name": "Menangle", "kind": "village", "at": [150.73839, -34.12776] },
+    { "osm": "n33840224", "name": "Wilton", "kind": "village", "at": [150.69939, -34.24029] },
+    { "osm": "n34916618", "name": "Yallah", "kind": "village", "at": [150.78415, -34.54182] },
+    { "osm": "n35414802", "name": "Badgingarra", "kind": "village", "at": [115.50216, -30.39038] },
+    { "osm": "n36244444", "name": "Mulgoa", "kind": "village", "at": [150.6504, -33.83716] },
+    { "osm": "n39090885", "name": "Krambach", "kind": "village", "at": [152.26061, -32.05212] },
+    { "osm": "n39093056", "name": "Barrington", "kind": "village", "at": [151.91406, -31.97307] },
+    { "osm": "n39738874", "name": "Nelligen", "kind": "village", "at": [150.14087, -35.64839] },
+    { "osm": "n40888139", "name": "Quaama", "kind": "village", "at": [149.86931, -36.46525] },
+    {
+      "osm": "n41048335",
+      "name": "Central Tilba",
+      "kind": "village",
+      "at": [150.07454, -36.31269]
+    },
+    { "osm": "n41048344", "name": "Tilba Tilba", "kind": "village", "at": [150.06369, -36.3241] },
+    { "osm": "n42126000", "name": "Binningup", "kind": "village", "at": [115.69725, -33.14913] },
+    { "osm": "n42126759", "name": "Myalup", "kind": "village", "at": [115.69632, -33.103] },
+    { "osm": "n50912852", "name": "Stroud", "kind": "village", "at": [151.96742, -32.4027] },
+    { "osm": "n53691260", "name": "Seabird", "kind": "village", "at": [115.44292, -31.27475] },
+    {
+      "osm": "n54572588",
+      "name": "Captains Flat",
+      "kind": "village",
+      "at": [149.44756, -35.58912]
+    },
+    { "osm": "n55184586", "name": "Nowa Nowa", "kind": "village", "at": [148.09101, -37.73184] },
+    { "osm": "n55196051", "name": "Rosedale", "kind": "village", "at": [146.78785, -38.15117] },
+    { "osm": "n55199074", "name": "Darnum", "kind": "village", "at": [146.00371, -38.18755] },
+    { "osm": "n59608763", "name": "Kalaru", "kind": "village", "at": [149.9406, -36.73596] },
+    { "osm": "n59634128", "name": "Cann River", "kind": "village", "at": [149.14995, -37.56568] },
+    { "osm": "n59653740", "name": "Glengarry", "kind": "village", "at": [146.57297, -38.12594] },
+    { "osm": "n59728920", "name": "Toongabbie", "kind": "village", "at": [146.62384, -38.05942] },
+    { "osm": "n59740606", "name": "Boolarra", "kind": "village", "at": [146.27272, -38.38085] },
+    { "osm": "n59926508", "name": "Ardyaloon", "kind": "village", "at": [123.06057, -16.44635] },
+    { "osm": "n60302306", "name": "Woodside", "kind": "village", "at": [146.87522, -38.52441] },
+    { "osm": "n60565885", "name": "St Albans", "kind": "village", "at": [150.97185, -33.29244] },
+    { "osm": "n60819338", "name": "Mount Nebo", "kind": "village", "at": [152.78195, -27.39525] },
+    { "osm": "n62972281", "name": "Heddon Greta", "kind": "village", "at": [151.51062, -32.80349] },
+    { "osm": "n65640166", "name": "Thornton", "kind": "village", "at": [145.79867, -37.2542] },
+    { "osm": "n65642379", "name": "Bonnie Doon", "kind": "village", "at": [145.85777, -37.02434] },
+    { "osm": "n70499292", "name": "Candelo", "kind": "village", "at": [149.69464, -36.76557] },
+    { "osm": "n72147006", "name": "Luddenham", "kind": "village", "at": [150.69012, -33.87798] },
+    { "osm": "n72163505", "name": "Bringelly", "kind": "village", "at": [150.73097, -33.93935] },
+    {
+      "osm": "n82331679",
+      "name": "Lake Bathurst",
+      "kind": "village",
+      "at": [149.64837, -35.01398]
+    },
+    {
+      "osm": "n82343447",
+      "name": "Tirrannaville",
+      "kind": "village",
+      "at": [149.68298, -34.81882]
+    },
+    { "osm": "n82474186", "name": "Gunning", "kind": "village", "at": [149.26599, -34.78312] },
+    { "osm": "n82474649", "name": "Breadalbane", "kind": "village", "at": [149.48914, -34.79275] },
+    { "osm": "n82587719", "name": "Collector", "kind": "village", "at": [149.43227, -34.91334] },
+    {
+      "osm": "n84321801",
+      "name": "Wombeyan Caves",
+      "kind": "village",
+      "at": [149.96883, -34.30846]
+    },
+    { "osm": "n84491138", "name": "Pottsville", "kind": "village", "at": [153.56083, -28.38694] },
+    {
+      "osm": "n86702528",
+      "name": "Stuarts Point",
+      "kind": "village",
+      "at": [152.99331, -30.82093]
+    },
+    { "osm": "n92411425", "name": "Glen Aplin", "kind": "village", "at": [151.87718, -28.73839] },
+    { "osm": "n97363933", "name": "Potato Point", "kind": "village", "at": [150.13501, -36.09649] },
+    { "osm": "n97363937", "name": "Bodalla", "kind": "village", "at": [150.04855, -36.09072] },
+    { "osm": "n97368443", "name": "Runnyford", "kind": "village", "at": [150.1072, -35.70246] },
+    { "osm": "n97542974", "name": "Malmsbury", "kind": "village", "at": [144.38278, -37.18877] },
+    { "osm": "n97551519", "name": "Taradale", "kind": "village", "at": [144.34817, -37.13837] },
+    { "osm": "n99490721", "name": "Marysville", "kind": "village", "at": [145.74904, -37.50977] },
+    { "osm": "n99621023", "name": "Bowning", "kind": "village", "at": [148.82036, -34.77063] },
+    { "osm": "n106501642", "name": "Edi", "kind": "village", "at": [146.42698, -36.64906] },
+    { "osm": "n106783005", "name": "Tolmie", "kind": "village", "at": [146.23888, -36.93608] },
+    { "osm": "n106945273", "name": "Whitfield", "kind": "village", "at": [146.41423, -36.76546] },
+    { "osm": "n110719247", "name": "Perthville", "kind": "village", "at": [149.54795, -33.49051] },
+    {
+      "osm": "n113133670",
+      "name": "Bawley Point",
+      "kind": "village",
+      "at": [150.39234, -35.50735]
+    },
+    { "osm": "n113133746", "name": "Bendalong", "kind": "village", "at": [150.5321, -35.24588] },
+    { "osm": "n113133778", "name": "Berrara", "kind": "village", "at": [150.55018, -35.20548] },
+    { "osm": "n113134314", "name": "Cudmirrah", "kind": "village", "at": [150.55681, -35.19782] },
+    { "osm": "n113134619", "name": "East Lynne", "kind": "village", "at": [150.26778, -35.615] },
+    { "osm": "n113134636", "name": "Durras North", "kind": "village", "at": [150.30296, -35.6362] },
+    {
+      "osm": "n113134719",
+      "name": "Fishermans Paradise",
+      "kind": "village",
+      "at": [150.44528, -35.22972]
+    },
+    { "osm": "n113134942", "name": "Manyana", "kind": "village", "at": [150.51727, -35.25671] },
+    { "osm": "n113135004", "name": "Kioloa", "kind": "village", "at": [150.37752, -35.55916] },
+    { "osm": "n113135032", "name": "Lake Conjola", "kind": "village", "at": [150.48912, -35.2698] },
+    {
+      "osm": "n113135446",
+      "name": "Tabourie Lake",
+      "kind": "village",
+      "at": [150.39951, -35.44021]
+    },
+    { "osm": "n113135471", "name": "Swanhaven", "kind": "village", "at": [150.57324, -35.17982] },
+    { "osm": "n113135793", "name": "Termeil", "kind": "village", "at": [150.33444, -35.48167] },
+    { "osm": "n113135833", "name": "Wandandian", "kind": "village", "at": [150.51072, -35.08736] },
+    { "osm": "n113235139", "name": "Aylmerton", "kind": "village", "at": [150.4953, -34.4186] },
+    { "osm": "n113235148", "name": "Balmoral", "kind": "village", "at": [150.52282, -34.30579] },
+    { "osm": "n113237593", "name": "Burradoo", "kind": "village", "at": [150.40751, -34.50133] },
+    { "osm": "n113237609", "name": "Buxton", "kind": "village", "at": [150.53448, -34.25493] },
+    { "osm": "n113237626", "name": "Burrawang", "kind": "village", "at": [150.51752, -34.59348] },
+    { "osm": "n113237691", "name": "Colo Vale", "kind": "village", "at": [150.4839, -34.40046] },
+    { "osm": "n113237839", "name": "Glenquarry", "kind": "village", "at": [150.48444, -34.515] },
+    { "osm": "n113238068", "name": "Kangaloon", "kind": "village", "at": [150.53444, -34.54833] },
+    { "osm": "n113238116", "name": "Penrose", "kind": "village", "at": [150.21403, -34.67142] },
+    { "osm": "n113238142", "name": "Welby", "kind": "village", "at": [150.42312, -34.44066] },
+    {
+      "osm": "n113238286",
+      "name": "Wildes Meadow",
+      "kind": "village",
+      "at": [150.52892, -34.60637]
+    },
+    { "osm": "n113238338", "name": "Yerrinbool", "kind": "village", "at": [150.54217, -34.3652] },
+    { "osm": "n113238354", "name": "Willow Vale", "kind": "village", "at": [150.47007, -34.43601] },
+    { "osm": "n113254266", "name": "Burragate", "kind": "village", "at": [149.62165, -37.00755] },
+    { "osm": "n113254359", "name": "Cobargo", "kind": "village", "at": [149.88851, -36.38801] },
+    {
+      "osm": "n113255436",
+      "name": "Wallaga Lake Heights",
+      "kind": "village",
+      "at": [150.0735, -36.37038]
+    },
+    {
+      "osm": "n113255592",
+      "name": "Wonboyn Lake",
+      "kind": "village",
+      "at": [149.91256, -37.25078]
+    },
+    {
+      "osm": "n113259988",
+      "name": "South Durras",
+      "kind": "village",
+      "at": [150.29995, -35.66541]
+    },
+    { "osm": "n113260008", "name": "Durras Lake", "kind": "village", "at": [150.29561, -35.64659] },
+    { "osm": "n113260163", "name": "Kianga", "kind": "village", "at": [150.12852, -36.19605] },
+    { "osm": "n113365284", "name": "Glengarry", "kind": "village", "at": [147.62036, -29.6674] },
+    { "osm": "n113372218", "name": "Adaminaby", "kind": "village", "at": [148.77472, -35.99556] },
+    { "osm": "n113372811", "name": "Dalgety", "kind": "village", "at": [148.83473, -36.50512] },
+    {
+      "osm": "n113373467",
+      "name": "Perisher Valley",
+      "kind": "village",
+      "at": [148.41066, -36.40565]
+    },
+    { "osm": "n113373977", "name": "Thredbo", "kind": "village", "at": [148.30571, -36.50478] },
+    { "osm": "n113374004", "name": "Tyrolean", "kind": "village", "at": [148.63636, -36.40751] },
+    { "osm": "n113393316", "name": "Euston", "kind": "village", "at": [142.74501, -34.5762] },
+    {
+      "osm": "n113465161",
+      "name": "North Bourke",
+      "kind": "village",
+      "at": [145.95111, -30.04833]
+    },
+    { "osm": "n113465201", "name": "Darnick", "kind": "village", "at": [143.62462, -32.85122] },
+    { "osm": "n113486396", "name": "Michelago", "kind": "village", "at": [149.16778, -35.715] },
+    { "osm": "n113581169", "name": "Coreen", "kind": "village", "at": [146.3451, -35.74849] },
+    { "osm": "n113581361", "name": "Daysdale", "kind": "village", "at": [146.3016, -35.64531] },
+    { "osm": "n113629141", "name": "Inveralochy", "kind": "village", "at": [149.65111, -34.965] },
+    { "osm": "n113637789", "name": "Brocklesby", "kind": "village", "at": [146.68207, -35.82342] },
+    {
+      "osm": "n113637869",
+      "name": "Burrumbuttock",
+      "kind": "village",
+      "at": [146.80601, -35.83428]
+    },
+    { "osm": "n113638043", "name": "Gerogery", "kind": "village", "at": [146.99389, -35.83372] },
+    { "osm": "n113641093", "name": "Jugiong", "kind": "village", "at": [148.32537, -34.82197] },
+    { "osm": "n113641312", "name": "Cunningar", "kind": "village", "at": [148.41617, -34.56088] },
+    { "osm": "n113641368", "name": "Wombat", "kind": "village", "at": [148.24242, -34.42372] },
+    { "osm": "n113641388", "name": "Kingsvale", "kind": "village", "at": [148.31947, -34.44294] },
+    { "osm": "n113649067", "name": "Booligal", "kind": "village", "at": [144.88654, -33.86797] },
+    { "osm": "n113668649", "name": "Burcher", "kind": "village", "at": [147.25111, -33.515] },
+    { "osm": "n113685244", "name": "Milbrulong", "kind": "village", "at": [146.8456, -35.25461] },
+    {
+      "osm": "n113685339",
+      "name": "Pleasant Hills",
+      "kind": "village",
+      "at": [146.79676, -35.46197]
+    },
+    { "osm": "n113685358", "name": "Osborne", "kind": "village", "at": [146.71778, -35.34833] },
+    { "osm": "n113685427", "name": "Urangeline", "kind": "village", "at": [146.63444, -35.44833] },
+    { "osm": "n113685468", "name": "Yerong Creek", "kind": "village", "at": [147.05815, -35.3871] },
+    { "osm": "n113689153", "name": "Ashley", "kind": "village", "at": [149.80656, -29.317] },
+    { "osm": "n113689225", "name": "Biniguy", "kind": "village", "at": [150.20741, -29.5401] },
+    { "osm": "n113689317", "name": "Boomi", "kind": "village", "at": [149.57902, -28.72388] },
+    { "osm": "n113692584", "name": "Coleambally", "kind": "village", "at": [145.88098, -34.80524] },
+    { "osm": "n113693290", "name": "Womboota", "kind": "village", "at": [144.59845, -35.91026] },
+    { "osm": "n113696573", "name": "Barellan", "kind": "village", "at": [146.57396, -34.2874] },
+    { "osm": "n113704510", "name": "Araluen", "kind": "village", "at": [149.81365, -35.64322] },
+    {
+      "osm": "n113707646",
+      "name": "Jenolan Caves",
+      "kind": "village",
+      "at": [150.02063, -33.82059]
+    },
+    { "osm": "n113708299", "name": "Mount David", "kind": "village", "at": [149.60111, -33.815] },
+    { "osm": "n113708385", "name": "Nerriga", "kind": "village", "at": [150.08444, -35.115] },
+    { "osm": "n113708446", "name": "Spring Hill", "kind": "village", "at": [149.15323, -33.39781] },
+    { "osm": "n113708481", "name": "Sutton", "kind": "village", "at": [149.25432, -35.16166] },
+    { "osm": "n113712142", "name": "Brungle", "kind": "village", "at": [148.22865, -35.14836] },
+    { "osm": "n113712291", "name": "Cabramurra", "kind": "village", "at": [148.38086, -35.93617] },
+    { "osm": "n113716339", "name": "Bigga", "kind": "village", "at": [149.15066, -34.08433] },
+    { "osm": "n113716340", "name": "Binda", "kind": "village", "at": [149.36592, -34.3295] },
+    { "osm": "n113716388", "name": "Dalton", "kind": "village", "at": [149.18135, -34.72223] },
+    { "osm": "n113716627", "name": "Laggan", "kind": "village", "at": [149.53199, -34.40316] },
+    { "osm": "n113722303", "name": "Galore", "kind": "village", "at": [146.81371, -34.99828] },
+    { "osm": "n113722401", "name": "Humula", "kind": "village", "at": [147.76272, -35.48845] },
+    { "osm": "n113723912", "name": "Tooleybuc", "kind": "village", "at": [143.33738, -35.03048] },
+    { "osm": "n113723988", "name": "Wakool", "kind": "village", "at": [144.39683, -35.46939] },
+    { "osm": "n113724103", "name": "Walcha Road", "kind": "village", "at": [151.40285, -30.94514] },
+    { "osm": "n113728580", "name": "Quandialla", "kind": "village", "at": [147.79121, -34.01385] },
+    { "osm": "n113731370", "name": "Bookham", "kind": "village", "at": [148.64082, -34.81434] },
+    { "osm": "n113732043", "name": "Wee Jasper", "kind": "village", "at": [148.67592, -35.11057] },
+    { "osm": "n113736656", "name": "Hillgrove", "kind": "village", "at": [151.90836, -30.56917] },
+    { "osm": "n113745472", "name": "Brewongle", "kind": "village", "at": [149.7153, -33.48668] },
+    { "osm": "n113745729", "name": "Cumbalum", "kind": "village", "at": [153.53457, -28.8222] },
+    {
+      "osm": "n113746028",
+      "name": "Georges Plains",
+      "kind": "village",
+      "at": [149.52451, -33.51461]
+    },
+    { "osm": "n113746622", "name": "Rockley", "kind": "village", "at": [149.56373, -33.68923] },
+    { "osm": "n113746706", "name": "Peel", "kind": "village", "at": [149.63421, -33.31181] },
+    { "osm": "n113746726", "name": "Sofala", "kind": "village", "at": [149.69148, -33.08047] },
+    { "osm": "n113749758", "name": "The Lagoon", "kind": "village", "at": [149.60548, -33.53929] },
+    { "osm": "n113749828", "name": "Sunny Corner", "kind": "village", "at": [149.8884, -33.38428] },
+    { "osm": "n113749879", "name": "Vittoria", "kind": "village", "at": [149.36778, -33.43167] },
+    {
+      "osm": "n113749898",
+      "name": "Trunkey Creek",
+      "kind": "village",
+      "at": [149.32512, -33.81859]
+    },
+    { "osm": "n113750174", "name": "Wimbledon", "kind": "village", "at": [149.41778, -33.53167] },
+    { "osm": "n113750262", "name": "Wattle Flat", "kind": "village", "at": [149.69009, -33.14096] },
+    { "osm": "n113750278", "name": "Yetholme", "kind": "village", "at": [149.81778, -33.44833] },
+    { "osm": "n113750905", "name": "Barooga", "kind": "village", "at": [145.69499, -35.90993] },
+    { "osm": "n113751007", "name": "Bostobrick", "kind": "village", "at": [152.62898, -30.27603] },
+    { "osm": "n113751026", "name": "Brierfield", "kind": "village", "at": [152.90111, -30.49833] },
+    { "osm": "n113751272", "name": "Fernmount", "kind": "village", "at": [152.94088, -30.47031] },
+    { "osm": "n113751380", "name": "Gleniffer", "kind": "village", "at": [152.88444, -30.38167] },
+    { "osm": "n113751670", "name": "Mylestom", "kind": "village", "at": [153.04421, -30.46504] },
+    {
+      "osm": "n113751697",
+      "name": "Paddys Plain",
+      "kind": "village",
+      "at": [152.68444, -30.24833]
+    },
+    {
+      "osm": "n113751734",
+      "name": "North Dorrigo",
+      "kind": "village",
+      "at": [152.68241, -30.29089]
+    },
+    { "osm": "n113751786", "name": "Repton", "kind": "village", "at": [153.02384, -30.43752] },
+    { "osm": "n113751800", "name": "Raleigh", "kind": "village", "at": [153.01148, -30.45475] },
+    { "osm": "n113751874", "name": "Thora", "kind": "village", "at": [152.78008, -30.4253] },
+    { "osm": "n113751937", "name": "Valery", "kind": "village", "at": [152.97062, -30.39724] },
+    { "osm": "n113754687", "name": "Barry", "kind": "village", "at": [149.26778, -33.64833] },
+    { "osm": "n113754947", "name": "Carcoar", "kind": "village", "at": [149.1395, -33.61129] },
+    { "osm": "n113755261", "name": "Mandurama", "kind": "village", "at": [149.07209, -33.65052] },
+    { "osm": "n113755335", "name": "Lyndhurst", "kind": "village", "at": [149.03592, -33.67337] },
+    { "osm": "n113755394", "name": "Neville", "kind": "village", "at": [149.21525, -33.71219] },
+    { "osm": "n113755412", "name": "Millthorpe", "kind": "village", "at": [149.18303, -33.44702] },
+    { "osm": "n113755526", "name": "Newbridge", "kind": "village", "at": [149.36789, -33.58487] },
+    { "osm": "n113763292", "name": "Billinudgel", "kind": "village", "at": [153.52815, -28.50376] },
+    { "osm": "n113763983", "name": "Ewingsdale", "kind": "village", "at": [153.55366, -28.63841] },
+    { "osm": "n113764295", "name": "Goodooga", "kind": "village", "at": [147.45213, -29.1137] },
+    { "osm": "n113765205", "name": "Ocean Shores", "kind": "village", "at": [153.54, -28.52056] },
+    {
+      "osm": "n113765393",
+      "name": "Weilmoringle",
+      "kind": "village",
+      "at": [146.91923, -29.23922]
+    },
+    { "osm": "n114176099", "name": "Aberdare", "kind": "village", "at": [151.38027, -32.84278] },
+    { "osm": "n114176100", "name": "Abermain", "kind": "village", "at": [151.4275, -32.80722] },
+    { "osm": "n114176104", "name": "Abernethy", "kind": "village", "at": [151.39685, -32.88128] },
+    { "osm": "n114176108", "name": "Bellbird", "kind": "village", "at": [151.31833, -32.855] },
+    { "osm": "n114176362", "name": "Ellalong", "kind": "village", "at": [151.31074, -32.9145] },
+    { "osm": "n114176432", "name": "Kearsley", "kind": "village", "at": [151.39777, -32.86083] },
+    { "osm": "n114176469", "name": "Kitchener", "kind": "village", "at": [151.36812, -32.87785] },
+    { "osm": "n114176529", "name": "Mount Vincent", "kind": "village", "at": [151.48444, -32.915] },
+    { "osm": "n114176542", "name": "Millfield", "kind": "village", "at": [151.25889, -32.88972] },
+    { "osm": "n114176546", "name": "Nulkaba", "kind": "village", "at": [151.35111, -32.79833] },
+    { "osm": "n114176558", "name": "Paxton", "kind": "village", "at": [151.28441, -32.90315] },
+    { "osm": "n114176572", "name": "Pelton", "kind": "village", "at": [151.30111, -32.88166] },
+    { "osm": "n114176604", "name": "Mulbring", "kind": "village", "at": [151.48052, -32.90462] },
+    { "osm": "n114176647", "name": "Neath", "kind": "village", "at": [151.40682, -32.82789] },
+    { "osm": "n114176711", "name": "Wollombi", "kind": "village", "at": [151.14168, -32.93785] },
+    { "osm": "n114202469", "name": "Angourie", "kind": "village", "at": [153.36004, -29.47888] },
+    { "osm": "n114202476", "name": "Ashby", "kind": "village", "at": [153.19621, -29.43696] },
+    { "osm": "n114202725", "name": "Brooms Head", "kind": "village", "at": [153.3369, -29.60949] },
+    { "osm": "n114203035", "name": "Copmanhurst", "kind": "village", "at": [152.77636, -29.58591] },
+    {
+      "osm": "n114203098",
+      "name": "Coutts Crossing",
+      "kind": "village",
+      "at": [152.89137, -29.83091]
+    },
+    { "osm": "n114203251", "name": "Glenreagh", "kind": "village", "at": [152.97872, -30.0512] },
+    { "osm": "n114203391", "name": "Gulmarrad", "kind": "village", "at": [153.23444, -29.49] },
+    {
+      "osm": "n114203415",
+      "name": "Gordon Brook",
+      "kind": "village",
+      "at": [152.63444, -29.44833]
+    },
+    { "osm": "n114203774", "name": "Iluka", "kind": "village", "at": [153.35124, -29.40751] },
+    { "osm": "n114204220", "name": "Lawrence", "kind": "village", "at": [153.10034, -29.50098] },
+    {
+      "osm": "n114370884",
+      "name": "East Gresford",
+      "kind": "village",
+      "at": [151.55452, -32.42892]
+    },
+    { "osm": "n114371036", "name": "Gresford", "kind": "village", "at": [151.54557, -32.42812] },
+    { "osm": "n114371233", "name": "Martins Creek", "kind": "village", "at": [151.61778, -32.565] },
+    { "osm": "n114371243", "name": "Marshdale", "kind": "village", "at": [151.78582, -32.45111] },
+    { "osm": "n114371357", "name": "Salisbury", "kind": "village", "at": [151.56112, -32.21745] },
+    { "osm": "n114371472", "name": "Wallarobba", "kind": "village", "at": [151.70111, -32.49833] },
+    { "osm": "n114371481", "name": "Vacy", "kind": "village", "at": [151.57644, -32.53953] },
+    { "osm": "n114377163", "name": "Emmaville", "kind": "village", "at": [151.59803, -29.44482] },
+    { "osm": "n114381210", "name": "Beechwood", "kind": "village", "at": [152.66649, -31.43643] },
+    { "osm": "n114381783", "name": "Bunyah", "kind": "village", "at": [152.21948, -32.16469] },
+    {
+      "osm": "n114381946",
+      "name": "Central Lansdowne",
+      "kind": "village",
+      "at": [152.48444, -31.73167]
+    },
+    { "osm": "n114382172", "name": "Coopernook", "kind": "village", "at": [152.61435, -31.8257] },
+    { "osm": "n114382244", "name": "Comboyne", "kind": "village", "at": [152.46803, -31.60552] },
+    { "osm": "n114382298", "name": "Crowdy Head", "kind": "village", "at": [152.75075, -31.84089] },
+    { "osm": "n114382510", "name": "Ebor", "kind": "village", "at": [152.35111, -30.40111] },
+    {
+      "osm": "n114382663",
+      "name": "Ellenborough",
+      "kind": "village",
+      "at": [152.46512, -31.44191]
+    },
+    { "osm": "n114383502", "name": "Kew", "kind": "village", "at": [152.72415, -31.63364] },
+    { "osm": "n114383529", "name": "Kendall", "kind": "village", "at": [152.7045, -31.63253] },
+    { "osm": "n114383605", "name": "Johns River", "kind": "village", "at": [152.69614, -31.73127] },
+    { "osm": "n114383736", "name": "Kolodong", "kind": "village", "at": [152.42194, -31.88811] },
+    { "osm": "n114383808", "name": "King Creek", "kind": "village", "at": [152.75281, -31.48657] },
+    { "osm": "n114383998", "name": "Lansdowne", "kind": "village", "at": [152.53458, -31.78301] },
+    { "osm": "n114384052", "name": "Lake Cathie", "kind": "village", "at": [152.8551, -31.55277] },
+    {
+      "osm": "n114384287",
+      "name": "Manning Point",
+      "kind": "village",
+      "at": [152.66257, -31.89512]
+    },
+    { "osm": "n114384329", "name": "Long Flat", "kind": "village", "at": [152.48893, -31.43688] },
+    { "osm": "n114384400", "name": "North Star", "kind": "village", "at": [150.39327, -28.92992] },
+    {
+      "osm": "n114384464",
+      "name": "Mount George",
+      "kind": "village",
+      "at": [152.18664, -31.88599]
+    },
+    { "osm": "n114384513", "name": "Moorland", "kind": "village", "at": [152.64879, -31.7703] },
+    { "osm": "n114384794", "name": "Purfleet", "kind": "village", "at": [152.46855, -31.94158] },
+    { "osm": "n114385017", "name": "Warialda Rail", "kind": "village", "at": [150.53941, -29.579] },
+    {
+      "osm": "n114385459",
+      "name": "Wallabi Point",
+      "kind": "village",
+      "at": [152.5698, -31.99577]
+    },
+    { "osm": "n114607591", "name": "Denman", "kind": "village", "at": [150.68806, -32.38951] },
+    { "osm": "n114611095", "name": "Backmede", "kind": "village", "at": [153.01778, -28.74833] },
+    { "osm": "n114611219", "name": "Codrington", "kind": "village", "at": [153.24278, -28.94833] },
+    { "osm": "n114611233", "name": "Coombell", "kind": "village", "at": [152.945, -29.02417] },
+    { "osm": "n114611302", "name": "Greenridge", "kind": "village", "at": [153.11778, -28.89833] },
+    { "osm": "n114611362", "name": "Leeville", "kind": "village", "at": [153.00111, -28.94833] },
+    {
+      "osm": "n114611415",
+      "name": "Naughtons Gap",
+      "kind": "village",
+      "at": [153.10111, -28.79833]
+    },
+    { "osm": "n114611435", "name": "Rappville", "kind": "village", "at": [152.95211, -29.08535] },
+    { "osm": "n114611488", "name": "Rileys Hill", "kind": "village", "at": [153.40111, -29.015] },
+    { "osm": "n114632095", "name": "Bilambil", "kind": "village", "at": [153.46595, -28.22459] },
+    { "osm": "n114632149", "name": "Bogangar", "kind": "village", "at": [153.57009, -28.33637] },
+    { "osm": "n114632229", "name": "Burringbar", "kind": "village", "at": [153.47032, -28.43854] },
+    { "osm": "n114632290", "name": "Casuarina", "kind": "village", "at": [153.57388, -28.28889] },
+    { "osm": "n114632370", "name": "Condong", "kind": "village", "at": [153.43512, -28.31148] },
+    { "osm": "n114632398", "name": "Cudgen", "kind": "village", "at": [153.5588, -28.26256] },
+    {
+      "osm": "n114632435",
+      "name": "Crystal Creek",
+      "kind": "village",
+      "at": [153.3198, -28.31343]
+    },
+    { "osm": "n114632560", "name": "Fernvale", "kind": "village", "at": [153.42611, -28.365] },
+    { "osm": "n114632712", "name": "Kielvale", "kind": "village", "at": [153.43343, -28.3336] },
+    { "osm": "n114632737", "name": "Liston", "kind": "village", "at": [152.08401, -28.64521] },
+    { "osm": "n114632812", "name": "Old Koreelah", "kind": "village", "at": [152.4263, -28.39312] },
+    { "osm": "n114632849", "name": "Nunderi", "kind": "village", "at": [153.46331, -28.32267] },
+    {
+      "osm": "n114632958",
+      "name": "Stokers Siding",
+      "kind": "village",
+      "at": [153.40468, -28.39635]
+    },
+    { "osm": "n114633019", "name": "Torrington", "kind": "village", "at": [151.69675, -29.3113] },
+    { "osm": "n114633060", "name": "Terranora", "kind": "village", "at": [153.50944, -28.24556] },
+    { "osm": "n114633125", "name": "Tumbulgum", "kind": "village", "at": [153.4611, -28.27514] },
+    { "osm": "n114638223", "name": "Bendemeer", "kind": "village", "at": [151.15579, -30.88258] },
+    {
+      "osm": "n114638267",
+      "name": "Bowling Alley Point",
+      "kind": "village",
+      "at": [151.13444, -31.39833]
+    },
+    {
+      "osm": "n114638497",
+      "name": "Hanging Rock",
+      "kind": "village",
+      "at": [151.18444, -31.48167]
+    },
+    {
+      "osm": "n114638816",
+      "name": "Upper Manilla",
+      "kind": "village",
+      "at": [150.66778, -30.63167]
+    },
+    {
+      "osm": "n114643687",
+      "name": "Bottle Creek",
+      "kind": "village",
+      "at": [152.65194, -28.78861]
+    },
+    { "osm": "n114643709", "name": "Bundgeam", "kind": "village", "at": [152.88444, -28.43167] },
+    { "osm": "n114643735", "name": "Capeen", "kind": "village", "at": [152.66778, -28.58167] },
+    { "osm": "n114643782", "name": "Cedar Point", "kind": "village", "at": [153.00194, -28.68417] },
+    {
+      "osm": "n114643807",
+      "name": "Collins Creek",
+      "kind": "village",
+      "at": [153.03111, -28.47833]
+    },
+    {
+      "osm": "n114643831",
+      "name": "Culmaran Creek",
+      "kind": "village",
+      "at": [152.6687, -28.86456]
+    },
+    { "osm": "n114643864", "name": "Duck Creek", "kind": "village", "at": [152.6575, -28.61139] },
+    { "osm": "n114643920", "name": "Ettrick", "kind": "village", "at": [152.91417, -28.64917] },
+    { "osm": "n114643942", "name": "Eden Creek", "kind": "village", "at": [152.91472, -28.58028] },
+    { "osm": "n114643956", "name": "Edenville", "kind": "village", "at": [152.95611, -28.6875] },
+    {
+      "osm": "n114644031",
+      "name": "Green Pigeon",
+      "kind": "village",
+      "at": [153.07472, -28.49028]
+    },
+    { "osm": "n114644043", "name": "Ghinni Ghi", "kind": "village", "at": [152.78596, -28.62351] },
+    { "osm": "n114644094", "name": "Grevillia", "kind": "village", "at": [152.83467, -28.44303] },
+    {
+      "osm": "n114644114",
+      "name": "Horseshoe Creek",
+      "kind": "village",
+      "at": [153.0375, -28.535]
+    },
+    { "osm": "n114644121", "name": "Homeleigh", "kind": "village", "at": [153.06417, -28.56833] },
+    { "osm": "n114644296", "name": "Mount Lion", "kind": "village", "at": [152.95389, -28.43401] },
+    { "osm": "n114644310", "name": "Mummulgum", "kind": "village", "at": [152.80111, -28.84833] },
+    {
+      "osm": "n114644355",
+      "name": "Lynchs Creek",
+      "kind": "village",
+      "at": [152.99444, -28.45333]
+    },
+    {
+      "osm": "n114644424",
+      "name": "Old Grevillia",
+      "kind": "village",
+      "at": [152.87837, -28.44282]
+    },
+    { "osm": "n114644475", "name": "Wiangaree", "kind": "village", "at": [152.96528, -28.50838] },
+    { "osm": "n114644531", "name": "Tunglebung", "kind": "village", "at": [152.66796, -28.82958] },
+    { "osm": "n114651194", "name": "Bexhill", "kind": "village", "at": [153.34655, -28.76272] },
+    { "osm": "n114651254", "name": "Broadwater", "kind": "village", "at": [153.4321, -29.01398] },
+    { "osm": "n114651317", "name": "Clunes", "kind": "village", "at": [153.40561, -28.73229] },
+    { "osm": "n114651324", "name": "Coraki", "kind": "village", "at": [153.28741, -28.98684] },
+    { "osm": "n114651355", "name": "Dunoon", "kind": "village", "at": [153.31541, -28.68403] },
+    { "osm": "n114651517", "name": "Wadeville", "kind": "village", "at": [153.13444, -28.565] },
+    {
+      "osm": "n114651524",
+      "name": "Tuntable Falls",
+      "kind": "village",
+      "at": [153.26778, -28.58167]
+    },
+    { "osm": "n114655862", "name": "Burrapine", "kind": "village", "at": [152.64361, -30.72278] },
+    { "osm": "n114655876", "name": "Congarinni", "kind": "village", "at": [152.87889, -30.75167] },
+    {
+      "osm": "n114655903",
+      "name": "Eungai Creek",
+      "kind": "village",
+      "at": [152.87705, -30.82977]
+    },
+    { "osm": "n114655909", "name": "Eungai Rail", "kind": "village", "at": [152.90071, -30.84957] },
+    { "osm": "n114655939", "name": "Hyland Park", "kind": "village", "at": [153, -30.61222] },
+    {
+      "osm": "n114655965",
+      "name": "Lower Taylors Arm",
+      "kind": "village",
+      "at": [152.71479, -30.76955]
+    },
+    { "osm": "n114655978", "name": "Scotts Head", "kind": "village", "at": [152.9963, -30.74605] },
+    { "osm": "n114655993", "name": "Tamban", "kind": "village", "at": [152.83444, -30.865] },
+    { "osm": "n114656003", "name": "Talarm", "kind": "village", "at": [152.84885, -30.71352] },
+    { "osm": "n114656028", "name": "Valla", "kind": "village", "at": [152.96778, -30.59833] },
+    { "osm": "n114656064", "name": "Warrell Creek", "kind": "village", "at": [152.90012, -30.764] },
+    { "osm": "n114658039", "name": "Boree Creek", "kind": "village", "at": [146.60809, -35.10808] },
+    { "osm": "n114658057", "name": "Kentucky", "kind": "village", "at": [151.45094, -30.75891] },
+    { "osm": "n114658066", "name": "Kingstown", "kind": "village", "at": [151.11677, -30.50762] },
+    { "osm": "n114658077", "name": "Rand", "kind": "village", "at": [146.58065, -35.59429] },
+    { "osm": "n114993455", "name": "Allworth", "kind": "village", "at": [151.95895, -32.53996] },
+    {
+      "osm": "n114993489",
+      "name": "Blueys Beach",
+      "kind": "village",
+      "at": [152.53167, -32.34917]
+    },
+    {
+      "osm": "n114993536",
+      "name": "Boomerang Beach",
+      "kind": "village",
+      "at": [152.54125, -32.34066]
+    },
+    { "osm": "n114993668", "name": "Bundabah", "kind": "village", "at": [152.06504, -32.66458] },
+    { "osm": "n114993720", "name": "Carrington", "kind": "village", "at": [152.01472, -32.66611] },
+    {
+      "osm": "n114993783",
+      "name": "Charlotte Bay",
+      "kind": "village",
+      "at": [152.50777, -32.35084]
+    },
+    {
+      "osm": "n114993815",
+      "name": "Coolongolook",
+      "kind": "village",
+      "at": [152.32194, -32.21722]
+    },
+    { "osm": "n114993924", "name": "Coomba Park", "kind": "village", "at": [152.47006, -32.24065] },
+    {
+      "osm": "n114993969",
+      "name": "Elizabeth Beach",
+      "kind": "village",
+      "at": [152.53135, -32.33264]
+    },
+    { "osm": "n114994033", "name": "Green Point", "kind": "village", "at": [152.51753, -32.24921] },
+    {
+      "osm": "n114994145",
+      "name": "Limeburners Creek",
+      "kind": "village",
+      "at": [151.89806, -32.60278]
+    },
+    { "osm": "n114994170", "name": "Karuah", "kind": "village", "at": [151.96556, -32.65444] },
+    {
+      "osm": "n114994336",
+      "name": "North Arm Cove",
+      "kind": "village",
+      "at": [152.04125, -32.66952]
+    },
+    { "osm": "n114994349", "name": "Nerong", "kind": "village", "at": [152.21361, -32.50944] },
+    { "osm": "n114994396", "name": "Pindimar", "kind": "village", "at": [152.10556, -32.67972] },
+    { "osm": "n114994527", "name": "Smiths Lake", "kind": "village", "at": [152.50167, -32.38694] },
+    { "osm": "n114995477", "name": "Tarbuck Bay", "kind": "village", "at": [152.48112, -32.36505] },
+    { "osm": "n114995534", "name": "Stroud Road", "kind": "village", "at": [151.92972, -32.34528] },
+    { "osm": "n114995602", "name": "Wards River", "kind": "village", "at": [151.93528, -32.2225] },
+    { "osm": "n114995712", "name": "Wootton", "kind": "village", "at": [152.30056, -32.29639] },
+    { "osm": "n115055521", "name": "Bonshaw", "kind": "village", "at": [151.277, -29.04696] },
+    { "osm": "n115069933", "name": "Arakoon", "kind": "village", "at": [153.07091, -30.88648] },
+    { "osm": "n115070062", "name": "Bellbrook", "kind": "village", "at": [152.50921, -30.81836] },
+    {
+      "osm": "n115070078",
+      "name": "Bellimbopinni",
+      "kind": "village",
+      "at": [152.90111, -30.99833]
+    },
+    {
+      "osm": "n115070183",
+      "name": "Burnt Bridge",
+      "kind": "village",
+      "at": [152.80611, -31.10778]
+    },
+    { "osm": "n115070533", "name": "Euroka", "kind": "village", "at": [152.80111, -31.08167] },
+    { "osm": "n115070675", "name": "Greenhill", "kind": "village", "at": [152.80389, -31.04694] },
+    { "osm": "n115070724", "name": "Grassy Head", "kind": "village", "at": [152.98874, -30.78586] },
+    { "osm": "n115070810", "name": "Hat Head", "kind": "village", "at": [153.05163, -31.05454] },
+    { "osm": "n115070881", "name": "Jerseyville", "kind": "village", "at": [153.03683, -30.92459] },
+    { "osm": "n115070916", "name": "Kinchela", "kind": "village", "at": [152.99054, -30.99037] },
+    { "osm": "n115070927", "name": "Kookaburra", "kind": "village", "at": [152.33444, -31.03167] },
+    { "osm": "n115071003", "name": "Kundabung", "kind": "village", "at": [152.81778, -31.215] },
+    { "osm": "n115096530", "name": "Cassilis", "kind": "village", "at": [149.98029, -32.00613] },
+    { "osm": "n115097422", "name": "Gundy", "kind": "village", "at": [150.99841, -32.01383] },
+    { "osm": "n115097486", "name": "Greta", "kind": "village", "at": [151.39281, -32.67925] },
+    { "osm": "n115098301", "name": "Satur", "kind": "village", "at": [150.84403, -32.04077] },
+    { "osm": "n116950472", "name": "Coramba", "kind": "village", "at": [153.01488, -30.22086] },
+    {
+      "osm": "n116950480",
+      "name": "Corindi Beach",
+      "kind": "village",
+      "at": [153.19832, -30.02959]
+    },
+    { "osm": "n116950509", "name": "Fridays Creek", "kind": "village", "at": [153.01778, -30.315] },
+    { "osm": "n116950639", "name": "Ulong", "kind": "village", "at": [152.88546, -30.24081] },
+    { "osm": "n116980591", "name": "Noraville", "kind": "village", "at": [151.5582, -33.26438] },
+    { "osm": "n116990408", "name": "Capertee", "kind": "village", "at": [149.9855, -33.14647] },
+    { "osm": "n117040729", "name": "Bell", "kind": "village", "at": [150.27976, -33.50336] },
+    {
+      "osm": "n117040913",
+      "name": "Hawkesbury Heights",
+      "kind": "village",
+      "at": [150.64253, -33.66539]
+    },
+    { "osm": "n117041024", "name": "Medlow Bath", "kind": "village", "at": [150.28259, -33.67432] },
+    { "osm": "n117041157", "name": "Mount Wilson", "kind": "village", "at": [150.36778, -33.515] },
+    { "osm": "n117050524", "name": "Bilpin", "kind": "village", "at": [150.52882, -33.49649] },
+    { "osm": "n117051118", "name": "Kurmond", "kind": "village", "at": [150.6926, -33.55164] },
+    { "osm": "n117211266", "name": "Pooncarie", "kind": "village", "at": [142.56778, -33.38167] },
+    { "osm": "n118193834", "name": "Menzies", "kind": "village", "at": [121.02913, -29.69237] },
+    { "osm": "n120558074", "name": "Thirlmere", "kind": "village", "at": [150.57147, -34.20396] },
+    { "osm": "n120578048", "name": "Nattai", "kind": "village", "at": [150.45411, -34.06255] },
+    { "osm": "n124404120", "name": "Branxholme", "kind": "village", "at": [141.8012, -37.8553] },
+    { "osm": "n124407460", "name": "Cavendish", "kind": "village", "at": [142.04088, -37.52682] },
+    { "osm": "n124601932", "name": "Suffolk Park", "kind": "village", "at": [153.61235, -28.6868] },
+    { "osm": "n124895298", "name": "Elimbah", "kind": "village", "at": [152.9438, -27.01137] },
+    { "osm": "n125554640", "name": "Tura Beach", "kind": "village", "at": [149.92447, -36.86281] },
+    { "osm": "n129243089", "name": "Nymboida", "kind": "village", "at": [152.72739, -29.93825] },
+    {
+      "osm": "n131091197",
+      "name": "Peterborough",
+      "kind": "village",
+      "at": [142.87702, -38.60612]
+    },
+    { "osm": "n131111452", "name": "Lavers Hill", "kind": "village", "at": [143.39141, -38.67931] },
+    { "osm": "n134650271", "name": "Oakdale", "kind": "village", "at": [150.50627, -34.07933] },
+    { "osm": "n137097709", "name": "Imbil", "kind": "village", "at": [152.67631, -26.46049] },
+    { "osm": "n139655584", "name": "Thorpdale", "kind": "village", "at": [146.17606, -38.28822] },
+    { "osm": "n141802192", "name": "Prevelly", "kind": "village", "at": [114.99485, -33.97845] },
+    { "osm": "n143974617", "name": "Gormandale", "kind": "village", "at": [146.70112, -38.29362] },
+    { "osm": "n145472402", "name": "Serpentine", "kind": "village", "at": [143.97364, -36.41118] },
+    { "osm": "n147650260", "name": "Strathmerton", "kind": "village", "at": [145.48148, -35.9253] },
+    { "osm": "n147867528", "name": "Burpengary", "kind": "village", "at": [152.97082, -27.15486] },
+    {
+      "osm": "n150533298",
+      "name": "North Maclean",
+      "kind": "village",
+      "at": [153.00999, -27.77683]
+    },
+    {
+      "osm": "n150533300",
+      "name": "South Maclean",
+      "kind": "village",
+      "at": [153.0106, -27.78909]
+    },
+    { "osm": "n150984383", "name": "Meeniyan", "kind": "village", "at": [146.01402, -38.57893] },
+    { "osm": "n150984554", "name": "Fish Creek", "kind": "village", "at": [146.0843, -38.6944] },
+    { "osm": "n150984681", "name": "Sandy Point", "kind": "village", "at": [146.12584, -38.82879] },
+    { "osm": "n150984762", "name": "Loch", "kind": "village", "at": [145.70666, -38.36969] },
+    { "osm": "n150984808", "name": "Nyora", "kind": "village", "at": [145.66899, -38.33329] },
+    { "osm": "n151064574", "name": "Licola", "kind": "village", "at": [146.62366, -37.62777] },
+    { "osm": "n152525425", "name": "Tarpeena", "kind": "village", "at": [140.79542, -37.62719] },
+    { "osm": "n152526985", "name": "Nangwarry", "kind": "village", "at": [140.81756, -37.54407] },
+    { "osm": "n159081004", "name": "Mogo", "kind": "village", "at": [150.14261, -35.78302] },
+    {
+      "osm": "n161251891",
+      "name": "Yackandandah",
+      "kind": "village",
+      "at": [146.83908, -36.31438]
+    },
+    { "osm": "n163564024", "name": "Benambra", "kind": "village", "at": [147.70205, -36.95486] },
+    { "osm": "n163910996", "name": "Opossum Bay", "kind": "village", "at": [147.40462, -42.99332] },
+    { "osm": "n163966643", "name": "Windellama", "kind": "village", "at": [149.87318, -35.02415] },
+    { "osm": "n171095775", "name": "Erica", "kind": "village", "at": [146.37333, -37.97598] },
+    { "osm": "n171095813", "name": "Rawson", "kind": "village", "at": [146.39967, -37.95682] },
+    {
+      "osm": "n177799376",
+      "name": "Aireys Inlet",
+      "kind": "village",
+      "at": [144.10676, -38.46209]
+    },
+    { "osm": "n179844169", "name": "Jarrahdale", "kind": "village", "at": [116.06618, -32.33936] },
+    { "osm": "n180957488", "name": "Truro", "kind": "village", "at": [139.12716, -34.40941] },
+    { "osm": "n180957512", "name": "Angaston", "kind": "village", "at": [139.04904, -34.50277] },
+    { "osm": "n180957524", "name": "Greenock", "kind": "village", "at": [138.93061, -34.45607] },
+    { "osm": "n181951010", "name": "Amity Point", "kind": "village", "at": [153.44113, -27.40139] },
+    {
+      "osm": "n181952788",
+      "name": "Point Lookout",
+      "kind": "village",
+      "at": [153.53572, -27.4271]
+    },
+    { "osm": "n186947418", "name": "Tharwa", "kind": "village", "at": [149.06962, -35.50971] },
+    { "osm": "n187130200", "name": "Karridale", "kind": "village", "at": [115.09985, -34.201] },
+    { "osm": "n192826285", "name": "Don Valley", "kind": "village", "at": [145.5877, -37.75958] },
+    { "osm": "n193757707", "name": "Lyndoch", "kind": "village", "at": [138.8883, -34.60125] },
+    { "osm": "n194066513", "name": "Eudlo", "kind": "village", "at": [152.95739, -26.72535] },
+    { "osm": "n194066850", "name": "Mooloolah", "kind": "village", "at": [152.96198, -26.765] },
+    { "osm": "n201103018", "name": "Merinda", "kind": "village", "at": [148.16529, -20.01672] },
+    { "osm": "n201372054", "name": "Peaceful Bay", "kind": "village", "at": [116.9265, -35.03897] },
+    { "osm": "n204492164", "name": "Yaamba", "kind": "village", "at": [150.36804, -23.13521] },
+    {
+      "osm": "n206204684",
+      "name": "Black Mountain",
+      "kind": "village",
+      "at": [151.65719, -30.30797]
+    },
+    { "osm": "n206236593", "name": "Callington", "kind": "village", "at": [139.04067, -35.11658] },
+    {
+      "osm": "n207089354",
+      "name": "Mount Tamborine",
+      "kind": "village",
+      "at": [153.18444, -27.9285]
+    },
+    { "osm": "n210096602", "name": "Hahndorf", "kind": "village", "at": [138.80967, -35.02885] },
+    { "osm": "n213499050", "name": "Kandanga", "kind": "village", "at": [152.67709, -26.38764] },
+    { "osm": "n220385716", "name": "Dunwich", "kind": "village", "at": [153.40833, -27.49487] },
+    { "osm": "n220779589", "name": "Cookernup", "kind": "village", "at": [115.89268, -32.99606] },
+    { "osm": "n222635897", "name": "Grey", "kind": "village", "at": [115.13573, -30.66435] },
+    { "osm": "n238661895", "name": "Rathdowney", "kind": "village", "at": [152.86503, -28.21111] },
+    {
+      "osm": "n240449198",
+      "name": "Peppermint Grove Beach",
+      "kind": "village",
+      "at": [115.50725, -33.52799]
+    },
+    { "osm": "n243645434", "name": "Cooran", "kind": "village", "at": [152.82212, -26.33461] },
+    { "osm": "n243920369", "name": "Falls Creek", "kind": "village", "at": [147.28159, -36.8635] },
+    { "osm": "n243948938", "name": "Wooli", "kind": "village", "at": [153.26621, -29.86786] },
+    { "osm": "n244038687", "name": "Shelford", "kind": "village", "at": [143.97267, -38.01241] },
+    { "osm": "n244038691", "name": "Cressy", "kind": "village", "at": [143.63346, -38.03027] },
+    { "osm": "n244039218", "name": "Rokewood", "kind": "village", "at": [143.7198, -37.90158] },
+    { "osm": "n244301758", "name": "Seisia", "kind": "village", "at": [142.36764, -10.84645] },
+    { "osm": "n244399885", "name": "Laura", "kind": "village", "at": [144.44686, -15.56129] },
+    { "osm": "n244444941", "name": "Gin Gin", "kind": "village", "at": [151.95723, -24.99283] },
+    { "osm": "n244593770", "name": "Campania", "kind": "village", "at": [147.42068, -42.6646] },
+    { "osm": "n244593781", "name": "Colebrook", "kind": "village", "at": [147.3648, -42.53528] },
+    {
+      "osm": "n245207093",
+      "name": "Howqua Inlet",
+      "kind": "village",
+      "at": [146.13456, -37.22365]
+    },
+    { "osm": "n246008270", "name": "Wanganella", "kind": "village", "at": [144.81558, -35.21137] },
+    { "osm": "n246012248", "name": "Yelarbon", "kind": "village", "at": [150.7529, -28.57225] },
+    { "osm": "n247128968", "name": "Baranduda", "kind": "village", "at": [146.94785, -36.18422] },
+    {
+      "osm": "n248127076",
+      "name": "Kurrimine Beach",
+      "kind": "village",
+      "at": [146.1073, -17.77729]
+    },
+    { "osm": "n249060149", "name": "Hall", "kind": "village", "at": [149.06675, -35.17023] },
+    {
+      "osm": "n249530579",
+      "name": "Boreen Point",
+      "kind": "village",
+      "at": [152.99473, -26.28397]
+    },
+    { "osm": "n250991435", "name": "Hallett", "kind": "village", "at": [138.8937, -33.4119] },
+    { "osm": "n250991450", "name": "Yunta", "kind": "village", "at": [139.56358, -32.58042] },
+    { "osm": "n251144815", "name": "Milawa", "kind": "village", "at": [146.4321, -36.44927] },
+    {
+      "osm": "n251155078",
+      "name": "Dinner Plain",
+      "kind": "village",
+      "at": [147.23898, -37.02358]
+    },
+    { "osm": "n251587230", "name": "Newhaven", "kind": "village", "at": [145.36076, -38.51501] },
+    { "osm": "n251587231", "name": "San Remo", "kind": "village", "at": [145.36939, -38.52149] },
+    { "osm": "n252061660", "name": "Yallingup", "kind": "village", "at": [115.02596, -33.63953] },
+    { "osm": "n252355316", "name": "Nelly Bay", "kind": "village", "at": [146.85033, -19.15627] },
+    { "osm": "n252392757", "name": "Nimmitabel", "kind": "village", "at": [149.28412, -36.51127] },
+    { "osm": "n253000282", "name": "Girgarre", "kind": "village", "at": [144.98131, -36.3978] },
+    { "osm": "n253011547", "name": "Port Neill", "kind": "village", "at": [136.35069, -34.11956] },
+    { "osm": "n253664488", "name": "Low Head", "kind": "village", "at": [146.79501, -41.06286] },
+    { "osm": "n253893538", "name": "Taplan", "kind": "village", "at": [140.88158, -34.54288] },
+    { "osm": "n253893542", "name": "Meribah", "kind": "village", "at": [140.85166, -34.70505] },
+    { "osm": "n253893547", "name": "Paruna", "kind": "village", "at": [140.72991, -34.71899] },
+    { "osm": "n254081508", "name": "Verdun", "kind": "village", "at": [138.79086, -35.00826] },
+    { "osm": "n254081510", "name": "Balhannah", "kind": "village", "at": [138.828, -34.99155] },
+    {
+      "osm": "n254394473",
+      "name": "Traralgon South",
+      "kind": "village",
+      "at": [146.54196, -38.29787]
+    },
+    { "osm": "n254514190", "name": "Kilcunda", "kind": "village", "at": [145.47637, -38.54918] },
+    { "osm": "n255240308", "name": "Toombullup", "kind": "village", "at": [146.26287, -36.91579] },
+    { "osm": "n255352016", "name": "Bushy Park", "kind": "village", "at": [146.89699, -42.70911] },
+    {
+      "osm": "n255420350",
+      "name": "East Jindabyne",
+      "kind": "village",
+      "at": [148.65086, -36.39649]
+    },
+    { "osm": "n256003546", "name": "Delegate", "kind": "village", "at": [148.93958, -37.04345] },
+    { "osm": "n256017271", "name": "Bendoc", "kind": "village", "at": [148.88329, -37.14692] },
+    { "osm": "n259244008", "name": "Woodbridge", "kind": "village", "at": [147.23784, -43.16037] },
+    { "osm": "n259414705", "name": "Franklin", "kind": "village", "at": [147.01101, -43.08802] },
+    { "osm": "n259418144", "name": "Kettering", "kind": "village", "at": [147.24817, -43.12905] },
+    {
+      "osm": "n260193221",
+      "name": "Donnelly River",
+      "kind": "village",
+      "at": [115.97746, -34.10254]
+    },
+    { "osm": "n260333464", "name": "Bemm River", "kind": "village", "at": [148.96827, -37.76008] },
+    { "osm": "n260344956", "name": "Wolumla", "kind": "village", "at": [149.81195, -36.83283] },
+    { "osm": "n260347881", "name": "Bemboka", "kind": "village", "at": [149.56802, -36.62695] },
+    { "osm": "n264031777", "name": "Stanley", "kind": "village", "at": [145.29452, -40.76057] },
+    { "osm": "n267101780", "name": "Venus Bay", "kind": "village", "at": [134.6728, -33.23313] },
+    { "osm": "n268437845", "name": "Salt Creek", "kind": "village", "at": [139.64921, -36.12731] },
+    { "osm": "n268698332", "name": "Stratford", "kind": "village", "at": [147.08082, -37.96894] },
+    { "osm": "n269463630", "name": "Stone Hut", "kind": "village", "at": [138.29739, -33.10394] },
+    { "osm": "n270883715", "name": "Meadows", "kind": "village", "at": [138.76297, -35.18012] },
+    { "osm": "n271289718", "name": "Cradock", "kind": "village", "at": [138.49485, -32.07058] },
+    { "osm": "n271607810", "name": "Kallangur", "kind": "village", "at": [152.99279, -27.25085] },
+    { "osm": "n271886065", "name": "Harcourt", "kind": "village", "at": [144.26116, -36.99922] },
+    { "osm": "n273863424", "name": "Elphinstone", "kind": "village", "at": [144.33253, -37.10326] },
+    { "osm": "n275987000", "name": "Gabbin", "kind": "village", "at": [117.67854, -30.79983] },
+    { "osm": "n276388223", "name": "North Lakes", "kind": "village", "at": [153.0177, -27.23812] },
+    {
+      "osm": "n276556456",
+      "name": "Deception Bay",
+      "kind": "village",
+      "at": [153.02747, -27.19316]
+    },
+    { "osm": "n276618395", "name": "Tylden", "kind": "village", "at": [144.40825, -37.32575] },
+    {
+      "osm": "n277104677",
+      "name": "Coochiemudlo Island",
+      "kind": "village",
+      "at": [153.33198, -27.5688]
+    },
+    { "osm": "n283287084", "name": "Glenorchy", "kind": "village", "at": [142.66323, -36.90938] },
+    { "osm": "n283288325", "name": "Marnoo", "kind": "village", "at": [142.87037, -36.66943] },
+    { "osm": "n283289063", "name": "Navarre", "kind": "village", "at": [143.11392, -36.89961] },
+    { "osm": "n286410341", "name": "Baringhup", "kind": "village", "at": [143.97095, -36.98226] },
+    { "osm": "n286432958", "name": "Carisbrook", "kind": "village", "at": [143.81436, -37.0489] },
+    { "osm": "n286446611", "name": "Laanecoorie", "kind": "village", "at": [143.90003, -36.82717] },
+    {
+      "osm": "n286457390",
+      "name": "Daintree Village",
+      "kind": "village",
+      "at": [145.31975, -16.2484]
+    },
+    { "osm": "n286924593", "name": "Helidon", "kind": "village", "at": [152.12447, -27.55052] },
+    { "osm": "n287257612", "name": "Kingsthorpe", "kind": "village", "at": [151.81556, -27.47422] },
+    { "osm": "n287497946", "name": "Ultima", "kind": "village", "at": [143.26518, -35.46794] },
+    { "osm": "n289619307", "name": "Buxton", "kind": "village", "at": [145.70926, -37.42385] },
+    { "osm": "n289620071", "name": "Narbethong", "kind": "village", "at": [145.66283, -37.54746] },
+    { "osm": "n290610576", "name": "Eddington", "kind": "village", "at": [143.85903, -36.88311] },
+    { "osm": "n290613222", "name": "Llanelly", "kind": "village", "at": [143.85507, -36.73374] },
+    { "osm": "n290614048", "name": "Newbridge", "kind": "village", "at": [143.89983, -36.73922] },
+    { "osm": "n290614051", "name": "Marong", "kind": "village", "at": [144.1334, -36.73632] },
+    {
+      "osm": "n290620842",
+      "name": "Lockwood South",
+      "kind": "village",
+      "at": [144.15599, -36.83852]
+    },
+    { "osm": "n291485709", "name": "Maclagan", "kind": "village", "at": [151.63521, -27.0839] },
+    { "osm": "n291485712", "name": "Quinalow", "kind": "village", "at": [151.62219, -27.10848] },
+    { "osm": "n291767089", "name": "Kogan", "kind": "village", "at": [150.75791, -27.03978] },
+    { "osm": "n291767363", "name": "Brigalow", "kind": "village", "at": [150.78928, -26.84321] },
+    { "osm": "n296050665", "name": "Uraidla", "kind": "village", "at": [138.74567, -34.95714] },
+    { "osm": "n298321098", "name": "Jimbour", "kind": "village", "at": [151.21696, -26.96202] },
+    {
+      "osm": "n298322678",
+      "name": "Kaimkillenbun",
+      "kind": "village",
+      "at": [151.43426, -27.06006]
+    },
+    { "osm": "n298324219", "name": "Jondaryan", "kind": "village", "at": [151.59226, -27.36892] },
+    { "osm": "n298692573", "name": "Villeneuve", "kind": "village", "at": [152.63151, -26.96178] },
+    { "osm": "n298692725", "name": "D'Aguilar", "kind": "village", "at": [152.79803, -26.9871] },
+    {
+      "osm": "n300015774",
+      "name": "Grandchester",
+      "kind": "village",
+      "at": [152.46432, -27.66076]
+    },
+    {
+      "osm": "n300016200",
+      "name": "Glamorgan Vale",
+      "kind": "village",
+      "at": [152.62721, -27.50867]
+    },
+    { "osm": "n300016673", "name": "Minden", "kind": "village", "at": [152.55758, -27.53729] },
+    { "osm": "n300016674", "name": "Hatton Vale", "kind": "village", "at": [152.45941, -27.56907] },
+    { "osm": "n300016675", "name": "Plainland", "kind": "village", "at": [152.42264, -27.56551] },
+    { "osm": "n300021976", "name": "Coominya", "kind": "village", "at": [152.5021, -27.39217] },
+    { "osm": "n301978336", "name": "Smeaton", "kind": "village", "at": [143.94947, -37.33218] },
+    { "osm": "n301978409", "name": "Allendale", "kind": "village", "at": [143.92291, -37.37016] },
+    { "osm": "n301990216", "name": "Ascot", "kind": "village", "at": [143.80465, -37.39879] },
+    { "osm": "n302764679", "name": "Cooyar", "kind": "village", "at": [151.83156, -26.98221] },
+    { "osm": "n302765478", "name": "Moore", "kind": "village", "at": [152.29004, -26.89396] },
+    { "osm": "n304943873", "name": "St Pauls", "kind": "village", "at": [142.33295, -10.18712] },
+    { "osm": "n304943890", "name": "Kubin", "kind": "village", "at": [142.21791, -10.23438] },
+    { "osm": "n304964737", "name": "Yalgoo", "kind": "village", "at": [116.68305, -28.33969] },
+    {
+      "osm": "n306280247",
+      "name": "North Dandalup",
+      "kind": "village",
+      "at": [115.96715, -32.51728]
+    },
+    {
+      "osm": "n308150957",
+      "name": "Cape Woolamai",
+      "kind": "village",
+      "at": [145.33577, -38.53126]
+    },
+    {
+      "osm": "n308714872",
+      "name": "Point Samson",
+      "kind": "village",
+      "at": [117.19487, -20.63045]
+    },
+    { "osm": "n309587668", "name": "The Gurdies", "kind": "village", "at": [145.56392, -38.37144] },
+    { "osm": "n309587669", "name": "Grantville", "kind": "village", "at": [145.53185, -38.40739] },
+    { "osm": "n310203338", "name": "Camooweal", "kind": "village", "at": [138.12013, -19.92168] },
+    {
+      "osm": "n312681507",
+      "name": "Berriwillock",
+      "kind": "village",
+      "at": [142.99251, -35.63461]
+    },
+    { "osm": "n313669645", "name": "Ripley", "kind": "village", "at": [152.78045, -27.6713] },
+    { "osm": "n313693768", "name": "Flagstone", "kind": "village", "at": [152.96529, -27.81602] },
+    { "osm": "n315415196", "name": "Poowong", "kind": "village", "at": [145.76442, -38.34305] },
+    { "osm": "n315678575", "name": "Belvedere", "kind": "village", "at": [145.98816, -17.51985] },
+    {
+      "osm": "n316896039",
+      "name": "Seventeen Seventy",
+      "kind": "village",
+      "at": [151.88513, -24.16427]
+    },
+    {
+      "osm": "n317395504",
+      "name": "Wurrumiyanga",
+      "kind": "village",
+      "at": [130.63211, -11.76259]
+    },
+    { "osm": "n317396023", "name": "Milikapiti", "kind": "village", "at": [130.67417, -11.42206] },
+    { "osm": "n318538033", "name": "Fryerstown", "kind": "village", "at": [144.25087, -37.13884] },
+    { "osm": "n318538075", "name": "Vaughan", "kind": "village", "at": [144.21152, -37.15777] },
+    { "osm": "n318538943", "name": "Guildford", "kind": "village", "at": [144.16682, -37.14906] },
+    { "osm": "n318863223", "name": "Lilydale", "kind": "village", "at": [147.21563, -41.25112] },
+    {
+      "osm": "n319500401",
+      "name": "Beauty Point",
+      "kind": "village",
+      "at": [146.82043, -41.15672]
+    },
+    { "osm": "n319943345", "name": "Weymouth", "kind": "village", "at": [147.15192, -41.01566] },
+    { "osm": "n319943554", "name": "Beechford", "kind": "village", "at": [146.95136, -41.02755] },
+    { "osm": "n319943591", "name": "Greens Beach", "kind": "village", "at": [146.74485, -41.0861] },
+    { "osm": "n320491630", "name": "Woomargama", "kind": "village", "at": [147.24823, -35.83376] },
+    { "osm": "n321393488", "name": "Wooloweyah", "kind": "village", "at": [153.34346, -29.47994] },
+    { "osm": "n321716928", "name": "Redesdale", "kind": "village", "at": [144.53152, -37.0208] },
+    {
+      "osm": "n321896626",
+      "name": "Mandurang South",
+      "kind": "village",
+      "at": [144.28205, -36.85689]
+    },
+    { "osm": "n321922712", "name": "Inman Valley", "kind": "village", "at": [138.45747, -35.4948] },
+    { "osm": "n321958019", "name": "Miena", "kind": "village", "at": [146.70759, -41.99165] },
+    { "osm": "n321958446", "name": "Poatina", "kind": "village", "at": [146.96025, -41.79642] },
+    { "osm": "n323823971", "name": "Wamuran", "kind": "village", "at": [152.86072, -27.03927] },
+    { "osm": "n324203838", "name": "Deans Marsh", "kind": "village", "at": [143.88501, -38.39715] },
+    { "osm": "n324204174", "name": "Birregurra", "kind": "village", "at": [143.78433, -38.33779] },
+    { "osm": "n324204285", "name": "Barwon Downs", "kind": "village", "at": [143.7642, -38.4719] },
+    { "osm": "n324500887", "name": "Moyston", "kind": "village", "at": [142.76638, -37.30176] },
+    { "osm": "n324521624", "name": "Pomonal", "kind": "village", "at": [142.60906, -37.1919] },
+    { "osm": "n324529175", "name": "Halls Gap", "kind": "village", "at": [142.52024, -37.14177] },
+    { "osm": "n324609419", "name": "Cambroon", "kind": "village", "at": [152.68505, -26.63947] },
+    { "osm": "n324609432", "name": "Montville", "kind": "village", "at": [152.89328, -26.68988] },
+    { "osm": "n324884969", "name": "Westerway", "kind": "village", "at": [146.78939, -42.67561] },
+    { "osm": "n325595300", "name": "Carrick", "kind": "village", "at": [147.01056, -41.5315] },
+    { "osm": "n329984279", "name": "Carey Gully", "kind": "village", "at": [138.76935, -34.96322] },
+    { "osm": "n329984536", "name": "Longwood", "kind": "village", "at": [138.72808, -35.04525] },
+    { "osm": "n331329919", "name": "Halls Creek", "kind": "village", "at": [127.66833, -18.22486] },
+    {
+      "osm": "n332205055",
+      "name": "Sulphur Creek",
+      "kind": "village",
+      "at": [146.02473, -41.09451]
+    },
+    { "osm": "n332810669", "name": "Berridale", "kind": "village", "at": [148.8266, -36.36521] },
+    { "osm": "n333283803", "name": "Wollomombi", "kind": "village", "at": [152.04497, -30.51265] },
+    { "osm": "n333339752", "name": "Wunghnu", "kind": "village", "at": [145.43261, -36.15394] },
+    { "osm": "n335617392", "name": "Ceres", "kind": "village", "at": [144.27579, -38.16968] },
+    { "osm": "n335617662", "name": "Modewarre", "kind": "village", "at": [144.12074, -38.2634] },
+    { "osm": "n339090883", "name": "Karte", "kind": "village", "at": [140.69998, -35.05696] },
+    { "osm": "n341864205", "name": "Anakie", "kind": "village", "at": [144.25448, -37.91112] },
+    { "osm": "n343657500", "name": "Conondale", "kind": "village", "at": [152.71854, -26.72952] },
+    { "osm": "n346091163", "name": "Maidenwell", "kind": "village", "at": [151.7993, -26.84695] },
+    {
+      "osm": "n348204985",
+      "name": "Little Hampton",
+      "kind": "village",
+      "at": [144.29291, -37.36012]
+    },
+    { "osm": "n354443179", "name": "Muli Muli", "kind": "village", "at": [152.58417, -28.41806] },
+    { "osm": "n357001849", "name": "Metcalfe", "kind": "village", "at": [144.42323, -37.10154] },
+    { "osm": "n364650996", "name": "Smythesdale", "kind": "village", "at": [143.68529, -37.64445] },
+    {
+      "osm": "n364939257",
+      "name": "South Pambula",
+      "kind": "village",
+      "at": [149.86174, -36.94405]
+    },
+    {
+      "osm": "n364985261",
+      "name": "Pambula Beach",
+      "kind": "village",
+      "at": [149.90729, -36.94133]
+    },
+    { "osm": "n369923298", "name": "Cardiff", "kind": "village", "at": [116.20739, -33.42876] },
+    { "osm": "n380039992", "name": "Kongwak", "kind": "village", "at": [145.71232, -38.51543] },
+    {
+      "osm": "n380041693",
+      "name": "Cape Paterson",
+      "kind": "village",
+      "at": [145.61609, -38.67172]
+    },
+    { "osm": "n380455084", "name": "Meandarra", "kind": "village", "at": [149.8826, -27.32311] },
+    { "osm": "n380459445", "name": "Glenmorgan", "kind": "village", "at": [149.67666, -27.24864] },
+    {
+      "osm": "n400914788",
+      "name": "Innot Hot Springs",
+      "kind": "village",
+      "at": [145.23923, -17.66691]
+    },
+    { "osm": "n413289244", "name": "Avoca", "kind": "village", "at": [147.72316, -41.78057] },
+    { "osm": "n413289245", "name": "Conara", "kind": "village", "at": [147.43664, -41.83058] },
+    { "osm": "n413297708", "name": "Hadspen", "kind": "village", "at": [147.06556, -41.50538] },
+    {
+      "osm": "n413303193",
+      "name": "Rutherford Park",
+      "kind": "village",
+      "at": [144.00132, -37.34455]
+    },
+    { "osm": "n420518946", "name": "Bealiba", "kind": "village", "at": [143.54814, -36.7892] },
+    { "osm": "n421412263", "name": "Pimpinio", "kind": "village", "at": [142.11932, -36.58522] },
+    {
+      "osm": "n422509553",
+      "name": "Cooloola Cove",
+      "kind": "village",
+      "at": [152.98499, -25.97448]
+    },
+    { "osm": "n422512548", "name": "Tullah", "kind": "village", "at": [145.61628, -41.73752] },
+    { "osm": "n422849931", "name": "Jeparit", "kind": "village", "at": [141.98855, -36.14177] },
+    { "osm": "n426709719", "name": "Wanaaring", "kind": "village", "at": [144.14903, -29.70452] },
+    { "osm": "n426740324", "name": "Natimuk", "kind": "village", "at": [141.94211, -36.7415] },
+    { "osm": "n426752884", "name": "Hagley", "kind": "village", "at": [146.88961, -41.52613] },
+    { "osm": "n427443606", "name": "Moonambel", "kind": "village", "at": [143.31973, -36.98741] },
+    {
+      "osm": "n427454038",
+      "name": "Natte Yallock",
+      "kind": "village",
+      "at": [143.4696, -36.94103]
+    },
+    { "osm": "n427836164", "name": "Mitiamo", "kind": "village", "at": [144.23272, -36.20982] },
+    { "osm": "n427865600", "name": "Dookie", "kind": "village", "at": [145.68742, -36.32834] },
+    { "osm": "n427865950", "name": "Devenish", "kind": "village", "at": [145.89532, -36.3311] },
+    { "osm": "n427912726", "name": "Timor", "kind": "village", "at": [143.70914, -36.98384] },
+    { "osm": "n427912728", "name": "Bowenvale", "kind": "village", "at": [143.71129, -36.99021] },
+    { "osm": "n427965590", "name": "Southend", "kind": "village", "at": [140.1262, -37.56982] },
+    { "osm": "n429200091", "name": "Boonooroo", "kind": "village", "at": [152.88767, -25.67169] },
+    { "osm": "n429203084", "name": "Big Tuan", "kind": "village", "at": [152.87617, -25.68274] },
+    { "osm": "n429404560", "name": "Kooringal", "kind": "village", "at": [153.4204, -27.34995] },
+    { "osm": "n430602217", "name": "Innes Park", "kind": "village", "at": [152.46925, -24.86977] },
+    { "osm": "n431092982", "name": "Widgee", "kind": "village", "at": [152.43823, -26.2022] },
+    { "osm": "n438033587", "name": "Robertstown", "kind": "village", "at": [139.08107, -33.98949] },
+    { "osm": "n440006771", "name": "Sedgwick", "kind": "village", "at": [144.31903, -36.86891] },
+    { "osm": "n440115400", "name": "Dulacca", "kind": "village", "at": [149.7574, -26.64364] },
+    { "osm": "n440116320", "name": "Jackson", "kind": "village", "at": [149.62325, -26.64377] },
+    {
+      "osm": "n441127292",
+      "name": "Port Victoria",
+      "kind": "village",
+      "at": [137.48476, -34.49728]
+    },
+    { "osm": "n443265468", "name": "The Summit", "kind": "village", "at": [151.9482, -28.57424] },
+    { "osm": "n445969154", "name": "Ma Ma Creek", "kind": "village", "at": [152.18832, -27.63047] },
+    { "osm": "n456874812", "name": "Dargo", "kind": "village", "at": [147.25108, -37.46069] },
+    { "osm": "n461665479", "name": "Kabra", "kind": "village", "at": [150.39678, -23.47124] },
+    { "osm": "n469634772", "name": "Lochiel", "kind": "village", "at": [138.15933, -33.93] },
+    { "osm": "n473245158", "name": "Stuart Mill", "kind": "village", "at": [143.28592, -36.80574] },
+    { "osm": "n474993830", "name": "Bromley", "kind": "village", "at": [143.75668, -36.88093] },
+    { "osm": "n474993831", "name": "Betley", "kind": "village", "at": [143.79713, -36.90852] },
+    { "osm": "n482791864", "name": "Elaine", "kind": "village", "at": [144.029, -37.77632] },
+    { "osm": "n486242170", "name": "Mullalyup", "kind": "village", "at": [115.94516, -33.74313] },
+    { "osm": "n486267919", "name": "Newlands", "kind": "village", "at": [115.87653, -33.66805] },
+    { "osm": "n486287638", "name": "Noggerup", "kind": "village", "at": [116.16178, -33.58012] },
+    { "osm": "n493230506", "name": "Warakurna", "kind": "village", "at": [128.28656, -25.00063] },
+    { "osm": "n494778740", "name": "Clarendon", "kind": "village", "at": [143.97606, -37.69641] },
+    { "osm": "n501461440", "name": "Pannawonica", "kind": "village", "at": [116.32461, -21.6386] },
+    { "osm": "n510052503", "name": "Bethany", "kind": "village", "at": [138.98384, -34.54185] },
+    { "osm": "n510052514", "name": "Penrice", "kind": "village", "at": [139.05557, -34.47917] },
+    { "osm": "n512095731", "name": "Mossy Point", "kind": "village", "at": [150.1796, -35.83869] },
+    { "osm": "n513051410", "name": "Yaapeet", "kind": "village", "at": [142.05404, -35.76906] },
+    { "osm": "n517763395", "name": "Nagoorin", "kind": "village", "at": [151.30039, -24.35617] },
+    { "osm": "n519654324", "name": "Injinoo", "kind": "village", "at": [142.3267, -10.90668] },
+    { "osm": "n519940187", "name": "Thangool", "kind": "village", "at": [150.5744, -24.48681] },
+    { "osm": "n535134021", "name": "Digby", "kind": "village", "at": [141.53034, -37.80473] },
+    { "osm": "n536319772", "name": "Dartmoor", "kind": "village", "at": [141.27666, -37.92254] },
+    { "osm": "n536324849", "name": "Hotspur", "kind": "village", "at": [141.55985, -37.92678] },
+    { "osm": "n536327590", "name": "Merino", "kind": "village", "at": [141.54849, -37.71738] },
+    {
+      "osm": "n550610421",
+      "name": "Pipers Creek",
+      "kind": "village",
+      "at": [144.54366, -37.25249]
+    },
+    { "osm": "n554979646", "name": "Malua Bay", "kind": "village", "at": [150.23002, -35.79153] },
+    { "osm": "n555851277", "name": "Lockington", "kind": "village", "at": [144.53609, -36.27143] },
+    { "osm": "n559877687", "name": "Goughs Bay", "kind": "village", "at": [146.06671, -37.18613] },
+    { "osm": "n560389644", "name": "Haddon", "kind": "village", "at": [143.71091, -37.58918] },
+    { "osm": "n560943513", "name": "Billiluna", "kind": "village", "at": [127.66157, -19.5558] },
+    { "osm": "n563709805", "name": "Tarnagulla", "kind": "village", "at": [143.83147, -36.76924] },
+    {
+      "osm": "n564343915",
+      "name": "Bridgewater on Loddon",
+      "kind": "village",
+      "at": [143.94147, -36.60102]
+    },
+    { "osm": "n573255140", "name": "Majorca", "kind": "village", "at": [143.79846, -37.11111] },
+    { "osm": "n575874446", "name": "Lady Barron", "kind": "village", "at": [148.24207, -40.21141] },
+    { "osm": "n583007059", "name": "Nelson", "kind": "village", "at": [141.00637, -38.04724] },
+    { "osm": "n583223357", "name": "Stanley", "kind": "village", "at": [146.75484, -36.40489] },
+    { "osm": "n588344911", "name": "Tarampa", "kind": "village", "at": [152.5474, -27.48641] },
+    {
+      "osm": "n595501874",
+      "name": "Dadswells Bridge",
+      "kind": "village",
+      "at": [142.51334, -36.91776]
+    },
+    { "osm": "n595594052", "name": "Tarrington", "kind": "village", "at": [142.09511, -37.76471] },
+    { "osm": "n596040202", "name": "Walloon", "kind": "village", "at": [152.66436, -27.60496] },
+    { "osm": "n596083375", "name": "Byaduk", "kind": "village", "at": [141.95376, -37.95175] },
+    { "osm": "n596090099", "name": "Macarthur", "kind": "village", "at": [142.00019, -38.03137] },
+    { "osm": "n596135649", "name": "Forest Hill", "kind": "village", "at": [152.3569, -27.58978] },
+    { "osm": "n597124897", "name": "Lake Boga", "kind": "village", "at": [143.632, -35.45846] },
+    { "osm": "n598131168", "name": "Lexton", "kind": "village", "at": [143.51648, -37.27589] },
+    { "osm": "n598180659", "name": "Chatsworth", "kind": "village", "at": [142.64644, -37.86015] },
+    {
+      "osm": "n598180686",
+      "name": "Glenthompson",
+      "kind": "village",
+      "at": [142.54714, -37.63625]
+    },
+    { "osm": "n598180795", "name": "Wickliffe", "kind": "village", "at": [142.72356, -37.69035] },
+    { "osm": "n598180853", "name": "Westmere", "kind": "village", "at": [142.97102, -37.68795] },
+    { "osm": "n598180867", "name": "Streatham", "kind": "village", "at": [143.06294, -37.67922] },
+    { "osm": "n598473187", "name": "Purnim", "kind": "village", "at": [142.62031, -38.28023] },
+    { "osm": "n598474211", "name": "Ellerslie", "kind": "village", "at": [142.68317, -38.15133] },
+    { "osm": "n598476139", "name": "Darlington", "kind": "village", "at": [143.04476, -37.99903] },
+    { "osm": "n598512905", "name": "Donovans", "kind": "village", "at": [140.96034, -38.01179] },
+    { "osm": "n598893746", "name": "Winnap", "kind": "village", "at": [141.31856, -37.94478] },
+    { "osm": "n599538913", "name": "Sassafras", "kind": "village", "at": [146.49429, -41.28466] },
+    {
+      "osm": "n599539122",
+      "name": "Elizabeth Town",
+      "kind": "village",
+      "at": [146.56264, -41.46546]
+    },
+    { "osm": "n599895491", "name": "Bracknell", "kind": "village", "at": [146.93845, -41.65059] },
+    {
+      "osm": "n599908456",
+      "name": "Wiluna Gold Mine",
+      "kind": "village",
+      "at": [120.25312, -26.62916]
+    },
+    {
+      "osm": "n599908457",
+      "name": "Wiluna Gold Village",
+      "kind": "village",
+      "at": [120.26857, -26.6376]
+    },
+    {
+      "osm": "n599908460",
+      "name": "Mount Keith Village",
+      "kind": "village",
+      "at": [120.55215, -27.28282]
+    },
+    {
+      "osm": "n599908464",
+      "name": "Jundee Vilage",
+      "kind": "village",
+      "at": [120.63867, -26.39445]
+    },
+    { "osm": "n600217120", "name": "Allestree", "kind": "village", "at": [141.63147, -38.28281] },
+    { "osm": "n600217286", "name": "Narrawong", "kind": "village", "at": [141.71207, -38.25276] },
+    { "osm": "n600217306", "name": "Tyrendarra", "kind": "village", "at": [141.78162, -38.21768] },
+    {
+      "osm": "n600650910",
+      "name": "Bishopsbourne",
+      "kind": "village",
+      "at": [146.98762, -41.61636]
+    },
+    { "osm": "n600650926", "name": "Cressy", "kind": "village", "at": [147.07848, -41.68531] },
+    { "osm": "n600652942", "name": "Mole Creek", "kind": "village", "at": [146.40837, -41.55737] },
+    { "osm": "n600653920", "name": "Tunbridge", "kind": "village", "at": [147.42676, -42.1385] },
+    { "osm": "n601264227", "name": "Pine Point", "kind": "village", "at": [137.88153, -34.56955] },
+    { "osm": "n601725686", "name": "Coolabunia", "kind": "village", "at": [151.90477, -26.59031] },
+    { "osm": "n601725688", "name": "Wooroolin", "kind": "village", "at": [151.81543, -26.4097] },
+    { "osm": "n601725689", "name": "Memerambi", "kind": "village", "at": [151.82292, -26.45076] },
+    { "osm": "n601725691", "name": "Crawford", "kind": "village", "at": [151.82323, -26.49709] },
+    { "osm": "n603289215", "name": "Kempton", "kind": "village", "at": [147.1996, -42.52915] },
+    { "osm": "n603290061", "name": "Bagdad", "kind": "village", "at": [147.21973, -42.60067] },
+    {
+      "osm": "n603338828",
+      "name": "Arthur River",
+      "kind": "village",
+      "at": [144.66735, -41.04942]
+    },
+    {
+      "osm": "n603372054",
+      "name": "Savage River",
+      "kind": "village",
+      "at": [145.21688, -41.51327]
+    },
+    { "osm": "n608665084", "name": "Linton", "kind": "village", "at": [143.56207, -37.68691] },
+    { "osm": "n613328939", "name": "Narangba", "kind": "village", "at": [152.95922, -27.20271] },
+    { "osm": "n617908618", "name": "Kowanyama", "kind": "village", "at": [141.74661, -15.47623] },
+    { "osm": "n621164056", "name": "Clarendon", "kind": "village", "at": [152.54778, -27.44037] },
+    { "osm": "n623987574", "name": "Bena", "kind": "village", "at": [145.76155, -38.41086] },
+    { "osm": "n625128292", "name": "Clayton Bay", "kind": "village", "at": [138.92648, -35.49687] },
+    { "osm": "n644290984", "name": "Tungamah", "kind": "village", "at": [145.87938, -36.16368] },
+    {
+      "osm": "n647402707",
+      "name": "Katandra West",
+      "kind": "village",
+      "at": [145.55921, -36.22759]
+    },
+    { "osm": "n648227423", "name": "Wokalup", "kind": "village", "at": [115.88132, -33.11194] },
+    { "osm": "n666856559", "name": "Glenhope", "kind": "village", "at": [144.60938, -37.08639] },
+    { "osm": "n666856560", "name": "Mia Mia", "kind": "village", "at": [144.57151, -36.99991] },
+    {
+      "osm": "n668775556",
+      "name": "Spencers Brook",
+      "kind": "village",
+      "at": [116.64478, -31.72382]
+    },
+    {
+      "osm": "n669248205",
+      "name": "Grass Valley",
+      "kind": "village",
+      "at": [116.79679, -31.63613]
+    },
+    { "osm": "n669252807", "name": "Toolamba", "kind": "village", "at": [145.33967, -36.48956] },
+    { "osm": "n669944036", "name": "Everton", "kind": "village", "at": [146.54243, -36.43316] },
+    { "osm": "n671070744", "name": "Whitemore", "kind": "village", "at": [146.93028, -41.58238] },
+    {
+      "osm": "n671070970",
+      "name": "Turners Beach",
+      "kind": "village",
+      "at": [146.24293, -41.16051]
+    },
+    { "osm": "n671083534", "name": "Harrow", "kind": "village", "at": [141.59224, -37.16545] },
+    { "osm": "n671817454", "name": "Greendale", "kind": "village", "at": [144.2989, -37.56117] },
+    { "osm": "n671817503", "name": "Myrniong", "kind": "village", "at": [144.3472, -37.61972] },
+    { "osm": "n673874153", "name": "Jarrahwood", "kind": "village", "at": [115.66526, -33.79698] },
+    { "osm": "n677370819", "name": "Eldorado", "kind": "village", "at": [146.52248, -36.30985] },
+    { "osm": "n685067714", "name": "Metung", "kind": "village", "at": [147.85357, -37.89319] },
+    { "osm": "n686358258", "name": "Cudgewa", "kind": "village", "at": [147.77038, -36.1917] },
+    { "osm": "n686358262", "name": "Tintaldra", "kind": "village", "at": [147.93076, -36.0472] },
+    {
+      "osm": "n686376850",
+      "name": "Old Tallangatta",
+      "kind": "village",
+      "at": [147.25562, -36.19348]
+    },
+    { "osm": "n686398491", "name": "Towong", "kind": "village", "at": [147.98795, -36.1269] },
+    { "osm": "n688577107", "name": "Thoona", "kind": "village", "at": [146.0782, -36.33839] },
+    {
+      "osm": "n697240406",
+      "name": "Port Germein",
+      "kind": "village",
+      "at": [137.99932, -33.02053]
+    },
+    {
+      "osm": "n702309987",
+      "name": "Maloneys Beach",
+      "kind": "village",
+      "at": [150.24672, -35.70858]
+    },
+    { "osm": "n709655785", "name": "Bowelling", "kind": "village", "at": [116.48459, -33.42104] },
+    { "osm": "n710369841", "name": "Goornong", "kind": "village", "at": [144.50503, -36.61532] },
+    { "osm": "n728960550", "name": "Hivesville", "kind": "village", "at": [151.69195, -26.17581] },
+    { "osm": "n734785478", "name": "Wandiligong", "kind": "village", "at": [146.98287, -36.76998] },
+    {
+      "osm": "n741764894",
+      "name": "McArthur River Mine",
+      "kind": "village",
+      "at": [136.0752, -16.43732]
+    },
+    { "osm": "n750598653", "name": "Lyonville", "kind": "village", "at": [144.25885, -37.38862] },
+    { "osm": "n781532228", "name": "Nepabunna", "kind": "village", "at": [138.98075, -30.58276] },
+    { "osm": "n790843344", "name": "Black Point", "kind": "village", "at": [137.8975, -34.61472] },
+    { "osm": "n790843354", "name": "Port Julia", "kind": "village", "at": [137.87825, -34.66368] },
+    { "osm": "n793075365", "name": "Brinkworth", "kind": "village", "at": [138.4044, -33.69369] },
+    { "osm": "n795544351", "name": "Springhurst", "kind": "village", "at": [146.46701, -36.18604] },
+    { "osm": "n801910487", "name": "Corop", "kind": "village", "at": [144.79248, -36.45786] },
+    { "osm": "n801933740", "name": "Stanhope", "kind": "village", "at": [144.98324, -36.44496] },
+    {
+      "osm": "n811357369",
+      "name": "Great Western",
+      "kind": "village",
+      "at": [142.84818, -37.15019]
+    },
+    { "osm": "n812746023", "name": "Kulpara", "kind": "village", "at": [138.0368, -34.06029] },
+    { "osm": "n812746063", "name": "Arthurton", "kind": "village", "at": [137.7556, -34.25829] },
+    { "osm": "n821502693", "name": "Eurong", "kind": "village", "at": [153.12606, -25.50997] },
+    {
+      "osm": "n821519250",
+      "name": "Orchid Beach",
+      "kind": "village",
+      "at": [153.31223, -24.96211]
+    },
+    { "osm": "n822487955", "name": "Bellbrae", "kind": "village", "at": [144.26208, -38.33082] },
+    {
+      "osm": "n827070405",
+      "name": "Kingfisher Bay",
+      "kind": "village",
+      "at": [153.03054, -25.39181]
+    },
+    { "osm": "n839531800", "name": "Beerburrum", "kind": "village", "at": [152.95791, -26.95704] },
+    { "osm": "n841479813", "name": "Yarck", "kind": "village", "at": [145.61662, -37.10105] },
+    { "osm": "n841479834", "name": "Merton", "kind": "village", "at": [145.70878, -36.97695] },
+    { "osm": "n848380900", "name": "Carlsruhe", "kind": "village", "at": [144.50152, -37.28206] },
+    { "osm": "n848380949", "name": "Rossville", "kind": "village", "at": [145.26684, -15.75038] },
+    { "osm": "n848386364", "name": "Marton", "kind": "village", "at": [145.17904, -15.45215] },
+    { "osm": "n848390438", "name": "Lakeland", "kind": "village", "at": [144.85785, -15.86088] },
+    { "osm": "n881883863", "name": "Baddaginnie", "kind": "village", "at": [145.85985, -36.59046] },
+    {
+      "osm": "n893425223",
+      "name": "Sultana Point",
+      "kind": "village",
+      "at": [137.75633, -35.1134]
+    },
+    {
+      "osm": "n893482543",
+      "name": "Port Rickaby",
+      "kind": "village",
+      "at": [137.49584, -34.67185]
+    },
+    { "osm": "n893482598", "name": "Curramulka", "kind": "village", "at": [137.71248, -34.69682] },
+    { "osm": "n893482649", "name": "Coobowie", "kind": "village", "at": [137.72724, -35.04314] },
+    { "osm": "n893482662", "name": "Price", "kind": "village", "at": [137.99418, -34.28609] },
+    { "osm": "n893482663", "name": "Clinton", "kind": "village", "at": [138.02318, -34.22169] },
+    { "osm": "n899897667", "name": "Taggerty", "kind": "village", "at": [145.71291, -37.32175] },
+    {
+      "osm": "n910283354",
+      "name": "Sawmill Settlement",
+      "kind": "village",
+      "at": [146.35725, -37.10838]
+    },
+    { "osm": "n911746171", "name": "Merrijig", "kind": "village", "at": [146.26302, -37.10345] },
+    { "osm": "n928099304", "name": "Panmure", "kind": "village", "at": [142.72969, -38.33387] },
+    { "osm": "n940925757", "name": "Kyancutta", "kind": "village", "at": [135.55528, -33.13347] },
+    { "osm": "n945930097", "name": "Mirriwinni", "kind": "village", "at": [145.90921, -17.39864] },
+    { "osm": "n954660022", "name": "Dunnstown", "kind": "village", "at": [143.96647, -37.59097] },
+    { "osm": "n958023897", "name": "Oxley", "kind": "village", "at": [146.38398, -36.44327] },
+    { "osm": "n958059787", "name": "Ovens", "kind": "village", "at": [146.76389, -36.58935] },
+    { "osm": "n964662641", "name": "Yolla", "kind": "village", "at": [145.71663, -41.12597] },
+    { "osm": "n966358245", "name": "Balmoral", "kind": "village", "at": [141.84106, -37.24806] },
+    { "osm": "n967484470", "name": "Moculta", "kind": "village", "at": [139.11783, -34.47083] },
+    { "osm": "n971140063", "name": "Wilga", "kind": "village", "at": [116.233, -33.69544] },
+    { "osm": "n971631944", "name": "Beacon", "kind": "village", "at": [117.86693, -30.44936] },
+    {
+      "osm": "n971829325",
+      "name": "Warrill View",
+      "kind": "village",
+      "at": [152.61518, -27.82341]
+    },
+    {
+      "osm": "n986281840",
+      "name": "Mount Egerton",
+      "kind": "village",
+      "at": [144.10424, -37.62798]
+    },
+    {
+      "osm": "n1003754272",
+      "name": "Moonan Flat",
+      "kind": "village",
+      "at": [151.23641, -31.92228]
+    },
+    { "osm": "n1010069407", "name": "Hexham", "kind": "village", "at": [142.68848, -37.995] },
+    {
+      "osm": "n1022499257",
+      "name": "Coronet Bay",
+      "kind": "village",
+      "at": [145.43629, -38.43765]
+    },
+    {
+      "osm": "n1080420035",
+      "name": "Stony Creek",
+      "kind": "village",
+      "at": [146.04212, -38.58833]
+    },
+    { "osm": "n1080427999", "name": "Koonwarra", "kind": "village", "at": [145.94228, -38.54708] },
+    { "osm": "n1081472044", "name": "Nobby", "kind": "village", "at": [151.90247, -27.85374] },
+    { "osm": "n1090298694", "name": "Allanson", "kind": "village", "at": [116.0994, -33.33493] },
+    {
+      "osm": "n1101174710",
+      "name": "Flagstone Creek",
+      "kind": "village",
+      "at": [152.10147, -27.61901]
+    },
+    { "osm": "n1103013919", "name": "Garfield", "kind": "village", "at": [145.67622, -38.08987] },
+    {
+      "osm": "n1103013920",
+      "name": "Nar Nar Goon",
+      "kind": "village",
+      "at": [145.57021, -38.08215]
+    },
+    { "osm": "n1104544805", "name": "Wool Bay", "kind": "village", "at": [137.75371, -34.989] },
+    { "osm": "n1108887154", "name": "Dumbalk", "kind": "village", "at": [146.09432, -38.53221] },
+    { "osm": "n1108914162", "name": "Mirboo", "kind": "village", "at": [146.20691, -38.4692] },
+    { "osm": "n1114595384", "name": "Kongorong", "kind": "village", "at": [140.5566, -37.89984] },
+    { "osm": "n1137149640", "name": "Woombah", "kind": "village", "at": [153.28444, -29.365] },
+    { "osm": "n1143810963", "name": "Light Pass", "kind": "village", "at": [139.02375, -34.47055] },
+    { "osm": "n1158002952", "name": "Yeelanna", "kind": "village", "at": [135.72995, -34.14074] },
+    { "osm": "n1160599925", "name": "Corinella", "kind": "village", "at": [145.4312, -38.41458] },
+    { "osm": "n1161508124", "name": "Ungarra", "kind": "village", "at": [136.04796, -34.18026] },
+    { "osm": "n1190781303", "name": "Yetman", "kind": "village", "at": [150.77913, -28.90342] },
+    { "osm": "n1215867851", "name": "Noorat", "kind": "village", "at": [142.9281, -38.19169] },
+    { "osm": "n1218301284", "name": "Yanakie", "kind": "village", "at": [146.20644, -38.81243] },
+    {
+      "osm": "n1227855788",
+      "name": "Waratah Bay",
+      "kind": "village",
+      "at": [146.04068, -38.80963]
+    },
+    { "osm": "n1232242829", "name": "Leyburn", "kind": "village", "at": [151.58577, -28.00995] },
+    { "osm": "n1233274975", "name": "Barnawartha", "kind": "village", "at": [146.67357, -36.1054] },
+    {
+      "osm": "n1236940165",
+      "name": "Tangambalanga",
+      "kind": "village",
+      "at": [147.02997, -36.25259]
+    },
+    { "osm": "n1241535291", "name": "Eskdale", "kind": "village", "at": [147.25238, -36.46455] },
+    { "osm": "n1244297136", "name": "Maroona", "kind": "village", "at": [142.85972, -37.43981] },
+    { "osm": "n1249790999", "name": "Table Top", "kind": "village", "at": [147.00691, -35.96906] },
+    { "osm": "n1255169729", "name": "Morven", "kind": "village", "at": [147.11976, -35.6577] },
+    {
+      "osm": "n1259646174",
+      "name": "Port Broughton",
+      "kind": "village",
+      "at": [137.93115, -33.60042]
+    },
+    { "osm": "n1260290764", "name": "Kooralbyn", "kind": "village", "at": [152.84155, -28.08356] },
+    { "osm": "n1277936430", "name": "Yangan", "kind": "village", "at": [152.2111, -28.19578] },
+    { "osm": "n1280919401", "name": "Boho South", "kind": "village", "at": [145.80243, -36.79085] },
+    {
+      "osm": "n1281426391",
+      "name": "Walkerville",
+      "kind": "village",
+      "at": [145.99725, -38.84584]
+    },
+    { "osm": "n1282460644", "name": "Point Lowly", "kind": "village", "at": [137.7847, -32.99963] },
+    { "osm": "n1282559959", "name": "Beulah", "kind": "village", "at": [142.41946, -35.93773] },
+    { "osm": "n1286260837", "name": "Ballandean", "kind": "village", "at": [151.842, -28.79961] },
+    { "osm": "n1286335307", "name": "Dooen", "kind": "village", "at": [142.25524, -36.66] },
+    { "osm": "n1294551022", "name": "Brim", "kind": "village", "at": [142.417, -36.07672] },
+    {
+      "osm": "n1294805998",
+      "name": "Patchewollock",
+      "kind": "village",
+      "at": [142.18995, -35.38088]
+    },
+    { "osm": "n1297036488", "name": "Cambooya", "kind": "village", "at": [151.86532, -27.70698] },
+    { "osm": "n1299469693", "name": "Wyreema", "kind": "village", "at": [151.86374, -27.65721] },
+    { "osm": "n1323047809", "name": "Timboon", "kind": "village", "at": [142.98055, -38.48472] },
+    {
+      "osm": "n1330393601",
+      "name": "Mount Molloy",
+      "kind": "village",
+      "at": [145.33014, -16.6755]
+    },
+    { "osm": "n1332892669", "name": "Alford", "kind": "village", "at": [137.82199, -33.81685] },
+    { "osm": "n1340904189", "name": "Cracow", "kind": "village", "at": [150.3024, -25.29517] },
+    { "osm": "n1361228601", "name": "Dingo", "kind": "village", "at": [149.33104, -23.64601] },
+    { "osm": "n1369673207", "name": "Tinamba", "kind": "village", "at": [146.89129, -37.96239] },
+    { "osm": "n1384118266", "name": "Nildottie", "kind": "village", "at": [139.65136, -34.67712] },
+    {
+      "osm": "n1402185165",
+      "name": "Watsonville",
+      "kind": "village",
+      "at": [145.31262, -17.37726]
+    },
+    { "osm": "n1402185166", "name": "Irvinebank", "kind": "village", "at": [145.20386, -17.42791] },
+    { "osm": "n1419733874", "name": "Redbank", "kind": "village", "at": [143.32816, -36.93888] },
+    { "osm": "n1433706545", "name": "Learmonth", "kind": "village", "at": [143.71856, -37.42342] },
+    { "osm": "n1435405332", "name": "Thinoomba", "kind": "village", "at": [152.4539, -25.60017] },
+    { "osm": "n1436386636", "name": "Rheola", "kind": "village", "at": [143.70126, -36.64816] },
+    {
+      "osm": "n1439977403",
+      "name": "Jacobs Well",
+      "kind": "village",
+      "at": [153.36386, -27.78101]
+    },
+    {
+      "osm": "n1447839842",
+      "name": "Seatrees Estate",
+      "kind": "village",
+      "at": [115.64556, -31.46897]
+    },
+    { "osm": "n1469237132", "name": "Chidlow", "kind": "village", "at": [116.26874, -31.85959] },
+    {
+      "osm": "n1473360554",
+      "name": "Wyalkatchem",
+      "kind": "village",
+      "at": [117.38294, -31.17792]
+    },
+    {
+      "osm": "n1474977837",
+      "name": "Elliott Heads",
+      "kind": "village",
+      "at": [152.49107, -24.9184]
+    },
+    { "osm": "n1480760534", "name": "Nunamara", "kind": "village", "at": [147.30121, -41.38964] },
+    { "osm": "n1485427684", "name": "Kirkstall", "kind": "village", "at": [142.31722, -38.27073] },
+    { "osm": "n1485658976", "name": "Woorndoo", "kind": "village", "at": [142.7981, -37.88954] },
+    { "osm": "n1490292997", "name": "Logan", "kind": "village", "at": [143.4899, -36.62066] },
+    { "osm": "n1490293019", "name": "Kingower", "kind": "village", "at": [143.7545, -36.60772] },
+    {
+      "osm": "n1493309476",
+      "name": "Mount Helena",
+      "kind": "village",
+      "at": [116.20935, -31.87788]
+    },
+    { "osm": "n1516284100", "name": "Hawkesdale", "kind": "village", "at": [142.32175, -38.10606] },
+    { "osm": "n1522559940", "name": "Peeramon", "kind": "village", "at": [145.61135, -17.31093] },
+    { "osm": "n1522569697", "name": "Kairi", "kind": "village", "at": [145.5436, -17.21585] },
+    {
+      "osm": "n1537602419",
+      "name": "Wandarrie Hill",
+      "kind": "village",
+      "at": [128.39508, -16.74239]
+    },
+    {
+      "osm": "n1537610615",
+      "name": "Argyle Village",
+      "kind": "village",
+      "at": [128.43223, -16.68567]
+    },
+    { "osm": "n1543893296", "name": "Bearii", "kind": "village", "at": [145.33913, -35.899] },
+    { "osm": "n1550038625", "name": "Cockburn", "kind": "village", "at": [140.99888, -32.07719] },
+    {
+      "osm": "n1561327783",
+      "name": "Pirron Yallock",
+      "kind": "village",
+      "at": [143.42896, -38.34935]
+    },
+    {
+      "osm": "n1561327789",
+      "name": "Pomborneit North",
+      "kind": "village",
+      "at": [143.29637, -38.27276]
+    },
+    { "osm": "n1563003146", "name": "Naroghid", "kind": "village", "at": [143.05755, -38.25995] },
+    { "osm": "n1572245258", "name": "Rossbridge", "kind": "village", "at": [142.8494, -37.48471] },
+    { "osm": "n1573380057", "name": "Maydena", "kind": "village", "at": [146.62616, -42.75596] },
+    { "osm": "n1573432792", "name": "Tyalgum", "kind": "village", "at": [153.20516, -28.35646] },
+    {
+      "osm": "n1579341480",
+      "name": "Tiddy Widdy Beach",
+      "kind": "village",
+      "at": [137.93997, -34.40078]
+    },
+    {
+      "osm": "n1585601025",
+      "name": "Booleroo Centre",
+      "kind": "village",
+      "at": [138.35105, -32.87937]
+    },
+    { "osm": "n1585601038", "name": "Appila", "kind": "village", "at": [138.42893, -33.04971] },
+    { "osm": "n1594488967", "name": "Mapleton", "kind": "village", "at": [152.86616, -26.62414] },
+    {
+      "osm": "n1597598639",
+      "name": "Framlingham",
+      "kind": "village",
+      "at": [142.70004, -38.24218]
+    },
+    { "osm": "n1598659868", "name": "Mangalore", "kind": "village", "at": [147.24158, -42.65389] },
+    { "osm": "n1602131510", "name": "Grantham", "kind": "village", "at": [152.2008, -27.57829] },
+    { "osm": "n1603338196", "name": "Cudgee", "kind": "village", "at": [142.65147, -38.3445] },
+    {
+      "osm": "n1603338227",
+      "name": "Ecklin South",
+      "kind": "village",
+      "at": [142.90867, -38.38661]
+    },
+    { "osm": "n1603338233", "name": "Garvoc", "kind": "village", "at": [142.8143, -38.29765] },
+    { "osm": "n1603338241", "name": "Illowa", "kind": "village", "at": [142.40218, -38.32823] },
+    {
+      "osm": "n1603338264",
+      "name": "Mailors Flat",
+      "kind": "village",
+      "at": [142.47299, -38.29035]
+    },
+    { "osm": "n1603338285", "name": "Nirranda", "kind": "village", "at": [142.75326, -38.49988] },
+    {
+      "osm": "n1605545664",
+      "name": "Mount Whitestone",
+      "kind": "village",
+      "at": [152.16078, -27.66815]
+    },
+    {
+      "osm": "n1615025574",
+      "name": "Boundary Bend",
+      "kind": "village",
+      "at": [143.15134, -34.71685]
+    },
+    { "osm": "n1615434719", "name": "Woods Point", "kind": "village", "at": [146.25349, -37.5695] },
+    { "osm": "n1617313571", "name": "Wood Wood", "kind": "village", "at": [143.34647, -35.10656] },
+    {
+      "osm": "n1617471761",
+      "name": "Chillingollah",
+      "kind": "village",
+      "at": [143.05196, -35.26449]
+    },
+    { "osm": "n1633381490", "name": "Katunga", "kind": "village", "at": [145.45758, -35.99966] },
+    { "osm": "n1633674673", "name": "Yarroweyah", "kind": "village", "at": [145.56111, -35.92583] },
+    { "osm": "n1634843647", "name": "Benarkin", "kind": "village", "at": [152.13637, -26.88782] },
+    { "osm": "n1635672089", "name": "Kulpi", "kind": "village", "at": [151.70231, -27.18782] },
+    { "osm": "n1651171335", "name": "Aratula", "kind": "village", "at": [152.54826, -27.98059] },
+    { "osm": "n1651178924", "name": "Moogerah", "kind": "village", "at": [152.52434, -28.08212] },
+    {
+      "osm": "n1651180881",
+      "name": "Mount Alford",
+      "kind": "village",
+      "at": [152.59528, -28.06718]
+    },
+    { "osm": "n1651185877", "name": "Kalbar", "kind": "village", "at": [152.62409, -27.93888] },
+    {
+      "osm": "n1653846284",
+      "name": "Peak Crossing",
+      "kind": "village",
+      "at": [152.72954, -27.78345]
+    },
+    { "osm": "n1658585531", "name": "Willowbank", "kind": "village", "at": [152.69345, -27.65783] },
+    { "osm": "n1658798945", "name": "Waubra", "kind": "village", "at": [143.63673, -37.35821] },
+    {
+      "osm": "n1659960736",
+      "name": "Snake Valley",
+      "kind": "village",
+      "at": [143.5853, -37.61158]
+    },
+    { "osm": "n1661795387", "name": "Coongulla", "kind": "village", "at": [146.78437, -37.89386] },
+    {
+      "osm": "n1665456278",
+      "name": "Licola North",
+      "kind": "village",
+      "at": [146.55046, -37.51955]
+    },
+    { "osm": "n1665749058", "name": "Benholme", "kind": "village", "at": [148.81625, -21.15552] },
+    { "osm": "n1665749089", "name": "Uruba", "kind": "village", "at": [148.67022, -21.13577] },
+    { "osm": "n1665749091", "name": "Trueman", "kind": "village", "at": [148.65936, -21.13486] },
+    { "osm": "n1665764062", "name": "Septimus", "kind": "village", "at": [148.76315, -21.22332] },
+    { "osm": "n1665764081", "name": "Abbotville", "kind": "village", "at": [148.72892, -21.0988] },
+    { "osm": "n1665764084", "name": "Pakula", "kind": "village", "at": [148.72004, -21.09018] },
+    {
+      "osm": "n1665764089",
+      "name": "Owens Creek",
+      "kind": "village",
+      "at": [148.71085, -21.08146]
+    },
+    { "osm": "n1665764108", "name": "Dows Creek", "kind": "village", "at": [148.77814, -21.10679] },
+    { "osm": "n1665764112", "name": "Langdon", "kind": "village", "at": [148.77939, -21.08733] },
+    {
+      "osm": "n1665764117",
+      "name": "Mount Martin",
+      "kind": "village",
+      "at": [148.80417, -21.11347]
+    },
+    { "osm": "n1665767617", "name": "Boongana", "kind": "village", "at": [148.58632, -21.14165] },
+    { "osm": "n1665767624", "name": "Okuloo", "kind": "village", "at": [148.56395, -21.13643] },
+    { "osm": "n1665767627", "name": "Morugo", "kind": "village", "at": [148.55108, -21.13685] },
+    { "osm": "n1667100311", "name": "Coningsby", "kind": "village", "at": [149.07653, -21.09135] },
+    {
+      "osm": "n1668528257",
+      "name": "Samford Village",
+      "kind": "village",
+      "at": [152.88639, -27.37344]
+    },
+    { "osm": "n1675125585", "name": "Kalangadoo", "kind": "village", "at": [140.69998, -37.56338] },
+    { "osm": "n1680935969", "name": "Porepunkah", "kind": "village", "at": [146.91302, -36.699] },
+    {
+      "osm": "n1681197347",
+      "name": "Skennars Head",
+      "kind": "village",
+      "at": [153.6026, -28.82778]
+    },
+    { "osm": "n1682720009", "name": "Kalpowar", "kind": "village", "at": [151.30559, -24.69434] },
+    { "osm": "n1682770654", "name": "Lake Rowan", "kind": "village", "at": [145.96572, -36.26768] },
+    { "osm": "n1684487480", "name": "Moyhu", "kind": "village", "at": [146.3775, -36.57686] },
+    { "osm": "n1684545501", "name": "Bundalong", "kind": "village", "at": [146.16584, -36.03296] },
+    { "osm": "n1686562667", "name": "Torbanlea", "kind": "village", "at": [152.59543, -25.34493] },
+    { "osm": "n1686596518", "name": "Aldershot", "kind": "village", "at": [152.65989, -25.46298] },
+    {
+      "osm": "n1687074382",
+      "name": "Apple Tree Creek",
+      "kind": "village",
+      "at": [152.23335, -25.22532]
+    },
+    { "osm": "n1687074383", "name": "Buxton", "kind": "village", "at": [152.53642, -25.19451] },
+    { "osm": "n1705726426", "name": "Dawesley", "kind": "village", "at": [138.94604, -35.03783] },
+    {
+      "osm": "n1707829686",
+      "name": "Landsborough",
+      "kind": "village",
+      "at": [143.13378, -37.00824]
+    },
+    { "osm": "n1707835886", "name": "Mount Cole", "kind": "village", "at": [143.17102, -37.26104] },
+    { "osm": "n1718694928", "name": "Bethanga", "kind": "village", "at": [147.09819, -36.12411] },
+    { "osm": "n1720085954", "name": "Peechelba", "kind": "village", "at": [146.23164, -36.1926] },
+    { "osm": "n1720322987", "name": "Linville", "kind": "village", "at": [152.27616, -26.84355] },
+    { "osm": "n1721480909", "name": "Dalyston", "kind": "village", "at": [145.54422, -38.56446] },
+    { "osm": "n1722445838", "name": "Whorouly", "kind": "village", "at": [146.5877, -36.50464] },
+    {
+      "osm": "n1723585478",
+      "name": "Tarrawingee",
+      "kind": "village",
+      "at": [146.45063, -36.39143]
+    },
+    { "osm": "n1728909993", "name": "Swanpool", "kind": "village", "at": [146.00073, -36.74507] },
+    {
+      "osm": "n1733854357",
+      "name": "Mount Jukes",
+      "kind": "village",
+      "at": [148.95734, -20.99221]
+    },
+    { "osm": "n1733855031", "name": "Belmunda", "kind": "village", "at": [149.02491, -20.951] },
+    { "osm": "n1734073297", "name": "Murrinda", "kind": "village", "at": [148.88368, -20.88582] },
+    { "osm": "n1739957278", "name": "Batesford", "kind": "village", "at": [144.28313, -38.09081] },
+    {
+      "osm": "n1741202627",
+      "name": "Mount Charlton",
+      "kind": "village",
+      "at": [148.72958, -21.02225]
+    },
+    { "osm": "n1745357063", "name": "Douglas", "kind": "village", "at": [141.72939, -37.03353] },
+    { "osm": "n1745434735", "name": "Toomelah", "kind": "village", "at": [150.47885, -28.66919] },
+    { "osm": "n1745457597", "name": "Goroke", "kind": "village", "at": [141.47596, -36.71829] },
+    { "osm": "n1745580648", "name": "Langkoop", "kind": "village", "at": [141.03564, -37.10122] },
+    { "osm": "n1746170643", "name": "Frances", "kind": "village", "at": [140.95579, -36.7133] },
+    { "osm": "n1746178869", "name": "Apsley", "kind": "village", "at": [141.0825, -36.96666] },
+    { "osm": "n1756846188", "name": "Sandford", "kind": "village", "at": [141.44364, -37.60683] },
+    {
+      "osm": "n1762852999",
+      "name": "Swifts Creek",
+      "kind": "village",
+      "at": [147.72365, -37.26361]
+    },
+    { "osm": "n1765787455", "name": "Wannon", "kind": "village", "at": [141.83943, -37.66928] },
+    { "osm": "n1768250619", "name": "Condamine", "kind": "village", "at": [150.13265, -26.92607] },
+    { "osm": "n1775896344", "name": "Bollon", "kind": "village", "at": [147.47801, -28.03183] },
+    { "osm": "n1781016992", "name": "Murrabit", "kind": "village", "at": [143.95732, -35.52853] },
+    { "osm": "n1786834774", "name": "Wychitella", "kind": "village", "at": [143.59938, -36.27227] },
+    {
+      "osm": "n1787039672",
+      "name": "Strathbogie",
+      "kind": "village",
+      "at": [145.73589, -36.85647]
+    },
+    { "osm": "n1789817510", "name": "Theodore", "kind": "village", "at": [150.07599, -24.94704] },
+    { "osm": "n1791477689", "name": "Woomelang", "kind": "village", "at": [142.66868, -35.68175] },
+    { "osm": "n1791514845", "name": "Banana", "kind": "village", "at": [150.12809, -24.47083] },
+    { "osm": "n1792545922", "name": "Jung", "kind": "village", "at": [142.35869, -36.60593] },
+    { "osm": "n1793989751", "name": "Tammin", "kind": "village", "at": [117.48714, -31.64171] },
+    { "osm": "n1795281742", "name": "St James", "kind": "village", "at": [145.89534, -36.26903] },
+    { "osm": "n1795318263", "name": "Baralaba", "kind": "village", "at": [149.81108, -24.1807] },
+    { "osm": "n1795421614", "name": "Wowan", "kind": "village", "at": [150.19566, -23.90781] },
+    { "osm": "n1798893321", "name": "Tallimba", "kind": "village", "at": [146.88287, -33.99498] },
+    { "osm": "n1798898456", "name": "Weethalle", "kind": "village", "at": [146.62409, -33.87801] },
+    { "osm": "n1800147536", "name": "Wolseley", "kind": "village", "at": [140.9059, -36.36691] },
+    { "osm": "n1802764548", "name": "Laang", "kind": "village", "at": [142.8069, -38.36842] },
+    { "osm": "n1805075839", "name": "Gracetown", "kind": "village", "at": [114.98816, -33.86468] },
+    { "osm": "n1817627474", "name": "Eungella", "kind": "village", "at": [148.49204, -21.13119] },
+    { "osm": "n1821324177", "name": "Goovigen", "kind": "village", "at": [150.28492, -24.14604] },
+    { "osm": "n1824107708", "name": "Pechey", "kind": "village", "at": [152.04644, -27.30685] },
+    { "osm": "n1828326449", "name": "Kingston", "kind": "village", "at": [143.95581, -37.37429] },
+    { "osm": "n1830388319", "name": "Gladstone", "kind": "village", "at": [148.00929, -40.9595] },
+    { "osm": "n1835106440", "name": "Bororen", "kind": "village", "at": [151.49536, -24.24242] },
+    { "osm": "n1837679595", "name": "Copley", "kind": "village", "at": [138.42517, -30.55438] },
+    {
+      "osm": "n1842599418",
+      "name": "Timber Creek",
+      "kind": "village",
+      "at": [130.48055, -15.65621]
+    },
+    {
+      "osm": "n1843852068",
+      "name": "Langhorne Creek",
+      "kind": "village",
+      "at": [139.03645, -35.29594]
+    },
+    { "osm": "n1851269561", "name": "Thallon", "kind": "village", "at": [148.86547, -28.63487] },
+    { "osm": "n1863502756", "name": "Doomadgee", "kind": "village", "at": [138.82782, -17.94235] },
+    {
+      "osm": "n1869441357",
+      "name": "Western Junction",
+      "kind": "village",
+      "at": [147.21366, -41.55465]
+    },
+    { "osm": "n1875324216", "name": "Myrtlebank", "kind": "village", "at": [147.02911, -38.06447] },
+    { "osm": "n1875324217", "name": "Fulham", "kind": "village", "at": [146.98871, -38.0996] },
+    { "osm": "n1875326012", "name": "Kilmany", "kind": "village", "at": [146.91261, -38.10652] },
+    { "osm": "n1882024651", "name": "Ringarooma", "kind": "village", "at": [147.73687, -41.24171] },
+    { "osm": "n1883015247", "name": "Gunalda", "kind": "village", "at": [152.56677, -25.9892] },
+    { "osm": "n1883709621", "name": "Roseworthy", "kind": "village", "at": [138.74671, -34.53323] },
+    { "osm": "n1883709624", "name": "Stockport", "kind": "village", "at": [138.7324, -34.33398] },
+    { "osm": "n1883709636", "name": "Wasleys", "kind": "village", "at": [138.68361, -34.47247] },
+    { "osm": "n1884404091", "name": "Jimna", "kind": "village", "at": [152.46505, -26.65977] },
+    { "osm": "n1885117232", "name": "Tarlee", "kind": "village", "at": [138.77098, -34.27326] },
+    { "osm": "n1886648896", "name": "Marrabel", "kind": "village", "at": [138.87762, -34.14349] },
+    { "osm": "n1887102624", "name": "Numeralla", "kind": "village", "at": [149.34796, -36.1758] },
+    { "osm": "n1887345497", "name": "Nyah", "kind": "village", "at": [143.37926, -35.17234] },
+    { "osm": "n1887467926", "name": "Degilbo", "kind": "village", "at": [151.99975, -25.48323] },
+    {
+      "osm": "n1887612115",
+      "name": "Wharparilla",
+      "kind": "village",
+      "at": [144.62794, -36.06943]
+    },
+    { "osm": "n1889003274", "name": "Gunbalanya", "kind": "village", "at": [133.05362, -12.32469] },
+    { "osm": "n1894400045", "name": "Kin Kin", "kind": "village", "at": [152.87501, -26.26324] },
+    {
+      "osm": "n1894480829",
+      "name": "Wallendbeen",
+      "kind": "village",
+      "at": [148.15898, -34.52423]
+    },
+    { "osm": "n1894653236", "name": "St Kilda", "kind": "village", "at": [138.53525, -34.73981] },
+    { "osm": "n1898184030", "name": "Charleston", "kind": "village", "at": [138.90056, -34.91686] },
+    { "osm": "n1901847470", "name": "Wundowie", "kind": "village", "at": [116.38689, -31.76307] },
+    { "osm": "n1904133716", "name": "Lewiston", "kind": "village", "at": [138.58975, -34.61028] },
+    { "osm": "n1905076637", "name": "Inglewood", "kind": "village", "at": [138.77463, -34.82375] },
+    { "osm": "n1905313388", "name": "Axedale", "kind": "village", "at": [144.50215, -36.78694] },
+    { "osm": "n1905432802", "name": "Ashton", "kind": "village", "at": [138.73776, -34.93965] },
+    {
+      "osm": "n1905432827",
+      "name": "Norton Summit",
+      "kind": "village",
+      "at": [138.72502, -34.92273]
+    },
+    {
+      "osm": "n1908191318",
+      "name": "Lower Hermitage",
+      "kind": "village",
+      "at": [138.77855, -34.79955]
+    },
+    {
+      "osm": "n1908191323",
+      "name": "Upper Hermitage",
+      "kind": "village",
+      "at": [138.76218, -34.79235]
+    },
+    { "osm": "n1908289705", "name": "Lenswood", "kind": "village", "at": [138.8284, -34.92021] },
+    { "osm": "n1909506398", "name": "Reids Flat", "kind": "village", "at": [149.00863, -34.1309] },
+    { "osm": "n1911359795", "name": "Daveyston", "kind": "village", "at": [138.88262, -34.46912] },
+    { "osm": "n1912710286", "name": "Point Pass", "kind": "village", "at": [139.05073, -34.0762] },
+    { "osm": "n1913430051", "name": "Jindivick", "kind": "village", "at": [145.89929, -38.02707] },
+    {
+      "osm": "n1918187511",
+      "name": "Tanjil Bren",
+      "kind": "village",
+      "at": [146.17723, -37.82335]
+    },
+    { "osm": "n1918586649", "name": "Tungkillo", "kind": "village", "at": [139.06654, -34.82152] },
+    { "osm": "n1923683743", "name": "Leasingham", "kind": "village", "at": [138.65115, -33.98354] },
+    { "osm": "n1923683744", "name": "Sevenhill", "kind": "village", "at": [138.62885, -33.89068] },
+    { "osm": "n1923683754", "name": "Watervale", "kind": "village", "at": [138.64522, -33.96289] },
+    { "osm": "n1928489166", "name": "Dallarnil", "kind": "village", "at": [152.04509, -25.38287] },
+    { "osm": "n1928912661", "name": "Manoora", "kind": "village", "at": [138.81747, -34.00055] },
+    { "osm": "n1928912665", "name": "Mintaro", "kind": "village", "at": [138.72383, -33.9195] },
+    { "osm": "n1928912670", "name": "Rhynie", "kind": "village", "at": [138.68828, -34.14458] },
+    { "osm": "n1931981637", "name": "Toogoom", "kind": "village", "at": [152.68521, -25.25426] },
+    {
+      "osm": "n1937621841",
+      "name": "Allendale East",
+      "kind": "village",
+      "at": [140.70975, -38.00444]
+    },
+    { "osm": "n1939473380", "name": "Nyabing", "kind": "village", "at": [118.14866, -33.5412] },
+    { "osm": "n1939477508", "name": "Pingrup", "kind": "village", "at": [118.51109, -33.53367] },
+    { "osm": "n1939606518", "name": "Kukerin", "kind": "village", "at": [118.08355, -33.18759] },
+    { "osm": "n1940197469", "name": "Elleker", "kind": "village", "at": [117.72914, -35.01095] },
+    { "osm": "n1940197471", "name": "Narrikup", "kind": "village", "at": [117.70147, -34.77365] },
+    { "osm": "n1940197474", "name": "Redmond", "kind": "village", "at": [117.69203, -34.88886] },
+    { "osm": "n1947370543", "name": "Woolbrook", "kind": "village", "at": [151.34612, -30.96577] },
+    { "osm": "n1954340019", "name": "Maude", "kind": "village", "at": [144.30072, -34.47408] },
+    { "osm": "n1955941091", "name": "Bruthen", "kind": "village", "at": [147.83274, -37.70752] },
+    { "osm": "n1956101841", "name": "Innamincka", "kind": "village", "at": [140.73758, -27.74564] },
+    { "osm": "n1957241752", "name": "Warruwi", "kind": "village", "at": [133.39032, -11.64955] },
+    { "osm": "n1959944177", "name": "Ootha", "kind": "village", "at": [147.44882, -33.12104] },
+    {
+      "osm": "n1960490092",
+      "name": "Wangkatjungka",
+      "kind": "village",
+      "at": [125.92806, -18.88405]
+    },
+    { "osm": "n1960925042", "name": "Yiyili", "kind": "village", "at": [126.75616, -18.71891] },
+    {
+      "osm": "n1960928664",
+      "name": "Kunda Djaru",
+      "kind": "village",
+      "at": [128.61501, -18.79384]
+    },
+    { "osm": "n1963287647", "name": "Mulan", "kind": "village", "at": [127.59426, -20.10268] },
+    { "osm": "n1963381155", "name": "Warmun", "kind": "village", "at": [128.21204, -17.02903] },
+    { "osm": "n1965097899", "name": "Kintore", "kind": "village", "at": [129.38819, -23.27591] },
+    { "osm": "n1965413111", "name": "Parnngurr", "kind": "village", "at": [122.59764, -22.81713] },
+    { "osm": "n1966525701", "name": "Talwood", "kind": "village", "at": [149.46965, -28.48551] },
+    { "osm": "n1967769054", "name": "Wyndham", "kind": "village", "at": [149.64422, -36.92943] },
+    { "osm": "n1969399263", "name": "Oodnadatta", "kind": "village", "at": [135.44708, -27.54652] },
+    { "osm": "n1969432669", "name": "Sandford", "kind": "village", "at": [147.49944, -42.94236] },
+    { "osm": "n1969433231", "name": "South Arm", "kind": "village", "at": [147.41399, -43.0298] },
+    { "osm": "n1969434709", "name": "Cambridge", "kind": "village", "at": [147.44861, -42.83383] },
+    { "osm": "n1971392381", "name": "Marree", "kind": "village", "at": [138.06356, -29.64747] },
+    {
+      "osm": "n1974811731",
+      "name": "Mount Tyson",
+      "kind": "village",
+      "at": [151.56831, -27.57404]
+    },
+    {
+      "osm": "n1978742461",
+      "name": "Kaltukatjara",
+      "kind": "village",
+      "at": [129.08441, -24.87489]
+    },
+    { "osm": "n1978818953", "name": "Keyneton", "kind": "village", "at": [139.13474, -34.55571] },
+    { "osm": "n1982778767", "name": "Bidyadanga", "kind": "village", "at": [121.77801, -18.68449] },
+    { "osm": "n1984203938", "name": "Heybridge", "kind": "village", "at": [145.98603, -41.07879] },
+    {
+      "osm": "n1986356492",
+      "name": "Murphys Creek",
+      "kind": "village",
+      "at": [152.05873, -27.46233]
+    },
+    { "osm": "n1987956620", "name": "Forth", "kind": "village", "at": [146.25026, -41.1885] },
+    { "osm": "n1990572593", "name": "Wongulla", "kind": "village", "at": [139.56413, -34.70683] },
+    { "osm": "n1993241168", "name": "Lajamanu", "kind": "village", "at": [130.63592, -18.33578] },
+    {
+      "osm": "n1993453059",
+      "name": "Kalkarindji",
+      "kind": "village",
+      "at": [130.83346, -17.44704]
+    },
+    {
+      "osm": "n1999409507",
+      "name": "Mount Margaret",
+      "kind": "village",
+      "at": [122.1844, -28.79513]
+    },
+    {
+      "osm": "n1999513198",
+      "name": "Mingullatharndo",
+      "kind": "village",
+      "at": [117.2123, -20.80412]
+    },
+    { "osm": "n1999890056", "name": "Tucabia", "kind": "village", "at": [153.10648, -29.66816] },
+    {
+      "osm": "n2000810968",
+      "name": "Minnie Water",
+      "kind": "village",
+      "at": [153.29783, -29.77579]
+    },
+    { "osm": "n2002428754", "name": "Wyrallah", "kind": "village", "at": [153.29991, -28.88906] },
+    {
+      "osm": "n2003164307",
+      "name": "Port Arthur",
+      "kind": "village",
+      "at": [147.84404, -43.14353]
+    },
+    { "osm": "n2003938805", "name": "Wardell", "kind": "village", "at": [153.46357, -28.95176] },
+    { "osm": "n2007239859", "name": "Rye Park", "kind": "village", "at": [148.90728, -34.51797] },
+    { "osm": "n2007420065", "name": "Kupartiya", "kind": "village", "at": [126.24595, -18.89192] },
+    {
+      "osm": "n2011700452",
+      "name": "Collinsvale",
+      "kind": "village",
+      "at": [147.19739, -42.84053]
+    },
+    { "osm": "n2011708807", "name": "Black Hill", "kind": "village", "at": [139.45746, -34.70261] },
+    { "osm": "n2013705123", "name": "Bayulu", "kind": "village", "at": [125.59781, -18.30059] },
+    {
+      "osm": "n2014962027",
+      "name": "The Channon",
+      "kind": "village",
+      "at": [153.27845, -28.67393]
+    },
+    { "osm": "n2015829814", "name": "Withcott", "kind": "village", "at": [152.02662, -27.55459] },
+    { "osm": "n2015936015", "name": "Paskeville", "kind": "village", "at": [137.90176, -34.03609] },
+    { "osm": "n2016091967", "name": "Wyalong", "kind": "village", "at": [147.24589, -33.92678] },
+    { "osm": "n2016097860", "name": "Caragabal", "kind": "village", "at": [147.74267, -33.84407] },
+    { "osm": "n2017898285", "name": "Lyndhurst", "kind": "village", "at": [138.34878, -30.28804] },
+    { "osm": "n2018197599", "name": "Buchan", "kind": "village", "at": [148.17209, -37.49922] },
+    { "osm": "n2022643013", "name": "Deepwater", "kind": "village", "at": [151.8451, -29.4434] },
+    {
+      "osm": "n2023755780",
+      "name": "Korong Vale",
+      "kind": "village",
+      "at": [143.70388, -36.35588]
+    },
+    {
+      "osm": "n2025259832",
+      "name": "Cooya Beach",
+      "kind": "village",
+      "at": [145.40673, -16.45041]
+    },
+    { "osm": "n2027818357", "name": "Stockwell", "kind": "village", "at": [139.05272, -34.43402] },
+    {
+      "osm": "n2030400000",
+      "name": "Wonga Beach",
+      "kind": "village",
+      "at": [145.41294, -16.34826]
+    },
+    { "osm": "n2031102658", "name": "Irrungadji", "kind": "village", "at": [120.10515, -21.89426] },
+    { "osm": "n2034443580", "name": "Iragul", "kind": "village", "at": [121.69585, -32.11845] },
+    {
+      "osm": "n2035815748",
+      "name": "Diggers Camp",
+      "kind": "village",
+      "at": [153.28856, -29.81645]
+    },
+    { "osm": "n2035856194", "name": "Urandangi", "kind": "village", "at": [138.31735, -21.60941] },
+    { "osm": "n2036062049", "name": "Yando", "kind": "village", "at": [143.79938, -36.07811] },
+    {
+      "osm": "n2036203522",
+      "name": "Innawonga Community",
+      "kind": "village",
+      "at": [117.88966, -23.04492]
+    },
+    { "osm": "n2036586545", "name": "Imintji", "kind": "village", "at": [125.46146, -17.15066] },
+    { "osm": "n2037179484", "name": "Julatten", "kind": "village", "at": [145.34266, -16.60565] },
+    { "osm": "n2038570695", "name": "Guda Guda", "kind": "village", "at": [128.19261, -15.53371] },
+    {
+      "osm": "n2039806578",
+      "name": "Goolarabooloo Millibinyarri",
+      "kind": "village",
+      "at": [122.21908, -17.83767]
+    },
+    { "osm": "n2041339836", "name": "Lal Lal", "kind": "village", "at": [144.0128, -37.67597] },
+    { "osm": "n2041955370", "name": "Girriyoowa", "kind": "village", "at": [126.76767, -18.72088] },
+    { "osm": "n2043483086", "name": "Djugerari", "kind": "village", "at": [125.51053, -18.98738] },
+    {
+      "osm": "n2045864246",
+      "name": "Djarindjin Junction",
+      "kind": "village",
+      "at": [122.91395, -16.51727]
+    },
+    { "osm": "n2053932005", "name": "Annuello", "kind": "village", "at": [142.83181, -34.85457] },
+    { "osm": "n2053933205", "name": "Bolton", "kind": "village", "at": [142.88021, -34.96632] },
+    { "osm": "n2055677619", "name": "Bobieding", "kind": "village", "at": [122.63453, -16.97438] },
+    { "osm": "n2059381201", "name": "Nyah West", "kind": "village", "at": [143.3469, -35.18666] },
+    { "osm": "n2061450321", "name": "Brooloo", "kind": "village", "at": [152.70099, -26.48797] },
+    { "osm": "n2064034908", "name": "Forest", "kind": "village", "at": [145.24868, -40.85671] },
+    { "osm": "n2064034909", "name": "Irishtown", "kind": "village", "at": [145.14415, -40.91378] },
+    {
+      "osm": "n2065926931",
+      "name": "Farrell Flat",
+      "kind": "village",
+      "at": [138.79511, -33.82753]
+    },
+    { "osm": "n2066334118", "name": "Bidan", "kind": "village", "at": [123.16778, -17.64493] },
+    { "osm": "n2068000597", "name": "Beagle Bay", "kind": "village", "at": [122.66445, -16.98374] },
+    {
+      "osm": "n2079631185",
+      "name": "Sisters Beach",
+      "kind": "village",
+      "at": [145.56149, -40.91778]
+    },
+    { "osm": "n2091977411", "name": "Middleton", "kind": "village", "at": [147.25407, -43.23178] },
+    { "osm": "n2091991387", "name": "Gordon", "kind": "village", "at": [147.24114, -43.2617] },
+    { "osm": "n2092082609", "name": "Southport", "kind": "village", "at": [146.9754, -43.43064] },
+    { "osm": "n2092109048", "name": "Port Huon", "kind": "village", "at": [146.96981, -43.15563] },
+    { "osm": "n2093315694", "name": "Ariah Park", "kind": "village", "at": [147.21757, -34.34889] },
+    {
+      "osm": "n2106525315",
+      "name": "North Mossman",
+      "kind": "village",
+      "at": [145.37431, -16.44005]
+    },
+    { "osm": "n2108209134", "name": "Walpeup", "kind": "village", "at": [142.02447, -35.13713] },
+    { "osm": "n2111363699", "name": "Parilla", "kind": "village", "at": [140.66659, -35.29735] },
+    { "osm": "n2119119850", "name": "Toobanna", "kind": "village", "at": [146.14993, -18.70949] },
+    { "osm": "n2120573397", "name": "Walla Walla", "kind": "village", "at": [146.9008, -35.76332] },
+    { "osm": "n2125987138", "name": "Bullyard", "kind": "village", "at": [152.0606, -24.95304] },
+    { "osm": "n2128298259", "name": "Ayton", "kind": "village", "at": [145.35265, -15.92191] },
+    { "osm": "n2128342271", "name": "Blyth", "kind": "village", "at": [138.48946, -33.8451] },
+    { "osm": "n2132126418", "name": "Kybybolite", "kind": "village", "at": [140.92482, -36.86994] },
+    { "osm": "n2138130505", "name": "Longwarry", "kind": "village", "at": [145.7706, -38.11114] },
+    { "osm": "n2140871545", "name": "Blackwood", "kind": "village", "at": [144.30647, -37.47118] },
+    { "osm": "n2151455885", "name": "Cororooke", "kind": "village", "at": [143.5231, -38.28716] },
+    { "osm": "n2151491931", "name": "Alvie", "kind": "village", "at": [143.5156, -38.24418] },
+    { "osm": "n2151557322", "name": "Walwa", "kind": "village", "at": [147.7357, -35.96403] },
+    { "osm": "n2155600995", "name": "Cranbrook", "kind": "village", "at": [117.55237, -34.29403] },
+    { "osm": "n2163777199", "name": "Yacka", "kind": "village", "at": [138.44589, -33.57083] },
+    {
+      "osm": "n2174074782",
+      "name": "Watsons Creek",
+      "kind": "village",
+      "at": [151.05211, -30.73376]
+    },
+    { "osm": "n2174282817", "name": "Lindenow", "kind": "village", "at": [147.45838, -37.80043] },
+    { "osm": "n2177831085", "name": "Waaia", "kind": "village", "at": [145.33129, -36.05221] },
+    { "osm": "n2178058625", "name": "Garrthalala", "kind": "village", "at": [136.5684, -12.76288] },
+    { "osm": "n2178062602", "name": "Ramingining", "kind": "village", "at": [134.92993, -12.328] },
+    { "osm": "n2178065154", "name": "Maningrida", "kind": "village", "at": [134.22673, -12.05242] },
+    { "osm": "n2178291068", "name": "Gulnare", "kind": "village", "at": [138.44224, -33.4672] },
+    { "osm": "n2181017903", "name": "Buckland", "kind": "village", "at": [147.7178, -42.60731] },
+    { "osm": "n2209019276", "name": "Kybunga", "kind": "village", "at": [138.50519, -33.92074] },
+    { "osm": "n2210847648", "name": "Jindera", "kind": "village", "at": [146.88903, -35.95348] },
+    { "osm": "n2212413002", "name": "Walbundrie", "kind": "village", "at": [146.72312, -35.6885] },
+    { "osm": "n2220361225", "name": "Redbanks", "kind": "village", "at": [138.56175, -34.48222] },
+    { "osm": "n2244280314", "name": "Congupna", "kind": "village", "at": [145.43316, -36.3005] },
+    {
+      "osm": "n2244829172",
+      "name": "Tallygaroopna",
+      "kind": "village",
+      "at": [145.4337, -36.23799]
+    },
+    { "osm": "n2247779035", "name": "Hay Point", "kind": "village", "at": [149.2915, -21.29661] },
+    { "osm": "n2247794835", "name": "Greenhill", "kind": "village", "at": [149.45158, -21.68238] },
+    { "osm": "n2249360888", "name": "Nain", "kind": "village", "at": [138.90047, -34.45002] },
+    { "osm": "n2249392707", "name": "Koumala", "kind": "village", "at": [149.24673, -21.60876] },
+    {
+      "osm": "n2252476507",
+      "name": "Macclesfield",
+      "kind": "village",
+      "at": [138.83603, -35.17187]
+    },
+    { "osm": "n2270203043", "name": "Talbingo", "kind": "village", "at": [148.303, -35.58192] },
+    { "osm": "n2270621645", "name": "Milang", "kind": "village", "at": [138.97133, -35.40534] },
+    {
+      "osm": "n2275102724",
+      "name": "Younghusband",
+      "kind": "village",
+      "at": [139.46899, -34.86805]
+    },
+    { "osm": "n2275135270", "name": "Jervois", "kind": "village", "at": [139.4377, -35.26436] },
+    {
+      "osm": "n2285643533",
+      "name": "Murrayville",
+      "kind": "village",
+      "at": [141.18265, -35.26255]
+    },
+    {
+      "osm": "n2286688206",
+      "name": "Cape Jervis",
+      "kind": "village",
+      "at": [138.10535, -35.60617]
+    },
+    {
+      "osm": "n2286688211",
+      "name": "Second Valley",
+      "kind": "village",
+      "at": [138.21924, -35.51468]
+    },
+    { "osm": "n2286688212", "name": "Yankalilla", "kind": "village", "at": [138.35065, -35.45868] },
+    { "osm": "n2290081095", "name": "Penneshaw", "kind": "village", "at": [137.93954, -35.71767] },
+    { "osm": "n2291929162", "name": "Caltowie", "kind": "village", "at": [138.48267, -33.18086] },
+    { "osm": "n2293202745", "name": "Wirrabara", "kind": "village", "at": [138.2697, -33.03281] },
+    {
+      "osm": "n2295595420",
+      "name": "Billen Cliffs",
+      "kind": "village",
+      "at": [153.13134, -28.61218]
+    },
+    { "osm": "n2299079187", "name": "Warragamba", "kind": "village", "at": [150.60392, -33.88904] },
+    { "osm": "n2300367351", "name": "Wangan", "kind": "village", "at": [146.00892, -17.57359] },
+    { "osm": "n2300379107", "name": "Hull Heads", "kind": "village", "at": [146.07047, -17.99575] },
+    {
+      "osm": "n2300379108",
+      "name": "Tully Heads",
+      "kind": "village",
+      "at": [146.05971, -18.01355]
+    },
+    { "osm": "n2300883824", "name": "Simpson", "kind": "village", "at": [143.20773, -38.49566] },
+    { "osm": "n2303712178", "name": "Booborowie", "kind": "village", "at": [138.75955, -33.56255] },
+    { "osm": "n2306413316", "name": "Mount Bryan", "kind": "village", "at": [138.8939, -33.55032] },
+    { "osm": "n2310539086", "name": "Ensay", "kind": "village", "at": [147.83616, -37.37354] },
+    { "osm": "n2315777578", "name": "Andamooka", "kind": "village", "at": [137.16445, -30.45092] },
+    { "osm": "n2316964266", "name": "Terowie", "kind": "village", "at": [138.9183, -33.15144] },
+    { "osm": "n2322919894", "name": "Ben Lomond", "kind": "village", "at": [151.65918, -30.02371] },
+    { "osm": "n2324185963", "name": "Gilgai", "kind": "village", "at": [151.11819, -29.85153] },
+    { "osm": "n2329183869", "name": "Quambatook", "kind": "village", "at": [143.52086, -35.85005] },
+    { "osm": "n2331319543", "name": "Severnlea", "kind": "village", "at": [151.90512, -28.70206] },
+    {
+      "osm": "n2331505654",
+      "name": "Pallamallawa",
+      "kind": "village",
+      "at": [150.13541, -29.47534]
+    },
+    { "osm": "n2338772849", "name": "Stratford", "kind": "village", "at": [151.93855, -32.11772] },
+    {
+      "osm": "n2339147238",
+      "name": "Golden Beach",
+      "kind": "village",
+      "at": [147.39822, -38.21069]
+    },
+    {
+      "osm": "n2340361477",
+      "name": "Leitchville",
+      "kind": "village",
+      "at": [144.30082, -35.90414]
+    },
+    { "osm": "n2340366162", "name": "Toora", "kind": "village", "at": [146.32435, -38.66474] },
+    { "osm": "n2340383709", "name": "Port Albert", "kind": "village", "at": [146.69217, -38.6718] },
+    { "osm": "n2340385928", "name": "Alberton", "kind": "village", "at": [146.66585, -38.61499] },
+    {
+      "osm": "n2340393734",
+      "name": "Port Franklin",
+      "kind": "village",
+      "at": [146.27921, -38.68296]
+    },
+    { "osm": "n2340527966", "name": "Thornton", "kind": "village", "at": [152.3737, -27.79784] },
+    { "osm": "n2340527968", "name": "Mulgowie", "kind": "village", "at": [152.36441, -27.72773] },
+    {
+      "osm": "n2352240526",
+      "name": "Sapphiretown",
+      "kind": "village",
+      "at": [137.78422, -35.79333]
+    },
+    { "osm": "n2352704836", "name": "Townsend", "kind": "village", "at": [153.21778, -29.465] },
+    { "osm": "n2358362315", "name": "Stieglitz", "kind": "village", "at": [148.30011, -41.32331] },
+    { "osm": "n2365813401", "name": "Yabberup", "kind": "village", "at": [116.00739, -33.53718] },
+    { "osm": "n2377375285", "name": "Dandaragan", "kind": "village", "at": [115.70349, -30.67217] },
+    {
+      "osm": "n2377672099",
+      "name": "Wagait Beach",
+      "kind": "village",
+      "at": [130.74327, -12.43371]
+    },
+    { "osm": "n2386338006", "name": "Rokeby", "kind": "village", "at": [145.92611, -38.07084] },
+    {
+      "osm": "n2390147132",
+      "name": "Willow Grove",
+      "kind": "village",
+      "at": [146.17849, -38.0723]
+    },
+    {
+      "osm": "n2393353785",
+      "name": "Mount Castor",
+      "kind": "village",
+      "at": [148.73057, -21.10666]
+    },
+    {
+      "osm": "n2397996122",
+      "name": "Adventure Bay",
+      "kind": "village",
+      "at": [147.32846, -43.36097]
+    },
+    { "osm": "n2405833097", "name": "Ellendale", "kind": "village", "at": [146.7167, -42.6172] },
+    { "osm": "n2405941972", "name": "Grove", "kind": "village", "at": [147.09902, -42.97895] },
+    {
+      "osm": "n2406646803",
+      "name": "The Monument",
+      "kind": "village",
+      "at": [139.91346, -21.76427]
+    },
+    { "osm": "n2406728803", "name": "Hamilton", "kind": "village", "at": [146.8344, -42.55712] },
+    { "osm": "n2418531812", "name": "Glenwood", "kind": "village", "at": [152.60468, -25.93281] },
+    { "osm": "n2422174174", "name": "Stanwell", "kind": "village", "at": [150.32765, -23.48343] },
+    { "osm": "n2423528819", "name": "Seaspray", "kind": "village", "at": [147.19072, -38.37397] },
+    { "osm": "n2429767317", "name": "Silkwood", "kind": "village", "at": [146.02065, -17.74627] },
+    { "osm": "n2434975180", "name": "Wynarka", "kind": "village", "at": [139.73074, -35.13256] },
+    { "osm": "n2451288340", "name": "Gregory", "kind": "village", "at": [114.25147, -28.18801] },
+    { "osm": "n2461133802", "name": "Ungarie", "kind": "village", "at": [146.97594, -33.64142] },
+    {
+      "osm": "n2463680253",
+      "name": "Wongaling Beach",
+      "kind": "village",
+      "at": [146.09167, -17.89937]
+    },
+    {
+      "osm": "n2465337616",
+      "name": "Flying Fish Point",
+      "kind": "village",
+      "at": [146.07555, -17.5027]
+    },
+    { "osm": "n2469854292", "name": "Elmhurst", "kind": "village", "at": [143.24651, -37.17796] },
+    { "osm": "n2470986459", "name": "Tarzali", "kind": "village", "at": [145.6038, -17.42462] },
+    { "osm": "n2477090995", "name": "Tullibigeal", "kind": "village", "at": [146.72546, -33.4224] },
+    { "osm": "n2487920290", "name": "Parham", "kind": "village", "at": [138.25897, -34.43047] },
+    { "osm": "n2500170636", "name": "Raywood", "kind": "village", "at": [144.20535, -36.53467] },
+    { "osm": "n2500249462", "name": "Sebastian", "kind": "village", "at": [144.19079, -36.59315] },
+    { "osm": "n2500580507", "name": "Dingee", "kind": "village", "at": [144.23258, -36.3699] },
+    {
+      "osm": "n2508333835",
+      "name": "Midge Point",
+      "kind": "village",
+      "at": [148.72052, -20.65086]
+    },
+    { "osm": "n2509392077", "name": "Cordalba", "kind": "village", "at": [152.21238, -25.1578] },
+    { "osm": "n2520566971", "name": "Carrieton", "kind": "village", "at": [138.53097, -32.4234] },
+    { "osm": "n2520852601", "name": "Jumbunna", "kind": "village", "at": [145.77478, -38.46763] },
+    { "osm": "n2526067018", "name": "Wickepin", "kind": "village", "at": [117.49938, -32.78424] },
+    { "osm": "n2527482788", "name": "Chillingham", "kind": "village", "at": [153.275, -28.31215] },
+    { "osm": "n2531690389", "name": "Rosedale", "kind": "village", "at": [151.91444, -24.62943] },
+    {
+      "osm": "n2564069027",
+      "name": "Wesley Vale",
+      "kind": "village",
+      "at": [146.45514, -41.18991]
+    },
+    { "osm": "n2565910133", "name": "Miram", "kind": "village", "at": [141.34495, -36.35487] },
+    { "osm": "n2566169425", "name": "Edi Upper", "kind": "village", "at": [146.43917, -36.66296] },
+    { "osm": "n2571375037", "name": "Tuena", "kind": "village", "at": [149.32912, -34.01746] },
+    { "osm": "n2573894302", "name": "Merriton", "kind": "village", "at": [138.15097, -33.43592] },
+    {
+      "osm": "n2578696613",
+      "name": "Hopetoun Park",
+      "kind": "village",
+      "at": [144.50164, -37.69504]
+    },
+    { "osm": "n2586197164", "name": "Winnaleah", "kind": "village", "at": [147.82507, -41.09839] },
+    {
+      "osm": "n2586470827",
+      "name": "Rocky Gully",
+      "kind": "village",
+      "at": [117.00873, -34.51414]
+    },
+    {
+      "osm": "n2587406506",
+      "name": "Murray Town",
+      "kind": "village",
+      "at": [138.23867, -32.93567]
+    },
+    { "osm": "n2588633969", "name": "Tarcowie", "kind": "village", "at": [138.51618, -32.95122] },
+    { "osm": "n2588697828", "name": "Kununoppin", "kind": "village", "at": [117.91852, -31.11271] },
+    { "osm": "n2588697830", "name": "Welbungin", "kind": "village", "at": [117.99376, -30.82394] },
+    {
+      "osm": "n2591124452",
+      "name": "Karragarra Island",
+      "kind": "village",
+      "at": [153.36622, -27.63629]
+    },
+    { "osm": "n2600814041", "name": "Ansons Bay", "kind": "village", "at": [148.26911, -41.03729] },
+    { "osm": "n2615851101", "name": "Moriac", "kind": "village", "at": [144.17255, -38.24526] },
+    {
+      "osm": "n2617894356",
+      "name": "Little River",
+      "kind": "village",
+      "at": [144.50099, -37.96393]
+    },
+    { "osm": "n2620633328", "name": "Mathinna", "kind": "village", "at": [147.88957, -41.47498] },
+    { "osm": "n2625771074", "name": "Booral", "kind": "village", "at": [151.96022, -32.46671] },
+    {
+      "osm": "n2626590762",
+      "name": "Kialla West",
+      "kind": "village",
+      "at": [145.38913, -36.46515]
+    },
+    { "osm": "n2634782123", "name": "Wilmot", "kind": "village", "at": [146.17485, -41.38703] },
+    { "osm": "n2655270525", "name": "Bellbridge", "kind": "village", "at": [147.06195, -36.09876] },
+    { "osm": "n2665856833", "name": "Narrung", "kind": "village", "at": [139.16147, -35.50954] },
+    { "osm": "n2677913480", "name": "Bungunya", "kind": "village", "at": [149.65652, -28.42427] },
+    { "osm": "n2680325209", "name": "Manypeaks", "kind": "village", "at": [118.17086, -34.83813] },
+    { "osm": "n2681569538", "name": "Wellstead", "kind": "village", "at": [118.60412, -34.49521] },
+    { "osm": "n2693752994", "name": "Dergholm", "kind": "village", "at": [141.21644, -37.36942] },
+    { "osm": "n2694248057", "name": "Chetwynd", "kind": "village", "at": [141.4189, -37.27711] },
+    { "osm": "n2715730736", "name": "Coulta", "kind": "village", "at": [135.4684, -34.38527] },
+    { "osm": "n2716036885", "name": "Wangary", "kind": "village", "at": [135.47817, -34.55104] },
+    { "osm": "n2716428341", "name": "Glencoe", "kind": "village", "at": [140.61076, -37.68672] },
+    { "osm": "n2717037927", "name": "Rendelsham", "kind": "village", "at": [140.22501, -37.5506] },
+    {
+      "osm": "n2736214028",
+      "name": "Patchs Beach",
+      "kind": "village",
+      "at": [153.50944, -28.94694]
+    },
+    {
+      "osm": "n2736491151",
+      "name": "South Ballina",
+      "kind": "village",
+      "at": [153.55694, -28.88359]
+    },
+    {
+      "osm": "n2741024566",
+      "name": "Cardigan Village",
+      "kind": "village",
+      "at": [143.70844, -37.51617]
+    },
+    {
+      "osm": "n2755479864",
+      "name": "Dales Creek",
+      "kind": "village",
+      "at": [144.30315, -37.52186]
+    },
+    {
+      "osm": "n2813049267",
+      "name": "Uriarra Village",
+      "kind": "village",
+      "at": [148.92547, -35.2963]
+    },
+    { "osm": "n2823811661", "name": "Sprent", "kind": "village", "at": [146.15841, -41.2625] },
+    { "osm": "n2826562768", "name": "Allingham", "kind": "village", "at": [146.296, -18.7053] },
+    {
+      "osm": "n2826562769",
+      "name": "Taylors Beach",
+      "kind": "village",
+      "at": [146.32698, -18.62255]
+    },
+    { "osm": "n2827225970", "name": "Yarram", "kind": "village", "at": [146.67589, -38.56167] },
+    {
+      "osm": "n2843367368",
+      "name": "Dodges Ferry",
+      "kind": "village",
+      "at": [147.62185, -42.8536]
+    },
+    {
+      "osm": "n2879532291",
+      "name": "Tarwin Lower",
+      "kind": "village",
+      "at": [145.86842, -38.70111]
+    },
+    { "osm": "n2939016806", "name": "Walhalla", "kind": "village", "at": [146.45114, -37.94231] },
+    {
+      "osm": "n2968379122",
+      "name": "Castaways Beach",
+      "kind": "village",
+      "at": [153.10431, -26.4358]
+    },
+    {
+      "osm": "n2968379123",
+      "name": "Marcus Beach",
+      "kind": "village",
+      "at": [153.09765, -26.45324]
+    },
+    {
+      "osm": "n2968379124",
+      "name": "Peregian Beach",
+      "kind": "village",
+      "at": [153.09618, -26.4811]
+    },
+    {
+      "osm": "n2968379125",
+      "name": "Sunrise Beach",
+      "kind": "village",
+      "at": [153.10771, -26.4162]
+    },
+    {
+      "osm": "n2968379126",
+      "name": "Sunshine Beach",
+      "kind": "village",
+      "at": [153.11178, -26.40513]
+    },
+    { "osm": "n2968743643", "name": "Wooragee", "kind": "village", "at": [146.73178, -36.29073] },
+    {
+      "osm": "n2989435471",
+      "name": "Happy Valley",
+      "kind": "village",
+      "at": [153.20052, -25.33771]
+    },
+    {
+      "osm": "n3006192007",
+      "name": "Middle Point",
+      "kind": "village",
+      "at": [131.32149, -12.56981]
+    },
+    { "osm": "n3009597054", "name": "Lipson", "kind": "village", "at": [136.13716, -34.29135] },
+    { "osm": "n3017407073", "name": "Howlong", "kind": "village", "at": [146.62476, -35.97832] },
+    { "osm": "n3017455196", "name": "Wilby", "kind": "village", "at": [146.01789, -36.15756] },
+    { "osm": "n3045934818", "name": "Harrismith", "kind": "village", "at": [117.86137, -32.93593] },
+    { "osm": "n3049730589", "name": "Goorambat", "kind": "village", "at": [145.92017, -36.40713] },
+    { "osm": "n3053673728", "name": "Yanderra", "kind": "village", "at": [150.57248, -34.32099] },
+    {
+      "osm": "n3058982703",
+      "name": "Ravensworth",
+      "kind": "village",
+      "at": [151.05648, -32.44346]
+    },
+    { "osm": "n3104824664", "name": "Rosewood", "kind": "village", "at": [147.86375, -35.67239] },
+    { "osm": "n3153661836", "name": "Loch Sport", "kind": "village", "at": [147.58666, -38.04468] },
+    {
+      "osm": "n3169667099",
+      "name": "Shepparton East",
+      "kind": "village",
+      "at": [145.47779, -36.39822]
+    },
+    {
+      "osm": "n3169859371",
+      "name": "Greta South",
+      "kind": "village",
+      "at": [146.23777, -36.61921]
+    },
+    { "osm": "n3169859372", "name": "Molyullah", "kind": "village", "at": [146.15569, -36.64137] },
+    { "osm": "n3178512160", "name": "Towamba", "kind": "village", "at": [149.69644, -37.08493] },
+    { "osm": "n3242574655", "name": "Cawarral", "kind": "village", "at": [150.67732, -23.25435] },
+    { "osm": "n3243293313", "name": "Pormpuraaw", "kind": "village", "at": [141.62113, -14.89995] },
+    {
+      "osm": "n3245959223",
+      "name": "Theresa Park",
+      "kind": "village",
+      "at": [150.63237, -33.99341]
+    },
+    { "osm": "n3245959224", "name": "Cobbitty", "kind": "village", "at": [150.69227, -34.01042] },
+    { "osm": "n3268092465", "name": "Yarralin", "kind": "village", "at": [130.88207, -16.44782] },
+    { "osm": "n3273370101", "name": "Mungkarta", "kind": "village", "at": [134.19845, -20.33699] },
+    { "osm": "n3297011362", "name": "Amanbidji", "kind": "village", "at": [129.61849, -16.42894] },
+    { "osm": "n3300469024", "name": "Palumpa", "kind": "village", "at": [129.88005, -14.35076] },
+    { "osm": "n3300469577", "name": "Wudapuli", "kind": "village", "at": [129.85346, -14.21401] },
+    {
+      "osm": "n3301216487",
+      "name": "Peppimenarti",
+      "kind": "village",
+      "at": [130.07637, -14.15058]
+    },
+    {
+      "osm": "n3320329415",
+      "name": "Bouldercombe",
+      "kind": "village",
+      "at": [150.47804, -23.55468]
+    },
+    { "osm": "n3329196480", "name": "Cadoux", "kind": "village", "at": [117.13572, -30.76995] },
+    { "osm": "n3340904403", "name": "Minyerri", "kind": "village", "at": [134.08189, -15.22162] },
+    {
+      "osm": "n3345184012",
+      "name": "Koolyanobbing",
+      "kind": "village",
+      "at": [119.51966, -30.81545]
+    },
+    {
+      "osm": "n3355510027",
+      "name": "Woodanilling",
+      "kind": "village",
+      "at": [117.43373, -33.56255]
+    },
+    {
+      "osm": "n3390094295",
+      "name": "Cape Burney",
+      "kind": "village",
+      "at": [114.64657, -28.85787]
+    },
+    { "osm": "n3402767808", "name": "Horrocks", "kind": "village", "at": [114.4313, -28.38218] },
+    {
+      "osm": "n3403187751",
+      "name": "Amphitheatre",
+      "kind": "village",
+      "at": [143.40054, -37.18154]
+    },
+    { "osm": "n3421293709", "name": "Morangup", "kind": "village", "at": [116.30239, -31.69526] },
+    { "osm": "n3440750988", "name": "Yinnar", "kind": "village", "at": [146.32594, -38.3243] },
+    {
+      "osm": "n3441792546",
+      "name": "Badger Creek",
+      "kind": "village",
+      "at": [145.53292, -37.70153]
+    },
+    { "osm": "n3509710195", "name": "Carrathool", "kind": "village", "at": [145.43303, -34.40915] },
+    { "osm": "n3534520275", "name": "Howden", "kind": "village", "at": [147.29239, -43.0258] },
+    { "osm": "n3542827274", "name": "Koyuga", "kind": "village", "at": [144.88695, -36.22056] },
+    { "osm": "n3602863709", "name": "Qunaba", "kind": "village", "at": [152.42799, -24.83323] },
+    { "osm": "n3604377527", "name": "Coral Cove", "kind": "village", "at": [152.48278, -24.88219] },
+    { "osm": "n3605379839", "name": "Woongarra", "kind": "village", "at": [152.41874, -24.89031] },
+    { "osm": "n3605419560", "name": "Windermere", "kind": "village", "at": [152.4357, -24.85558] },
+    { "osm": "n3605534893", "name": "Coonarr", "kind": "village", "at": [152.4841, -24.95603] },
+    {
+      "osm": "n3608172893",
+      "name": "Macleay Island",
+      "kind": "village",
+      "at": [153.3551, -27.60299]
+    },
+    {
+      "osm": "n3623370078",
+      "name": "South Kolan",
+      "kind": "village",
+      "at": [152.16917, -24.93165]
+    },
+    { "osm": "n3629136766", "name": "Sharon", "kind": "village", "at": [152.26164, -24.88098] },
+    { "osm": "n3629162337", "name": "Oakwood", "kind": "village", "at": [152.30232, -24.84771] },
+    { "osm": "n3629165588", "name": "Meadowvale", "kind": "village", "at": [152.24898, -24.81295] },
+    { "osm": "n3635476009", "name": "Avondale", "kind": "village", "at": [152.15865, -24.74164] },
+    { "osm": "n3635476010", "name": "Yandaran", "kind": "village", "at": [152.113, -24.7224] },
+    { "osm": "n3639444746", "name": "Moorland", "kind": "village", "at": [152.19209, -24.76691] },
+    { "osm": "n3650830761", "name": "Horton", "kind": "village", "at": [152.32088, -25.22741] },
+    {
+      "osm": "n3655103890",
+      "name": "McLaren Flat",
+      "kind": "village",
+      "at": [138.5853, -35.20578]
+    },
+    { "osm": "n3656073879", "name": "Booyal", "kind": "village", "at": [152.0412, -25.21541] },
+    { "osm": "n3660164315", "name": "Winfield", "kind": "village", "at": [152.02008, -24.53447] },
+    { "osm": "n3668683809", "name": "Wallaville", "kind": "village", "at": [151.99602, -25.07378] },
+    {
+      "osm": "n3686385042",
+      "name": "South Bingera",
+      "kind": "village",
+      "at": [152.22002, -24.96724]
+    },
+    { "osm": "n3686396743", "name": "Bucca", "kind": "village", "at": [152.10838, -24.87073] },
+    { "osm": "n3708596638", "name": "Goombungee", "kind": "village", "at": [151.8509, -27.30482] },
+    {
+      "osm": "n3708748888",
+      "name": "East Greenmount",
+      "kind": "village",
+      "at": [151.94799, -27.77392]
+    },
+    {
+      "osm": "n3719855669",
+      "name": "Cudlee Creek",
+      "kind": "village",
+      "at": [138.82033, -34.84148]
+    },
+    { "osm": "n3724595383", "name": "Nitjpurru", "kind": "village", "at": [131.22071, -16.81471] },
+    { "osm": "n3742666562", "name": "Barunga", "kind": "village", "at": [132.8648, -14.525] },
+    { "osm": "n3742789974", "name": "Wugularr", "kind": "village", "at": [133.11399, -14.5545] },
+    { "osm": "n3743959901", "name": "Coolalinga", "kind": "village", "at": [131.04035, -12.52428] },
+    { "osm": "n3745334332", "name": "Daly River", "kind": "village", "at": [130.68864, -13.75045] },
+    { "osm": "n3750416736", "name": "Belyuen", "kind": "village", "at": [130.70074, -12.53941] },
+    { "osm": "n3765083462", "name": "Brookstead", "kind": "village", "at": [151.44816, -27.75763] },
+    {
+      "osm": "n3785008493",
+      "name": "Livingstone",
+      "kind": "village",
+      "at": [131.07782, -12.67939]
+    },
+    { "osm": "n3785008494", "name": "Noonamah", "kind": "village", "at": [131.07469, -12.63466] },
+    { "osm": "n3786827513", "name": "Southport", "kind": "village", "at": [130.94849, -12.72273] },
+    {
+      "osm": "n3792166800",
+      "name": "Sheaoak Flat",
+      "kind": "village",
+      "at": [137.87593, -34.70494]
+    },
+    { "osm": "n3796349579", "name": "Tenby Point", "kind": "village", "at": [145.47715, -38.411] },
+    { "osm": "n3796826557", "name": "Bungadoo", "kind": "village", "at": [152.07359, -24.98793] },
+    { "osm": "n3796826558", "name": "Delan", "kind": "village", "at": [152.0386, -25.02734] },
+    { "osm": "n3796826559", "name": "Electra", "kind": "village", "at": [152.11853, -24.98836] },
+    { "osm": "n3796826561", "name": "Pine Creek", "kind": "village", "at": [152.16876, -25.02235] },
+    {
+      "osm": "n3797892571",
+      "name": "Isis Central",
+      "kind": "village",
+      "at": [152.19558, -25.19723]
+    },
+    { "osm": "n3799055382", "name": "South Isis", "kind": "village", "at": [152.29728, -25.25824] },
+    {
+      "osm": "n3801700765",
+      "name": "Morganville",
+      "kind": "village",
+      "at": [151.96311, -25.18042]
+    },
+    { "osm": "n3824830161", "name": "Borroloola", "kind": "village", "at": [136.30541, -16.05945] },
+    { "osm": "n3827117728", "name": "Brooklands", "kind": "village", "at": [151.81846, -26.74241] },
+    { "osm": "n3827117730", "name": "Cloyna", "kind": "village", "at": [151.84484, -26.10777] },
+    {
+      "osm": "n3827117731",
+      "name": "Ficks Crossing",
+      "kind": "village",
+      "at": [151.88889, -26.26039]
+    },
+    { "osm": "n3827117736", "name": "Mondure", "kind": "village", "at": [151.7755, -26.18059] },
+    { "osm": "n3827117737", "name": "Mowbullan", "kind": "village", "at": [151.59959, -26.89023] },
+    { "osm": "n3827117739", "name": "Tarong", "kind": "village", "at": [151.8668, -26.7728] },
+    { "osm": "n3833876388", "name": "Ellesmere", "kind": "village", "at": [151.73915, -26.72516] },
+    { "osm": "n3861750500", "name": "Dereel", "kind": "village", "at": [143.75424, -37.81947] },
+    { "osm": "n3877283827", "name": "Biboohra", "kind": "village", "at": [145.41976, -16.91567] },
+    { "osm": "n3895987753", "name": "Koraleigh", "kind": "village", "at": [143.40461, -35.1553] },
+    {
+      "osm": "n3922965618",
+      "name": "Coomberdale",
+      "kind": "village",
+      "at": [116.03979, -30.46425]
+    },
+    {
+      "osm": "n3937392145",
+      "name": "Hillside Station",
+      "kind": "village",
+      "at": [119.39826, -21.72214]
+    },
+    { "osm": "n3938739098", "name": "Hamel", "kind": "village", "at": [115.91993, -32.87205] },
+    {
+      "osm": "n3946915277",
+      "name": "Prospect Hill",
+      "kind": "village",
+      "at": [138.73431, -35.22413]
+    },
+    {
+      "osm": "n3949412706",
+      "name": "Rankins Springs",
+      "kind": "village",
+      "at": [146.26028, -33.84071]
+    },
+    { "osm": "n3979389809", "name": "Wingello", "kind": "village", "at": [150.15691, -34.69318] },
+    {
+      "osm": "n4063525248",
+      "name": "Channel Point Community",
+      "kind": "village",
+      "at": [130.12295, -13.16928]
+    },
+    {
+      "osm": "n4065480940",
+      "name": "Woodycupaldiya",
+      "kind": "village",
+      "at": [130.00159, -13.85904]
+    },
+    { "osm": "n4072734862", "name": "Halifax", "kind": "village", "at": [146.28574, -18.57954] },
+    { "osm": "n4072794517", "name": "Abergowrie", "kind": "village", "at": [145.88639, -18.47517] },
+    { "osm": "n4072831409", "name": "Ambrose", "kind": "village", "at": [150.92502, -23.78379] },
+    { "osm": "n4072833980", "name": "Amiens", "kind": "village", "at": [151.81219, -28.59397] },
+    {
+      "osm": "n4072842457",
+      "name": "Applethorpe",
+      "kind": "village",
+      "at": [151.95591, -28.61791]
+    },
+    { "osm": "n4074283389", "name": "Mutarnee", "kind": "village", "at": [146.28853, -18.9517] },
+    { "osm": "n4074288167", "name": "Bambaroo", "kind": "village", "at": [146.19112, -18.86754] },
+    { "osm": "n4074414975", "name": "Brandon", "kind": "village", "at": [147.35345, -19.55458] },
+    { "osm": "n4074574918", "name": "Chillagoe", "kind": "village", "at": [144.52317, -17.15411] },
+    { "osm": "n4074614616", "name": "Dimbulah", "kind": "village", "at": [145.11039, -17.14975] },
+    { "osm": "n4075589701", "name": "Holtze", "kind": "village", "at": [130.984, -12.461] },
+    {
+      "osm": "n4096467817",
+      "name": "Lockhart River",
+      "kind": "village",
+      "at": [143.34252, -12.78527]
+    },
+    { "osm": "n4101156279", "name": "Tieri", "kind": "village", "at": [148.3448, -23.03582] },
+    { "osm": "n4113177510", "name": "Woorabinda", "kind": "village", "at": [149.456, -24.1327] },
+    { "osm": "n4129399183", "name": "Wollar", "kind": "village", "at": [149.94837, -32.35811] },
+    { "osm": "n4165508345", "name": "Virginia", "kind": "village", "at": [131.01741, -12.54828] },
+    { "osm": "n4172677124", "name": "Yellow Rock", "kind": "village", "at": [150.6365, -33.69135] },
+    {
+      "osm": "n4183789749",
+      "name": "Allies Creek",
+      "kind": "village",
+      "at": [151.10992, -26.08749]
+    },
+    { "osm": "n4244383703", "name": "Lyndon", "kind": "village", "at": [115.24411, -23.63421] },
+    { "osm": "n4285917657", "name": "Flaxton", "kind": "village", "at": [152.8782, -26.65736] },
+    { "osm": "n4290197317", "name": "Meander", "kind": "village", "at": [146.61164, -41.65182] },
+    { "osm": "n4290201299", "name": "Beaumaris", "kind": "village", "at": [148.27602, -41.41435] },
+    {
+      "osm": "n4290201304",
+      "name": "Binalong Bay",
+      "kind": "village",
+      "at": [148.31215, -41.24899]
+    },
+    { "osm": "n4290201325", "name": "Derby", "kind": "village", "at": [147.80095, -41.14904] },
+    { "osm": "n4290201370", "name": "Legerwood", "kind": "village", "at": [147.69428, -41.21567] },
+    { "osm": "n4290202319", "name": "Rossarden", "kind": "village", "at": [147.74704, -41.66717] },
+    { "osm": "n4290202350", "name": "Tomahawk", "kind": "village", "at": [147.75784, -40.86779] },
+    {
+      "osm": "n4290718652",
+      "name": "Epping Forest",
+      "kind": "village",
+      "at": [147.35083, -41.75937]
+    },
+    { "osm": "n4293044871", "name": "Alonnah", "kind": "village", "at": [147.24401, -43.31566] },
+    { "osm": "n4293045773", "name": "Gretna", "kind": "village", "at": [146.93693, -42.67899] },
+    { "osm": "n4293047121", "name": "Parattah", "kind": "village", "at": [147.4069, -42.35038] },
+    { "osm": "n4293050118", "name": "Glen Huon", "kind": "village", "at": [146.96052, -43.02753] },
+    {
+      "osm": "n4293050179",
+      "name": "White Beach",
+      "kind": "village",
+      "at": [147.72121, -43.12488]
+    },
+    {
+      "osm": "n4294350225",
+      "name": "Strathgordon",
+      "kind": "village",
+      "at": [146.04582, -42.76665]
+    },
+    {
+      "osm": "n4316622215",
+      "name": "Springbrook",
+      "kind": "village",
+      "at": [153.26429, -28.18814]
+    },
+    { "osm": "n4330459182", "name": "Edillilie", "kind": "village", "at": [135.70749, -34.41041] },
+    { "osm": "n4385186055", "name": "Avon Downs", "kind": "village", "at": [137.48996, -20.03077] },
+    { "osm": "n4388504648", "name": "Toorbul", "kind": "village", "at": [153.09852, -27.03281] },
+    { "osm": "n4389093423", "name": "Banthula", "kind": "village", "at": [135.87419, -11.83594] },
+    { "osm": "n4402455451", "name": "Bujan", "kind": "village", "at": [136.87938, -16.26874] },
+    { "osm": "n4410734899", "name": "Two Wells", "kind": "village", "at": [138.51861, -34.59523] },
+    { "osm": "n4429629174", "name": "Djirrbiyak", "kind": "village", "at": [132.76403, -12.72906] },
+    {
+      "osm": "n4518441888",
+      "name": "Glass House Mountains",
+      "kind": "village",
+      "at": [152.95712, -26.89808]
+    },
+    { "osm": "n4522417017", "name": "Perrederr", "kind": "village", "at": [129.82818, -14.02035] },
+    { "osm": "n4524068712", "name": "Nama", "kind": "village", "at": [129.85795, -14.22956] },
+    { "osm": "n4524308018", "name": "Ngangalala", "kind": "village", "at": [134.99253, -12.2982] },
+    { "osm": "n4547736933", "name": "Wogyala", "kind": "village", "at": [135.17895, -19.00603] },
+    { "osm": "n4547744553", "name": "Wurankuwu", "kind": "village", "at": [130.2774, -11.61671] },
+    { "osm": "n4553310617", "name": "Byawatha", "kind": "village", "at": [146.48705, -36.29174] },
+    { "osm": "n4560577000", "name": "Kargaru", "kind": "village", "at": [134.1987, -19.65791] },
+    { "osm": "n4562335331", "name": "Gnarabup", "kind": "village", "at": [114.99803, -33.99469] },
+    {
+      "osm": "n4681048957",
+      "name": "Crab Claw Island",
+      "kind": "village",
+      "at": [130.62352, -12.71231]
+    },
+    {
+      "osm": "n4700157662",
+      "name": "South Golden Beach",
+      "kind": "village",
+      "at": [153.54763, -28.49589]
+    },
+    {
+      "osm": "n4700162694",
+      "name": "New Brighton",
+      "kind": "village",
+      "at": [153.55094, -28.51558]
+    },
+    { "osm": "n4728830765", "name": "Kanmantoo", "kind": "village", "at": [139.01112, -35.0703] },
+    { "osm": "n4810636554", "name": "Murringo", "kind": "village", "at": [148.51962, -34.30425] },
+    { "osm": "n4882545658", "name": "Mirrool", "kind": "village", "at": [147.0889, -34.30649] },
+    { "osm": "n4946490622", "name": "Ashbourne", "kind": "village", "at": [138.76224, -35.28736] },
+    { "osm": "n4947868190", "name": "Tenthill", "kind": "village", "at": [152.21414, -27.63382] },
+    { "osm": "n4954631631", "name": "Montacute", "kind": "village", "at": [138.73794, -34.89203] },
+    {
+      "osm": "n4958021547",
+      "name": "Forest Range",
+      "kind": "village",
+      "at": [138.80013, -34.93079]
+    },
+    {
+      "osm": "n4958021548",
+      "name": "Mount George",
+      "kind": "village",
+      "at": [138.76448, -34.99214]
+    },
+    {
+      "osm": "n5046615237",
+      "name": "Silver Valley",
+      "kind": "village",
+      "at": [145.28673, -17.63849]
+    },
+    { "osm": "n5215519255", "name": "Piries", "kind": "village", "at": [146.13147, -37.14784] },
+    {
+      "osm": "n5224039015",
+      "name": "Newlands Arm",
+      "kind": "village",
+      "at": [147.70179, -37.92394]
+    },
+    { "osm": "n5224039016", "name": "Eagle Point", "kind": "village", "at": [147.6805, -37.89634] },
+    { "osm": "n5246890365", "name": "Columboola", "kind": "village", "at": [150.3382, -26.67376] },
+    { "osm": "n5261329213", "name": "Southbrook", "kind": "village", "at": [151.71316, -27.67828] },
+    {
+      "osm": "n5283292201",
+      "name": "Majors Creek",
+      "kind": "village",
+      "at": [149.73835, -35.56678]
+    },
+    { "osm": "n5319734801", "name": "Cardross", "kind": "village", "at": [142.14367, -34.28737] },
+    { "osm": "n5374618869", "name": "Monkey Mia", "kind": "village", "at": [113.71891, -25.79427] },
+    { "osm": "n5432378577", "name": "New Norcia", "kind": "village", "at": [116.21466, -30.9706] },
+    { "osm": "n5438074333", "name": "Yerecoin", "kind": "village", "at": [116.39072, -30.92236] },
+    { "osm": "n5440874977", "name": "Moorabool", "kind": "village", "at": [144.29254, -38.06666] },
+    { "osm": "n5591681780", "name": "Pampas", "kind": "village", "at": [151.41311, -27.79033] },
+    { "osm": "n5634406647", "name": "Maaroom", "kind": "village", "at": [152.87291, -25.61154] },
+    {
+      "osm": "n5673989496",
+      "name": "Basket Range",
+      "kind": "village",
+      "at": [138.7657, -34.93918]
+    },
+    { "osm": "n5674778781", "name": "Clarendon", "kind": "village", "at": [138.62931, -35.10927] },
+    {
+      "osm": "n5674778801",
+      "name": "Kenton Valley",
+      "kind": "village",
+      "at": [138.89443, -34.85547]
+    },
+    { "osm": "n5689382462", "name": "Won Wron", "kind": "village", "at": [146.71904, -38.47266] },
+    { "osm": "n5704950545", "name": "Nanneella", "kind": "village", "at": [144.77748, -36.31336] },
+    { "osm": "n5704950553", "name": "Noojee", "kind": "village", "at": [145.99997, -37.89359] },
+    { "osm": "n5705013932", "name": "The Oaks", "kind": "village", "at": [150.57135, -34.07613] },
+    { "osm": "n5705013960", "name": "Wollongbar", "kind": "village", "at": [153.42194, -28.8206] },
+    { "osm": "n5705053182", "name": "Mowanjum", "kind": "village", "at": [123.70045, -17.35577] },
+    { "osm": "n5705053186", "name": "Amelup", "kind": "village", "at": [118.22039, -34.22371] },
+    {
+      "osm": "n5705053187",
+      "name": "Packsaddle Village",
+      "kind": "village",
+      "at": [118.88442, -22.90847]
+    },
+    { "osm": "n5705053188", "name": "Karalundi", "kind": "village", "at": [118.68423, -26.12822] },
+    { "osm": "n5786926986", "name": "Tonebridge", "kind": "village", "at": [116.70892, -34.23279] },
+    {
+      "osm": "n5791131320",
+      "name": "Bunya Mountains",
+      "kind": "village",
+      "at": [151.60324, -26.88]
+    },
+    {
+      "osm": "n5847440426",
+      "name": "Russell Island",
+      "kind": "village",
+      "at": [153.37779, -27.66654]
+    },
+    { "osm": "n5859930480", "name": "Coolup", "kind": "village", "at": [115.87474, -32.74111] },
+    { "osm": "n5903062239", "name": "Mutchilba", "kind": "village", "at": [145.2103, -17.13877] },
+    { "osm": "n5948952360", "name": "Binnu", "kind": "village", "at": [114.67431, -28.04202] },
+    {
+      "osm": "n5960886948",
+      "name": "South Murwillumbah",
+      "kind": "village",
+      "at": [153.40047, -28.33241]
+    },
+    { "osm": "n6029472127", "name": "Wonnerup", "kind": "village", "at": [115.43463, -33.63726] },
+    { "osm": "n6035838576", "name": "Yarwun", "kind": "village", "at": [151.12912, -23.84564] },
+    { "osm": "n6035839070", "name": "Horse Camp", "kind": "village", "at": [151.89139, -25.08167] },
+    {
+      "osm": "n6035839183",
+      "name": "North Johnstone",
+      "kind": "village",
+      "at": [145.65697, -17.33499]
+    },
+    { "osm": "n6035839219", "name": "Bingil Bay", "kind": "village", "at": [146.09511, -17.83022] },
+    {
+      "osm": "n6035839276",
+      "name": "Bramston Beach",
+      "kind": "village",
+      "at": [146.02202, -17.35148]
+    },
+    { "osm": "n6035839519", "name": "Evelyn", "kind": "village", "at": [145.49149, -17.5072] },
+    {
+      "osm": "n6035900146",
+      "name": "Samford Valley",
+      "kind": "village",
+      "at": [152.84036, -27.3691]
+    },
+    { "osm": "n6036335760", "name": "Arcadia", "kind": "village", "at": [146.86452, -19.14892] },
+    { "osm": "n6036336030", "name": "Tirroan", "kind": "village", "at": [151.93388, -25.01222] },
+    { "osm": "n6036336541", "name": "Donnybrook", "kind": "village", "at": [153.07073, -27.00104] },
+    { "osm": "n6036336564", "name": "Mcilwraith", "kind": "village", "at": [152, -25] },
+    {
+      "osm": "n6036336569",
+      "name": "Mount Cotton",
+      "kind": "village",
+      "at": [153.25129, -27.64021]
+    },
+    {
+      "osm": "n6036336580",
+      "name": "Lamb Island",
+      "kind": "village",
+      "at": [153.37862, -27.62639]
+    },
+    { "osm": "n6036336871", "name": "Marmor", "kind": "village", "at": [150.71102, -23.67865] },
+    { "osm": "n6036337150", "name": "Stanage", "kind": "village", "at": [150.04251, -22.13528] },
+    { "osm": "n6036337357", "name": "Monduran", "kind": "village", "at": [151.90944, -24.84361] },
+    { "osm": "n6036337593", "name": "Tinaroo", "kind": "village", "at": [145.5483, -17.16812] },
+    { "osm": "n6042480000", "name": "Riverside", "kind": "village", "at": [152.86004, -31.4018] },
+    { "osm": "n6042481211", "name": "Silverdale", "kind": "village", "at": [150.61318, -33.90122] },
+    { "osm": "n6042481523", "name": "Tomakin", "kind": "village", "at": [150.19192, -35.82645] },
+    {
+      "osm": "n6042482229",
+      "name": "Moruya Heads",
+      "kind": "village",
+      "at": [150.13749, -35.91703]
+    },
+    {
+      "osm": "n6042482828",
+      "name": "North Shore",
+      "kind": "village",
+      "at": [152.90054, -31.40064]
+    },
+    { "osm": "n6051889695", "name": "Gapuwiyak", "kind": "village", "at": [135.80378, -12.5001] },
+    {
+      "osm": "n6051889700",
+      "name": "Milyakburra",
+      "kind": "village",
+      "at": [136.19583, -13.78389]
+    },
+    { "osm": "n6051889752", "name": "Tindal", "kind": "village", "at": [132.39693, -14.49865] },
+    { "osm": "n6052071711", "name": "Quinninup", "kind": "village", "at": [116.2504, -34.43408] },
+    {
+      "osm": "n6052072554",
+      "name": "Little Grove",
+      "kind": "village",
+      "at": [117.86519, -35.0627]
+    },
+    {
+      "osm": "n6355815372",
+      "name": "Neerim Junction",
+      "kind": "village",
+      "at": [145.96132, -37.92908]
+    },
+    { "osm": "n6624481347", "name": "Kowrowa", "kind": "village", "at": [145.57701, -16.80372] },
+    {
+      "osm": "n6669906940",
+      "name": "Cobbold Gorge Village",
+      "kind": "village",
+      "at": [143.42346, -18.79546]
+    },
+    {
+      "osm": "n6684423107",
+      "name": "Rocky Creek",
+      "kind": "village",
+      "at": [145.44877, -17.17971]
+    },
+    { "osm": "n6685772460", "name": "Weerimba", "kind": "village", "at": [145.59879, -17.30129] },
+    {
+      "osm": "n6952999044",
+      "name": "Useless Loop",
+      "kind": "village",
+      "at": [113.41703, -26.13048]
+    },
+    { "osm": "n7027951101", "name": "Glen Allyn", "kind": "village", "at": [145.63462, -17.36269] },
+    {
+      "osm": "n7209080353",
+      "name": "Cotton Vale",
+      "kind": "village",
+      "at": [151.94837, -28.51837]
+    },
+    {
+      "osm": "n7210810212",
+      "name": "Gruyere Mine Village",
+      "kind": "village",
+      "at": [123.81182, -28.0309]
+    },
+    {
+      "osm": "n7335085819",
+      "name": "Crystal Waters",
+      "kind": "village",
+      "at": [152.71689, -26.78706]
+    },
+    {
+      "osm": "n7474777963",
+      "name": "Kartajirri Village",
+      "kind": "village",
+      "at": [116.83281, -22.40923]
+    },
+    {
+      "osm": "n7474907346",
+      "name": "Diamond Camp",
+      "kind": "village",
+      "at": [116.92344, -22.49331]
+    },
+    {
+      "osm": "n7477213141",
+      "name": "Eliwana Exploration Camp",
+      "kind": "village",
+      "at": [117.03308, -22.50181]
+    },
+    {
+      "osm": "n8478632263",
+      "name": "Invergordon North",
+      "kind": "village",
+      "at": [145.61121, -36.14663]
+    },
+    {
+      "osm": "n8520356695",
+      "name": "Woodside Beach",
+      "kind": "village",
+      "at": [146.97546, -38.5497]
+    },
+    { "osm": "n8847078565", "name": "Tjukurla", "kind": "village", "at": [128.71904, -24.3478] },
+    { "osm": "n8881126036", "name": "Rockhole", "kind": "village", "at": [132.18698, -14.5194] },
+    { "osm": "n9136672860", "name": "Nilma", "kind": "village", "at": [145.9672, -38.17113] },
+    {
+      "osm": "n9145381485",
+      "name": "Ngnumuda Village (Thunderbox Accomodation)",
+      "kind": "village",
+      "at": [120.97281, -28.17332]
+    },
+    { "osm": "n9285375677", "name": "Maryknoll", "kind": "village", "at": [145.60483, -38.03431] },
+    { "osm": "n9285375685", "name": "Macclesfield", "kind": "village", "at": [145.47519, -37.887] },
+    {
+      "osm": "n9387631865",
+      "name": "Fairbridge Village",
+      "kind": "village",
+      "at": [115.94704, -32.59968]
+    },
+    { "osm": "n9884866304", "name": "Bogong", "kind": "village", "at": [147.22569, -36.80403] },
+    {
+      "osm": "n10012096358",
+      "name": "American River",
+      "kind": "village",
+      "at": [137.76989, -35.78602]
+    },
+    { "osm": "n10221144498", "name": "Yarilena", "kind": "village", "at": [133.63859, -32.09543] },
+    { "osm": "n10232864536", "name": "Chiltern", "kind": "village", "at": [146.60854, -36.15128] },
+    {
+      "osm": "n10250506717",
+      "name": "Penny West Mine Village",
+      "kind": "village",
+      "at": [118.81262, -28.8274]
+    },
+    {
+      "osm": "n10270826134",
+      "name": "Old Bowgada Townsite - Fenced Private Keep Out",
+      "kind": "village",
+      "at": [116.17295, -29.33401]
+    },
+    { "osm": "n10538442932", "name": "Poruma", "kind": "village", "at": [143.06376, -10.05033] },
+    { "osm": "n10538560890", "name": "Baniyala", "kind": "village", "at": [136.22763, -13.19917] },
+    { "osm": "n10542736083", "name": "Kondut", "kind": "village", "at": [116.77459, -30.70888] },
+    { "osm": "n10560765726", "name": "Kronkup", "kind": "village", "at": [117.62549, -35.06702] },
+    { "osm": "n10560846759", "name": "Koolunga", "kind": "village", "at": [138.33328, -33.58673] },
+    {
+      "osm": "n10560846765",
+      "name": "Darke Peak",
+      "kind": "village",
+      "at": [136.19949, -33.47043]
+    },
+    {
+      "osm": "n10560877615",
+      "name": "Corroboree Park",
+      "kind": "village",
+      "at": [131.50116, -12.7619]
+    },
+    {
+      "osm": "n10560884714",
+      "name": "Dhalinybuy",
+      "kind": "village",
+      "at": [136.38656, -12.41188]
+    },
+    { "osm": "n10560886792", "name": "Gan Gan", "kind": "village", "at": [135.94364, -13.04564] },
+    { "osm": "n10560895321", "name": "Homestead", "kind": "village", "at": [145.65491, -20.36231] },
+    { "osm": "n10561389384", "name": "Gumlu", "kind": "village", "at": [147.68427, -19.87829] },
+    {
+      "osm": "n10561394148",
+      "name": "Groper Creek",
+      "kind": "village",
+      "at": [147.53157, -19.6921]
+    },
+    {
+      "osm": "n10561395735",
+      "name": "Elliot River",
+      "kind": "village",
+      "at": [147.87759, -19.88377]
+    },
+    {
+      "osm": "n10561401757",
+      "name": "Yarramalong",
+      "kind": "village",
+      "at": [151.27891, -33.22441]
+    },
+    { "osm": "n10561402321", "name": "Jerona", "kind": "village", "at": [147.23866, -19.44669] },
+    {
+      "osm": "n10561417060",
+      "name": "Millmerran Downs",
+      "kind": "village",
+      "at": [151.05607, -27.97856]
+    },
+    {
+      "osm": "n10561435955",
+      "name": "Heron Island",
+      "kind": "village",
+      "at": [151.91208, -23.44199]
+    },
+    {
+      "osm": "n10795310874",
+      "name": "Lizard Island Research Station",
+      "kind": "village",
+      "at": [145.44857, -14.67877]
+    },
+    {
+      "osm": "n10795311117",
+      "name": "Lizard Island",
+      "kind": "village",
+      "at": [145.44776, -14.66797]
+    },
+    {
+      "osm": "n10863796988",
+      "name": "Nichols Point",
+      "kind": "village",
+      "at": [142.21521, -34.23333]
+    },
+    { "osm": "n10863954505", "name": "Cabarita", "kind": "village", "at": [142.08672, -34.20411] },
+    {
+      "osm": "n10876849721",
+      "name": "Mystery Bay",
+      "kind": "village",
+      "at": [150.13331, -36.30231]
+    },
+    { "osm": "n10923047162", "name": "Cathcart", "kind": "village", "at": [149.38867, -36.84343] },
+    {
+      "osm": "n11221818201",
+      "name": "Jubullum Village",
+      "kind": "village",
+      "at": [152.52814, -28.89363]
+    },
+    {
+      "osm": "n11271236430",
+      "name": "Hotham Village",
+      "kind": "village",
+      "at": [147.148, -36.98469]
+    },
+    { "osm": "n11384987822", "name": "Briagolong", "kind": "village", "at": [147.0746, -37.84348] },
+    { "osm": "n11549244513", "name": "Piangil", "kind": "village", "at": [143.31119, -35.0545] },
+    { "osm": "n11846879286", "name": "Gununa", "kind": "village", "at": [139.18062, -16.66565] },
+    { "osm": "n12161690598", "name": "Napoleons", "kind": "village", "at": [143.82734, -37.67886] },
+    { "osm": "n12161750354", "name": "Enfield", "kind": "village", "at": [143.80388, -37.72854] },
+    { "osm": "n12350564425", "name": "Moomin", "kind": "village", "at": [145.38825, -17.36866] },
+    { "osm": "n12350564486", "name": "Tinaburra", "kind": "village", "at": [145.58311, -17.2518] },
+    {
+      "osm": "n12698116051",
+      "name": "Ken's Bore Camp",
+      "kind": "village",
+      "at": [116.16609, -22.1588]
+    },
+    { "osm": "n12769425141", "name": "Nayook", "kind": "village", "at": [145.94701, -37.92076] },
+    { "osm": "n12864354514", "name": "Wallace", "kind": "village", "at": [144.04952, -37.55598] },
+    { "osm": "n12864354515", "name": "Bungaree", "kind": "village", "at": [143.99752, -37.55895] },
+    {
+      "osm": "n13242911739",
+      "name": "Neilborough",
+      "kind": "village",
+      "at": [144.24153, -36.56648]
+    },
+    { "osm": "n13271521120", "name": "Outtrim", "kind": "village", "at": [145.76836, -38.49335] },
+    {
+      "osm": "n13271526428",
+      "name": "Strzelecki",
+      "kind": "village",
+      "at": [145.89182, -38.34792]
+    },
+    { "osm": "n13271551139", "name": "Carrajung", "kind": "village", "at": [146.69978, -38.36933] },
+    {
+      "osm": "n13271551140",
+      "name": "Devon North",
+      "kind": "village",
+      "at": [146.65334, -38.51993]
+    },
+    { "osm": "n13271551141", "name": "Willung", "kind": "village", "at": [146.81977, -38.25226] },
+    { "osm": "n13275187628", "name": "Yahl", "kind": "village", "at": [140.83046, -37.87741] },
+    {
+      "osm": "n13280086394",
+      "name": "Wulkabimirri",
+      "kind": "village",
+      "at": [134.90588, -12.35531]
+    },
+    {
+      "osm": "n13668136569",
+      "name": "Telegraph Point",
+      "kind": "village",
+      "at": [152.80117, -31.3211]
+    },
+    {
+      "osm": "n13766839478",
+      "name": "Sandy Ridge Village",
+      "kind": "village",
+      "at": [120.08134, -30.37611]
+    },
+    { "osm": "n13881998297", "name": "Schoenthal", "kind": "village", "at": [138.8991, -34.90561] },
+    {
+      "osm": "n14026919538",
+      "name": "Portland North",
+      "kind": "village",
+      "at": [141.59615, -38.31405]
+    },
+    {
+      "osm": "n14106629025",
+      "name": "Hoffnungsthal",
+      "kind": "village",
+      "at": [138.89527, -34.64108]
+    },
+    {
+      "osm": "n14106654113",
+      "name": "Gnadenfrei",
+      "kind": "village",
+      "at": [138.93733, -34.48401]
+    },
+    { "osm": "n14109805206", "name": "Napranum", "kind": "village", "at": [141.888, -12.68401] },
+    {
+      "osm": "n14156663462",
+      "name": "Kalamia Estate",
+      "kind": "village",
+      "at": [147.4194, -19.53175]
+    },
+    {
+      "osm": "n14156663463",
+      "name": "Black River",
+      "kind": "village",
+      "at": [146.62455, -19.24343]
+    },
+    {
+      "osm": "n14161483464",
+      "name": "Rottnest Island",
+      "kind": "village",
+      "at": [115.51247, -32.00649]
+    },
+    {
+      "osm": "n14161585586",
+      "name": "Djarindjin-Lombadina",
+      "kind": "village",
+      "at": [122.89476, -16.51574]
+    },
+    {
+      "osm": "n14161705187",
+      "name": "Wyndham Harbour",
+      "kind": "village",
+      "at": [144.70653, -37.96459]
+    },
+    { "osm": "n14161773275", "name": "Middleton", "kind": "village", "at": [138.71595, -35.51106] },
+    { "osm": "n14162109839", "name": "Venus Bay", "kind": "village", "at": [145.80889, -38.69055] }
+  ]
+}

@@ -1,14 +1,15 @@
 /**
  * WS8 — nearest OpenStreetMap town and natural landmark for every nation (build time only).
  *
- * 1. Five Australia-wide Overpass queries, one per feature class (towns, peaks, rivers, lakes,
- *    ranges), run one after another with a pause between them and a generic project User-Agent.
+ * 1. Six Australia-wide Overpass queries, one per feature class (towns, villages, peaks, rivers,
+ *    lakes, ranges), run one after another with a pause between them and a generic project User-Agent.
  *    Raw responses go to data/cache/osm/raw/<class>-<date>.overpass (Overpass JSON, gitignored:
  *    ~140 MB, rivers alone 136 MB; not named .json so Prettier skips them). A trimmed snapshot — OSM id, name, kind and the coordinates needed for
  *    distance (river lines simplified to 10 m and polyline-encoded), clipped to the features
  *    within the cut-off of some nation point (no other feature can ever be chosen) — goes to
  *    data/cache/osm/<class>.json with the fetch date and the OSM data timestamp; it is committed.
- * 2. For each nation: nearest place=city|town within 100 km, nearest named peak / river / lake /
+ * 2. For each nation: nearest place=city|town|village within 100 km (nearest wins, whatever the
+ *    class), nearest named peak / river / lake /
  *    range within 50 km → data/cache/osm/nearby.json, which scripts/build-nations.ts merges into
  *    public/data/nations.json.
  *
@@ -83,6 +84,7 @@ const r5 = (n: number) => Math.round(n * 1e5) / 1e5;
 const AREA = 'area["ISO3166-1"="AU"]["admin_level"="2"]->.au;';
 const QUERIES: Record<OsmClass, string> = {
   towns: `[out:json][timeout:900];${AREA}node["place"~"^(city|town)$"]["name"](area.au);out qt;`,
+  villages: `[out:json][timeout:900];${AREA}node["place"="village"]["name"](area.au);out qt;`,
   peaks: `[out:json][timeout:900];${AREA}node["natural"="peak"]["name"](area.au);out qt;`,
   rivers: `[out:json][timeout:900][maxsize:1073741824];${AREA}way["waterway"="river"]["name"](area.au);out tags geom qt;`,
   lakes:
@@ -114,6 +116,8 @@ function kindOf(cls: OsmClass, e: OverpassElement): NearbyKind | null {
   switch (cls) {
     case 'towns':
       return e.tags?.place === 'city' ? 'city' : e.tags?.place === 'town' ? 'town' : null;
+    case 'villages':
+      return e.tags?.place === 'village' ? 'village' : null;
     case 'peaks':
       return 'peak';
     case 'rivers':
@@ -233,7 +237,8 @@ function newestRaw(cls: OsmClass): { file: string; date: string } | null {
   return hit ? { file: join(OSM_RAW_DIR, hit.f), date: hit.m[1] } : null;
 }
 
-const clipRadius = (cls: OsmClass) => (cls === 'towns' ? TOWN_MAX_KM : LANDMARK_MAX_KM);
+const clipRadius = (cls: OsmClass) =>
+  cls === 'towns' || cls === 'villages' ? TOWN_MAX_KM : LANDMARK_MAX_KM;
 
 async function snapshotFromRaw(
   cls: OsmClass,
@@ -338,7 +343,8 @@ async function main() {
 
   // Nearest search over the trimmed snapshots.
   const feats = (c: OsmClass) => snapshots.get(c)!.features.map(fromStored);
-  const towns = indexFeatures(feats('towns'));
+  // Cities, towns and villages compete on distance alone.
+  const towns = indexFeatures([...feats('towns'), ...feats('villages')]);
   const landmarks = indexFeatures([
     ...feats('peaks'),
     ...feats('rivers'),

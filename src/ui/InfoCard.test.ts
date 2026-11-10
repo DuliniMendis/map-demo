@@ -20,6 +20,9 @@ describe('InfoCard nearby', () => {
     expect(
       formatNearby({ name: 'Uluru / Ayers Rock', kind: 'peak', distanceKm: 8.2, bearing: 'W' }),
     ).toBe('Uluru / Ayers Rock (peak, 8 km W)');
+    expect(
+      formatNearby({ name: 'Yuendumu', kind: 'village', distanceKm: 12.2, bearing: 'NE' }),
+    ).toBe('Yuendumu (village, 12 km NE)');
   });
 
   it('shows the town and landmark lines inside "Country today"', () => {

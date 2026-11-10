@@ -114,7 +114,7 @@ export function validateNations(
 }
 
 const NEARBY_SLOTS = {
-  town: { kinds: ['city', 'town'], maxKm: TOWN_MAX_KM },
+  town: { kinds: ['city', 'town', 'village'], maxKm: TOWN_MAX_KM },
   landmark: { kinds: ['peak', 'river', 'lake', 'range'], maxKm: LANDMARK_MAX_KM },
 } as const;
 

@@ -237,7 +237,10 @@ export interface NearbyResult {
   osm?: { town?: string; landmark?: string };
 }
 
-/** Nearest town (≤ 100 km) and nearest landmark (≤ 50 km) for one point. */
+/**
+ * Nearest town (≤ 100 km; `towns` indexes cities, towns and villages together, so the nearest
+ * wins whatever its class) and nearest landmark (≤ 50 km) for one point.
+ */
 export function nearbyFor(
   lng: number,
   lat: number,

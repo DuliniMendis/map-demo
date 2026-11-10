@@ -300,6 +300,11 @@ describe('pipeline helpers', () => {
       landmark: { name: ' ', kind: 'river', distanceKm: 12.34, bearing: 'S' },
     }).join('\n');
     expect(errs).toMatch(/town.kind "peak"/);
+    expect(
+      nearbyErrors('X1', {
+        town: { name: 'Yuendumu', kind: 'village', distanceKm: 12.3, bearing: 'NE' },
+      }),
+    ).toEqual([]);
     expect(errs).toMatch(/town.distanceKm 100.1 outside 0–100/);
     expect(errs).toMatch(/landmark has an empty name/);
     expect(errs).toMatch(/not rounded to 1 dp/);
@@ -381,6 +386,29 @@ describe('nearby town and landmark (WS8)', () => {
     const hit = nearestFeature(lng, lat, idx, 100)!;
     expect(hit.feature.name).toBe('Alpha'); // equal distance N and S: name order
     expect(hit.km).toBeCloseTo(11.1, 1);
+  });
+
+  it('counts villages as towns: the nearest place wins whatever its class', () => {
+    const village: OsmFeature = {
+      osm: 'n7',
+      name: 'Yuendumu',
+      kind: 'village',
+      at: [lng, lat + 0.1],
+    };
+    const city: OsmFeature = { osm: 'n8', name: 'Big City', kind: 'city', at: [lng, lat - 0.3] };
+    const none = indexFeatures([]);
+    expect(nearbyFor(lng, lat, indexFeatures([city, village]), none).town).toEqual({
+      name: 'Yuendumu',
+      kind: 'village',
+      distanceKm: 11.1,
+      bearing: 'N',
+    });
+    const farVillage: OsmFeature = { ...village, at: [lng, lat + 0.5] };
+    expect(nearbyFor(lng, lat, indexFeatures([city, farVillage]), none).town?.name).toBe(
+      'Big City',
+    );
+    const tooFar: OsmFeature = { ...village, at: [lng, lat + 0.91] }; // ≈ 101 km
+    expect(nearbyFor(lng, lat, indexFeatures([tooFar]), none).town).toBeUndefined();
   });
 
   it('applies the ≤ 100 km (town) and ≤ 50 km (landmark) cut-offs', () => {

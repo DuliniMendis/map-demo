@@ -36,7 +36,7 @@ export interface NationView { zoom?: number; pitch?: number; bearing?: number; }
 
 export interface NearbyFeature {
   name: string;               // OSM name tag as published
-  kind: 'city' | 'town' | 'peak' | 'river' | 'lake' | 'range';
+  kind: 'city' | 'town' | 'village' | 'peak' | 'river' | 'lake' | 'range';
   distanceKm: number;         // great-circle from the nation's point, 1 decimal place
   bearing: 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW'; // from the nation's point to the feature
 }
@@ -55,7 +55,7 @@ export interface Nation {
   links: { austlang: string; wikipedia?: string; };
   view?: NationView;          // per-nation camera override from data/overrides.json
   nearby?: {                  // Phase 3 (WS8): OpenStreetMap, computed at build time
-    town?: NearbyFeature;     // nearest place=city|town within 100 km
+    town?: NearbyFeature;     // nearest place=city|town|village within 100 km
     landmark?: NearbyFeature; // nearest named peak/river/lake/range within 50 km
   };
   source: 'austlang';
