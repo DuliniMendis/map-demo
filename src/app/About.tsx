@@ -157,6 +157,18 @@ export function About({ open, onClose, returnFocusRef, attribution, nation }: Ab
               </li>
             ))}
           </ul>
+          <p className="about__fineprint" data-testid="about-odbl">
+            The nearby towns and landmarks on each card are © OpenStreetMap contributors and
+            available under the{' '}
+            <a
+              href="https://opendatacommons.org/licenses/odbl/1-0/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Database License (ODbL)
+            </a>
+            .
+          </p>
           <p className="about__fineprint">
             No analytics and no cookies. Your browser only remembers that you dismissed the
             disclaimer.

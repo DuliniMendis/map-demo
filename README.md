@@ -69,8 +69,14 @@ CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check and unit test
 ## Data
 
 `public/data/nations.json` holds 455 nations and language groups built by `pnpm data:build` from AUSTLANG
-(AIATSIS, via TLCMap), ABS 2021 suburbs and localities, and Wikidata. `public/data/attribution.json` holds the
-credits the app shows. What the build cleaned or excluded is listed in `data/report.md` and `data/cleaning.json`.
+(AIATSIS, via TLCMap), ABS 2021 suburbs and localities, Wikidata, and OpenStreetMap for the nearest town and
+landmark (`nearby`). `public/data/attribution.json` holds the credits the app shows. What the build cleaned or
+excluded is listed in `data/report.md` and `data/cleaning.json`.
+
+**Data licences:** see [`public/data/LICENSE.md`](public/data/LICENSE.md). In short, the AUSTLANG and ABS parts of
+`nations.json` are CC BY 4.0. The OpenStreetMap-derived `nearby` part and the OSM snapshots in `data/cache/osm/` are
+© OpenStreetMap contributors and available under the Open Database License (ODbL 1.0). `pnpm data:build`
+recreates the files from the committed snapshots.
 
 The dev server falls back to [`src/data/mock-nations.json`](src/data/mock-nations.json) (10 entries, same
 schema) if `nations.json` is missing; production builds treat a missing file as an error.
