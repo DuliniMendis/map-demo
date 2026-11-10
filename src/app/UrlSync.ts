@@ -1,10 +1,12 @@
 // URL state per docs/contracts.md: `?n=<Nation.id>`, `?l=imagery,labels` (enabled layers; omitted =
-// defaults), `?x=1.5` (exaggeration; omitted = default). Read once on boot; written back with
-// `history.replaceState`, debounced 300 ms. Unknown params are preserved.
+// defaults), `?x=1.5` (exaggeration; omitted = default), `?t=14.5` (sun hour; omitted = default
+// light). Read once on boot; written back with `history.replaceState`, debounced 300 ms. Unknown
+// params are preserved.
 import {
   DEFAULT_LAYERS,
   EXAGGERATION_DEFAULT,
   clampExaggeration,
+  clampSunHour,
   type AppState,
   type useAppStore,
 } from '../store/useAppStore';
@@ -29,12 +31,15 @@ export interface UrlState {
   layers: Layers | null;
   /** Clamped exaggeration, or null when `?x` is absent or not a number. */
   exaggeration: number | null;
+  /** Clamped sun hour (5–19), or null when `?t` is absent or not a number (= default light). */
+  sunHour: number | null;
 }
 
 export interface UrlWritable {
   selectedId: string | null;
   layers: Layers;
   exaggeration: number;
+  sunHour: number | null;
 }
 
 /** Pure: parse a `location.search` string. */
@@ -64,21 +69,30 @@ export function parseUrlState(search: string): UrlState {
     exaggeration = clampExaggeration(Number(x));
   }
 
-  return { n, layers, exaggeration };
+  let sunHour: number | null = null;
+  const t = p.get('t');
+  if (t !== null && t.trim() !== '' && Number.isFinite(Number(t))) {
+    sunHour = clampSunHour(Number(t));
+  }
+
+  return { n, layers, exaggeration, sunHour };
 }
 
 const sameLayers = (a: Layers, b: Layers) => LAYER_KEYS.every((k) => a[k] === b[k]);
 const roundX = (x: number) => Math.round(x * 10) / 10;
+/** Quarter hours, like the slider's step. */
+const roundT = (t: number) => Math.round(t * 4) / 4;
 
 /**
  * Pure: the `search` string (with leading `?`, or '' when empty) for `state`, keeping any params
- * other than n/l/x from `currentSearch`. Defaults are omitted so a fresh view has a clean URL.
+ * other than n/l/x/t from `currentSearch`. Defaults are omitted so a fresh view has a clean URL.
  */
 export function serialiseUrlState(state: UrlWritable, currentSearch = ''): string {
   const p = new URLSearchParams(currentSearch);
   p.delete('n');
   p.delete('l');
   p.delete('x');
+  p.delete('t');
   if (state.selectedId) p.set('n', state.selectedId);
   if (!sameLayers(state.layers, DEFAULT_LAYERS)) {
     p.set('l', LAYER_KEYS.filter((k) => state.layers[k]).join(','));
@@ -86,6 +100,7 @@ export function serialiseUrlState(state: UrlWritable, currentSearch = ''): strin
   if (roundX(state.exaggeration) !== roundX(EXAGGERATION_DEFAULT)) {
     p.set('x', String(roundX(state.exaggeration)));
   }
+  if (state.sunHour !== null) p.set('t', String(roundT(state.sunHour)));
   const s = p.toString().replace(/%2C/gi, ',');
   return s ? `?${s}` : '';
 }
@@ -100,7 +115,7 @@ type Store = Pick<typeof useAppStore, 'getState' | 'setState' | 'subscribe'>;
 
 /**
  * Boot step 1 (before the map is created, so the first style already reflects the URL): apply
- * `?l` and `?x` to the store. Returns the requested nation id, which the caller selects once
+ * `?l`, `?x` and `?t` to the store. Returns the requested nation id, which the caller selects once
  * nations have loaded (via `resolveBootSelection`).
  */
 export function applyUrlToStore(store: Store, search: string): string | null {
@@ -108,6 +123,7 @@ export function applyUrlToStore(store: Store, search: string): string | null {
   const patch: Partial<UrlWritable> = {};
   if (url.layers) patch.layers = url.layers;
   if (url.exaggeration !== null) patch.exaggeration = url.exaggeration;
+  if (url.sunHour !== null) patch.sunHour = url.sunHour;
   if (Object.keys(patch).length) store.setState(patch);
   return url.n;
 }
@@ -132,7 +148,8 @@ export function startUrlWriter(
     if (
       s.selectedId === prev.selectedId &&
       s.layers === prev.layers &&
-      s.exaggeration === prev.exaggeration
+      s.exaggeration === prev.exaggeration &&
+      s.sunHour === prev.sunHour
     ) {
       return;
     }
