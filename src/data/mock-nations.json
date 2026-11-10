@@ -1,5 +1,5 @@
 {
-  "_comment": "MOCK — replaced by WS3. 10 hand-picked real AUSTLANG entries (TLCMap layer 81 mirror, fetched 2026-11-09) with modern locality/state from the ABS ASGS 2021 SAL point query. Same schema as public/data/nations.json.",
+  "_comment": "MOCK — replaced by WS3. 10 hand-picked real AUSTLANG entries (TLCMap layer 81 mirror, fetched 2026-11-09) with modern locality/state from the ABS ASGS 2021 SAL point query. Same schema as public/data/nations.json. D62, S64, Y6, A43 and L3 carry the WS8 nearby town/landmark from OpenStreetMap (ODbL) as built on 2026-11-10.",
   "generatedAt": "2026-11-09",
   "count": 10,
   "nations": [
@@ -16,6 +16,20 @@
       },
       "links": {
         "austlang": "https://collection.aiatsis.gov.au/austlang/language/d62"
+      },
+      "nearby": {
+        "town": {
+          "name": "Tharwa",
+          "kind": "village",
+          "distanceKm": 7.5,
+          "bearing": "SE"
+        },
+        "landmark": {
+          "name": "Paddy's River",
+          "kind": "river",
+          "distanceKm": 0.3,
+          "bearing": "S"
+        }
       },
       "source": "austlang"
     },
@@ -46,6 +60,20 @@
       },
       "links": {
         "austlang": "https://collection.aiatsis.gov.au/austlang/language/s64"
+      },
+      "nearby": {
+        "town": {
+          "name": "Jenolan Caves",
+          "kind": "village",
+          "distanceKm": 8.1,
+          "bearing": "N"
+        },
+        "landmark": {
+          "name": "Green Hillock",
+          "kind": "peak",
+          "distanceKm": 1,
+          "bearing": "E"
+        }
       },
       "source": "austlang"
     },
@@ -259,6 +287,20 @@
       "links": {
         "austlang": "https://collection.aiatsis.gov.au/austlang/language/y6"
       },
+      "nearby": {
+        "town": {
+          "name": "Bamaga",
+          "kind": "town",
+          "distanceKm": 16.5,
+          "bearing": "SW"
+        },
+        "landmark": {
+          "name": "Carnegie Range",
+          "kind": "peak",
+          "distanceKm": 7.5,
+          "bearing": "N"
+        }
+      },
       "source": "austlang"
     },
     {
@@ -353,6 +395,20 @@
       "links": {
         "austlang": "https://collection.aiatsis.gov.au/austlang/language/l3"
       },
+      "nearby": {
+        "town": {
+          "name": "Dublin",
+          "kind": "town",
+          "distanceKm": 6,
+          "bearing": "SW"
+        },
+        "landmark": {
+          "name": "Light River",
+          "kind": "river",
+          "distanceKm": 11.8,
+          "bearing": "SE"
+        }
+      },
       "source": "austlang"
     },
     {
@@ -413,6 +469,20 @@
       },
       "links": {
         "austlang": "https://collection.aiatsis.gov.au/austlang/language/a43"
+      },
+      "nearby": {
+        "town": {
+          "name": "Warakurna",
+          "kind": "village",
+          "distanceKm": 27.2,
+          "bearing": "W"
+        },
+        "landmark": {
+          "name": "Giles Creek",
+          "kind": "river",
+          "distanceKm": 11.6,
+          "bearing": "NE"
+        }
       },
       "source": "austlang"
     },

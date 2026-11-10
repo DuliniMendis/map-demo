@@ -31,7 +31,22 @@ export const DISCLAIMER =
   'boundaries, and are not suitable for native title or any land claim. "Country today" is the ABS ' +
   '2021 suburb/locality containing (or nearest to) that point.';
 
-export function buildAttribution(generatedAt: string, withWikidata: boolean): AttributionFile {
+export const OSM_NEARBY_ATTRIBUTION: AttributionItem = {
+  id: 'osm-nearby',
+  text: 'Nearby towns and landmarks © OpenStreetMap contributors, ODbL',
+  url: 'https://www.openstreetmap.org/copyright',
+  licence: 'ODbL 1.0',
+  licenceUrl: 'https://opendatacommons.org/licenses/odbl/1-0/',
+  usedFor:
+    '"Country today" orientation: nearest town or village (place=city|town|village, within 100 km) and named peak, river, lake or range (within 50 km), extracted via the Overpass API at build time',
+  kind: 'data',
+};
+
+export function buildAttribution(
+  generatedAt: string,
+  withWikidata: boolean,
+  withOsmNearby = false,
+): AttributionFile {
   const items: AttributionItem[] = [
     {
       id: 'austlang',
@@ -103,5 +118,6 @@ export function buildAttribution(generatedAt: string, withWikidata: boolean): At
       kind: 'data',
     });
   }
+  if (withOsmNearby) items.push(OSM_NEARBY_ATTRIBUTION);
   return { generatedAt, disclaimer: DISCLAIMER, items };
 }

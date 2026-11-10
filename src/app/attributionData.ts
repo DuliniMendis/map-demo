@@ -20,6 +20,7 @@ const COMPACT: [RegExp, string][] = [
   [/Mapterhorn/i, '© Mapterhorn'],
   [/Mapzen|Terrain Tiles/i, 'Terrain Tiles (Mapzen/AWS)'],
   [/EOX|Sentinel/i, 'Sentinel-2 cloudless by EOX'],
+  [/^Nearby towns and landmarks/i, 'Nearby places © OpenStreetMap'],
   [/OpenStreetMap|OpenMapTiles/i, '© OpenMapTiles © OpenStreetMap'],
   [/Bureau of Statistics|\bABS\b/i, '© ABS'],
   [/MapLibre/i, '© MapLibre'],
