@@ -175,7 +175,7 @@ export function About({ open, onClose, returnFocusRef, attribution, nation }: Ab
           </p>
           <p className="about__fineprint">
             No analytics and no cookies. Your browser only remembers that you dismissed the
-            disclaimer and the welcome screen, and whether you turned the sound off.
+            disclaimer, the welcome screen and the map tips, and whether you turned the sound off.
           </p>
         </section>
       </div>

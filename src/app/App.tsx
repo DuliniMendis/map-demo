@@ -5,6 +5,8 @@ import { MapView } from '../map/MapView';
 import { useAppStore } from '../store/useAppStore';
 import { About } from './About';
 import { Attribution } from './Attribution';
+import { GestureHint } from './controls/GestureHint';
+import { TiltControl } from './controls/TiltControl';
 import { DEFAULT_ATTRIBUTION, loadAttribution, type AttributionEntry } from './attributionData';
 import { Disclaimer, InfoCard, SidePanel, type MapController } from './integration';
 import { LayerControls } from './LayerControls';
@@ -197,17 +199,19 @@ export function App({ bootNationId = null }: AppProps) {
           <TourButton />
           {desktop && <SoundToggle />}
         </div>
-        {/* Narrow screens have no room beside the layer controls: Vision and sound sit bottom-left. */}
+        {/* Narrow screens have no room beside the layer controls: Vision, sound and 2D/3D sit bottom-left. */}
         {!desktop && (
           <div className="app__bottom-left">
             {visionButton}
             <SoundToggle />
+            {map && <TiltControl map={map} />}
           </div>
         )}
         <div className="app__banner cm-theme">
           <Disclaimer variant="banner" />
         </div>
         <div className="app__top-right">
+          {desktop && map && <TiltControl map={map} />}
           <LayerControls onOverview={onOverview} />
         </div>
         {/* WS4's card positions itself (and sits above the bottom sheet on narrow screens). */}
@@ -233,6 +237,7 @@ export function App({ bootNationId = null }: AppProps) {
           <Attribution entries={attribution} />
         </div>
         <Toast message={toast} />
+        <GestureHint map={map} suppressed={dialogOpen} />
         <TourPanel aboutOpen={dialogOpen} onOverview={onOverview} />
       </main>
 
