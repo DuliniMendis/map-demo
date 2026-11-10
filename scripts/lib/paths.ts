@@ -14,6 +14,11 @@ export const OSM_RAW_DIR = join(OSM_CACHE_DIR, 'raw');
 /** WS8: per-nation nearest town/landmark, written by scripts/nearby.ts, read by the build. */
 export const NEARBY_CACHE = join(OSM_CACHE_DIR, 'nearby.json');
 export const OVERRIDES_FILE = join(ROOT, 'data', 'overrides.json');
+/** Per-nation illustrations: alt text and credit; the picture is public/images/nations/<id>.webp. */
+export const IMAGES_FILE = join(ROOT, 'data', 'images.json');
+/** Draft prompts and alt text for scripts/nation-images.ts (editable, committed). */
+export const IMAGE_PROMPTS_FILE = join(ROOT, 'data', 'image-prompts.json');
+export const IMAGES_DIR = join(ROOT, 'public', 'images', 'nations');
 export const CLEANING_FILE = join(ROOT, 'data', 'cleaning.json');
 export const REPORT_FILE = join(ROOT, 'data', 'report.md');
 export const NATIONS_FILE = join(ROOT, 'public', 'data', 'nations.json');

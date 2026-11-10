@@ -58,6 +58,8 @@ TypeScript is pinned to 6.0 because typescript-eslint does not support TypeScrip
 | `pnpm format` / `format:check` | Prettier write / check |
 | `pnpm data:build` | Rebuild `public/data/nations.json` and `attribution.json` from AUSTLANG, ABS and Wikidata (WS3; see `data/report.md`) |
 | `pnpm data:validate` | Validate the committed data files against the schema |
+| `pnpm images:draft` | Draft a landscape prompt and alt text per nation for info-card pictures (`data/image-prompts.json`; see `docs/images.md`) |
+| `pnpm images:generate` | Estimate cost, or with `--yes` generate the pictures through Vercel AI Gateway (needs `AI_GATEWAY_API_KEY`) |
 | `pnpm build:e2e` | Production build with `VITE_E2E=1` (exposes `window.__map` for Playwright) |
 | `pnpm test:e2e` | `build:e2e`, then the Playwright suite (`tests/playwright`, see `docs/qa.md`) |
 | `pnpm size` | Bundle size budgets (`.size-limit.json`) |

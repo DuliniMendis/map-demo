@@ -10,7 +10,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { parseArgs } from 'node:util';
-import type { Nation, NationsFile, StateCode } from '../src/types/nation.ts';
+import type { Nation, NationImage, NationsFile, StateCode } from '../src/types/nation.ts';
 import { STATE_CODES, STATE_NAMES } from '../src/types/nation.ts';
 import { buildAttribution } from './lib/attribution.ts';
 import { TLCMAP_URL, assertAustlangCollection } from './lib/austlang.ts';
@@ -23,11 +23,14 @@ import { OSM_CLASSES } from './lib/nearby-cache.ts';
 import { LANDMARK_MAX_KM, TOWN_MAX_KM } from './lib/nearby.ts';
 import type { ExtractResult } from './lib/nations.ts';
 import { byName, extractNations } from './lib/nations.ts';
+import type { ImageManifest } from './lib/nation-images.ts';
 import type { Overrides } from './lib/overrides.ts';
 import { overrideErrors, overrideFields } from './lib/overrides.ts';
 import {
   ATTRIBUTION_FILE,
   CLEANING_FILE,
+  IMAGES_DIR,
+  IMAGES_FILE,
   NATIONS_FILE,
   NEARBY_CACHE,
   OVERRIDES_FILE,
@@ -66,6 +69,24 @@ interface BuildContext {
   csv: { file: string; codes: string[] } | null;
 }
 
+function imageFor(
+  id: string,
+  entry: ImageManifest[string] | undefined,
+  errors: string[],
+): NationImage | undefined {
+  if (!entry || typeof entry === 'string') return undefined;
+  const src = `images/nations/${id}.webp`;
+  if (!existsSync(join(IMAGES_DIR, `${id}.webp`))) {
+    errors.push(`data/images.json: ${id} has no public/${src}`);
+    return undefined;
+  }
+  if (!entry.alt?.trim() || !entry.credit?.trim()) {
+    errors.push(`data/images.json: ${id} needs both "alt" and "credit"`);
+    return undefined;
+  }
+  return { src, alt: entry.alt.trim(), credit: entry.credit.trim() };
+}
+
 function main() {
   const { values } = parseArgs({ options: { 'no-nearest': { type: 'boolean', default: false } } });
   const useNearest = !values['no-nearest'];
@@ -84,6 +105,12 @@ function main() {
 
   const wikidata = existsSync(WIKIDATA_CACHE) ? readJson<WikidataCache>(WIKIDATA_CACHE) : null;
   const nearbyCache = existsSync(NEARBY_CACHE) ? readJson<NearbyCache>(NEARBY_CACHE) : null;
+  const images = existsSync(IMAGES_FILE) ? readJson<ImageManifest>(IMAGES_FILE) : {};
+  const ids = new Set(extract.nations.map((n) => n.id));
+  for (const id of Object.keys(images)) {
+    if (!id.startsWith('_') && !ids.has(id))
+      errors.push(`data/images.json: unknown nation id ${id}`);
+  }
   const resolutions = new Map<string, Resolution>();
   const nations: Nation[] = [];
   for (const base of extract.nations) {
@@ -114,6 +141,7 @@ function main() {
             ...(near.landmark ? { landmark: near.landmark } : {}),
           }
         : undefined;
+    const image = imageFor(base.id, images[base.id], errors);
     nations.push({
       id: base.id,
       name: o.name ?? base.name,
@@ -125,6 +153,7 @@ function main() {
       links: { austlang: base.links.austlang, ...(enwiki ? { wikipedia: enwiki } : {}) },
       ...(o.view ? { view: o.view } : {}),
       ...(nearby ? { nearby } : {}),
+      ...(image ? { image } : {}),
       source: 'austlang',
     });
   }

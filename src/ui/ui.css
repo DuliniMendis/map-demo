@@ -591,6 +591,66 @@
   margin-top: 14px;
 }
 
+/* ---------- info card with an illustration ---------- */
+
+.cm-info-card__media {
+  margin: 0;
+  background: var(--bg-raised);
+}
+.cm-info-card__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+.cm-info-card__media figcaption {
+  display: block;
+  padding: 6px 18px;
+}
+
+/* Wide screens: picture on the left, the facts on the right. */
+@media (min-width: 900px) {
+  .cm-info-card--with-image {
+    display: grid;
+    grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      'media header'
+      'media facts'
+      'media footer';
+    width: min(740px, calc(100% - 32px));
+  }
+  /* The text sets the card's height; the picture fills its column without stretching it. */
+  .cm-info-card--with-image > .cm-info-card__media {
+    position: relative;
+    grid-area: media;
+    min-height: 300px;
+    border-right: 1px solid var(--border);
+  }
+  .cm-info-card--with-image .cm-info-card__media img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+  .cm-info-card--with-image .cm-info-card__media figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: color-mix(in srgb, var(--card-bg) 88%, transparent);
+  }
+  .cm-info-card--with-image > .cm-info-card__header {
+    grid-area: header;
+  }
+  .cm-info-card--with-image > .cm-info-card__facts {
+    grid-area: facts;
+  }
+  .cm-info-card--with-image > .cm-info-card__footer {
+    grid-area: footer;
+  }
+}
+
 /* ---------- narrow screens: bottom sheet ---------- */
 
 @media (max-width: 899.98px) {

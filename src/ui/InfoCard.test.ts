@@ -83,3 +83,31 @@ describe('InfoCard nearby', () => {
     expect(nations.filter((n) => n.nearby).length).toBeGreaterThanOrEqual(3);
   });
 });
+
+describe('InfoCard image', () => {
+  it('shows the illustration with alt text and credit, and switches to the wide layout', () => {
+    const nation: Nation = {
+      ...base,
+      image: {
+        src: `images/nations/${base.id}.webp`,
+        alt: 'Pencil sketch of a dry riverbed lined with river red gums',
+        credit: 'Pencil illustration, AI-generated',
+      },
+    };
+    render(h(InfoCard, { nation, onClose() {} }));
+    const fig = screen.getByTestId('info-image');
+    const img = within(fig).getByRole('img');
+    expect(img.getAttribute('alt')).toBe(nation.image!.alt);
+    expect(img.getAttribute('src')).toMatch(new RegExp(`images/nations/${base.id}\\.webp$`));
+    expect(fig.textContent).toContain('Pencil illustration, AI-generated');
+    expect(screen.getByTestId('info-card').classList).toContain('cm-info-card--with-image');
+  });
+
+  it('keeps the single-column card when there is no image', () => {
+    const without: Nation = { ...base };
+    delete without.image;
+    render(h(InfoCard, { nation: without, onClose() {} }));
+    expect(screen.queryByTestId('info-image')).toBeNull();
+    expect(screen.getByTestId('info-card').classList).not.toContain('cm-info-card--with-image');
+  });
+});

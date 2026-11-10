@@ -90,6 +90,9 @@
   /* Short enough to sit beside the pin under the top overlays; the card scrolls inside. */
   max-height: min(520px, calc(100% - 150px));
 }
+.pin-card:has(> .cm-info-card--with-image) {
+  width: min(740px, calc(100% - 2 * var(--gap)));
+}
 .pin-card[data-placement='docked'] {
   left: var(--gap);
   bottom: calc(var(--gap) + 28px);

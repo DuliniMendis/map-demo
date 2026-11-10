@@ -9,6 +9,13 @@ export interface NearbyFeature {
   bearing: 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW'; // from the nation's point to the feature
 }
 
+/** An illustration of Country for the info card (data/images.json + public/images/nations/<id>.webp). */
+export interface NationImage {
+  src: string;                // path under the site base, e.g. "images/nations/N92.webp"
+  alt: string;                // what the picture shows, for screen readers
+  credit: string;             // who made it and how, e.g. "Pencil illustration, AI-generated (model X)"
+}
+
 export interface Nation {
   id: string;                 // AUSTLANG code, e.g. "A103"  (stable key, used in URL ?n=)
   name: string;               // AUSTLANG language_name, trimmed
@@ -26,6 +33,7 @@ export interface Nation {
     town?: NearbyFeature;     // nearest place=city|town|village within 100 km
     landmark?: NearbyFeature; // nearest named peak/river/lake/range within 50 km
   };
+  image?: NationImage;        // optional illustration, from data/images.json
   source: 'austlang';
 }
 
