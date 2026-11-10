@@ -1,0 +1,183 @@
+/* Place search + "Whose Country?" panel (src/places/PlaceFinder.tsx). Tokens from src/index.css. */
+
+.places {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.places__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px 0 10px;
+  min-height: 40px;
+}
+.places__icon {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+}
+.places__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+  font-size: 15px;
+  padding: 8px 0;
+  outline: none;
+}
+.places__search:focus-within {
+  border-color: var(--fg);
+}
+.places__clear,
+.country-panel__close {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.places__clear:hover,
+.country-panel__close:hover {
+  background: var(--hover-bg);
+  color: var(--hover-fg);
+}
+
+.places__results {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: -1px;
+  right: -1px;
+  z-index: 5;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-height: min(360px, 60vh);
+  overflow-y: auto;
+}
+.places__result {
+  display: grid;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.places__result[aria-selected='true'] {
+  background: var(--hover-bg);
+  color: var(--hover-fg);
+}
+.places__result-label {
+  font-weight: 600;
+}
+.places__result-detail {
+  font-size: 13px;
+  color: var(--muted);
+}
+.places__note {
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ---- Country panel ---- */
+
+.country-panel {
+  padding: 10px 12px 12px;
+  background: var(--card-bg);
+  max-height: min(340px, calc(100dvh - 260px));
+  overflow-y: auto;
+}
+.country-panel__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.country-panel__title {
+  flex: 1;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.country-panel__where {
+  display: block;
+  font-size: 13px;
+  font-weight: 450;
+  color: var(--muted);
+}
+.country-panel__note {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+.country-panel__list {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.country-panel__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.country-panel__swatch {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 20%);
+}
+.country-panel a {
+  color: inherit;
+  text-decoration-color: var(--link-underline);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+.country-panel__fine {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* Marks the point being looked up when the panel follows the map centre. */
+.places__crosshair {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  translate: -50% -50%;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--flag-black), var(--flag-black)) center / 2px 100% no-repeat,
+    linear-gradient(var(--flag-black), var(--flag-black)) center / 100% 2px no-repeat;
+  filter: drop-shadow(0 0 1px #fff);
+}
+
+/* Searched-place pin (a maplibregl.Marker element): a yellow dot in a black ring. */
+.place-pin {
+  width: 22px;
+  height: 22px;
+  border: 6px solid var(--flag-black);
+  border-radius: 50%;
+  background: var(--flag-yellow);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+}

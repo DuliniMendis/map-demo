@@ -49,6 +49,7 @@
 .app__top-left,
 .app__top-right,
 .app__bottom-right,
+.app__places,
 .app__banner {
   position: absolute;
   z-index: 2;
@@ -61,11 +62,30 @@
   top: var(--gap);
   right: var(--gap);
 }
-.app__banner {
+.app__places {
   top: calc(var(--gap) + 48px);
+  left: var(--gap);
+  width: min(340px, calc(100% - 2 * var(--gap)));
+  z-index: 3;
+}
+/* The first-visit banner sits under the place search, or beside it when there's room. */
+.app__banner {
+  top: calc(var(--gap) + 100px);
   left: var(--gap);
   right: calc(var(--gap) + 200px);
   pointer-events: none;
+}
+@media (min-width: 1300px) {
+  .app__banner {
+    top: calc(var(--gap) + 48px);
+    left: calc(2 * var(--gap) + 340px);
+  }
+}
+/* Narrower: the Country panel would cover it, and it carries its own disclaimer. */
+@media (max-width: 1299.98px) {
+  .app__main:has(.country-panel) .app__banner {
+    display: none;
+  }
 }
 .app__banner > * {
   pointer-events: auto;

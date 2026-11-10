@@ -21,6 +21,8 @@ const COMPACT: [RegExp, string][] = [
   [/Mapzen|Terrain Tiles/i, 'Terrain Tiles (Mapzen/AWS)'],
   [/EOX|Sentinel/i, 'Sentinel-2 cloudless by EOX'],
   [/^Nearby towns and landmarks/i, 'Nearby places © OpenStreetMap'],
+  [/Native Land/i, 'Territories © Native Land Digital'],
+  [/Photon/i, 'Search: Photon (© OpenStreetMap)'],
   [/OpenStreetMap|OpenMapTiles/i, '© OpenMapTiles © OpenStreetMap'],
   [/Bureau of Statistics|\bABS\b/i, '© ABS'],
   [/MapLibre/i, '© MapLibre'],
@@ -83,6 +85,32 @@ export function parseAttribution(data: unknown): AttributionEntry[] | null {
     });
   });
   return out.length ? out : null;
+}
+
+/** Runtime services added by src/places (place search, territory overlay); not in WS3's file. */
+export const PHOTON_ENTRY: AttributionEntry = {
+  id: 'photon',
+  text: 'Place search by Photon (komoot), data © OpenStreetMap contributors, ODbL',
+  url: 'https://photon.komoot.io/',
+  licence: 'ODbL',
+  licenceUrl: 'https://opendatacommons.org/licenses/odbl/',
+  usedFor: 'Finding suburbs and addresses (what you type is sent to photon.komoot.io)',
+  kind: 'service',
+};
+
+export const NATIVE_LAND_ENTRY: AttributionEntry = {
+  id: 'native-land',
+  text: 'Territory shapes © Native Land Digital (native-land.ca), used under their Data Sovereignty Treaty',
+  url: 'https://native-land.ca/',
+  usedFor:
+    '"Whose Country?" overlay, fetched at runtime and never stored. Not official or legal boundaries.',
+  kind: 'service',
+};
+
+/** Adds the place-search and (when configured) Native Land credits. */
+export function withPlaces(entries: AttributionEntry[], nativeLand: boolean): AttributionEntry[] {
+  const extra = nativeLand ? [PHOTON_ENTRY, NATIVE_LAND_ENTRY] : [PHOTON_ENTRY];
+  return [...entries, ...extra.filter((x) => !entries.some((e) => e.id === x.id))];
 }
 
 /** Adds the MapLibre credit unless the list already mentions MapLibre. */

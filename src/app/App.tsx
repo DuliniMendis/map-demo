@@ -1,13 +1,20 @@
 import type * as maplibregl from 'maplibre-gl';
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { loadNations } from '../data/loadNations';
 import { MapView } from '../map/MapView';
 import { useAppStore } from '../store/useAppStore';
 import { About } from './About';
 import { Attribution } from './Attribution';
+import { nativeLandKey } from '../places/nativeLand';
+import { PlaceFinder } from '../places/PlaceFinder';
 import { GestureHint } from './controls/GestureHint';
 import { TiltControl } from './controls/TiltControl';
-import { DEFAULT_ATTRIBUTION, loadAttribution, type AttributionEntry } from './attributionData';
+import {
+  DEFAULT_ATTRIBUTION,
+  loadAttribution,
+  withPlaces,
+  type AttributionEntry,
+} from './attributionData';
 import { Disclaimer, InfoCard, SidePanel, type MapController } from './integration';
 import { LayerControls } from './LayerControls';
 import { PinnedCard } from './PinnedCard';
@@ -40,7 +47,11 @@ export interface AppProps {
 export function App({ bootNationId = null }: AppProps) {
   const [load, setLoad] = useState<LoadState>({ kind: 'loading' });
   const [attempt, setAttempt] = useState(0);
-  const [attribution, setAttribution] = useState<AttributionEntry[]>(DEFAULT_ATTRIBUTION);
+  const [baseAttribution, setAttribution] = useState<AttributionEntry[]>(DEFAULT_ATTRIBUTION);
+  const attribution = useMemo(
+    () => withPlaces(baseAttribution, nativeLandKey() !== null),
+    [baseAttribution],
+  );
   const [controller, setController] = useState<MapController | null>(null);
   const [map, setMap] = useState<maplibregl.Map | null>(null);
   const desktop = useSyncExternalStore(subscribeDesktop, isDesktop, () => false);
@@ -207,6 +218,7 @@ export function App({ bootNationId = null }: AppProps) {
             {map && <TiltControl map={map} />}
           </div>
         )}
+        <PlaceFinder map={map} className="app__places" />
         <div className="app__banner cm-theme">
           <Disclaimer variant="banner" />
         </div>

@@ -29,6 +29,9 @@ pnpm install
 pnpm dev          # http://localhost:5173
 ```
 
+Optional: the "Whose Country?" territory overlay needs a Native Land Digital API key. Copy `.env.example`
+to `.env.local` and set `VITE_NATIVE_LAND_KEY`. Place search works without it. See `docs/places.md`.
+
 Toolchain (installed 2026-11-09 via Homebrew under `/opt/homebrew`):
 
 | Tool | Version |
