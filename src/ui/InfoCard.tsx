@@ -85,11 +85,24 @@ export function InfoCard({ nation, onClose, onBackToOverview, className }: InfoC
 
   return (
     <section
-      className={['cm-info-card', className].filter(Boolean).join(' ')}
+      className={['cm-info-card', nation.image && 'cm-info-card--with-image', className]
+        .filter(Boolean)
+        .join(' ')}
       data-testid="info-card"
       aria-labelledby={`${id}-title`}
       onKeyDown={handleKeyDown}
     >
+      {nation.image && (
+        <figure className="cm-info-card__media" data-testid="info-image">
+          <img
+            key={nation.id}
+            src={`${import.meta.env.BASE_URL}${nation.image.src}`}
+            alt={nation.image.alt}
+            decoding="async"
+          />
+          <figcaption className="cm-fact__note">{nation.image.credit}</figcaption>
+        </figure>
+      )}
       <header className="cm-info-card__header">
         <div>
           <p className="cm-badges">

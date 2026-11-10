@@ -1,0 +1,3 @@
+{
+  "_comment": "Per-nation illustrations for the info card, merged by scripts/build-nations.ts. Key = AUSTLANG id; the picture must be at public/images/nations/<id>.webp. Each entry needs \"alt\" (what it shows) and \"credit\" (who/what made it). See docs/images.md for what the pictures may and may not show."
+}
