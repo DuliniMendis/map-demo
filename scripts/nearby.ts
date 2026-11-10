@@ -3,10 +3,11 @@
  *
  * 1. Five Australia-wide Overpass queries, one per feature class (towns, peaks, rivers, lakes,
  *    ranges), run one after another with a pause between them and a generic project User-Agent.
- *    Raw responses go to data/cache/osm/raw/<class>-<date>.json (gitignored: rivers alone are
- *    tens of MB). A trimmed snapshot — OSM id, name, kind and the coordinates needed for distance
- *    (river lines simplified to 10 m and polyline-encoded) — goes to data/cache/osm/<class>.json
- *    with the fetch date and the OSM data timestamp; that snapshot is committed.
+ *    Raw responses go to data/cache/osm/raw/<class>-<date>.overpass (Overpass JSON, gitignored:
+ *    ~140 MB, rivers alone 136 MB; not named .json so Prettier skips them). A trimmed snapshot — OSM id, name, kind and the coordinates needed for
+ *    distance (river lines simplified to 10 m and polyline-encoded), clipped to the features
+ *    within the cut-off of some nation point (no other feature can ever be chosen) — goes to
+ *    data/cache/osm/<class>.json with the fetch date and the OSM data timestamp; it is committed.
  * 2. For each nation: nearest place=city|town within 100 km, nearest named peak / river / lake /
  *    range within 50 km → data/cache/osm/nearby.json, which scripts/build-nations.ts merges into
  *    public/data/nations.json.
@@ -45,8 +46,10 @@ import {
   LANDMARK_MAX_KM,
   TOWN_MAX_KM,
   fromStored,
+  clipToPoints,
   indexFeatures,
   nearbyFor,
+  pointsKey,
   simplifyLine,
   toStored,
 } from './lib/nearby.ts';
@@ -221,7 +224,7 @@ class Client {
 
 function newestRaw(cls: OsmClass): { file: string; date: string } | null {
   if (!existsSync(OSM_RAW_DIR)) return null;
-  const re = new RegExp(`^${cls}-(\\d{4}-\\d{2}-\\d{2})\\.json$`);
+  const re = new RegExp(`^${cls}-(\\d{4}-\\d{2}-\\d{2})\\.overpass$`);
   const hit = readdirSync(OSM_RAW_DIR)
     .map((f) => ({ f, m: re.exec(f) }))
     .filter((x): x is { f: string; m: RegExpExecArray } => x.m !== null)
@@ -230,13 +233,17 @@ function newestRaw(cls: OsmClass): { file: string; date: string } | null {
   return hit ? { file: join(OSM_RAW_DIR, hit.f), date: hit.m[1] } : null;
 }
 
+const clipRadius = (cls: OsmClass) => (cls === 'towns' ? TOWN_MAX_KM : LANDMARK_MAX_KM);
+
 async function snapshotFromRaw(
   cls: OsmClass,
   raw: { file: string; date: string },
   endpoint: string,
+  points: readonly (readonly [number, number])[],
 ): Promise<OsmSnapshot> {
   const body = JSON.parse(readFileSync(raw.file, 'utf8')) as OverpassResponse;
-  const features = trim(cls, body.elements ?? []);
+  const all = trim(cls, body.elements ?? []);
+  const features = clipToPoints(all, points, clipRadius(cls));
   const snap: OsmSnapshot = {
     class: cls,
     retrieved: raw.date,
@@ -246,12 +253,14 @@ async function snapshotFromRaw(
     licence: 'ODbL 1.0 — © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)',
     rawBytes: statSync(raw.file).size,
     ...(cls === 'rivers' ? { simplifiedKm: RIVER_SIMPLIFY_KM } : {}),
+    rawCount: all.length,
+    clip: { radiusKm: clipRadius(cls), pointsKey: pointsKey(points) },
     count: features.length,
     features: features.map(toStored),
   };
   await writeJsonFormatted(snapshotFile(cls), snap);
   console.log(
-    `[osm] ${cls}: ${features.length} features → ${rel(snapshotFile(cls))} ` +
+    `[osm] ${cls}: ${all.length} features, ${features.length} within ${clipRadius(cls)} km of a nation → ${rel(snapshotFile(cls))} ` +
       `(${(statSync(snapshotFile(cls)).size / 1e6).toFixed(2)} MB)`,
   );
   return snap;
@@ -270,31 +279,47 @@ async function main() {
     if (!OSM_CLASSES.includes(c as OsmClass)) throw new Error(`unknown class "${c}"`);
   }
 
+  const snap = newestSnapshot();
+  if (!snap) throw new Error('no data/raw snapshot; run node scripts/fetch-austlang.ts first');
+  const fc: unknown = JSON.parse(readFileSync(snap.file, 'utf8'));
+  assertAustlangCollection(fc);
+  const { nations } = extractNations(fc, readJson<CleaningPolicy>(CLEANING_FILE));
+  const points = nations.map((n) => [n.lng, n.lat] as const);
+  const key = pointsKey(points);
+
   const client = new Client();
   const snapshots = new Map<OsmClass, OsmSnapshot>();
   let failure: Error | null = null;
   for (const cls of OSM_CLASSES) {
     const file = snapshotFile(cls);
     const wanted = values.refresh && (!only || only.has(cls));
-    if (!wanted && existsSync(file)) {
-      snapshots.set(cls, readJson<OsmSnapshot>(file));
+    const prev = existsSync(file) ? readJson<OsmSnapshot>(file) : null;
+    if (!wanted && prev?.clip?.pointsKey === key) {
+      snapshots.set(cls, prev);
       continue;
     }
     const raw = newestRaw(cls);
     if (!wanted && raw) {
-      const prev = existsSync(file) ? readJson<OsmSnapshot>(file) : null;
-      snapshots.set(cls, await snapshotFromRaw(cls, raw, prev?.endpoint ?? '(raw cache)'));
+      if (prev)
+        console.log(`[osm] ${cls}: nation points changed; re-clipping from ${rel(raw.file)}`);
+      snapshots.set(cls, await snapshotFromRaw(cls, raw, prev?.endpoint ?? '(raw cache)', points));
       continue;
+    }
+    if (!wanted && prev) {
+      throw new Error(
+        `[osm] ${cls}: the committed snapshot was clipped to a different set of nation points ` +
+          `and there is no raw cache to re-clip from; run node scripts/nearby.ts --refresh --only ${cls}`,
+      );
     }
     if (failure) {
       if (existsSync(file)) snapshots.set(cls, readJson<OsmSnapshot>(file));
       continue;
     }
     const date = todayAu();
-    const target = join(OSM_RAW_DIR, `${cls}-${date}.json`);
+    const target = join(OSM_RAW_DIR, `${cls}-${date}.overpass`);
     try {
       const endpoint = await client.run(cls, target);
-      snapshots.set(cls, await snapshotFromRaw(cls, { file: target, date }, endpoint));
+      snapshots.set(cls, await snapshotFromRaw(cls, { file: target, date }, endpoint, points));
     } catch (err) {
       failure = err as Error;
       console.error(`[osm] ${cls}: ${failure.message}`);
@@ -312,11 +337,6 @@ async function main() {
   if (failure) console.warn('[osm] a refresh failed; kept the existing snapshots');
 
   // Nearest search over the trimmed snapshots.
-  const snap = newestSnapshot();
-  if (!snap) throw new Error('no data/raw snapshot; run node scripts/fetch-austlang.ts first');
-  const fc: unknown = JSON.parse(readFileSync(snap.file, 'utf8'));
-  assertAustlangCollection(fc);
-  const { nations } = extractNations(fc, readJson<CleaningPolicy>(CLEANING_FILE));
   const feats = (c: OsmClass) => snapshots.get(c)!.features.map(fromStored);
   const towns = indexFeatures(feats('towns'));
   const landmarks = indexFeatures([
@@ -331,7 +351,8 @@ async function main() {
     sources: Object.fromEntries(
       OSM_CLASSES.map((c) => {
         const s = snapshots.get(c)!;
-        return [c, { retrieved: s.retrieved, osmBase: s.osmBase, count: s.count }];
+        const src = { retrieved: s.retrieved, osmBase: s.osmBase, count: s.rawCount };
+        return [c, { ...src, committed: s.count }];
       }),
     ) as NearbyCache['sources'],
     townMaxKm: TOWN_MAX_KM,

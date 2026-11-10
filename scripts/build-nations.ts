@@ -512,12 +512,19 @@ function nearbySection(
       'They are not names for the nation or its Country and imply no boundary.',
     '',
     table(
-      ['Class', 'Overpass query run', 'OSM data as of', 'Features'],
+      [
+        'Class',
+        'Overpass query run',
+        'OSM data as of',
+        'Named features (Australia)',
+        'Committed (within cut-off of a nation)',
+      ],
       OSM_CLASSES.map((c) => [
         c,
         nearby.sources[c].retrieved,
         nearby.sources[c].osmBase || '—',
         nearby.sources[c].count,
+        nearby.sources[c].committed,
       ]),
     ),
     '',

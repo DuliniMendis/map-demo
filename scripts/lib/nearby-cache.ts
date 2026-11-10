@@ -22,13 +22,25 @@ export interface OsmSnapshot {
   rawBytes: number;
   /** Rivers only: Douglas–Peucker tolerance applied before committing. */
   simplifiedKm?: number;
+  /** Features in the raw response (named, of the right kind) before clipping. */
+  rawCount: number;
+  /**
+   * Only features within `radiusKm` of a nation point are committed (the rest can never be
+   * chosen). `pointsKey` identifies that point set; if the AUSTLANG points change, nearby.ts
+   * re-clips from the raw cache or asks for --refresh.
+   */
+  clip: { radiusKm: number; pointsKey: string };
   count: number;
   features: StoredFeature[];
 }
 
 /** data/cache/osm/nearby.json — per-nation results, merged into nations.json by the build. */
 export interface NearbyCache {
-  sources: Record<OsmClass, { retrieved: string; osmBase: string; count: number }>;
+  /** count: named features Australia-wide; committed: those within the cut-off of a nation. */
+  sources: Record<
+    OsmClass,
+    { retrieved: string; osmBase: string; count: number; committed: number }
+  >;
   townMaxKm: number;
   landmarkMaxKm: number;
   /** Keyed by AUSTLANG id; lng/lat let the build reject results for a moved point. */

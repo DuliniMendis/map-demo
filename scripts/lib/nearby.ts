@@ -3,6 +3,7 @@
  * bearing, point-to-polyline distance and a bounding-box prefiltered nearest search. The OSM
  * extract itself is fetched and trimmed by scripts/nearby.ts.
  */
+import { createHash } from 'node:crypto';
 import type { NearbyFeature } from '../../src/types/nation.ts';
 import { haversineKm, kmToDegrees } from './geo.ts';
 
@@ -180,6 +181,43 @@ export function nearestFeature(
     }
   }
   return best;
+}
+
+/**
+ * Keeps only features within `maxKm` of at least one of `points` (input order kept). Used to trim
+ * the committed snapshot to the features any nation could be matched with.
+ */
+export function clipToPoints(
+  features: readonly OsmFeature[],
+  points: readonly (readonly [number, number])[],
+  maxKm: number,
+): OsmFeature[] {
+  const { items } = indexFeatures(features);
+  const keep = new Set<OsmFeature>();
+  for (const [lng, lat] of points) {
+    const { dLng, dLat } = kmToDegrees(maxKm * 1.02, lat);
+    for (const { f, bbox } of items) {
+      if (keep.has(f)) continue;
+      if (
+        bbox[0] > lng + dLng ||
+        bbox[2] < lng - dLng ||
+        bbox[1] > lat + dLat ||
+        bbox[3] < lat - dLat
+      )
+        continue;
+      const km = isLine(f)
+        ? (nearestOnLines(lng, lat, f.lines)?.km ?? Infinity)
+        : haversineKm(lng, lat, f.at[0], f.at[1]);
+      if (km <= maxKm) keep.add(f);
+    }
+  }
+  return features.filter((f) => keep.has(f));
+}
+
+/** Order-independent key for a point set (which nation points a clipped snapshot covers). */
+export function pointsKey(points: readonly (readonly [number, number])[]): string {
+  const s = points.map(([x, y]) => `${x},${y}`).sort();
+  return `${s.length}:${createHash('sha256').update(s.join(';')).digest('hex').slice(0, 16)}`;
 }
 
 /** Converts a hit to the shipped `NearbyFeature` (name as published, 1-dp km, 8-point bearing). */

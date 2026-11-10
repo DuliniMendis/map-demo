@@ -25,6 +25,7 @@ import type { OsmFeature, OsmLine } from '../../scripts/lib/nearby.ts';
 import {
   LANDMARK_MAX_KM,
   TOWN_MAX_KM,
+  clipToPoints,
   compass8,
   decodePolyline,
   encodePolyline,
@@ -34,6 +35,7 @@ import {
   nearbyFor,
   nearestFeature,
   nearestOnLines,
+  pointsKey,
   pointToLinesKm,
   round1,
   simplifyLine,
@@ -426,6 +428,36 @@ describe('nearby town and landmark (WS8)', () => {
       distanceKm: 49.9,
       bearing: 'S',
     });
+  });
+
+  it('clips the committed snapshot to features some nation could be matched with', () => {
+    const near = town('n1', 'Near', 0, 0.4); // ≈ 44 km
+    const far = town('n2', 'Far', 0, 0.5); // ≈ 56 km
+    const line: OsmFeature = {
+      osm: 'w1',
+      name: 'R',
+      kind: 'river',
+      lines: [
+        [
+          [lng + 0.3, lat - 3],
+          [lng + 0.3, lat + 3],
+        ],
+      ],
+    };
+    expect(clipToPoints([far, line, near], [[lng, lat]], 50)).toEqual([line, near]);
+    expect(clipToPoints([far], [[lng, lat]], 100)).toEqual([far]);
+    expect(
+      pointsKey([
+        [1, 2],
+        [3, 4],
+      ]),
+    ).toBe(
+      pointsKey([
+        [3, 4],
+        [1, 2],
+      ]),
+    );
+    expect(pointsKey([[1, 2]])).not.toBe(pointsKey([[1, 2.000001]]));
   });
 
   it('simplifies and polyline-encodes river lines without moving them', () => {
