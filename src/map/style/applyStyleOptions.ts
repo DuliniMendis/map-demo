@@ -7,6 +7,7 @@ import { LABEL_LAYER_IDS } from './layers/labels';
 import { applyLighting } from './lighting';
 import { reliefOpacity } from './layers/relief';
 import { applyProjection } from './projection';
+import { STATE_IMAGERY_LAYER_IDS } from './stateImagery';
 import { visibility } from './layers/visibility';
 import type { StyleOptions } from './types';
 
@@ -60,6 +61,7 @@ export function applyStyleOptions(map: MlMap, o: StyleOptions): void {
   installDemFallback(map);
 
   setVisible(map, LAYER_IMAGERY, o.imagery);
+  for (const id of STATE_IMAGERY_LAYER_IDS) setVisible(map, id, o.imagery);
   setVisible(map, LAYER_HILLSHADE, o.hillshade);
   setVisible(map, LAYER_RELIEF, o.relief);
   for (const id of LABEL_LAYER_IDS) setVisible(map, id, o.labels);

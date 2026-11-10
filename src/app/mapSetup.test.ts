@@ -2,7 +2,14 @@ import { describe, expect, it } from 'vitest';
 import data from '../../public/data/nations.json';
 import { AUSTRALIA_BOUNDS, OVERVIEW_CAMERA } from '../map/style/ids';
 import type { NationsFile } from '../types/nation';
-import { CENTER_BOUNDS, constrainCamera, MAX_ZOOM, MIN_ZOOM } from './mapSetup';
+import {
+  CENTER_BOUNDS,
+  constrainCamera,
+  MAX_ZOOM,
+  MAX_ZOOM_ANYWHERE,
+  maxZoomAt,
+  MIN_ZOOM,
+} from './mapSetup';
 
 describe('constrainCamera (replaces maxBounds, which the globe ignores)', () => {
   const [[w, s], [e, n]] = CENTER_BOUNDS;
@@ -43,5 +50,24 @@ describe('constrainCamera (replaces maxBounds, which the globe ignores)', () => 
     const c = constrainCamera(Number.NaN, Number.NaN, Number.NaN);
     expect(Number.isFinite(c.lng) && Number.isFinite(c.lat)).toBe(true);
     expect(c.zoom).toBe(MIN_ZOOM);
+  });
+});
+
+describe('maxZoomAt', () => {
+  it('lets the camera in closer only where state aerial imagery covers it', () => {
+    expect(maxZoomAt(151.21, -33.86, true)).toBe(17.5); // Sydney
+    expect(maxZoomAt(147.32, -42.88, true)).toBe(17.5); // Hobart
+    expect(maxZoomAt(153.02, -27.47, true)).toBe(16); // Brisbane
+    expect(maxZoomAt(131.03, -25.34, true)).toBe(MAX_ZOOM); // Uluru
+    expect(maxZoomAt(144.96, -37.81, true)).toBe(MAX_ZOOM); // Melbourne
+    expect(MAX_ZOOM_ANYWHERE).toBe(17.5);
+  });
+
+  it('falls back to MAX_ZOOM with the imagery layer off', () => {
+    expect(maxZoomAt(151.21, -33.86, false)).toBe(MAX_ZOOM);
+  });
+
+  it('is what constrainCamera clamps to', () => {
+    expect(constrainCamera(151.21, -33.86, 20, maxZoomAt(151.21, -33.86, true)).zoom).toBe(17.5);
   });
 });
