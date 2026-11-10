@@ -8,21 +8,34 @@
     Arial,
     sans-serif;
   line-height: 1.45;
-  color-scheme: light dark;
+  /* One dark theme in the colours of the Aboriginal flag: black ground, red for selection and active
+     states, yellow for the sun-like accents (pins, focus, links). */
+  color-scheme: dark;
   --side-width: 360px;
-  --bg: #ffffff;
-  --fg: #1b1f24;
-  --muted: #5b6470;
-  --border: #d9dde3;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #12161b;
-    --fg: #e6e9ed;
-    --muted: #9aa4b0;
-    --border: #2a3139;
-  }
+  --flag-black: #000000;
+  --flag-red: #e03c31; /* Pantone 179 C */
+  --flag-yellow: #ffc72c; /* Pantone 123 C */
+
+  --bg: #0a0a0a;
+  --bg-raised: #131313;
+  --bg-hover: #1b1b1b;
+  --fg: #f4f2ee;
+  --muted: #a39f99; /* 7:1 on --bg */
+  --border: #262626;
+  --border-strong: #3a3a3a;
+
+  --accent: var(--flag-red); /* indicators, selected state, active borders (not small text) */
+  --accent-text: var(--flag-yellow); /* links and accent text: 12:1 on --bg */
+  --focus: var(--flag-yellow);
+  --selected-bg: rgb(224 60 49 / 14%);
+  --chip-bg: #161616;
+
+  --glass: rgb(10 10 10 / 82%);
+  --card-bg: rgb(10 10 10 / 92%);
+  --shadow: 0 12px 32px rgb(0 0 0 / 50%);
+  --radius: 8px;
+  --radius-sm: 6px;
 }
 
 * {
