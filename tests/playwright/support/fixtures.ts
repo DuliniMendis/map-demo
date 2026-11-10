@@ -13,10 +13,33 @@ interface Fixtures {
   tiles: TileLog;
   /** console.error messages and uncaught page errors collected since the test started. */
   consoleProblems: ConsoleProblem[];
+  /** Pretend the visitor has seen the Vision modal and gesture hint and turned sound off (default). A spec that
+   *  tests the first visit sets `test.use({ firstVisit: true })`. */
+  firstVisit: boolean;
+  quietLanding: void;
 }
 
 export const test = base.extend<Fixtures>({
   tileOptions: [{}, { option: true }],
+  firstVisit: [false, { option: true }],
+
+  quietLanding: [
+    async ({ context, firstVisit }, use) => {
+      await context.addInitScript((first: boolean) => {
+        try {
+          if (!first) {
+            localStorage.setItem('country-map:vision-seen', '1');
+            localStorage.setItem('country-map:gestures-seen', '1');
+          }
+          localStorage.setItem('country-map:sound-muted', '1');
+        } catch {
+          // about:blank and other opaque origins have no storage
+        }
+      }, firstVisit);
+      await use();
+    },
+    { auto: true },
+  ],
 
   tiles: [
     async ({ context, tileOptions }, use) => {
