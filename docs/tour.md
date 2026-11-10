@@ -189,7 +189,7 @@ flattens at z 11–12, which would curve every nation view.)
   Boot test's "starts at the overview camera" passes.
 - **maxBounds:** MapLibre 6.17 ignores `maxBounds` while it renders a globe ("Globe: TODO: respect _lngRange,
   _latRange" in `vertical_perspective_transform.ts`). Measured: at z 2.5 the camera could be moved to Africa,
-  and on zooming past z 4 it snapped ~7,500 km back to the bounds. Replaced in `src/app/mapSetup.ts` /
+  and on zooming past z 4 it snapped about 8,000 km back to the edge of the bounds. Replaced in `src/app/mapSetup.ts` /
   `MapView.tsx` by a `transformConstrain` that clamps the camera **centre** to Australia + sea room
   (`CENTER_BOUNDS`, 104.5–162.5° E, 49.5–4.5° S) at every zoom, plus `minZoom: 2`. Same rule on both sides of
   z 4, so no jump. `MAX_BOUNDS` is kept (exported, still unit-tested by WS5) but no longer passed to the map.
