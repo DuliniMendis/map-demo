@@ -9,6 +9,7 @@ import { Disclaimer, InfoCard, SidePanel, type MapController } from './integrati
 import { LayerControls } from './LayerControls';
 import { ListSkeleton, LoadError, Toast } from './LoadStates';
 import { resolveBootSelection, startUrlWriter } from './UrlSync';
+import { TourButton, TourPanel } from './tour/Tour';
 import { goToOverview } from './wiring';
 import './app.css';
 
@@ -149,6 +150,7 @@ export function App({ bootNationId = null }: AppProps) {
           >
             About<span className="hide-narrow"> &amp; acknowledgement</span>
           </button>
+          <TourButton />
         </div>
         <div className="app__banner cm-theme">
           <Disclaimer variant="banner" />
@@ -169,6 +171,7 @@ export function App({ bootNationId = null }: AppProps) {
           <Attribution entries={attribution} />
         </div>
         <Toast message={toast} />
+        <TourPanel aboutOpen={aboutOpen} onOverview={onOverview} />
       </main>
 
       <About
