@@ -1,3 +1,23 @@
 {
-  "_comment": "Per-nation illustrations for the info card, merged by scripts/build-nations.ts. Key = AUSTLANG id; the picture must be at public/images/nations/<id>.webp. Each entry needs \"alt\" (what it shows) and \"credit\" (who/what made it). See docs/images.md for what the pictures may and may not show."
+  "_comment": "Per-nation illustrations for the info card, merged by scripts/build-nations.ts. Key = AUSTLANG id; the picture must be at public/images/nations/<id>.webp. Each entry needs \"alt\" (what it shows) and \"credit\" (who/what made it). See docs/images.md for what the pictures may and may not show.",
+  "A103": {
+    "alt": "Pencil sketch of desert country with a still lake or waterhole. An impression of the region, not a particular place.",
+    "credit": "Pencil illustration, AI-generated with bfl/flux-3-image-klein, 2026-11-10"
+  },
+  "A11": {
+    "alt": "Pencil sketch of desert country with a rocky hill rising in the middle distance. An impression of the region, not a particular place.",
+    "credit": "Pencil illustration, AI-generated with bfl/flux-3-image-klein, 2026-11-10"
+  },
+  "A13": {
+    "alt": "Pencil sketch of desert country with a rocky hill rising in the middle distance. An impression of the region, not a particular place.",
+    "credit": "Pencil illustration, AI-generated with bfl/flux-3-image-klein, 2026-11-10"
+  },
+  "A14": {
+    "alt": "Pencil sketch of desert country with a rocky hill rising in the middle distance. An impression of the region, not a particular place.",
+    "credit": "Pencil illustration, AI-generated with bfl/flux-3-image-klein, 2026-11-10"
+  },
+  "A16": {
+    "alt": "Pencil sketch of desert country with a rocky hill rising in the middle distance. An impression of the region, not a particular place.",
+    "credit": "Pencil illustration, AI-generated with bfl/flux-3-image-klein, 2026-11-10"
+  }
 }
