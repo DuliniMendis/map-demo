@@ -1,0 +1,2084 @@
+{
+  "class": "lakes",
+  "retrieved": "2026-11-10",
+  "osmBase": "2026-11-10T00:09:19Z",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:900];area[\"ISO3166-1\"=\"AU\"][\"admin_level\"=\"2\"]->.au;(way[\"natural\"=\"water\"][\"water\"=\"lake\"][\"name\"](area.au);relation[\"natural\"=\"water\"][\"water\"=\"lake\"][\"name\"](area.au););out tags center qt;",
+  "licence": "ODbL 1.0 — © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)",
+  "rawBytes": 543670,
+  "rawCount": 2091,
+  "clip": { "radiusKm": 50, "pointsKey": "455:68bd9320d0b7883f" },
+  "count": 770,
+  "features": [
+    { "osm": "r55429", "name": "Lake Way", "kind": "lake", "at": [120.41275, -26.81593] },
+    { "osm": "r60565", "name": "Lake Leake", "kind": "lake", "at": [147.81847, -42.00787] },
+    {
+      "osm": "r61574",
+      "name": "yingina / Great Lake",
+      "kind": "lake",
+      "at": [146.75404, -41.88367]
+    },
+    { "osm": "r61575", "name": "Arthurs Lake", "kind": "lake", "at": [146.91948, -41.97131] },
+    { "osm": "r67720", "name": "Lake Tuggeranong", "kind": "lake", "at": [149.06987, -35.41106] },
+    { "osm": "r171928", "name": "Lake Gillon", "kind": "lake", "at": [115.88003, -32.01125] },
+    { "osm": "r409874", "name": "Lake Ginninderra", "kind": "lake", "at": [149.07308, -35.22911] },
+    { "osm": "r416805", "name": "West Lakes", "kind": "lake", "at": [138.4927, -34.87319] },
+    { "osm": "r558131", "name": "The Coorong", "kind": "lake", "at": [139.30151, -35.91084] },
+    { "osm": "r558145", "name": "Lake Alexandrina", "kind": "lake", "at": [139.15588, -35.45804] },
+    { "osm": "r812253", "name": "Rocket Lake", "kind": "lake", "at": [141.80727, -34.64051] },
+    { "osm": "r898957", "name": "Lake Munmorah", "kind": "lake", "at": [151.56981, -33.21473] },
+    { "osm": "r1164841", "name": "Smiths Lake", "kind": "lake", "at": [152.48999, -32.38441] },
+    { "osm": "r1319504", "name": "Lake Macquarie", "kind": "lake", "at": [151.58295, -33.06575] },
+    { "osm": "r1376534", "name": "Lake Wooloweyah", "kind": "lake", "at": [153.3124, -29.49197] },
+    { "osm": "r1507097", "name": "Lake Cootharaba", "kind": "lake", "at": [153.01738, -26.26626] },
+    { "osm": "r1640674", "name": "Lake Eden", "kind": "lake", "at": [153.01839, -27.23543] },
+    { "osm": "r1918444", "name": "Wallis Lake", "kind": "lake", "at": [152.43114, -32.21834] },
+    { "osm": "r1931381", "name": "Lake Corangamite", "kind": "lake", "at": [143.44188, -38.18464] },
+    { "osm": "r1978325", "name": "Lake Northam", "kind": "lake", "at": [151.19332, -33.8853] },
+    {
+      "osm": "r2001370",
+      "name": "Lake Boodjamooling",
+      "kind": "lake",
+      "at": [115.86335, -31.9385]
+    },
+    {
+      "osm": "r2001371",
+      "name": "Lake Boodjamooling",
+      "kind": "lake",
+      "at": [115.86149, -31.9379]
+    },
+    { "osm": "r2303045", "name": "Tuggerah Lake", "kind": "lake", "at": [151.49222, -33.31384] },
+    { "osm": "r2303075", "name": "Budgewoi Lake", "kind": "lake", "at": [151.53549, -33.23967] },
+    { "osm": "r2371632", "name": "Lake Tyrrell", "kind": "lake", "at": [142.83594, -35.33879] },
+    { "osm": "r2442196", "name": "Lake King", "kind": "lake", "at": [147.83332, -37.88844] },
+    { "osm": "r2512718", "name": "Jerilderie Lake", "kind": "lake", "at": [145.72273, -35.35238] },
+    { "osm": "r2661928", "name": "Eungella Dam", "kind": "lake", "at": [148.41281, -21.16748] },
+    { "osm": "r2815047", "name": "Tandure Lake", "kind": "lake", "at": [142.54122, -32.27376] },
+    { "osm": "r2816269", "name": "Emerald Lakes", "kind": "lake", "at": [153.37744, -28.01917] },
+    { "osm": "r2901946", "name": "Lake Roberts", "kind": "lake", "at": [140.52032, -35.32731] },
+    { "osm": "r2912139", "name": "Lake Trevallyn", "kind": "lake", "at": [147.07402, -41.458] },
+    { "osm": "r3007274", "name": "Dove Lake", "kind": "lake", "at": [145.96096, -41.66041] },
+    { "osm": "r3048214", "name": "Lake Crescent", "kind": "lake", "at": [147.16609, -42.17285] },
+    { "osm": "r3309746", "name": "Lake Albert", "kind": "lake", "at": [139.29183, -35.6233] },
+    { "osm": "r3321923", "name": "Lake James", "kind": "lake", "at": [145.93587, -41.76418] },
+    { "osm": "r3322954", "name": "Lake Windermere", "kind": "lake", "at": [145.95603, -41.76638] },
+    {
+      "osm": "r3400115",
+      "name": "Lake Burley Griffin",
+      "kind": "lake",
+      "at": [149.11396, -35.29909]
+    },
+    { "osm": "r3713770", "name": "Canoe Point Lake", "kind": "lake", "at": [151.36764, -23.94218] },
+    { "osm": "r4024607", "name": "Lake Yambuk", "kind": "lake", "at": [142.03319, -38.32001] },
+    {
+      "osm": "r4024671",
+      "name": "Neil McDougall Lake",
+      "kind": "lake",
+      "at": [115.86287, -32.00682]
+    },
+    { "osm": "r4024676", "name": "Lake Brearley", "kind": "lake", "at": [115.90796, -31.94781] },
+    { "osm": "r4038147", "name": "Meadowbank Lake", "kind": "lake", "at": [146.78672, -42.56742] },
+    {
+      "osm": "r4614795",
+      "name": "Laratinga Wetlands",
+      "kind": "lake",
+      "at": [138.88479, -35.07035]
+    },
+    { "osm": "r4614897", "name": "Leech Lake", "kind": "lake", "at": [139.92258, -36.27239] },
+    {
+      "osm": "r4614915",
+      "name": "Log Crossing/ Well And Bridge",
+      "kind": "lake",
+      "at": [139.86389, -36.20098]
+    },
+    {
+      "osm": "r4614917",
+      "name": "Barnet Flat Waterhole",
+      "kind": "lake",
+      "at": [139.86272, -36.18987]
+    },
+    { "osm": "r4614918", "name": "Cortina Lake", "kind": "lake", "at": [139.8925, -36.2804] },
+    { "osm": "r4614928", "name": "Mandina Marshes", "kind": "lake", "at": [139.92842, -36.26034] },
+    { "osm": "r4614952", "name": "Lake Ellen", "kind": "lake", "at": [139.8871, -35.99427] },
+    { "osm": "r4614993", "name": "Choolalie Lake", "kind": "lake", "at": [131.52214, -30.28574] },
+    { "osm": "r4614996", "name": "Yarle Lakes", "kind": "lake", "at": [131.45376, -30.2467] },
+    {
+      "osm": "r4615019",
+      "name": "Lake Cadibarrawirracanna",
+      "kind": "lake",
+      "at": [135.45308, -28.84374]
+    },
+    { "osm": "r4615085", "name": "Tea Tree Swamp", "kind": "lake", "at": [138.0786, -30.42396] },
+    { "osm": "r4615086", "name": "Minagoona Lake", "kind": "lake", "at": [138.16691, -30.16878] },
+    { "osm": "r4857977", "name": "Lyneham Wetland", "kind": "lake", "at": [149.13005, -35.25526] },
+    { "osm": "r5454530", "name": "Catalina Lake", "kind": "lake", "at": [150.18189, -35.72701] },
+    { "osm": "r5610767", "name": "Colongra Lake", "kind": "lake", "at": [151.54684, -33.19844] },
+    { "osm": "r5657705", "name": "Mummaga Lake", "kind": "lake", "at": [150.11285, -36.15737] },
+    { "osm": "r5723884", "name": "Lake Sorell", "kind": "lake", "at": [147.16846, -42.10505] },
+    { "osm": "r5746395", "name": "Durras Lake", "kind": "lake", "at": [150.28259, -35.63673] },
+    { "osm": "r5752657", "name": "Sheep Wash Lagoon", "kind": "lake", "at": [143.97708, -35.4798] },
+    { "osm": "r5813862", "name": "Wonboyn Lake", "kind": "lake", "at": [149.93225, -37.23275] },
+    { "osm": "r5975644", "name": "Lake Orr", "kind": "lake", "at": [153.41329, -28.07722] },
+    {
+      "osm": "r5989479",
+      "name": "Regatta Waters Lake",
+      "kind": "lake",
+      "at": [153.3081, -27.88265]
+    },
+    { "osm": "r6068725", "name": "Lake Callemondah", "kind": "lake", "at": [151.23471, -23.86475] },
+    { "osm": "r6204349", "name": "Feature Lake", "kind": "lake", "at": [153.38668, -28.0096] },
+    { "osm": "r6467511", "name": "Robina Waters", "kind": "lake", "at": [153.40971, -28.05809] },
+    { "osm": "r6932299", "name": "Lake Walyungup", "kind": "lake", "at": [115.82412, -32.3347] },
+    { "osm": "r7459919", "name": "Lake Carey", "kind": "lake", "at": [122.43563, -29.11764] },
+    { "osm": "r7752099", "name": "Lake Alford", "kind": "lake", "at": [152.68502, -26.21546] },
+    { "osm": "r7839620", "name": "James Tarn", "kind": "lake", "at": [146.56431, -42.66888] },
+    { "osm": "r8043795", "name": "Lake White", "kind": "lake", "at": [129.09115, -21.13093] },
+    { "osm": "r8062339", "name": "Lake Rebecca", "kind": "lake", "at": [122.60813, -30.22831] },
+    { "osm": "r8082582", "name": "Lake Rebecca", "kind": "lake", "at": [122.56202, -30.13747] },
+    { "osm": "r8344226", "name": "Lake Dundas", "kind": "lake", "at": [121.80413, -32.53751] },
+    { "osm": "r8348222", "name": "Lake Awoonga", "kind": "lake", "at": [151.28439, -24.1438] },
+    { "osm": "r8356710", "name": "Lake Gairdner", "kind": "lake", "at": [146.06782, -41.47702] },
+    {
+      "osm": "r8364729",
+      "name": "Bombah Broadwater",
+      "kind": "lake",
+      "at": [152.28097, -32.52783]
+    },
+    { "osm": "r8364730", "name": "Two Mile Lake", "kind": "lake", "at": [152.2924, -32.47857] },
+    { "osm": "r8364731", "name": "Boolambayte Lake", "kind": "lake", "at": [152.31196, -32.46547] },
+    { "osm": "r8364732", "name": "Myall Lake", "kind": "lake", "at": [152.39268, -32.43395] },
+    { "osm": "r8377270", "name": "Wooroonook Lakes", "kind": "lake", "at": [143.20506, -36.26622] },
+    { "osm": "r8385157", "name": "Lake Belvedere", "kind": "lake", "at": [151.07619, -33.85115] },
+    { "osm": "r8555839", "name": "Lake Will", "kind": "lake", "at": [145.9263, -41.73919] },
+    { "osm": "r8663628", "name": "Jualbup Lake", "kind": "lake", "at": [115.8118, -31.95881] },
+    { "osm": "r9097935", "name": "Lake Apanburra", "kind": "lake", "at": [140.07614, -27.00634] },
+    { "osm": "r9334650", "name": "Lake Apex", "kind": "lake", "at": [152.26984, -27.57152] },
+    { "osm": "r9358207", "name": "Crater Lake", "kind": "lake", "at": [145.94582, -41.65723] },
+    { "osm": "r9358218", "name": "Lake Lilla", "kind": "lake", "at": [145.95537, -41.65173] },
+    { "osm": "r9465914", "name": "Lake Rosser", "kind": "lake", "at": [153.3818, -28.00999] },
+    { "osm": "r9757545", "name": "Lake Fresca", "kind": "lake", "at": [115.96018, -31.79034] },
+    {
+      "osm": "r9821860",
+      "name": "Lilliesmere Swamp",
+      "kind": "lake",
+      "at": [147.46367, -19.47899]
+    },
+    { "osm": "r9964195", "name": "Capestone Lake", "kind": "lake", "at": [153.04217, -27.23208] },
+    { "osm": "r10122529", "name": "Mangans Lake", "kind": "lake", "at": [149.64571, -37.4818] },
+    { "osm": "r10126585", "name": "Lake Roulton", "kind": "lake", "at": [141.67993, -35.05571] },
+    { "osm": "r10126787", "name": "Clay Lake", "kind": "lake", "at": [141.61711, -34.97318] },
+    {
+      "osm": "r10134817",
+      "name": "Jilpanger Springs",
+      "kind": "lake",
+      "at": [141.70941, -36.93543]
+    },
+    { "osm": "r10156711", "name": "Lake Wellington", "kind": "lake", "at": [147.31934, -38.09345] },
+    { "osm": "r10157952", "name": "Victoria Lagoon", "kind": "lake", "at": [147.44324, -38.04366] },
+    { "osm": "r10157994", "name": "Lake Victoria", "kind": "lake", "at": [147.68021, -37.99204] },
+    {
+      "osm": "r10260069",
+      "name": "Police Paddock Dam",
+      "kind": "lake",
+      "at": [142.21059, -36.69383]
+    },
+    { "osm": "r10489599", "name": "Lake Bijijie", "kind": "lake", "at": [142.60775, -32.22447] },
+    { "osm": "r10676926", "name": "Jolimont Lake", "kind": "lake", "at": [115.80992, -31.94452] },
+    { "osm": "r11018636", "name": "Lake Kawana", "kind": "lake", "at": [153.12142, -26.74249] },
+    { "osm": "r11039930", "name": "Woods Lake", "kind": "lake", "at": [147.00318, -42.08139] },
+    { "osm": "r11063601", "name": "Lake Fenton", "kind": "lake", "at": [146.61773, -42.67172] },
+    {
+      "osm": "r11159284",
+      "name": "Minnippi Wetlands",
+      "kind": "lake",
+      "at": [153.11488, -27.48452]
+    },
+    { "osm": "r11185520", "name": "Barmah Lake", "kind": "lake", "at": [144.96063, -35.94595] },
+    { "osm": "r11207586", "name": "Sheldrakes Lake", "kind": "lake", "at": [144.93717, -35.91525] },
+    { "osm": "r11207837", "name": "Moira Lake", "kind": "lake", "at": [144.93654, -35.93796] },
+    { "osm": "r11533121", "name": "Scrubby Lake", "kind": "lake", "at": [141.40422, -37.05529] },
+    { "osm": "r11579520", "name": "Lake Tank", "kind": "lake", "at": [146.6511, -29.01712] },
+    { "osm": "r11773233", "name": "The Dry Lake", "kind": "lake", "at": [145.96725, -29.82031] },
+    { "osm": "r11785024", "name": "Sutherlands Lake", "kind": "lake", "at": [145.6254, -29.84576] },
+    { "osm": "r11879826", "name": "Murphy Lake", "kind": "lake", "at": [144.93209, -29.91348] },
+    { "osm": "r11879890", "name": "Burkanoko Lake", "kind": "lake", "at": [144.8141, -29.76897] },
+    { "osm": "r11981429", "name": "Dennys Lake", "kind": "lake", "at": [143.32944, -32.55996] },
+    { "osm": "r11981489", "name": "Brummeys Lake", "kind": "lake", "at": [143.36579, -32.58406] },
+    { "osm": "r11981497", "name": "Victoria Lake", "kind": "lake", "at": [143.38844, -32.53698] },
+    { "osm": "r11992114", "name": "Waterloo Lake", "kind": "lake", "at": [143.36361, -32.50357] },
+    { "osm": "r11992182", "name": "Eucalpytus Lake", "kind": "lake", "at": [143.35526, -32.45027] },
+    { "osm": "r11992235", "name": "Pelican Lake", "kind": "lake", "at": [143.33246, -32.41511] },
+    {
+      "osm": "r12007051",
+      "name": "Ratcatchers Lake",
+      "kind": "lake",
+      "at": [143.20294, -32.50766]
+    },
+    {
+      "osm": "r12007101",
+      "name": "Boolaboolka Lake",
+      "kind": "lake",
+      "at": [143.17773, -32.62327]
+    },
+    { "osm": "r12007127", "name": "Gum Lake", "kind": "lake", "at": [143.25545, -32.65113] },
+    { "osm": "r12010966", "name": "Sayers Lake", "kind": "lake", "at": [143.27929, -32.69386] },
+    { "osm": "r12015770", "name": "Wallace Lake", "kind": "lake", "at": [142.91059, -32.45291] },
+    { "osm": "r12093991", "name": "Malta Lake", "kind": "lake", "at": [142.72169, -32.12411] },
+    { "osm": "r12094380", "name": "Balaka Lake", "kind": "lake", "at": [142.63822, -32.17839] },
+    { "osm": "r12115159", "name": "Bobs Lake", "kind": "lake", "at": [142.27999, -32.64695] },
+    { "osm": "r12118896", "name": "Kangaroo Lake", "kind": "lake", "at": [142.18648, -32.61784] },
+    { "osm": "r12121978", "name": "Packers Lake", "kind": "lake", "at": [142.17545, -32.71451] },
+    { "osm": "r12122151", "name": "Lake Bintullia", "kind": "lake", "at": [142.22951, -32.73039] },
+    { "osm": "r12126947", "name": "Collins Lake", "kind": "lake", "at": [142.1357, -32.74317] },
+    { "osm": "r12149295", "name": "Paradise Lake", "kind": "lake", "at": [142.21148, -32.79057] },
+    { "osm": "r12153274", "name": "Long Lake", "kind": "lake", "at": [142.22272, -32.87946] },
+    { "osm": "r12166725", "name": "Travellers Lake", "kind": "lake", "at": [142.2371, -32.90059] },
+    { "osm": "r12438262", "name": "Cudgen Lake", "kind": "lake", "at": [153.55412, -28.32152] },
+    {
+      "osm": "r12530084",
+      "name": "Stud Ewe Billabong",
+      "kind": "lake",
+      "at": [142.4572, -33.54315]
+    },
+    { "osm": "r12622854", "name": "Lake Reeve", "kind": "lake", "at": [147.47522, -38.15418] },
+    { "osm": "r12622857", "name": "McLennan Strait", "kind": "lake", "at": [147.44211, -38.0804] },
+    { "osm": "r13493927", "name": "Muddy Lake", "kind": "lake", "at": [151.50513, -33.07928] },
+    { "osm": "r13519783", "name": "Mannering Lake", "kind": "lake", "at": [151.5093, -33.18619] },
+    { "osm": "r13553374", "name": "Lake Gkula", "kind": "lake", "at": [152.7582, -26.91518] },
+    { "osm": "r13603531", "name": "Dry Lake", "kind": "lake", "at": [144.24323, -34.79151] },
+    { "osm": "r13618583", "name": "Lake Lomandra", "kind": "lake", "at": [153.39516, -28.08315] },
+    { "osm": "r13640649", "name": "Pine Lake", "kind": "lake", "at": [153.46347, -28.13507] },
+    { "osm": "r13671573", "name": "South Lake", "kind": "lake", "at": [153.40754, -28.09182] },
+    {
+      "osm": "r14027543",
+      "name": "Harmony Park Lake",
+      "kind": "lake",
+      "at": [115.86608, -32.15283]
+    },
+    { "osm": "r14095806", "name": "Snake Lake", "kind": "lake", "at": [115.86436, -31.79939] },
+    { "osm": "r14541144", "name": "Lake Cowan", "kind": "lake", "at": [121.93142, -31.89667] },
+    { "osm": "r14542149", "name": "Lake Rebecca", "kind": "lake", "at": [122.25227, -29.95007] },
+    { "osm": "r14543690", "name": "Lake Raeside", "kind": "lake", "at": [122.76243, -29.90863] },
+    { "osm": "r14552141", "name": "Old Orchard Lake", "kind": "lake", "at": [152.9496, -26.69935] },
+    { "osm": "r15541315", "name": "Waldaira Lake", "kind": "lake", "at": [143.32155, -34.64941] },
+    { "osm": "r15640289", "name": "Andys Lake", "kind": "lake", "at": [143.94426, -34.11466] },
+    { "osm": "r15809949", "name": "Twin Lakes", "kind": "lake", "at": [141.44999, -31.98541] },
+    { "osm": "r15840203", "name": "Tomato Lake", "kind": "lake", "at": [115.93349, -31.9769] },
+    { "osm": "r16126625", "name": "Galup", "kind": "lake", "at": [115.82852, -31.92881] },
+    { "osm": "r16306373", "name": "Avalon Lake", "kind": "lake", "at": [143.91375, -34.58166] },
+    { "osm": "r16544999", "name": "Dee Lagoon", "kind": "lake", "at": [146.59175, -42.25649] },
+    { "osm": "r16545001", "name": "Bradys Lake", "kind": "lake", "at": [146.51025, -42.23993] },
+    { "osm": "r16789435", "name": "Irrigation Lake", "kind": "lake", "at": [143.89024, -34.36875] },
+    {
+      "osm": "r17062271",
+      "name": "Dalton Drive Lake",
+      "kind": "lake",
+      "at": [153.08904, -26.66794]
+    },
+    { "osm": "r17085707", "name": "Lake Dulverton", "kind": "lake", "at": [147.37648, -42.30398] },
+    { "osm": "r17085774", "name": "Egret Lake", "kind": "lake", "at": [115.83925, -32.2972] },
+    { "osm": "r17085775", "name": "Cormorant Lake", "kind": "lake", "at": [115.8403, -32.30104] },
+    { "osm": "r17085776", "name": "Black Swan Lake", "kind": "lake", "at": [115.8366, -32.30197] },
+    {
+      "osm": "r17231100",
+      "name": "Rocklands Reservoir",
+      "kind": "lake",
+      "at": [142.06694, -37.22758]
+    },
+    { "osm": "r17285415", "name": "Lake Binney", "kind": "lake", "at": [146.49051, -42.26686] },
+    { "osm": "r17799291", "name": "Lake Edith", "kind": "lake", "at": [151.77393, -28.58231] },
+    {
+      "osm": "r18418916",
+      "name": "Lake Waukarlycarly",
+      "kind": "lake",
+      "at": [121.84022, -21.29159]
+    },
+    { "osm": "r19463367", "name": "Floreat Lake", "kind": "lake", "at": [115.80009, -31.91614] },
+    { "osm": "r19568048", "name": "Blue Rock Lake", "kind": "lake", "at": [146.20128, -38.05458] },
+    { "osm": "r19740475", "name": "Floreat Water", "kind": "lake", "at": [115.80144, -31.92529] },
+    { "osm": "r19740477", "name": "Powis Lake", "kind": "lake", "at": [115.81037, -31.92172] },
+    { "osm": "r19740478", "name": "Industrial Lake", "kind": "lake", "at": [115.80593, -31.91244] },
+    {
+      "osm": "r20175759",
+      "name": "Lower Gracemere Lagoon",
+      "kind": "lake",
+      "at": [150.40681, -23.38854]
+    },
+    { "osm": "r20987545", "name": "Snowdrift Tarns", "kind": "lake", "at": [146.645, -42.92223] },
+    { "osm": "r21272663", "name": "Banyanda Lake", "kind": "lake", "at": [153.55429, -28.85623] },
+    { "osm": "r21701136", "name": "Endeavour Lake", "kind": "lake", "at": [153.55943, -28.85251] },
+    { "osm": "w4983997", "name": "North Lake", "kind": "lake", "at": [115.82489, -32.0775] },
+    { "osm": "w8014515", "name": "Saltwater Lake", "kind": "lake", "at": [152.93706, -31.32236] },
+    { "osm": "w8060816", "name": "Lake George", "kind": "lake", "at": [149.42984, -35.09166] },
+    { "osm": "w9878426", "name": "Lake Glenmaggie", "kind": "lake", "at": [146.76465, -37.89756] },
+    { "osm": "w10268066", "name": "Lake Hugh Muntz", "kind": "lake", "at": [153.41321, -28.0508] },
+    { "osm": "w10269056", "name": "West Lake", "kind": "lake", "at": [153.40146, -28.06239] },
+    { "osm": "w10269071", "name": "Silvabank Lake", "kind": "lake", "at": [153.41536, -28.08736] },
+    { "osm": "w14022160", "name": "Lake Armada", "kind": "lake", "at": [136.72248, -14.22087] },
+    {
+      "osm": "w14022164",
+      "name": "Angwurrkburna Lake",
+      "kind": "lake",
+      "at": [136.76448, -14.22699]
+    },
+    {
+      "osm": "w17222619",
+      "name": "Forrestdale Lake",
+      "kind": "lake",
+      "at": [115.93695, -32.15848]
+    },
+    { "osm": "w17504207", "name": "Jilbup", "kind": "lake", "at": [115.82828, -32.15076] },
+    { "osm": "w19830258", "name": "Lake Cooloongup", "kind": "lake", "at": [115.78736, -32.2975] },
+    { "osm": "w22702689", "name": "Lake Cooroibah", "kind": "lake", "at": [153.02624, -26.3558] },
+    {
+      "osm": "w22752197",
+      "name": "Jerdacuttup Lake",
+      "kind": "lake",
+      "at": [120.26322, -33.92601]
+    },
+    { "osm": "w22761526", "name": "Lake Birrabeen", "kind": "lake", "at": [153.05571, -25.50372] },
+    { "osm": "w22781575", "name": "Woodlake Lake", "kind": "lake", "at": [115.9762, -31.78933] },
+    { "osm": "w23994930", "name": "Wellums Lake", "kind": "lake", "at": [150.99027, -33.29653] },
+    { "osm": "w25500202", "name": "Lake Magellan", "kind": "lake", "at": [153.11337, -26.82643] },
+    { "osm": "w25590444", "name": "Kogolup Lake", "kind": "lake", "at": [115.83115, -32.13598] },
+    { "osm": "w25590989", "name": "Banganup Lake", "kind": "lake", "at": [115.82666, -32.16512] },
+    { "osm": "w25609091", "name": "Manning Lake", "kind": "lake", "at": [115.77154, -32.09271] },
+    {
+      "osm": "w27556833",
+      "name": "Glenmore Park Lake",
+      "kind": "lake",
+      "at": [153.36246, -27.98915]
+    },
+    {
+      "osm": "w27772445",
+      "name": "Upper Stranger Pond",
+      "kind": "lake",
+      "at": [149.08182, -35.42487]
+    },
+    { "osm": "w28066021", "name": "Laguna Lake", "kind": "lake", "at": [153.47102, -28.1283] },
+    { "osm": "w28318110", "name": "Lake Lido", "kind": "lake", "at": [153.38296, -28.07248] },
+    { "osm": "w29397984", "name": "Minnawarra Lake", "kind": "lake", "at": [116.01707, -32.14914] },
+    { "osm": "w30093967", "name": "Playford Lake", "kind": "lake", "at": [138.63624, -35.00564] },
+    { "osm": "w30455847", "name": "Lake Munbilla", "kind": "lake", "at": [153.09268, -26.69824] },
+    { "osm": "w33907468", "name": "Lake Boga", "kind": "lake", "at": [143.64576, -35.44934] },
+    { "osm": "w36984902", "name": "Tranby Lake", "kind": "lake", "at": [115.90747, -31.94222] },
+    { "osm": "w44834655", "name": "Lake Dobson", "kind": "lake", "at": [146.59172, -42.68369] },
+    { "osm": "w45366516", "name": "Bienvenue Lake", "kind": "lake", "at": [153.47305, -28.15439] },
+    {
+      "osm": "w45392747",
+      "name": "Gilbanung Wetland",
+      "kind": "lake",
+      "at": [151.18451, -33.91435]
+    },
+    {
+      "osm": "w46094826",
+      "name": "Kainka Wirra Main Lake",
+      "kind": "lake",
+      "at": [138.61027, -34.91838]
+    },
+    { "osm": "w46149617", "name": "Lake Clarendon", "kind": "lake", "at": [152.34735, -27.50442] },
+    {
+      "osm": "w46149618",
+      "name": "Seven Mile Lagoon",
+      "kind": "lake",
+      "at": [152.42707, -27.45551]
+    },
+    { "osm": "w46865776", "name": "Regatta Lake", "kind": "lake", "at": [152.92026, -27.67721] },
+    { "osm": "w46866566", "name": "Discovery Lake", "kind": "lake", "at": [152.91669, -27.68032] },
+    {
+      "osm": "w47785969",
+      "name": "Parnell Boulevard Lake",
+      "kind": "lake",
+      "at": [153.38341, -28.08292]
+    },
+    { "osm": "w49335008", "name": "Atwel Waters", "kind": "lake", "at": [115.86873, -32.14826] },
+    { "osm": "w50875473", "name": "The Dam", "kind": "lake", "at": [152.95415, -26.82111] },
+    { "osm": "w54949522", "name": "Bucks Lake", "kind": "lake", "at": [145.02788, -35.90391] },
+    { "osm": "w56759786", "name": "Lake Morea", "kind": "lake", "at": [141.31661, -36.84047] },
+    { "osm": "w57032739", "name": "Miga Lake", "kind": "lake", "at": [141.62532, -36.92558] },
+    { "osm": "w57033342", "name": "Centre Lake", "kind": "lake", "at": [141.74602, -37.02974] },
+    {
+      "osm": "w57034179",
+      "name": "Lake Copper Colour",
+      "kind": "lake",
+      "at": [141.76796, -36.98911]
+    },
+    { "osm": "w57034662", "name": "Lake Mobla", "kind": "lake", "at": [141.78551, -36.97011] },
+    { "osm": "w57373390", "name": "Lake Cantala", "kind": "lake", "at": [142.44689, -34.66753] },
+    { "osm": "w103516191", "name": "Lake Marma", "kind": "lake", "at": [142.46387, -36.62141] },
+    {
+      "osm": "w103760509",
+      "name": "Lake Tali Karng",
+      "kind": "lake",
+      "at": [146.79131, -37.54235]
+    },
+    { "osm": "w104496016", "name": "Central Lake", "kind": "lake", "at": [138.57224, -35.02695] },
+    {
+      "osm": "w105002353",
+      "name": "Lake Yuangmania",
+      "kind": "lake",
+      "at": [142.91037, -37.71997]
+    },
+    { "osm": "w110399314", "name": "Johnston Tarn", "kind": "lake", "at": [146.56838, -42.67238] },
+    { "osm": "w110399316", "name": "Lake Nicholls", "kind": "lake", "at": [146.64746, -42.6662] },
+    { "osm": "w110399318", "name": "Lake Hayes", "kind": "lake", "at": [146.53695, -42.66274] },
+    { "osm": "w110399330", "name": "Lake Seal", "kind": "lake", "at": [146.58224, -42.6697] },
+    {
+      "osm": "w119154081",
+      "name": "Friendship Park",
+      "kind": "lake",
+      "at": [153.01244, -27.21505]
+    },
+    {
+      "osm": "w122250993",
+      "name": "Mount Brown Lake",
+      "kind": "lake",
+      "at": [115.79023, -32.17284]
+    },
+    { "osm": "w128982858", "name": "Allom Lake", "kind": "lake", "at": [153.20978, -25.19711] },
+    {
+      "osm": "w128982863",
+      "name": "Freshwater Lakes",
+      "kind": "lake",
+      "at": [153.19735, -25.21876]
+    },
+    { "osm": "w128982865", "name": "Lake Bowarrady", "kind": "lake", "at": [153.21087, -25.14698] },
+    { "osm": "w129036762", "name": "Black Lagoon", "kind": "lake", "at": [153.14523, -25.26774] },
+    { "osm": "w129037350", "name": "Babrook Lagoon", "kind": "lake", "at": [153.13319, -25.28604] },
+    { "osm": "w133368719", "name": "Lake Ainsworth", "kind": "lake", "at": [153.5915, -28.78236] },
+    { "osm": "w148428141", "name": "Lake Carpul", "kind": "lake", "at": [142.89081, -34.72787] },
+    {
+      "osm": "w157052232",
+      "name": "Clear Island Lake",
+      "kind": "lake",
+      "at": [153.39615, -28.04582]
+    },
+    { "osm": "w159039189", "name": "Lake Denison", "kind": "lake", "at": [147.15071, -38.3971] },
+    { "osm": "w163149100", "name": "Lake Carpolac", "kind": "lake", "at": [141.32163, -36.85106] },
+    {
+      "osm": "w163159486",
+      "name": "Lake Ratzcastle",
+      "kind": "lake",
+      "at": [141.46598, -36.81442]
+    },
+    { "osm": "w165003168", "name": "Black Swamp", "kind": "lake", "at": [141.83321, -37.22642] },
+    {
+      "osm": "w165307481",
+      "name": "Lake Bullen Merri",
+      "kind": "lake",
+      "at": [143.10514, -38.24904]
+    },
+    { "osm": "w165307484", "name": "Lake Gnotuk", "kind": "lake", "at": [143.10166, -38.22061] },
+    { "osm": "w171462949", "name": "Clay Lake", "kind": "lake", "at": [140.54798, -36.78116] },
+    { "osm": "w171860667", "name": "Lake Yampitcha", "kind": "lake", "at": [141.28889, -36.98395] },
+    { "osm": "w173412167", "name": "Forest Lake", "kind": "lake", "at": [144.22794, -36.80239] },
+    { "osm": "w173917183", "name": "Lake Freeman", "kind": "lake", "at": [152.27005, -27.57435] },
+    { "osm": "w174332664", "name": "Lake Woodcroft", "kind": "lake", "at": [150.8803, -33.75318] },
+    { "osm": "w174744080", "name": "Oxenford Lake", "kind": "lake", "at": [153.30873, -27.89211] },
+    { "osm": "w175394173", "name": "Prospect Lake", "kind": "lake", "at": [153.58006, -28.84801] },
+    { "osm": "w175394177", "name": "Chickiba Lake", "kind": "lake", "at": [153.58546, -28.84628] },
+    {
+      "osm": "w176436538",
+      "name": "Chipperton Lake",
+      "kind": "lake",
+      "at": [115.84163, -32.25208]
+    },
+    {
+      "osm": "w177595037",
+      "name": "Kingsbridge Lake",
+      "kind": "lake",
+      "at": [115.69903, -31.64854]
+    },
+    {
+      "osm": "w178573775",
+      "name": "First Reedy Lake",
+      "kind": "lake",
+      "at": [143.88021, -35.67876]
+    },
+    { "osm": "w179187310", "name": "Halpine Lake", "kind": "lake", "at": [153.02948, -27.24591] },
+    { "osm": "w182846989", "name": "Lake Eli", "kind": "lake", "at": [152.80957, -25.27672] },
+    { "osm": "w183253235", "name": "Lake Mungo", "kind": "lake", "at": [143.04881, -33.71837] },
+    { "osm": "w183526100", "name": "Lake Rodway", "kind": "lake", "at": [145.96938, -41.6912] },
+    {
+      "osm": "w183631942",
+      "name": "The Springs Park Lake",
+      "kind": "lake",
+      "at": [152.95716, -26.77006]
+    },
+    {
+      "osm": "w183631943",
+      "name": "The Springs Park Lake",
+      "kind": "lake",
+      "at": [152.9562, -26.77087]
+    },
+    {
+      "osm": "w183970417",
+      "name": "Chancellor Park Lake 6",
+      "kind": "lake",
+      "at": [153.05644, -26.72404]
+    },
+    { "osm": "w183975357", "name": "Jabiru Lake", "kind": "lake", "at": [145.70156, -16.83168] },
+    { "osm": "w183975362", "name": "Cuckoo Lake", "kind": "lake", "at": [145.70364, -16.83218] },
+    {
+      "osm": "w184235986",
+      "name": "Edgewater Village Lake",
+      "kind": "lake",
+      "at": [153.04052, -26.63143]
+    },
+    {
+      "osm": "w184781938",
+      "name": "Wises Farm Lake",
+      "kind": "lake",
+      "at": [153.07738, -26.66226]
+    },
+    { "osm": "w185226722", "name": "Waverley Lake", "kind": "lake", "at": [147.18921, -41.43046] },
+    {
+      "osm": "w186383590",
+      "name": "Currimundi Lake",
+      "kind": "lake",
+      "at": [153.13369, -26.76489]
+    },
+    { "osm": "w186551719", "name": "Hartz Lake", "kind": "lake", "at": [146.75679, -43.23861] },
+    { "osm": "w186551720", "name": "Ladies Tarn", "kind": "lake", "at": [146.77011, -43.23634] },
+    { "osm": "w186551721", "name": "Lake Esperance", "kind": "lake", "at": [146.76922, -43.22774] },
+    { "osm": "w188874807", "name": "Kalora Lake", "kind": "lake", "at": [153.32296, -29.42656] },
+    { "osm": "w189319760", "name": "Lake Tarwong", "kind": "lake", "at": [144.21458, -33.91791] },
+    { "osm": "w191324200", "name": "Ti Tree Lake", "kind": "lake", "at": [153.61166, -28.69852] },
+    { "osm": "w193843737", "name": "Quanda Lake", "kind": "lake", "at": [153.05196, -26.5212] },
+    { "osm": "w194772536", "name": "Curralea Lake", "kind": "lake", "at": [146.78676, -19.27315] },
+    { "osm": "w198991852", "name": "Lake Elizabeth", "kind": "lake", "at": [143.75891, -38.5525] },
+    { "osm": "w200900737", "name": "Lake Waljeers", "kind": "lake", "at": [144.65949, -34.05414] },
+    { "osm": "w201866578", "name": "Oval Lake", "kind": "lake", "at": [146.7127, -43.52865] },
+    { "osm": "w207405411", "name": "Reflecting Pool", "kind": "lake", "at": [149.13232, -35.2876] },
+    {
+      "osm": "w208510307",
+      "name": "Black Swan Lake",
+      "kind": "lake",
+      "at": [153.40077, -28.00211]
+    },
+    {
+      "osm": "w215380794",
+      "name": "Freshwater Lake",
+      "kind": "lake",
+      "at": [142.31519, -37.58617]
+    },
+    { "osm": "w216900113", "name": "Quarry Lake", "kind": "lake", "at": [138.73962, -34.84642] },
+    { "osm": "w217036819", "name": "Murray Lagoon", "kind": "lake", "at": [150.48323, -23.39872] },
+    { "osm": "w218819685", "name": "Lake Homles", "kind": "lake", "at": [145.94896, -41.74187] },
+    { "osm": "w218867002", "name": "Lake Agnew", "kind": "lake", "at": [145.96494, -41.75513] },
+    {
+      "osm": "w219386473",
+      "name": "Wentworth Falls Lake",
+      "kind": "lake",
+      "at": [150.369, -33.70352]
+    },
+    {
+      "osm": "w220685068",
+      "name": "Bannockburn Lagoon",
+      "kind": "lake",
+      "at": [144.15535, -38.05042]
+    },
+    {
+      "osm": "w220925120",
+      "name": "Lake Yamma Yamma",
+      "kind": "lake",
+      "at": [141.45912, -26.31755]
+    },
+    {
+      "osm": "w223398492",
+      "name": "Little Llangothlin Lake",
+      "kind": "lake",
+      "at": [151.7815, -30.08636]
+    },
+    { "osm": "w224623308", "name": "Steed Lake", "kind": "lake", "at": [143.61101, -37.04616] },
+    { "osm": "w225681839", "name": "Paddys Lake", "kind": "lake", "at": [145.96157, -41.45124] },
+    { "osm": "w226259700", "name": "Lake Pluto", "kind": "lake", "at": [146.24238, -43.11843] },
+    { "osm": "w226259702", "name": "Lake Nereid", "kind": "lake", "at": [146.24291, -43.12774] },
+    { "osm": "w226259705", "name": "Lake Cygnus", "kind": "lake", "at": [146.23668, -43.13037] },
+    { "osm": "w226259707", "name": "Lake Fortuna", "kind": "lake", "at": [146.22635, -43.12501] },
+    { "osm": "w226260722", "name": "Lake Oberon", "kind": "lake", "at": [146.27148, -43.14865] },
+    { "osm": "w226260725", "name": "Square Lake", "kind": "lake", "at": [146.26284, -43.14108] },
+    { "osm": "w226263872", "name": "Lake Ceres", "kind": "lake", "at": [146.25186, -43.1416] },
+    { "osm": "w226263875", "name": "Lake Dione", "kind": "lake", "at": [146.29992, -43.15975] },
+    { "osm": "w226263876", "name": "Lake Uranus", "kind": "lake", "at": [146.28081, -43.1529] },
+    { "osm": "w226263878", "name": "Lake Ariel", "kind": "lake", "at": [146.28917, -43.16039] },
+    { "osm": "w226263879", "name": "Lake Titania", "kind": "lake", "at": [146.28213, -43.15931] },
+    { "osm": "w226265368", "name": "Lake Saturn", "kind": "lake", "at": [146.30859, -43.15605] },
+    { "osm": "w226325733", "name": "Lake Mimas", "kind": "lake", "at": [146.31744, -43.16366] },
+    { "osm": "w226325734", "name": "Haven Lake", "kind": "lake", "at": [146.3338, -43.17067] },
+    { "osm": "w226325735", "name": "Lake Callisto", "kind": "lake", "at": [146.30447, -43.17385] },
+    { "osm": "w226325736", "name": "Lake Ganymede", "kind": "lake", "at": [146.30904, -43.16885] },
+    { "osm": "w226328159", "name": "Lake Sirona", "kind": "lake", "at": [146.33735, -43.16428] },
+    { "osm": "w226328161", "name": "Lake Mars", "kind": "lake", "at": [146.35188, -43.17469] },
+    { "osm": "w226328686", "name": "Lake Vesta", "kind": "lake", "at": [146.34965, -43.16322] },
+    { "osm": "w226328687", "name": "Lake Juno", "kind": "lake", "at": [146.3523, -43.16268] },
+    {
+      "osm": "w226328688",
+      "name": "Promontory Lake",
+      "kind": "lake",
+      "at": [146.36062, -43.16456]
+    },
+    { "osm": "w226330939", "name": "Lake Venus", "kind": "lake", "at": [146.37237, -43.17609] },
+    {
+      "osm": "w227115588",
+      "name": "Lake Maconochie",
+      "kind": "lake",
+      "at": [146.09173, -43.05515]
+    },
+    { "osm": "w227623370", "name": "Youls Tarn", "kind": "lake", "at": [147.68767, -41.58878] },
+    { "osm": "w228320274", "name": "Lake Vera", "kind": "lake", "at": [145.87998, -42.2738] },
+    {
+      "osm": "w228333237",
+      "name": "Kaimerndyip Lake",
+      "kind": "lake",
+      "at": [117.81379, -34.58506]
+    },
+    { "osm": "w231170290", "name": "Robert Tarn", "kind": "lake", "at": [146.57114, -42.67703] },
+    { "osm": "w231170291", "name": "MacKenzie Tarn", "kind": "lake", "at": [146.57049, -42.67512] },
+    { "osm": "w231170980", "name": "Walker Tarn", "kind": "lake", "at": [146.56116, -42.66432] },
+    { "osm": "w231170981", "name": "Backhouse Tarn", "kind": "lake", "at": [146.56145, -42.66564] },
+    { "osm": "w232978814", "name": "Twisted Tarn", "kind": "lake", "at": [146.56667, -42.65778] },
+    { "osm": "w233865304", "name": "Jacana Pool", "kind": "lake", "at": [145.69858, -16.83329] },
+    { "osm": "w236404335", "name": "Kepalarup Lake", "kind": "lake", "at": [116.40085, -34.25031] },
+    { "osm": "w236535823", "name": "Codarup Lake", "kind": "lake", "at": [116.40794, -34.28488] },
+    { "osm": "w236535824", "name": "Oaljalup Lake", "kind": "lake", "at": [116.41131, -34.29127] },
+    {
+      "osm": "w241458535",
+      "name": "Sanctuary Lakes",
+      "kind": "lake",
+      "at": [130.99645, -12.48956]
+    },
+    { "osm": "w242167975", "name": "Lake Evella", "kind": "lake", "at": [135.80354, -12.51191] },
+    { "osm": "w243737146", "name": "Copulup Lake", "kind": "lake", "at": [115.84272, -32.15573] },
+    { "osm": "w245395318", "name": "Mannum Marina", "kind": "lake", "at": [139.29441, -34.9358] },
+    { "osm": "w259003650", "name": "Tchum Lakes", "kind": "lake", "at": [143.00101, -35.9993] },
+    { "osm": "w259003803", "name": "Tchum Lakes", "kind": "lake", "at": [142.99735, -35.99055] },
+    { "osm": "w260053660", "name": "Cotters Lake", "kind": "lake", "at": [146.25483, -38.94098] },
+    { "osm": "w260224134", "name": "Ironbark Lake", "kind": "lake", "at": [150.91386, -33.69503] },
+    { "osm": "w261318660", "name": "Heywood Lake", "kind": "lake", "at": [143.20605, -34.79441] },
+    { "osm": "w262774823", "name": "Lake Shaster", "kind": "lake", "at": [120.71338, -33.86988] },
+    { "osm": "w267147307", "name": "Lake Orpheus", "kind": "lake", "at": [153.40317, -28.06419] },
+    { "osm": "w267329966", "name": "Lake Indawarra", "kind": "lake", "at": [140.05942, -35.88831] },
+    { "osm": "w278004381", "name": "Lake Cowal", "kind": "lake", "at": [147.44805, -33.62786] },
+    { "osm": "w286003327", "name": "Mortat Swamp", "kind": "lake", "at": [141.37957, -36.71812] },
+    { "osm": "w289499194", "name": "Foxlow Lagoon", "kind": "lake", "at": [149.45602, -35.45847] },
+    {
+      "osm": "w291265846",
+      "name": "Kingfisher Lake",
+      "kind": "lake",
+      "at": [152.81734, -25.28937]
+    },
+    { "osm": "w299850495", "name": "Gara River", "kind": "lake", "at": [151.7995, -30.5941] },
+    {
+      "osm": "w302532963",
+      "name": "Budela-budela Lake",
+      "kind": "lake",
+      "at": [153.00522, -27.65201]
+    },
+    {
+      "osm": "w303142636",
+      "name": "Holden's Creek Pond",
+      "kind": "lake",
+      "at": [149.03703, -35.31365]
+    },
+    { "osm": "w307371901", "name": "Spring Lake", "kind": "lake", "at": [152.91936, -27.66695] },
+    { "osm": "w309888183", "name": "Redmond Lake", "kind": "lake", "at": [147.18008, -38.35636] },
+    { "osm": "w310166210", "name": "Lake Killarney", "kind": "lake", "at": [147.70259, -37.96339] },
+    { "osm": "w310276401", "name": "Big Lake", "kind": "lake", "at": [141.60703, -35.0143] },
+    {
+      "osm": "w312390513",
+      "name": "Yellow Water Billabong",
+      "kind": "lake",
+      "at": [132.51759, -12.89445]
+    },
+    { "osm": "w313368133", "name": "Kellys Lake", "kind": "lake", "at": [150.15296, -36.00796] },
+    { "osm": "w319048513", "name": "Caladenia", "kind": "lake", "at": [115.64175, -31.21561] },
+    { "osm": "w319048588", "name": "Swan Swamp", "kind": "lake", "at": [115.64414, -31.22032] },
+    { "osm": "w319197774", "name": "End Lake", "kind": "lake", "at": [115.65119, -31.22961] },
+    { "osm": "w322151786", "name": "Mill Swamp", "kind": "lake", "at": [141.83186, -36.91591] },
+    { "osm": "w323451600", "name": "Wonga Lake", "kind": "lake", "at": [142.02833, -35.52136] },
+    {
+      "osm": "w323454209",
+      "name": "Lake Jerriwirrup",
+      "kind": "lake",
+      "at": [142.04261, -35.53639]
+    },
+    { "osm": "w323454210", "name": "Lake Plagianth", "kind": "lake", "at": [142.02406, -35.53206] },
+    { "osm": "w324752459", "name": "Ross Lake", "kind": "lake", "at": [141.92582, -35.81382] },
+    { "osm": "w326214319", "name": "Lake Gaffney", "kind": "lake", "at": [152.93587, -27.23416] },
+    { "osm": "w327730152", "name": "Pink Lakes", "kind": "lake", "at": [141.73093, -35.03101] },
+    {
+      "osm": "w328533551",
+      "name": "Brightwater Lake",
+      "kind": "lake",
+      "at": [153.10787, -26.70737]
+    },
+    { "osm": "w329596202", "name": "Top Lake", "kind": "lake", "at": [138.6121, -34.9203] },
+    {
+      "osm": "w329596246",
+      "name": "Pigeon Hole Water",
+      "kind": "lake",
+      "at": [137.66571, -34.92309]
+    },
+    { "osm": "w329596271", "name": "Deep Lagoon", "kind": "lake", "at": [137.63859, -34.77989] },
+    {
+      "osm": "w329596274",
+      "name": "Washpool Lagoon",
+      "kind": "lake",
+      "at": [137.62411, -34.79048]
+    },
+    { "osm": "w329596374", "name": "Shallow Lagoon", "kind": "lake", "at": [137.63006, -34.77504] },
+    {
+      "osm": "w329596693",
+      "name": "Blue Green Algal Pool",
+      "kind": "lake",
+      "at": [139.79459, -36.44424]
+    },
+    { "osm": "w329596878", "name": "Coorong", "kind": "lake", "at": [139.41998, -35.92366] },
+    { "osm": "w329597224", "name": "Thynkie Swamp", "kind": "lake", "at": [139.17025, -35.69228] },
+    { "osm": "w329597402", "name": "Jury Swamp", "kind": "lake", "at": [139.3175, -35.05303] },
+    { "osm": "w329597431", "name": "Pellaring Flat", "kind": "lake", "at": [139.42249, -34.85716] },
+    {
+      "osm": "w329598254",
+      "name": "The Deep Waterhole",
+      "kind": "lake",
+      "at": [139.83836, -36.18839]
+    },
+    {
+      "osm": "w329598258",
+      "name": "Log Crossing/ Well And Bridge",
+      "kind": "lake",
+      "at": [139.87486, -36.20429]
+    },
+    {
+      "osm": "w329598334",
+      "name": "Log Crossing/ Well And Bridge",
+      "kind": "lake",
+      "at": [139.90261, -36.23281]
+    },
+    { "osm": "w329598947", "name": "Didilyamulka", "kind": "lake", "at": [137.54239, -34.65536] },
+    { "osm": "w329599083", "name": "Teatree Swamp", "kind": "lake", "at": [135.65613, -34.00186] },
+    { "osm": "w329599687", "name": "Yarle Lakes", "kind": "lake", "at": [131.47063, -30.24394] },
+    {
+      "osm": "w329599736",
+      "name": "Warrabillinna Soakage",
+      "kind": "lake",
+      "at": [131.95667, -26.40256]
+    },
+    { "osm": "w329599794", "name": "Yarle Lakes", "kind": "lake", "at": [131.50999, -30.26417] },
+    { "osm": "w329599795", "name": "Yarle Lakes", "kind": "lake", "at": [131.48993, -30.2505] },
+    {
+      "osm": "w329599816",
+      "name": "Ulaiyipa (Ulaipanya) Waterhole",
+      "kind": "lake",
+      "at": [131.51633, -26.10967]
+    },
+    { "osm": "w329600185", "name": "Lake Brimpton", "kind": "lake", "at": [135.51534, -34.0582] },
+    { "osm": "w329600308", "name": "Sheringa Lagoon", "kind": "lake", "at": [135.1864, -33.8638] },
+    { "osm": "w329600481", "name": "Castine Spring", "kind": "lake", "at": [135.51304, -28.93181] },
+    {
+      "osm": "w329600488",
+      "name": "Bidnecaroona Swamp",
+      "kind": "lake",
+      "at": [135.72957, -28.944]
+    },
+    {
+      "osm": "w329600496",
+      "name": "Cecilia Waterhole",
+      "kind": "lake",
+      "at": [135.58701, -27.62627]
+    },
+    {
+      "osm": "w329600530",
+      "name": "Cooreeappa Lake",
+      "kind": "lake",
+      "at": [135.53018, -28.96273]
+    },
+    {
+      "osm": "w329601008",
+      "name": "Millyeewilpa Lake",
+      "kind": "lake",
+      "at": [137.27391, -27.68266]
+    },
+    {
+      "osm": "w329601016",
+      "name": "Baltucoodna Waterhole",
+      "kind": "lake",
+      "at": [135.90931, -28.03525]
+    },
+    {
+      "osm": "w329601022",
+      "name": "Lake Pialpotingoona",
+      "kind": "lake",
+      "at": [137.49206, -27.5084]
+    },
+    {
+      "osm": "w329601026",
+      "name": "Mooloogoorana Swamp",
+      "kind": "lake",
+      "at": [135.9385, -28.97472]
+    },
+    {
+      "osm": "w329601034",
+      "name": "Manarrinna Waterhole",
+      "kind": "lake",
+      "at": [136.47103, -27.58983]
+    },
+    {
+      "osm": "w329601046",
+      "name": "The Cliff Waterhole",
+      "kind": "lake",
+      "at": [135.9859, -27.88914]
+    },
+    {
+      "osm": "w329601048",
+      "name": "Muckratuckaalinna Waterhole",
+      "kind": "lake",
+      "at": [137.48603, -27.58063]
+    },
+    {
+      "osm": "w329601057",
+      "name": "Cootabungoodana Swamp",
+      "kind": "lake",
+      "at": [135.81293, -28.97946]
+    },
+    {
+      "osm": "w329601073",
+      "name": "Tardetakarinna Waterhole",
+      "kind": "lake",
+      "at": [136.13129, -28.01073]
+    },
+    {
+      "osm": "w329601086",
+      "name": "Warriebucca Waterhole",
+      "kind": "lake",
+      "at": [137.44481, -27.8162]
+    },
+    {
+      "osm": "w329601092",
+      "name": "Ouana Waterhole",
+      "kind": "lake",
+      "at": [137.43222, -27.81808]
+    },
+    {
+      "osm": "w329601099",
+      "name": "Lake Coorichina",
+      "kind": "lake",
+      "at": [136.48854, -28.78076]
+    },
+    {
+      "osm": "w329601106",
+      "name": "Peracullanna Waterhole",
+      "kind": "lake",
+      "at": [136.3343, -27.97296]
+    },
+    { "osm": "w329601119", "name": "Peake Creek", "kind": "lake", "at": [136.052, -28.03342] },
+    {
+      "osm": "w329601140",
+      "name": "Cliff Waterhole",
+      "kind": "lake",
+      "at": [136.39219, -27.48542]
+    },
+    {
+      "osm": "w329601148",
+      "name": "Cootamilyeroo Swamp",
+      "kind": "lake",
+      "at": [135.82151, -28.92927]
+    },
+    {
+      "osm": "w329601153",
+      "name": "Lake Wadmadingalinda",
+      "kind": "lake",
+      "at": [136.56112, -28.784]
+    },
+    {
+      "osm": "w329601156",
+      "name": "Mungyamarrilyna Swamp",
+      "kind": "lake",
+      "at": [135.79846, -28.62152]
+    },
+    {
+      "osm": "w329601164",
+      "name": "Nummabirinna Waterhole",
+      "kind": "lake",
+      "at": [136.34992, -27.98022]
+    },
+    {
+      "osm": "w329601184",
+      "name": "Peedeemoondinna Waterhole",
+      "kind": "lake",
+      "at": [137.47269, -27.77607]
+    },
+    {
+      "osm": "w329601186",
+      "name": "Warrarawoona Waterhole",
+      "kind": "lake",
+      "at": [135.91456, -28.04453]
+    },
+    {
+      "osm": "w329601187",
+      "name": "Algebuckina Waterhole",
+      "kind": "lake",
+      "at": [135.82584, -27.88992]
+    },
+    {
+      "osm": "w329601189",
+      "name": "Wild Dog Waterhole",
+      "kind": "lake",
+      "at": [137.45624, -27.79498]
+    },
+    { "osm": "w329601307", "name": "Lake Moodie", "kind": "lake", "at": [139.30866, -34.60224] },
+    { "osm": "w329602470", "name": "Pine Swamp", "kind": "lake", "at": [138.06658, -30.39158] },
+    {
+      "osm": "w329602472",
+      "name": "Murrumbidgee Waterhole",
+      "kind": "lake",
+      "at": [138.21756, -29.9457]
+    },
+    { "osm": "w329602476", "name": "Lake Pinnarie", "kind": "lake", "at": [138.35276, -29.73275] },
+    {
+      "osm": "w329602500",
+      "name": "Lake Watherston",
+      "kind": "lake",
+      "at": [138.11844, -30.26366]
+    },
+    { "osm": "w329602514", "name": "Minagoona Lake", "kind": "lake", "at": [138.18636, -30.18336] },
+    { "osm": "w329602595", "name": "Lake Jessie", "kind": "lake", "at": [137.64437, -30.17386] },
+    {
+      "osm": "w329602608",
+      "name": "Polygonum Waterhole",
+      "kind": "lake",
+      "at": [138.27967, -29.94985]
+    },
+    {
+      "osm": "w329602737",
+      "name": "Pompapillinna Waterhole",
+      "kind": "lake",
+      "at": [137.59357, -27.72265]
+    },
+    {
+      "osm": "w329602790",
+      "name": "Keekalanna Soakage",
+      "kind": "lake",
+      "at": [137.69836, -27.69772]
+    },
+    {
+      "osm": "w329602822",
+      "name": "Lake Pompapillinna",
+      "kind": "lake",
+      "at": [137.55946, -27.70212]
+    },
+    {
+      "osm": "w329602825",
+      "name": "Marianawillina Waterhole",
+      "kind": "lake",
+      "at": [137.72066, -27.72473]
+    },
+    {
+      "osm": "w329602848",
+      "name": "Karingallanna Waterhole",
+      "kind": "lake",
+      "at": [137.61808, -27.76181]
+    },
+    {
+      "osm": "w329602887",
+      "name": "Kalawaranna Soakage",
+      "kind": "lake",
+      "at": [137.61412, -27.76879]
+    },
+    {
+      "osm": "w329602954",
+      "name": "Lake Willawilaninna",
+      "kind": "lake",
+      "at": [137.71214, -27.27185]
+    },
+    {
+      "osm": "w329602984",
+      "name": "Lake Peera Mudla Yeppa",
+      "kind": "lake",
+      "at": [137.64007, -27.58441]
+    },
+    {
+      "osm": "w329602987",
+      "name": "Lake Pantoowarinna",
+      "kind": "lake",
+      "at": [137.74574, -27.45974]
+    },
+    {
+      "osm": "w329603003",
+      "name": "Lake Warrandirinna",
+      "kind": "lake",
+      "at": [137.95538, -27.49208]
+    },
+    {
+      "osm": "w329603054",
+      "name": "Gumborie Waterhole",
+      "kind": "lake",
+      "at": [139.48454, -25.99042]
+    },
+    {
+      "osm": "w329603058",
+      "name": "The Eight Mile Waterhole",
+      "kind": "lake",
+      "at": [139.31333, -26.15013]
+    },
+    {
+      "osm": "w329603064",
+      "name": "Cacoory Waterhole",
+      "kind": "lake",
+      "at": [139.5703, -25.24737]
+    },
+    {
+      "osm": "w329603067",
+      "name": "Lake Nappanerica",
+      "kind": "lake",
+      "at": [139.08257, -25.92395]
+    },
+    {
+      "osm": "w329603074",
+      "name": "Appamurna Waterhole",
+      "kind": "lake",
+      "at": [139.63695, -26.31071]
+    },
+    {
+      "osm": "w329603083",
+      "name": "Wigugomrie Waterhole",
+      "kind": "lake",
+      "at": [139.34286, -25.29371]
+    },
+    {
+      "osm": "w329603084",
+      "name": "Karrathunka Waterhole",
+      "kind": "lake",
+      "at": [139.24176, -26.23149]
+    },
+    {
+      "osm": "w329603134",
+      "name": "Annuary Waterhole",
+      "kind": "lake",
+      "at": [139.50003, -25.6914]
+    },
+    {
+      "osm": "w329603136",
+      "name": "Kookabury Waterhole",
+      "kind": "lake",
+      "at": [139.98261, -25.84992]
+    },
+    {
+      "osm": "w329603166",
+      "name": "Benditoota Waterhole",
+      "kind": "lake",
+      "at": [139.8034, -25.61635]
+    },
+    {
+      "osm": "w329603176",
+      "name": "Brumbrie Waterhole",
+      "kind": "lake",
+      "at": [139.84023, -25.65143]
+    },
+    {
+      "osm": "w329603187",
+      "name": "Nappamurra Waterhole",
+      "kind": "lake",
+      "at": [139.6601, -25.6699]
+    },
+    {
+      "osm": "w329603194",
+      "name": "Muddy Waterhole",
+      "kind": "lake",
+      "at": [139.60565, -25.71711]
+    },
+    { "osm": "w329603210", "name": "Keys Swamp", "kind": "lake", "at": [139.16377, -25.62785] },
+    {
+      "osm": "w329603217",
+      "name": "Koppamurra Waterhole",
+      "kind": "lake",
+      "at": [139.75496, -25.65548]
+    },
+    {
+      "osm": "w329603219",
+      "name": "Stony Crossing Waterhole",
+      "kind": "lake",
+      "at": [139.84429, -25.67069]
+    },
+    { "osm": "w329603227", "name": "Bowmans Lake", "kind": "lake", "at": [139.29582, -25.91879] },
+    {
+      "osm": "w329603235",
+      "name": "Dickeree Waterhole",
+      "kind": "lake",
+      "at": [139.32236, -26.06838]
+    },
+    {
+      "osm": "w329603242",
+      "name": "Goodie Goodie Waterhole",
+      "kind": "lake",
+      "at": [139.27439, -25.99871]
+    },
+    {
+      "osm": "w329603256",
+      "name": "Lake Etamunbanie",
+      "kind": "lake",
+      "at": [139.69411, -26.28256]
+    },
+    {
+      "osm": "w329603260",
+      "name": "Nerathella Waterhole",
+      "kind": "lake",
+      "at": [139.71408, -25.75049]
+    },
+    {
+      "osm": "w329603262",
+      "name": "Fifteen Mile Claypan",
+      "kind": "lake",
+      "at": [139.72801, -26.01442]
+    },
+    {
+      "osm": "w329603268",
+      "name": "Kuckerunga Waterhole",
+      "kind": "lake",
+      "at": [139.84056, -26.14535]
+    },
+    {
+      "osm": "w329603271",
+      "name": "Wandamugulla Waterhole",
+      "kind": "lake",
+      "at": [139.65759, -25.23319]
+    },
+    { "osm": "w329603280", "name": "Lake Short", "kind": "lake", "at": [139.80548, -26.15341] },
+    { "osm": "w329603745", "name": "Lake Edward", "kind": "lake", "at": [140.60392, -37.6242] },
+    { "osm": "w329603783", "name": "The Everglades", "kind": "lake", "at": [140.62118, -37.64344] },
+    { "osm": "w329603845", "name": "Lake Leake", "kind": "lake", "at": [140.58821, -37.61346] },
+    {
+      "osm": "w329604115",
+      "name": "Mcleod Waterhole",
+      "kind": "lake",
+      "at": [140.9584, -37.17341]
+    },
+    { "osm": "w329604165", "name": "Rule Swamp", "kind": "lake", "at": [140.97062, -37.1938] },
+    {
+      "osm": "w329604176",
+      "name": "Effluent Pond Area",
+      "kind": "lake",
+      "at": [140.7033, -37.54991]
+    },
+    { "osm": "w329604292", "name": "Clear Swamp", "kind": "lake", "at": [140.97743, -37.21724] },
+    { "osm": "w329604336", "name": "Cooee Hole", "kind": "lake", "at": [140.98024, -37.18877] },
+    { "osm": "w329604405", "name": "Bright Hole", "kind": "lake", "at": [140.99384, -37.18573] },
+    { "osm": "w329604447", "name": "Kilsbys Hole", "kind": "lake", "at": [140.9982, -37.18105] },
+    { "osm": "w329604487", "name": "Brown Swamp", "kind": "lake", "at": [140.97943, -37.19842] },
+    {
+      "osm": "w329604639",
+      "name": "Lake Jarracteer",
+      "kind": "lake",
+      "at": [141.57839, -37.04357]
+    },
+    { "osm": "w329604660", "name": "Malseed Lake", "kind": "lake", "at": [141.301, -38.20661] },
+    { "osm": "w329604700", "name": "Tea Tree Swamp", "kind": "lake", "at": [141.74676, -37.10143] },
+    { "osm": "w329604744", "name": "Lake Swanee", "kind": "lake", "at": [141.72213, -37.0256] },
+    { "osm": "w329604750", "name": "Bitter Swamp", "kind": "lake", "at": [141.75831, -37.08335] },
+    { "osm": "w329604753", "name": "Lake Crawford", "kind": "lake", "at": [141.41581, -37.92019] },
+    {
+      "osm": "w329604777",
+      "name": "Aringa Reservoir",
+      "kind": "lake",
+      "at": [142.17353, -38.3388]
+    },
+    {
+      "osm": "w329604781",
+      "name": "Mcglashin Swamp",
+      "kind": "lake",
+      "at": [141.75736, -37.09117]
+    },
+    {
+      "osm": "w329604786",
+      "name": "Lake Mullancoree",
+      "kind": "lake",
+      "at": [141.58335, -37.05421]
+    },
+    {
+      "osm": "w329604788",
+      "name": "Blackwater Hole",
+      "kind": "lake",
+      "at": [141.21393, -37.73382]
+    },
+    { "osm": "w329604791", "name": "Cain Hut Swamp", "kind": "lake", "at": [141.20671, -38.13948] },
+    { "osm": "w329604810", "name": "Pot Brook", "kind": "lake", "at": [141.50888, -37.04579] },
+    { "osm": "w329604822", "name": "Bokurt Swamp", "kind": "lake", "at": [142.20783, -37.10073] },
+    { "osm": "w329604843", "name": "Lake Dollanoke", "kind": "lake", "at": [141.58281, -37.03437] },
+    { "osm": "w329686084", "name": "Lyons Lake", "kind": "lake", "at": [141.18732, -36.92563] },
+    { "osm": "w329686089", "name": "Stuntiles", "kind": "lake", "at": [140.92234, -36.95686] },
+    {
+      "osm": "w329686173",
+      "name": "Big Brim Waterhole",
+      "kind": "lake",
+      "at": [140.78763, -36.88226]
+    },
+    { "osm": "w329686202", "name": "Border Swamp", "kind": "lake", "at": [140.97513, -36.97868] },
+    { "osm": "w329686206", "name": "Waurn Swamp", "kind": "lake", "at": [141.21348, -36.7027] },
+    { "osm": "w329686297", "name": "Victory Swamp", "kind": "lake", "at": [141.16965, -36.75698] },
+    { "osm": "w329686458", "name": "Lake Charam", "kind": "lake", "at": [141.51545, -36.98183] },
+    {
+      "osm": "w329686465",
+      "name": "Sheepwash Swamp",
+      "kind": "lake",
+      "at": [141.48704, -36.90372]
+    },
+    { "osm": "w329686480", "name": "Woolshed Swamp", "kind": "lake", "at": [141.47756, -36.87218] },
+    { "osm": "w329686489", "name": "School Swamp", "kind": "lake", "at": [141.28784, -36.94788] },
+    { "osm": "w329686496", "name": "Greens Swamp", "kind": "lake", "at": [141.77673, -36.99948] },
+    { "osm": "w329686500", "name": "Byrons Swamp", "kind": "lake", "at": [141.58409, -37.00363] },
+    { "osm": "w329686502", "name": "Kygee Swamp", "kind": "lake", "at": [141.24826, -36.91404] },
+    { "osm": "w329686506", "name": "Silver Lake", "kind": "lake", "at": [141.47539, -36.93289] },
+    {
+      "osm": "w329686536",
+      "name": "Nerrick Nerrick Swamp",
+      "kind": "lake",
+      "at": [141.39737, -36.9771]
+    },
+    { "osm": "w329686556", "name": "East Lake", "kind": "lake", "at": [141.64603, -36.92234] },
+    { "osm": "w329686570", "name": "Mewett Swamp", "kind": "lake", "at": [141.72165, -36.99745] },
+    { "osm": "w329686577", "name": "Greenhill Lake", "kind": "lake", "at": [141.76649, -36.7096] },
+    {
+      "osm": "w329686589",
+      "name": "Brig Brig Swamp",
+      "kind": "lake",
+      "at": [141.31284, -36.94129]
+    },
+    {
+      "osm": "w329686601",
+      "name": "Saint Marys Lake",
+      "kind": "lake",
+      "at": [141.75994, -36.77409]
+    },
+    { "osm": "w329686603", "name": "Lake Awonga", "kind": "lake", "at": [141.40356, -36.97002] },
+    { "osm": "w329686604", "name": "Reedy Lake", "kind": "lake", "at": [141.28971, -36.95443] },
+    { "osm": "w329686608", "name": "Lake Moinalwar", "kind": "lake", "at": [141.39363, -36.91769] },
+    { "osm": "w329686609", "name": "Hectors Swamp", "kind": "lake", "at": [141.83395, -36.87482] },
+    {
+      "osm": "w329686610",
+      "name": "Booroopki Swamp",
+      "kind": "lake",
+      "at": [141.22015, -36.73228]
+    },
+    {
+      "osm": "w329686626",
+      "name": "Mccausland Swamp",
+      "kind": "lake",
+      "at": [141.29149, -36.96584]
+    },
+    { "osm": "w329686628", "name": "Maryvale Swamp", "kind": "lake", "at": [141.45834, -36.89102] },
+    { "osm": "w329686633", "name": "Bates Lake", "kind": "lake", "at": [141.57559, -36.88822] },
+    { "osm": "w329686635", "name": "Kygee Swamp", "kind": "lake", "at": [141.24842, -36.91128] },
+    { "osm": "w329686647", "name": "Pine Hut Lake", "kind": "lake", "at": [141.59314, -36.89331] },
+    { "osm": "w329686653", "name": "Cup Cup Lake", "kind": "lake", "at": [141.83396, -36.90395] },
+    { "osm": "w329686660", "name": "White Lake", "kind": "lake", "at": [141.58596, -36.94362] },
+    {
+      "osm": "w329686663",
+      "name": "Lake Charlegrark",
+      "kind": "lake",
+      "at": [141.23881, -36.76739]
+    },
+    { "osm": "w329686675", "name": "Olivers Lake", "kind": "lake", "at": [141.93036, -36.63129] },
+    { "osm": "w329686679", "name": "Kygee Swamp", "kind": "lake", "at": [141.24556, -36.91138] },
+    { "osm": "w329686681", "name": "Polpara Lake", "kind": "lake", "at": [141.60173, -36.96585] },
+    { "osm": "w329688678", "name": "Lake Brimin", "kind": "lake", "at": [142.05534, -35.58656] },
+    { "osm": "w329688690", "name": "Quail Lakes", "kind": "lake", "at": [141.91191, -35.48383] },
+    { "osm": "w329688698", "name": "Bracky Well", "kind": "lake", "at": [141.97847, -35.4674] },
+    { "osm": "w329688727", "name": "Lost Lake", "kind": "lake", "at": [142.02017, -35.486] },
+    { "osm": "w329688767", "name": "Weedy Lake", "kind": "lake", "at": [142.02032, -35.56371] },
+    { "osm": "w329688771", "name": "Lake Boinka", "kind": "lake", "at": [141.57894, -35.08211] },
+    { "osm": "w329688836", "name": "Round Lake", "kind": "lake", "at": [142.00776, -35.56528] },
+    { "osm": "w329688858", "name": "Rubble Lake", "kind": "lake", "at": [142.01076, -35.55891] },
+    { "osm": "w329688867", "name": "Lake Roonki", "kind": "lake", "at": [142.38264, -34.7357] },
+    { "osm": "w329688870", "name": "Lake Peter", "kind": "lake", "at": [141.60855, -35.0717] },
+    { "osm": "w329688871", "name": "Red Lake", "kind": "lake", "at": [141.58665, -35.07305] },
+    { "osm": "w329688877", "name": "Dingo Swamp", "kind": "lake", "at": [142.03702, -35.48459] },
+    { "osm": "w329693590", "name": "Woodstock Lake", "kind": "lake", "at": [142.05233, -31.1394] },
+    { "osm": "w329693656", "name": "Nuchea Lake", "kind": "lake", "at": [142.01746, -31.12265] },
+    {
+      "osm": "w329694361",
+      "name": "Yetally Waterhole",
+      "kind": "lake",
+      "at": [141.7632, -27.98342]
+    },
+    {
+      "osm": "w329694372",
+      "name": "Little Wallawanny Waterhole",
+      "kind": "lake",
+      "at": [142.24849, -27.8454]
+    },
+    {
+      "osm": "w329694378",
+      "name": "Maapoo Waterhole",
+      "kind": "lake",
+      "at": [141.28464, -27.59365]
+    },
+    { "osm": "w329694381", "name": "Unka Waterhole", "kind": "lake", "at": [141.39525, -27.60867] },
+    {
+      "osm": "w329694385",
+      "name": "Merri Waterhole",
+      "kind": "lake",
+      "at": [142.36181, -27.80612]
+    },
+    {
+      "osm": "w329694387",
+      "name": "Wompi Waterhole",
+      "kind": "lake",
+      "at": [142.06844, -28.22955]
+    },
+    {
+      "osm": "w329694391",
+      "name": "Tookabarnoo Waterhole",
+      "kind": "lake",
+      "at": [141.61277, -27.80038]
+    },
+    { "osm": "w329694395", "name": "Bilpa Waterhole", "kind": "lake", "at": [141.5627, -27.57876] },
+    {
+      "osm": "w329694396",
+      "name": "Oontoo Waterhole",
+      "kind": "lake",
+      "at": [141.01193, -27.6651]
+    },
+    {
+      "osm": "w329694405",
+      "name": "Womakie Waterhole",
+      "kind": "lake",
+      "at": [141.39044, -27.60769]
+    },
+    {
+      "osm": "w329694409",
+      "name": "Nurra Norah Waterhole",
+      "kind": "lake",
+      "at": [141.56897, -27.60837]
+    },
+    {
+      "osm": "w329694411",
+      "name": "Naccowlah Waterhole",
+      "kind": "lake",
+      "at": [142.05227, -27.6019]
+    },
+    {
+      "osm": "w329694416",
+      "name": "Tennappera Waterhole",
+      "kind": "lake",
+      "at": [141.89512, -28.05546]
+    },
+    {
+      "osm": "w329694428",
+      "name": "Doombilly Waterhole",
+      "kind": "lake",
+      "at": [142.06159, -27.87255]
+    },
+    {
+      "osm": "w329694433",
+      "name": "Mooroo Waterhole",
+      "kind": "lake",
+      "at": [141.71763, -27.60468]
+    },
+    {
+      "osm": "w329694443",
+      "name": "Little Tooley Wooley Waterhole",
+      "kind": "lake",
+      "at": [141.84508, -27.88311]
+    },
+    {
+      "osm": "w329694445",
+      "name": "Nockanoora Waterhole",
+      "kind": "lake",
+      "at": [141.51787, -27.72207]
+    },
+    {
+      "osm": "w329694453",
+      "name": "Merninie Waterhole",
+      "kind": "lake",
+      "at": [141.01367, -27.63741]
+    },
+    {
+      "osm": "w329694456",
+      "name": "Big Wallawanny Waterhole",
+      "kind": "lake",
+      "at": [142.23313, -27.84632]
+    },
+    {
+      "osm": "w329694458",
+      "name": "Tookabarnoo East Waterhole",
+      "kind": "lake",
+      "at": [141.62804, -27.79337]
+    },
+    {
+      "osm": "w329694482",
+      "name": "Nockaburrawarry Waterhole",
+      "kind": "lake",
+      "at": [142.17409, -27.81177]
+    },
+    {
+      "osm": "w329694484",
+      "name": "Whitracurlie Waterhole",
+      "kind": "lake",
+      "at": [141.06551, -27.60013]
+    },
+    {
+      "osm": "w329694486",
+      "name": "Tooley Wooley Waterhole",
+      "kind": "lake",
+      "at": [141.83, -27.85613]
+    },
+    {
+      "osm": "w329694489",
+      "name": "Owwirree Waterhole",
+      "kind": "lake",
+      "at": [141.61912, -27.60339]
+    },
+    {
+      "osm": "w329694491",
+      "name": "Baryulah Waterhole",
+      "kind": "lake",
+      "at": [141.67332, -27.57229]
+    },
+    {
+      "osm": "w329694494",
+      "name": "Koonandra Waterhole",
+      "kind": "lake",
+      "at": [142.09136, -27.92787]
+    },
+    {
+      "osm": "w329694495",
+      "name": "Walkalla Waterhole",
+      "kind": "lake",
+      "at": [142.14878, -27.86792]
+    },
+    {
+      "osm": "w329694506",
+      "name": "Marranumbla Waterhole",
+      "kind": "lake",
+      "at": [141.3678, -27.60989]
+    },
+    {
+      "osm": "w329694622",
+      "name": "Kulpie Waterhole",
+      "kind": "lake",
+      "at": [140.9465, -25.98213]
+    },
+    {
+      "osm": "w329694655",
+      "name": "Joseph Ware Lake",
+      "kind": "lake",
+      "at": [141.64535, -27.52421]
+    },
+    {
+      "osm": "w329694688",
+      "name": "Alivinna Waterhole",
+      "kind": "lake",
+      "at": [142.28539, -26.5148]
+    },
+    { "osm": "w329694711", "name": "Oakes Waterhole", "kind": "lake", "at": [140.85005, -25.9563] },
+    {
+      "osm": "w329694740",
+      "name": "Arrabury Waterhole",
+      "kind": "lake",
+      "at": [141.08886, -26.4739]
+    },
+    {
+      "osm": "w329694745",
+      "name": "Gingill Waterhole",
+      "kind": "lake",
+      "at": [142.20514, -26.70436]
+    },
+    {
+      "osm": "w329694791",
+      "name": "One Mile Waterhole",
+      "kind": "lake",
+      "at": [142.29441, -26.51088]
+    },
+    {
+      "osm": "w329694865",
+      "name": "Lake Marradibbadibba",
+      "kind": "lake",
+      "at": [140.25269, -26.97005]
+    },
+    {
+      "osm": "w329694905",
+      "name": "Mirrah Waterhole",
+      "kind": "lake",
+      "at": [141.34151, -26.21916]
+    },
+    { "osm": "w329694969", "name": "Lake Pure", "kind": "lake", "at": [141.30613, -27.01673] },
+    {
+      "osm": "w329694984",
+      "name": "Kulparee Waterhole",
+      "kind": "lake",
+      "at": [141.09875, -26.4916]
+    },
+    {
+      "osm": "w329694987",
+      "name": "Lake Marroopootanie",
+      "kind": "lake",
+      "at": [140.10283, -26.89789]
+    },
+    {
+      "osm": "w329695190",
+      "name": "Karapa Waterhole",
+      "kind": "lake",
+      "at": [141.83973, -25.0667]
+    },
+    {
+      "osm": "w329695193",
+      "name": "Binglebunyah Rockhole",
+      "kind": "lake",
+      "at": [141.35108, -25.46173]
+    },
+    {
+      "osm": "w329695202",
+      "name": "Twenty Mile Waterhole",
+      "kind": "lake",
+      "at": [141.56188, -25.0575]
+    },
+    { "osm": "w329695233", "name": "Coco Waterhole", "kind": "lake", "at": [141.25595, -25.26515] },
+    {
+      "osm": "w329695236",
+      "name": "Five Mile Waterhole",
+      "kind": "lake",
+      "at": [141.35044, -25.0741]
+    },
+    {
+      "osm": "w329695264",
+      "name": "Dicola Waterhole",
+      "kind": "lake",
+      "at": [141.21405, -25.18648]
+    },
+    { "osm": "w329695274", "name": "Hidden Hole", "kind": "lake", "at": [141.3334, -25.24903] },
+    {
+      "osm": "w329695285",
+      "name": "Conanbulla Waterhole",
+      "kind": "lake",
+      "at": [141.53223, -25.08091]
+    },
+    { "osm": "w329695322", "name": "Lake Cuddapan", "kind": "lake", "at": [141.45464, -25.72275] },
+    {
+      "osm": "w329695340",
+      "name": "Currawilla Waterhole",
+      "kind": "lake",
+      "at": [141.34628, -25.13832]
+    },
+    {
+      "osm": "w329695415",
+      "name": "Toondah Waterhole",
+      "kind": "lake",
+      "at": [141.26452, -25.326]
+    },
+    {
+      "osm": "w329695507",
+      "name": "Morney Waterhole",
+      "kind": "lake",
+      "at": [141.47188, -25.37268]
+    },
+    {
+      "osm": "w329695526",
+      "name": "Coolbulla Waterhole",
+      "kind": "lake",
+      "at": [141.66122, -25.0096]
+    },
+    {
+      "osm": "w329695552",
+      "name": "Secret Waterhole",
+      "kind": "lake",
+      "at": [141.2958, -25.10287]
+    },
+    {
+      "osm": "w329695557",
+      "name": "Broken Dam Waterhole",
+      "kind": "lake",
+      "at": [141.27563, -25.09783]
+    },
+    {
+      "osm": "w329695573",
+      "name": "Poolooroo Waterhole",
+      "kind": "lake",
+      "at": [141.21293, -25.46035]
+    },
+    {
+      "osm": "w329695580",
+      "name": "Palparara Waterhole",
+      "kind": "lake",
+      "at": [141.41875, -25.04095]
+    },
+    {
+      "osm": "w329695581",
+      "name": "Big Moorathulla Waterhole",
+      "kind": "lake",
+      "at": [141.13924, -25.45333]
+    },
+    {
+      "osm": "w329695601",
+      "name": "Four Mile Waterhole",
+      "kind": "lake",
+      "at": [141.35358, -25.18952]
+    },
+    { "osm": "w333348875", "name": "Lake Kirk", "kind": "lake", "at": [121.73404, -32.27642] },
+    { "osm": "w335047809", "name": "Eagle Tarn", "kind": "lake", "at": [146.59127, -42.67989] },
+    { "osm": "w344644816", "name": "Dam", "kind": "lake", "at": [144.21487, -38.39108] },
+    {
+      "osm": "w364820345",
+      "name": "Little Lake Kelly",
+      "kind": "lake",
+      "at": [143.8088, -35.54357]
+    },
+    { "osm": "w364820346", "name": "Lake Kelly", "kind": "lake", "at": [143.82105, -35.54406] },
+    {
+      "osm": "w365077503",
+      "name": "Chancellor Park Lake 5",
+      "kind": "lake",
+      "at": [153.05876, -26.72501]
+    },
+    { "osm": "w365502674", "name": "Lake Muirhead", "kind": "lake", "at": [142.60664, -37.4861] },
+    {
+      "osm": "w365601468",
+      "name": "Happy Valley Lakes",
+      "kind": "lake",
+      "at": [151.25952, -23.85557]
+    },
+    {
+      "osm": "w365602327",
+      "name": "Happy Valley Lakes",
+      "kind": "lake",
+      "at": [151.25893, -23.85373]
+    },
+    { "osm": "w367347097", "name": "Lake Towanway", "kind": "lake", "at": [142.69921, -37.77789] },
+    { "osm": "w373247061", "name": "Lake Mipia", "kind": "lake", "at": [139.49281, -24.91263] },
+    { "osm": "w373247070", "name": "Lake Machattie", "kind": "lake", "at": [139.7864, -24.81322] },
+    { "osm": "w383975086", "name": "Lake Cakora", "kind": "lake", "at": [153.32884, -29.60192] },
+    {
+      "osm": "w386144527",
+      "name": "Allen Reservoir",
+      "kind": "lake",
+      "at": [143.94471, -38.53686]
+    },
+    { "osm": "w386557781", "name": "Lake 4", "kind": "lake", "at": [130.97241, -12.47441] },
+    {
+      "osm": "w386565053",
+      "name": "University Lake",
+      "kind": "lake",
+      "at": [130.97768, -12.47428]
+    },
+    { "osm": "w387155580", "name": "Barbers Lagoon", "kind": "lake", "at": [144.25268, -35.7007] },
+    { "osm": "w391100180", "name": "Lake Skinner", "kind": "lake", "at": [146.67646, -42.94427] },
+    { "osm": "w391322848", "name": "Beatties Tarn", "kind": "lake", "at": [146.64207, -42.67283] },
+    { "osm": "w391323688", "name": "Lake Rayner", "kind": "lake", "at": [146.64812, -42.66307] },
+    { "osm": "w394076294", "name": "Cakora Lagoon", "kind": "lake", "at": [153.32592, -29.6134] },
+    {
+      "osm": "w420109330",
+      "name": "Freshwater Lake",
+      "kind": "lake",
+      "at": [153.13991, -25.99613]
+    },
+    {
+      "osm": "w433268209",
+      "name": "Lilliesmere Lagoon",
+      "kind": "lake",
+      "at": [147.41813, -19.52431]
+    },
+    {
+      "osm": "w433268210",
+      "name": "Lilliesmere Lagoon",
+      "kind": "lake",
+      "at": [147.41403, -19.54107]
+    },
+    { "osm": "w435138684", "name": "Langlo Lake", "kind": "lake", "at": [142.98136, -18.38862] },
+    {
+      "osm": "w447396177",
+      "name": "Moorongga Swamp",
+      "kind": "lake",
+      "at": [135.07064, -11.92485]
+    },
+    { "osm": "w448078336", "name": "Jubilee Lake", "kind": "lake", "at": [138.69398, -34.80571] },
+    { "osm": "w451005078", "name": "Lake Katherine", "kind": "lake", "at": [135.06862, -14.27386] },
+    { "osm": "w461973411", "name": "swimming hole", "kind": "lake", "at": [132.47297, -14.31419] },
+    {
+      "osm": "w464029851",
+      "name": "Durobby Retreat Lake",
+      "kind": "lake",
+      "at": [153.33808, -28.37871]
+    },
+    {
+      "osm": "w464029855",
+      "name": "Durobby Retreat Lake",
+      "kind": "lake",
+      "at": [153.33715, -28.37784]
+    },
+    {
+      "osm": "w464029858",
+      "name": "Mt. Warning Sanctuary Lodge Lake",
+      "kind": "lake",
+      "at": [153.33539, -28.38144]
+    },
+    {
+      "osm": "w464030680",
+      "name": "Mayvis Kitchen Lake",
+      "kind": "lake",
+      "at": [153.33298, -28.38492]
+    },
+    {
+      "osm": "w468746292",
+      "name": "Freeling Estate Lake",
+      "kind": "lake",
+      "at": [138.81716, -34.45638]
+    },
+    {
+      "osm": "w468746294",
+      "name": "Freeling Wetlands",
+      "kind": "lake",
+      "at": [138.81535, -34.45783]
+    },
+    { "osm": "w469349115", "name": "Kilgour Lake", "kind": "lake", "at": [115.8147, -31.96515] },
+    { "osm": "w479426445", "name": "Duck Spring", "kind": "lake", "at": [115.92952, -32.07869] },
+    {
+      "osm": "w479980692",
+      "name": "Lake Santa Cruz",
+      "kind": "lake",
+      "at": [153.40445, -28.03872]
+    },
+    {
+      "osm": "w484351091",
+      "name": "North Avoca Lake",
+      "kind": "lake",
+      "at": [151.43363, -33.45556]
+    },
+    { "osm": "w494088403", "name": "Shallow Lagoon", "kind": "lake", "at": [150.45028, -23.36523] },
+    {
+      "osm": "w498236352",
+      "name": "Kooliatto Waterhole",
+      "kind": "lake",
+      "at": [143.13862, -28.32156]
+    },
+    { "osm": "w499470876", "name": "Woolleys Tarn", "kind": "lake", "at": [146.66261, -42.90777] },
+    {
+      "osm": "w499470887",
+      "name": "Honeybird Basin",
+      "kind": "lake",
+      "at": [146.66468, -42.92493]
+    },
+    { "osm": "w499470892", "name": "Dungeon Tarn", "kind": "lake", "at": [146.66439, -42.9319] },
+    { "osm": "w499470898", "name": "Lake Denison", "kind": "lake", "at": [146.68545, -42.95328] },
+    { "osm": "w499595506", "name": "Square Tarn", "kind": "lake", "at": [146.59426, -43.21421] },
+    { "osm": "w499859126", "name": "Lake Koolivoo", "kind": "lake", "at": [139.5763, -24.91911] },
+    { "osm": "w509890590", "name": "Basin Lake", "kind": "lake", "at": [130.9758, -12.47224] },
+    {
+      "osm": "w514941678",
+      "name": "Bromfield Swamp",
+      "kind": "lake",
+      "at": [145.54224, -17.37807]
+    },
+    { "osm": "w515135689", "name": "Target Lake", "kind": "lake", "at": [153.40062, -29.19917] },
+    {
+      "osm": "w515731352",
+      "name": "Mobo Creek Crater",
+      "kind": "lake",
+      "at": [145.63934, -17.17347]
+    },
+    { "osm": "w515733431", "name": "Euramoo Crater", "kind": "lake", "at": [145.62886, -17.1588] },
+    { "osm": "w530231949", "name": "Padgole Lagoon", "kind": "lake", "at": [150.43759, -23.42876] },
+    { "osm": "w542861799", "name": "The Big Hole", "kind": "lake", "at": [146.57043, -38.76711] },
+    { "osm": "w542863239", "name": "Lighthouse Dam", "kind": "lake", "at": [146.60886, -38.75299] },
+    {
+      "osm": "w542863986",
+      "name": "Elbow Water Hole",
+      "kind": "lake",
+      "at": [146.54562, -38.78199]
+    },
+    {
+      "osm": "w542890123",
+      "name": "Bullock Waterhole",
+      "kind": "lake",
+      "at": [146.56797, -38.74771]
+    },
+    {
+      "osm": "w543007875",
+      "name": "Cow Swamp Waterhole",
+      "kind": "lake",
+      "at": [146.5236, -38.7741]
+    },
+    {
+      "osm": "w543007876",
+      "name": "Big Plain Waterhole",
+      "kind": "lake",
+      "at": [146.48559, -38.74028]
+    },
+    {
+      "osm": "w543008093",
+      "name": "Boney Waterhole",
+      "kind": "lake",
+      "at": [146.57455, -38.74818]
+    },
+    {
+      "osm": "w543025702",
+      "name": "Rifle Range Waterhole",
+      "kind": "lake",
+      "at": [146.55666, -38.7682]
+    },
+    { "osm": "w543034260", "name": "Gulf Waterhole", "kind": "lake", "at": [146.50613, -38.75279] },
+    { "osm": "w543670279", "name": "Beaumont Lake", "kind": "lake", "at": [151.20962, -23.88092] },
+    { "osm": "w543670280", "name": "Beaumont Pond", "kind": "lake", "at": [151.20738, -23.87899] },
+    { "osm": "w544074736", "name": "Lake Agnes", "kind": "lake", "at": [143.99674, -35.16364] },
+    { "osm": "w555324026", "name": "Yellanup Lake", "kind": "lake", "at": [117.91982, -34.72443] },
+    { "osm": "w555324122", "name": "Morande Lake", "kind": "lake", "at": [117.91738, -34.75717] },
+    { "osm": "w559643490", "name": "Lake 1B", "kind": "lake", "at": [130.9711, -12.4696] },
+    { "osm": "w560921442", "name": "Paddy Lake", "kind": "lake", "at": [143.03656, -37.76521] },
+    { "osm": "w562880125", "name": "Lake Dennis", "kind": "lake", "at": [128.80749, -20.97672] },
+    { "osm": "w562880126", "name": "Lake Dennis", "kind": "lake", "at": [128.84785, -20.93647] },
+    { "osm": "w562880127", "name": "Lake Dennis", "kind": "lake", "at": [128.94287, -20.9387] },
+    { "osm": "w562941430", "name": "Silver Lake", "kind": "lake", "at": [138.75358, -35.05903] },
+    { "osm": "w563116770", "name": "Lake White", "kind": "lake", "at": [129.02636, -21.03542] },
+    { "osm": "w563117699", "name": "Lake White", "kind": "lake", "at": [128.99842, -21.1323] },
+    { "osm": "w563118434", "name": "Lake White", "kind": "lake", "at": [129.04631, -21.05161] },
+    { "osm": "w563118785", "name": "Lake White", "kind": "lake", "at": [129.05644, -21.05967] },
+    { "osm": "w563120022", "name": "Lake White", "kind": "lake", "at": [129.01031, -21.09937] },
+    { "osm": "w563120710", "name": "Lake White", "kind": "lake", "at": [129.0342, -21.10152] },
+    { "osm": "w563120711", "name": "Lake White", "kind": "lake", "at": [129.04204, -21.07581] },
+    { "osm": "w563120712", "name": "Lake White", "kind": "lake", "at": [129.02243, -21.07441] },
+    { "osm": "w563121300", "name": "Lake White", "kind": "lake", "at": [129.07118, -21.13118] },
+    { "osm": "w563121370", "name": "Lake White", "kind": "lake", "at": [129.07922, -21.12082] },
+    { "osm": "w563121900", "name": "Lake White", "kind": "lake", "at": [129.11361, -21.08399] },
+    { "osm": "w563121939", "name": "Lake White", "kind": "lake", "at": [129.10339, -21.07924] },
+    { "osm": "w563122364", "name": "Lake White", "kind": "lake", "at": [129.00672, -21.14741] },
+    { "osm": "w563122365", "name": "Lake White", "kind": "lake", "at": [129.01207, -21.14702] },
+    { "osm": "w563657796", "name": "Lake Nunijup", "kind": "lake", "at": [117.40894, -34.40714] },
+    { "osm": "w565543783", "name": "Lake White", "kind": "lake", "at": [129.06293, -21.09574] },
+    { "osm": "w565547789", "name": "Lake White", "kind": "lake", "at": [129.08678, -21.07683] },
+    { "osm": "w565547808", "name": "Lake White", "kind": "lake", "at": [129.07268, -21.07245] },
+    { "osm": "w616919866", "name": "Black Swamp", "kind": "lake", "at": [141.79955, -37.67216] },
+    { "osm": "w629488549", "name": "Lake Wattleup", "kind": "lake", "at": [115.82606, -32.18341] },
+    { "osm": "w636242643", "name": "Dunn's Swamp", "kind": "lake", "at": [120.15488, -33.92404] },
+    {
+      "osm": "w638897608",
+      "name": "Bokarina Entrance Lake",
+      "kind": "lake",
+      "at": [153.12974, -26.74455]
+    },
+    {
+      "osm": "w663104291",
+      "name": "Patterton Spring",
+      "kind": "lake",
+      "at": [138.67182, -31.18718]
+    },
+    {
+      "osm": "w665049757",
+      "name": "Cave Hill Creek",
+      "kind": "lake",
+      "at": [143.28361, -37.30082]
+    },
+    { "osm": "w695547702", "name": "Bunyip Creek", "kind": "lake", "at": [152.96312, -29.61283] },
+    {
+      "osm": "w708172210",
+      "name": "Edward Hunter Swimming Pool",
+      "kind": "lake",
+      "at": [146.26478, -38.18893]
+    },
+    {
+      "osm": "w721788077",
+      "name": "Pelican Waters Southern Lake",
+      "kind": "lake",
+      "at": [153.10392, -26.83665]
+    },
+    {
+      "osm": "w725872513",
+      "name": "Mason Park Wetland",
+      "kind": "lake",
+      "at": [151.08214, -33.8549]
+    },
+    { "osm": "w731758548", "name": "Clemes Tarn", "kind": "lake", "at": [146.5418, -42.67223] },
+    { "osm": "w732252714", "name": "Mangans Lake", "kind": "lake", "at": [149.64341, -37.48612] },
+    { "osm": "w732449985", "name": "Salt Lake", "kind": "lake", "at": [141.61595, -35.0757] },
+    { "osm": "w733078648", "name": "Poyntons Lake", "kind": "lake", "at": [141.5858, -37.04283] },
+    {
+      "osm": "w733078654",
+      "name": "Lake Icheclemain",
+      "kind": "lake",
+      "at": [141.57983, -37.08687]
+    },
+    {
+      "osm": "w733188252",
+      "name": "Lake Culla Culla",
+      "kind": "lake",
+      "at": [141.6511, -37.04948]
+    },
+    { "osm": "w733523836", "name": "Lake Gnarimara", "kind": "lake", "at": [142.90701, -37.73092] },
+    {
+      "osm": "w734489275",
+      "name": "Little Unicup Lake",
+      "kind": "lake",
+      "at": [116.71195, -34.33539]
+    },
+    { "osm": "w735114633", "name": "Lake Bolac", "kind": "lake", "at": [142.82892, -37.62196] },
+    { "osm": "w743551002", "name": "Paperbark Lake", "kind": "lake", "at": [115.84204, -32.30391] },
+    { "osm": "w743829956", "name": "Lake Waneragup", "kind": "lake", "at": [115.68473, -33.46869] },
+    {
+      "osm": "w767750232",
+      "name": "Youngerina Lake",
+      "kind": "lake",
+      "at": [145.12496, -29.58986]
+    },
+    {
+      "osm": "w792684708",
+      "name": "Disappearing Tarn",
+      "kind": "lake",
+      "at": [147.21013, -42.92472]
+    },
+    { "osm": "w792744739", "name": "Hidden Lake", "kind": "lake", "at": [145.26691, -42.13179] },
+    {
+      "osm": "w802751414",
+      "name": "Barbers Garden Lagoon",
+      "kind": "lake",
+      "at": [145.0165, -35.85487]
+    },
+    {
+      "osm": "w805830287",
+      "name": "Wirrambi Wetland",
+      "kind": "lake",
+      "at": [151.18404, -33.91008]
+    },
+    {
+      "osm": "w807440595",
+      "name": "Melvilles Waterhole",
+      "kind": "lake",
+      "at": [144.93271, -35.75928]
+    },
+    { "osm": "w810440653", "name": "Bimbadeen Dam", "kind": "lake", "at": [146.05854, -38.78292] },
+    { "osm": "w813733658", "name": "Hut Lake", "kind": "lake", "at": [144.99446, -35.91222] },
+    { "osm": "w813798037", "name": "L8", "kind": "lake", "at": [153.05005, -26.72136] },
+    {
+      "osm": "w813798038",
+      "name": "Chancellor Park Lake 4",
+      "kind": "lake",
+      "at": [153.0619, -26.7263]
+    },
+    { "osm": "w817971247", "name": "Bunyip Hole", "kind": "lake", "at": [145.22458, -35.83787] },
+    { "osm": "w817971262", "name": "Hookes Lagoon", "kind": "lake", "at": [145.15436, -35.8325] },
+    {
+      "osm": "w817971263",
+      "name": "Big Woodcutter Lagoon",
+      "kind": "lake",
+      "at": [145.05825, -35.83745]
+    },
+    { "osm": "w819651371", "name": "Dinnys Dip", "kind": "lake", "at": [145.28391, -35.86694] },
+    {
+      "osm": "w834056170",
+      "name": "Black Waterhole",
+      "kind": "lake",
+      "at": [141.67771, -36.87008]
+    },
+    { "osm": "w838900064", "name": "Mangrove Court", "kind": "lake", "at": [153.03941, -26.61081] },
+    { "osm": "w847010927", "name": "Main Pool", "kind": "lake", "at": [130.99764, -12.70244] },
+    { "osm": "w847010928", "name": "Lower Pool", "kind": "lake", "at": [130.99703, -12.7016] },
+    { "osm": "w887391748", "name": "Gospers Lagoon", "kind": "lake", "at": [150.72061, -33.42509] },
+    { "osm": "w891733276", "name": "Shadbolts Lake", "kind": "lake", "at": [142.13152, -32.86875] },
+    { "osm": "w907196390", "name": "water race lake", "kind": "lake", "at": [146.76457, -36.4121] },
+    {
+      "osm": "w938218422",
+      "name": "Glenrock area Flood runoff",
+      "kind": "lake",
+      "at": [146.72212, -19.34325]
+    },
+    {
+      "osm": "w963521625",
+      "name": "Pelican Waters Southern Lake",
+      "kind": "lake",
+      "at": [153.10425, -26.83957]
+    },
+    { "osm": "w982171903", "name": "Lake Amiens", "kind": "lake", "at": [151.76992, -28.58451] },
+    { "osm": "w982171905", "name": "Archers Dam", "kind": "lake", "at": [151.77316, -28.58642] },
+    { "osm": "w998684486", "name": "Bibra Lake", "kind": "lake", "at": [115.82533, -32.09183] },
+    { "osm": "w1016775781", "name": "Lake Orr", "kind": "lake", "at": [153.41312, -28.0795] },
+    {
+      "osm": "w1029162985",
+      "name": "White Womans Waterhole",
+      "kind": "lake",
+      "at": [146.77189, -38.48053]
+    },
+    {
+      "osm": "w1053224713",
+      "name": "Little Punt Lagoon",
+      "kind": "lake",
+      "at": [144.20506, -35.70556]
+    },
+    { "osm": "w1058048811", "name": "Lake Cantala", "kind": "lake", "at": [142.44867, -34.6579] },
+    { "osm": "w1072261840", "name": "Swimming Dam", "kind": "lake", "at": [146.30846, -37.12906] },
+    { "osm": "w1086847247", "name": "Plunge Pool", "kind": "lake", "at": [130.66849, -13.12185] },
+    {
+      "osm": "w1086849505",
+      "name": "Florence Creek",
+      "kind": "lake",
+      "at": [130.78683, -13.10622]
+    },
+    {
+      "osm": "w1132661817",
+      "name": "\"Hidden Lake\"",
+      "kind": "lake",
+      "at": [153.11643, -26.72011]
+    },
+    { "osm": "w1153125426", "name": "Lake Treeby", "kind": "lake", "at": [115.88632, -32.13188] },
+    { "osm": "w1185165767", "name": "Gardens Lake", "kind": "lake", "at": [130.83462, -12.45031] },
+    { "osm": "w1185426444", "name": "Eadine Spring", "kind": "lake", "at": [116.53828, -31.71374] },
+    { "osm": "w1216661998", "name": "Lake Beridup", "kind": "lake", "at": [115.65191, -33.44646] },
+    { "osm": "w1234781008", "name": "Lake Emmett", "kind": "lake", "at": [146.54572, -42.61466] },
+    { "osm": "w1273087555", "name": "West Lake", "kind": "lake", "at": [115.78203, -31.9424] },
+    { "osm": "w1291176465", "name": "Teal Lagoon", "kind": "lake", "at": [153.03859, -30.91527] },
+    { "osm": "w1309606597", "name": "Dulong Quarry", "kind": "lake", "at": [152.88544, -26.6348] },
+    { "osm": "w1346675390", "name": "Lake Lonsdale", "kind": "lake", "at": [142.65069, -37.02307] },
+    { "osm": "w1347108654", "name": "Lake Gunjal", "kind": "lake", "at": [142.92012, -37.72752] },
+    {
+      "osm": "w1418050946",
+      "name": "Barretts Lagoon",
+      "kind": "lake",
+      "at": [145.97706, -18.03742]
+    },
+    {
+      "osm": "w1445680789",
+      "name": "Waddenjerry Lake",
+      "kind": "lake",
+      "at": [149.25869, -37.0182]
+    },
+    { "osm": "w1458783636", "name": "Lake 1A", "kind": "lake", "at": [130.96948, -12.46938] },
+    {
+      "osm": "w1468766082",
+      "name": "Williams Lagoon",
+      "kind": "lake",
+      "at": [150.46002, -22.99105]
+    },
+    { "osm": "w1468766083", "name": "Green Lake", "kind": "lake", "at": [150.52972, -23.02891] },
+    {
+      "osm": "w1468766084",
+      "name": "Charcoal Waterhole",
+      "kind": "lake",
+      "at": [150.51514, -23.00356]
+    },
+    {
+      "osm": "w1474457838",
+      "name": "Springers Lagoon",
+      "kind": "lake",
+      "at": [150.49307, -23.45221]
+    },
+    {
+      "osm": "w1497534452",
+      "name": "Paradise Lagoon",
+      "kind": "lake",
+      "at": [145.8204, -43.24844]
+    },
+    { "osm": "w1501588883", "name": "Hosanna Dam", "kind": "lake", "at": [153.41188, -28.40044] },
+    {
+      "osm": "w1526271454",
+      "name": "Two Mile Lagoon",
+      "kind": "lake",
+      "at": [143.28646, -18.4921]
+    },
+    { "osm": "w1536526927", "name": "Mills Hole", "kind": "lake", "at": [152.07843, -31.75921] },
+    { "osm": "w1538474203", "name": "Lake Pleasant", "kind": "lake", "at": [150.30465, -24.1081] },
+    { "osm": "w1539921197", "name": "Pipeclay Lake", "kind": "lake", "at": [153.20583, -30.02203] },
+    {
+      "osm": "w1554436661",
+      "name": "Toby Inlet Deadwater",
+      "kind": "lake",
+      "at": [115.18168, -33.64342]
+    },
+    { "osm": "w1574427373", "name": "Goose Lagoon", "kind": "lake", "at": [130.98421, -12.70251] }
+  ]
+}

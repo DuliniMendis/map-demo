@@ -1,8 +1,8 @@
 /**
  * Builds public/data/nations.json, public/data/attribution.json and data/report.md from the newest
  * data/raw snapshot plus the committed caches (data/cache/sal, data/cache/wikidata.json),
- * data/cleaning.json and data/overrides.json. No network: run abs-lookup.ts / wikidata.ts first
- * (`pnpm data:build` does).
+ * data/cache/osm/nearby.json, data/cleaning.json and data/overrides.json. No network: run
+ * abs-lookup.ts / nearby.ts / wikidata.ts first (`pnpm data:build` does).
  *
  * Usage: node scripts/build-nations.ts [--no-nearest]
  */
@@ -18,6 +18,9 @@ import type { CleaningPolicy } from './lib/clean.ts';
 import { csvLanguageCodes } from './lib/csv.ts';
 import { haversineKm } from './lib/geo.ts';
 import { readJson, writeText } from './lib/io.ts';
+import type { NearbyCache } from './lib/nearby-cache.ts';
+import { OSM_CLASSES } from './lib/nearby-cache.ts';
+import { LANDMARK_MAX_KM, TOWN_MAX_KM } from './lib/nearby.ts';
 import type { ExtractResult } from './lib/nations.ts';
 import { byName, extractNations } from './lib/nations.ts';
 import type { Overrides } from './lib/overrides.ts';
@@ -26,6 +29,7 @@ import {
   ATTRIBUTION_FILE,
   CLEANING_FILE,
   NATIONS_FILE,
+  NEARBY_CACHE,
   OVERRIDES_FILE,
   REPORT_FILE,
   ROOT,
@@ -58,6 +62,7 @@ interface BuildContext {
   resolutions: Map<string, Resolution>;
   overrides: Overrides;
   wikidata: WikidataCache | null;
+  nearby: NearbyCache | null;
   csv: { file: string; codes: string[] } | null;
 }
 
@@ -78,6 +83,7 @@ function main() {
   const errors = overrideErrors(overrides, new Set(extract.nations.map((n) => n.id)));
 
   const wikidata = existsSync(WIKIDATA_CACHE) ? readJson<WikidataCache>(WIKIDATA_CACHE) : null;
+  const nearbyCache = existsSync(NEARBY_CACHE) ? readJson<NearbyCache>(NEARBY_CACHE) : null;
   const resolutions = new Map<string, Resolution>();
   const nations: Nation[] = [];
   for (const base of extract.nations) {
@@ -94,6 +100,20 @@ function main() {
     resolutions.set(base.id, res);
     const enwiki = wikidata?.codes[base.id.toUpperCase()]?.enwiki;
     const o = overrides[base.id] ? overrideFields(overrides[base.id]) : {};
+    const near = nearbyCache?.nations[base.id];
+    const nearOk = near && near.lng === base.lng && near.lat === base.lat;
+    if (nearbyCache && !nearOk) {
+      errors.push(
+        `${base.id} ${base.name}: no nearby.json entry for this point (run node scripts/nearby.ts)`,
+      );
+    }
+    const nearby =
+      nearOk && (near.town || near.landmark)
+        ? {
+            ...(near.town ? { town: near.town } : {}),
+            ...(near.landmark ? { landmark: near.landmark } : {}),
+          }
+        : undefined;
     nations.push({
       id: base.id,
       name: o.name ?? base.name,
@@ -104,6 +124,7 @@ function main() {
       modern: { locality: res.locality, state: res.state, stateCode: res.stateCode },
       links: { austlang: base.links.austlang, ...(enwiki ? { wikipedia: enwiki } : {}) },
       ...(o.view ? { view: o.view } : {}),
+      ...(nearby ? { nearby } : {}),
       source: 'austlang',
     });
   }
@@ -117,9 +138,10 @@ function main() {
   const out: NationsFile = { generatedAt, count: nations.length, nations };
   writeText(NATIONS_FILE, serialiseNations(out));
   const linked = nations.some((n) => n.links.wikipedia);
+  const withOsm = nations.some((n) => n.nearby);
   writeText(
     ATTRIBUTION_FILE,
-    `${JSON.stringify(buildAttribution(generatedAt, linked), null, 2)}\n`,
+    `${JSON.stringify(buildAttribution(generatedAt, linked, withOsm), null, 2)}\n`,
   );
 
   const csvSnap = newestCsvSnapshot();
@@ -135,6 +157,7 @@ function main() {
     resolutions,
     overrides,
     wikidata,
+    nearby: nearbyCache,
     csv: csvSnap
       ? { file: csvSnap.file, codes: csvLanguageCodes(readFileSync(csvSnap.file, 'utf8')) }
       : null,
@@ -442,6 +465,8 @@ function report(ctx: BuildContext): string {
     );
   }
 
+  nearbySection(ctx, h, out, label);
+
   h('Overrides (data/overrides.json)');
   const ov = Object.entries(ctx.overrides).filter(([id]) => !id.startsWith('_'));
   out.push(
@@ -462,6 +487,140 @@ function report(ctx: BuildContext): string {
       : 'None.',
   );
   return `${out.join('\n')}\n`;
+}
+
+function nearbySection(
+  ctx: BuildContext,
+  h: (s: string) => void,
+  out: string[],
+  label: (id: string) => string,
+): void {
+  h('Nearby town and landmark (OpenStreetMap, WS8)');
+  const { nearby, nations } = ctx;
+  if (!nearby) {
+    out.push('No `data/cache/osm/nearby.json`; run `node scripts/nearby.ts`. No `nearby` written.');
+    return;
+  }
+  const n = nations.length;
+  const pct = (k: number) => `${k} of ${n} (${((100 * k) / n).toFixed(0)} %)`;
+  const withTown = nations.filter((x) => x.nearby?.town);
+  const withLm = nations.filter((x) => x.nearby?.landmark);
+  const both = nations.filter((x) => x.nearby?.town && x.nearby.landmark).length;
+  const neither = nations.filter((x) => !x.nearby).length;
+  out.push(
+    'Orientation only: today’s (mostly colonial) place names, shown in the info card under “Country today”. ' +
+      'They are not names for the nation or its Country and imply no boundary.',
+    '',
+    table(
+      [
+        'Class',
+        'Overpass query run',
+        'OSM data as of',
+        'Named features (Australia)',
+        'Committed (within cut-off of a nation)',
+      ],
+      OSM_CLASSES.map((c) => [
+        c,
+        nearby.sources[c].retrieved,
+        nearby.sources[c].osmBase || '—',
+        nearby.sources[c].count,
+        nearby.sources[c].committed,
+      ]),
+    ),
+    '',
+    `- Nearest \`place=city|town|village\` within ${TOWN_MAX_KM} km (nearest wins, whatever the class): **${pct(withTown.length)}**`,
+    `- Nearest named peak / river / lake / range within ${LANDMARK_MAX_KM} km: **${pct(withLm.length)}**`,
+    `- Both: ${both}; neither (no \`nearby\` field): ${neither}`,
+  );
+  const median = (xs: number[]) => {
+    const s = [...xs].sort((a, b) => a - b);
+    return s.length ? s[Math.floor(s.length / 2)] : 0;
+  };
+  out.push(
+    `- Median distance: town ${median(withTown.map((x) => x.nearby!.town!.distanceKm))} km, ` +
+      `landmark ${median(withLm.map((x) => x.nearby!.landmark!.distanceKm))} km`,
+  );
+  const kinds = new Map<string, number>();
+  for (const x of nations) {
+    for (const f of [x.nearby?.town, x.nearby?.landmark]) {
+      if (f) kinds.set(f.kind, (kinds.get(f.kind) ?? 0) + 1);
+    }
+  }
+  out.push(
+    `- By kind: ${[...kinds]
+      .sort((a, b) => b[1] - a[1])
+      .map(([k, v]) => `${k} ${v}`)
+      .join(', ')}`,
+    '',
+    table(
+      ['Code', 'State / territory', 'Nations', 'With town or village', 'With landmark'],
+      STATE_CODES.map((c) => {
+        const inState = nations.filter((x) => x.modern.stateCode === c);
+        return [
+          c,
+          STATE_NAMES[c],
+          inState.length,
+          inState.filter((x) => x.nearby?.town).length,
+          inState.filter((x) => x.nearby?.landmark).length,
+        ];
+      }),
+    ),
+  );
+
+  const place = (id: string) => {
+    const x = nations.find((y) => y.id === id)!;
+    return `${x.modern.locality}, ${x.modern.stateCode}`;
+  };
+  const noTown = nations.filter((x) => !x.nearby?.town);
+  const noLm = nations.filter((x) => !x.nearby?.landmark);
+  out.push('', '### Oddities', '');
+  out.push(
+    `**No city, town or village within ${TOWN_MAX_KM} km** (${noTown.length}): ` +
+      (noTown.map((x) => `${label(x.id)} (${place(x.id)})`).join('; ') || 'none') +
+      '.',
+    '',
+    `**No landmark within ${LANDMARK_MAX_KM} km** (${noLm.length}): ` +
+      (noLm.map((x) => `${label(x.id)} (${place(x.id)})`).join('; ') || 'none') +
+      '.',
+  );
+  const zero = withLm.filter((x) => x.nearby!.landmark!.distanceKm < 0.5);
+  out.push(
+    '',
+    `**Landmark under 0.5 km** (${zero.length}; usually the point sits on a mapped river line, so the bearing means little): ` +
+      (zero
+        .map(
+          (x) =>
+            `${label(x.id)} → ${x.nearby!.landmark!.name} (${x.nearby!.landmark!.distanceKm} km)`,
+        )
+        .join('; ') || 'none') +
+      '.',
+  );
+  const compound = nations.flatMap((x) =>
+    [x.nearby?.town, x.nearby?.landmark]
+      .filter((f) => f && /\s\/\s|;|\(/.test(f.name))
+      .map((f) => `${label(x.id)} → "${f!.name}" (${f!.kind})`),
+  );
+  out.push(
+    '',
+    `**Dual or compound OSM names, kept exactly as published** (${compound.length}): ${compound.join('; ') || 'none'}.`,
+  );
+  const shared = new Map<string, string[]>();
+  for (const x of withTown) {
+    const k = `${x.nearby!.town!.name} (${x.nearby!.town!.kind})`;
+    shared.set(k, [...(shared.get(k) ?? []), x.id]);
+  }
+  const top = [...shared].sort((a, b) => b[1].length - a[1].length).slice(0, 8);
+  out.push(
+    '',
+    `**Towns nearest to the most nations:** ${top.map(([k, ids]) => `${k} ${ids.length}`).join(', ')}.`,
+    '',
+    'Method notes: distances are great-circle from the AUSTLANG point, 1 decimal place; bearings are the ' +
+      '8-point initial bearing from the point to the feature. Rivers (`waterway=river` ways) are measured ' +
+      'to the nearest point on the line (simplified to 10 m); lakes (`natural=water` + `water=lake`) and ' +
+      'ranges (`natural=ridge|mountain_range`) to the Overpass centre, so a point on the shore of a large ' +
+      'lake can read further than it looks. Only ways tagged `name` are used: an unnamed river way that ' +
+      'belongs to a named waterway relation is not.',
+  );
 }
 
 main();

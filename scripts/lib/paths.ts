@@ -8,6 +8,11 @@ export const RAW_DIR = join(ROOT, 'data', 'raw');
 export const CACHE_DIR = join(ROOT, 'data', 'cache');
 export const SAL_CACHE_DIR = join(CACHE_DIR, 'sal');
 export const WIKIDATA_CACHE = join(CACHE_DIR, 'wikidata.json');
+/** WS8: trimmed OpenStreetMap snapshots (committed) and raw Overpass responses (gitignored). */
+export const OSM_CACHE_DIR = join(CACHE_DIR, 'osm');
+export const OSM_RAW_DIR = join(OSM_CACHE_DIR, 'raw');
+/** WS8: per-nation nearest town/landmark, written by scripts/nearby.ts, read by the build. */
+export const NEARBY_CACHE = join(OSM_CACHE_DIR, 'nearby.json');
 export const OVERRIDES_FILE = join(ROOT, 'data', 'overrides.json');
 export const CLEANING_FILE = join(ROOT, 'data', 'cleaning.json');
 export const REPORT_FILE = join(ROOT, 'data', 'report.md');

@@ -76,6 +76,7 @@ describe('compactLabel', () => {
       '© OpenMapTiles © OpenStreetMap',
       '© MapLibre',
       'Wikidata (CC0)',
+      'Nearby places © OpenStreetMap',
     ]);
     expect(compactLabel({ text: 'Something else' })).toBe('Something else');
   });

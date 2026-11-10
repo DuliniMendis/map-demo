@@ -1,6 +1,6 @@
 import { useId, useState } from 'react';
 import type { KeyboardEvent } from 'react';
-import type { Nation } from '../types/nation';
+import type { Nation, NearbyFeature } from '../types/nation';
 import { Disclaimer } from './Disclaimer';
 import './ui.css';
 
@@ -18,6 +18,16 @@ export interface InfoCardProps {
 
 function formatCoord(value: number, pos: string, neg: string): string {
   return `${Math.abs(value).toFixed(2)}° ${value < 0 ? neg : pos}`;
+}
+
+/** "12 km NE"; under 1 km the bearing says little, so it is dropped. */
+export function formatNearbyDistance(f: Pick<NearbyFeature, 'distanceKm' | 'bearing'>): string {
+  return f.distanceKm < 1 ? 'under 1 km' : `${Math.round(f.distanceKm)} km ${f.bearing}`;
+}
+
+/** "Alice Springs (town, 12 km NE)" — OSM name exactly as published. */
+export function formatNearby(f: NearbyFeature): string {
+  return `${f.name} (${f.kind}, ${formatNearbyDistance(f)})`;
 }
 
 function ExternalLink({ href, children }: { href: string; children: string }) {
@@ -106,6 +116,19 @@ export function InfoCard({ nation, onClose, onBackToOverview, className }: InfoC
               <span data-testid="info-state">{nation.modern.state}</span>
             </span>
             <span className="cm-fact__note">Suburb/locality boundary from ABS 2021</span>
+            {(nation.nearby?.town || nation.nearby?.landmark) && (
+              <div className="cm-nearby" data-testid="info-nearby">
+                <ul className="cm-nearby__list">
+                  {nation.nearby.town && <li>Near {formatNearby(nation.nearby.town)}</li>}
+                  {nation.nearby.landmark && (
+                    <li>Landmark: {formatNearby(nation.nearby.landmark)}</li>
+                  )}
+                </ul>
+                <span className="cm-fact__note">
+                  Today’s place names, for orientation only (OpenStreetMap)
+                </span>
+              </div>
+            )}
           </dd>
         </div>
         <div className="cm-fact">
