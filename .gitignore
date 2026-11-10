@@ -9,8 +9,6 @@ coverage
 .env
 .env.*
 !.env.example
-# committed on purpose: holds no secrets, only the pre-WS3 mock-data flag
-!.env.production
 *.local
 
 # logs
@@ -22,3 +20,9 @@ coverage
 .idea
 .DS_Store
 *.sw?
+
+# tooling
+.claude/worktrees/
+.lighthouseci/
+test-results/
+playwright-report/

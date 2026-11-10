@@ -1,0 +1,13 @@
+{
+  "id": "S11",
+  "lng": 139.569097,
+  "lat": -36.089402,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40308",
+    "locality": "Coorong",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

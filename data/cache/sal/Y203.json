@@ -1,0 +1,13 @@
+{
+  "id": "Y203",
+  "lng": 141.48342,
+  "lat": -15.815809,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "33195",
+    "locality": "Yagoonya",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

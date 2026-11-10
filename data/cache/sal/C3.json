@@ -1,0 +1,13 @@
+{
+  "id": "C3",
+  "lng": 133.415357,
+  "lat": -29.659445,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40621",
+    "locality": "Ingomar",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

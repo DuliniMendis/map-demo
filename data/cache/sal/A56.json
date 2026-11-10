@@ -1,0 +1,13 @@
+{
+  "id": "A56",
+  "lng": 121.045724,
+  "lat": -23.069376,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51111",
+    "locality": "Newman",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

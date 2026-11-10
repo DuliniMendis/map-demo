@@ -1,0 +1,13 @@
+{
+  "id": "N229",
+  "lng": 133.197321,
+  "lat": -15.900874,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70034",
+    "locality": "Birdum",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

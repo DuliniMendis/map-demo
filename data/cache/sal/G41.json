@@ -1,0 +1,13 @@
+{
+  "id": "G41",
+  "lng": 138.810456,
+  "lat": -21.260278,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "33016",
+    "locality": "Waverley (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

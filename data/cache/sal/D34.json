@@ -1,0 +1,13 @@
+{
+  "id": "D34",
+  "lng": 150.174827,
+  "lat": -28.141393,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30251",
+    "locality": "Billa Billa",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

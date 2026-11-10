@@ -1,0 +1,13 @@
+{
+  "id": "N38",
+  "lng": 131.877598,
+  "lat": -14.441,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70101",
+    "locality": "Florina",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

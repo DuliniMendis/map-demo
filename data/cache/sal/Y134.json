@@ -1,0 +1,13 @@
+{
+  "id": "Y134",
+  "lng": 145.797936,
+  "lat": -18.437509,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30004",
+    "locality": "Abergowrie",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

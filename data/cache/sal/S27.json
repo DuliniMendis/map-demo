@@ -1,0 +1,8 @@
+{
+  "id": "S27",
+  "lng": 142.568885,
+  "lat": -36.723325,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "21549", "locality": "Lubeck", "state": "Victoria", "stateCode": "VIC" }
+}

@@ -1,0 +1,77 @@
+// Bundled copy of the `items` in WS3's public/data/attribution.json, shown before (or instead of)
+// the fetched file, because attribution must always be visible. attributionData.test.ts fails if the
+// two drift apart: after `pnpm data:build`, copy the new items here.
+import type { AttributionEntry } from './attributionData';
+
+export const FALLBACK_ATTRIBUTION: AttributionEntry[] = [
+  {
+    id: 'austlang',
+    text: 'AUSTLANG © Australian Institute of Aboriginal and Torres Strait Islander Studies (AIATSIS), CC BY 4.0, via TLCMap',
+    url: 'https://collection.aiatsis.gov.au/datasets/austlang/001',
+    licence: 'CC BY 4.0',
+    licenceUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    usedFor:
+      'Language names, alternative names and approximate locations (TLCMap layer 81: https://tlcmap.org/layers/81)',
+    kind: 'data',
+  },
+  {
+    id: 'abs-asgs',
+    text: 'Suburb/state boundaries © Australian Bureau of Statistics, CC BY 4.0',
+    url: 'https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/non-abs-structures/suburbs-and-localities',
+    licence: 'CC BY 4.0',
+    licenceUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    usedFor:
+      '"Country today": ASGS Edition 3 (2021) Suburbs and Localities and States, looked up at build time',
+    kind: 'data',
+  },
+  {
+    id: 'mapterhorn',
+    text: '© Mapterhorn',
+    url: 'https://mapterhorn.com/attribution',
+    usedFor: 'Terrain elevation tiles (primary)',
+    kind: 'tiles',
+  },
+  {
+    id: 'aws-terrain',
+    text: 'Terrain Tiles: Mapzen/AWS Open Data (SRTM, Geoscience Australia)',
+    url: 'https://github.com/tilezen/joerd/blob/master/docs/attribution.md',
+    usedFor: 'Terrain elevation tiles (fallback)',
+    kind: 'tiles',
+  },
+  {
+    id: 'eox-s2cloudless',
+    text: 'Sentinel-2 cloudless – https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024)',
+    url: 'https://s2maps.eu',
+    licence: 'CC BY 4.0',
+    licenceUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    usedFor: 'Satellite imagery',
+    kind: 'tiles',
+  },
+  {
+    id: 'openmaptiles',
+    text: '© OpenMapTiles © OpenStreetMap contributors',
+    url: 'https://www.openstreetmap.org/copyright',
+    licence: 'ODbL 1.0',
+    licenceUrl: 'https://opendatacommons.org/licenses/odbl/1-0/',
+    usedFor: 'Place, road and water labels (OpenFreeMap vector tiles)',
+    kind: 'tiles',
+  },
+  {
+    id: 'maplibre',
+    text: '© MapLibre',
+    url: 'https://maplibre.org/',
+    licence: 'BSD-3-Clause',
+    licenceUrl: 'https://github.com/maplibre/maplibre-gl-js/blob/main/LICENSE.txt',
+    usedFor: 'Map renderer',
+    kind: 'software',
+  },
+  {
+    id: 'wikidata',
+    text: 'Wikipedia links via Wikidata (CC0)',
+    url: 'https://www.wikidata.org/wiki/Property:P1252',
+    licence: 'CC0 1.0',
+    licenceUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    usedFor: 'Links from AUSTLANG codes to English Wikipedia articles',
+    kind: 'data',
+  },
+];

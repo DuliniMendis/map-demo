@@ -1,0 +1,13 @@
+{
+  "id": "N159",
+  "lng": 129.816949,
+  "lat": -14.40514,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70204",
+    "locality": "Nemarluk",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

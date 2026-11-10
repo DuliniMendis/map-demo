@@ -1,0 +1,13 @@
+{
+  "id": "S86",
+  "lng": 142.798815,
+  "lat": -37.413949,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "22789",
+    "locality": "Willaura North",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

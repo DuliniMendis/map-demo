@@ -1,0 +1,13 @@
+{
+  "id": "G47",
+  "lng": 138.682737,
+  "lat": -17.851446,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30865",
+    "locality": "Doomadgee",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "L52",
+  "lng": 136.160438,
+  "lat": -28.914307,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40032",
+    "locality": "Anna Creek",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

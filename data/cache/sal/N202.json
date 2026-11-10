@@ -1,0 +1,13 @@
+{
+  "id": "N202",
+  "lng": 136.421305,
+  "lat": -12.147403,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70086",
+    "locality": "East Arnhem",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

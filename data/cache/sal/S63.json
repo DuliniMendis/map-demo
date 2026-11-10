@@ -1,0 +1,13 @@
+{
+  "id": "S63",
+  "lng": 150.924829,
+  "lat": -32.239558,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12879",
+    "locality": "Muswellbrook",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

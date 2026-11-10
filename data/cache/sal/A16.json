@@ -1,0 +1,13 @@
+{
+  "id": "A16",
+  "lng": 120.345365,
+  "lat": -28.182032,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50844",
+    "locality": "Leinster",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

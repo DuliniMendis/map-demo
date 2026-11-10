@@ -1,0 +1,13 @@
+{
+  "id": "E10",
+  "lng": 153.187844,
+  "lat": -29.686723,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13216",
+    "locality": "Pillar Valley",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

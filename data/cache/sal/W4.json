@@ -1,0 +1,13 @@
+{
+  "id": "W4",
+  "lng": 116.698302,
+  "lat": -33.984155,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51335",
+    "locality": "Scotts Brook",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "E15",
+  "lng": 152.866814,
+  "lat": -28.533264,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "14043",
+    "locality": "Upper Eden Creek",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

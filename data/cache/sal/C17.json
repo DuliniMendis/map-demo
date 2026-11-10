@@ -1,0 +1,13 @@
+{
+  "id": "C17",
+  "lng": 132.871007,
+  "lat": -19.249627,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70249",
+    "locality": "Tanami East",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "Y43",
+  "lng": 141.650986,
+  "lat": -14.420628,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32349",
+    "locality": "Pormpuraaw",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

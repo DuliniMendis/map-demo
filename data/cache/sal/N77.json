@@ -1,0 +1,13 @@
+{
+  "id": "N77",
+  "lng": 134.270753,
+  "lat": -14.283992,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70103",
+    "locality": "Flying Fox (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

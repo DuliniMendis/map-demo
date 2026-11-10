@@ -1,0 +1,13 @@
+{
+  "id": "G38",
+  "lng": 139.458891,
+  "lat": -16.564314,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "33026",
+    "locality": "Wellesley Islands",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

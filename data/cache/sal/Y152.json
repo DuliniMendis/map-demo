@@ -1,0 +1,13 @@
+{
+  "id": "Y152",
+  "lng": 145.389807,
+  "lat": -17.680535,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31843",
+    "locality": "Millstream (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

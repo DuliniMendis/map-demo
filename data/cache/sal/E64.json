@@ -1,0 +1,8 @@
+{
+  "id": "E64",
+  "lng": 149.010962,
+  "lat": -23.655447,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "30846", "locality": "Dingo", "state": "Queensland", "stateCode": "QLD" }
+}

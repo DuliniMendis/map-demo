@@ -1,0 +1,13 @@
+{
+  "id": "W2",
+  "lng": 117.564632,
+  "lat": -34.721824,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51092",
+    "locality": "Narrikup",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

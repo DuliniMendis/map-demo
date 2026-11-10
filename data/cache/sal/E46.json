@@ -1,0 +1,13 @@
+{
+  "id": "E46",
+  "lng": 150.060046,
+  "lat": -22.715684,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31587",
+    "locality": "Kunwarara",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

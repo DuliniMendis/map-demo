@@ -1,0 +1,13 @@
+{
+  "id": "K6",
+  "lng": 126.179024,
+  "lat": -18.59097,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51042",
+    "locality": "Mueller Ranges",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

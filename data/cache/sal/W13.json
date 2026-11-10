@@ -1,0 +1,13 @@
+{
+  "id": "W13",
+  "lng": 114.687957,
+  "lat": -28.100476,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50130",
+    "locality": "Binnu",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -85,7 +85,7 @@ Definition of done for every PR: typecheck + lint pass, unit tests for pure logi
 On `select(id)` where a different nation is already focused:
 1. Cancel any in-flight animation (`map.stop()`).
 2. **Rise**: `easeTo({ zoom: max(4.2, currentZoom − 5), pitch: 0, bearing: 0, duration: 900 })`.
-3. **Travel + descend**: `flyTo({ center, zoom: nation.view.zoom ?? 10.5, pitch: nation.view.pitch ?? 62, bearing: nation.view.bearing ?? −18, speed: 0.6, curve: 1.42, essential: true })`.
+3. **Travel + descend**: `flyTo({ center, zoom: nation.view.zoom ?? 10.5, pitch: nation.view.pitch ?? 62, bearing: nation.view.bearing ?? −18, duration: <computed>, curve: 1.42, essential: true })`. Durations are explicit (see `docs/camera.md`): `speed: 0.6` took 6–7 s on long flights and broke the 2.5–4.5 s budget.
 4. On `moveend`: set `cameraState='idle'`, pulse the marker, show the info card.
 From the national overview (first click) skip step 2. Respect `prefers-reduced-motion` → single `jumpTo` with a 300 ms fade.
 Per-nation `view` overrides live in `data/overrides.json` (e.g. coastal nations look inland; desert nations zoom to ~9.5 so relief reads).

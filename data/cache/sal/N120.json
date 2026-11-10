@@ -1,0 +1,13 @@
+{
+  "id": "N120",
+  "lng": 135.345062,
+  "lat": -15.042942,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70163",
+    "locality": "Limmen",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

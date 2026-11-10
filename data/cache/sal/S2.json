@@ -1,0 +1,13 @@
+{
+  "id": "S2",
+  "lng": 138.711249,
+  "lat": -35.460735,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40870",
+    "locality": "Middleton (SA)",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

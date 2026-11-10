@@ -1,0 +1,13 @@
+{
+  "id": "A103",
+  "lng": 122.698712,
+  "lat": -29.86593,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51253",
+    "locality": "Plumridge Lakes",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

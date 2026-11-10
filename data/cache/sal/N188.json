@@ -1,0 +1,15 @@
+{
+  "id": "N188",
+  "lng": 132.418407,
+  "lat": -11.245845,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "70058",
+    "locality": "Cobourg",
+    "state": "Northern Territory",
+    "stateCode": "NT",
+    "distanceKm": 0.13
+  }
+}

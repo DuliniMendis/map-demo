@@ -1,0 +1,8 @@
+{
+  "id": "G46",
+  "lng": 146.313425,
+  "lat": -20.047997,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "30366", "locality": "Breddan", "state": "Queensland", "stateCode": "QLD" }
+}

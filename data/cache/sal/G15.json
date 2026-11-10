@@ -1,0 +1,13 @@
+{
+  "id": "G15",
+  "lng": 139.064819,
+  "lat": -19.538892,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30502",
+    "locality": "Camooweal",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

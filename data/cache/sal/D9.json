@@ -1,0 +1,13 @@
+{
+  "id": "D9",
+  "lng": 144.400027,
+  "lat": -34.418687,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12535",
+    "locality": "Maude (NSW)",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

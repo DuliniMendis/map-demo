@@ -1,0 +1,13 @@
+{
+  "id": "L3",
+  "lng": 138.408466,
+  "lat": -34.427147,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40204",
+    "locality": "Calomba",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

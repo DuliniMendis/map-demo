@@ -1,0 +1,13 @@
+{
+  "id": "A13",
+  "lng": 116.721527,
+  "lat": -28.826758,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51662",
+    "locality": "Yalgoo",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

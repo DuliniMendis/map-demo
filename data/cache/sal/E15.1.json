@@ -1,0 +1,13 @@
+{
+  "id": "E15.1",
+  "lng": 153.23611,
+  "lat": -28.732615,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12197",
+    "locality": "Koonorigan",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

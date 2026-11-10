@@ -1,0 +1,15 @@
+{
+  "id": "W47",
+  "lng": 116.686778,
+  "lat": -20.671515,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "50378",
+    "locality": "Dampier",
+    "state": "Western Australia",
+    "stateCode": "WA",
+    "distanceKm": 0.759
+  }
+}

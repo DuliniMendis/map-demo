@@ -1,0 +1,13 @@
+{
+  "id": "S38",
+  "lng": 145.107143,
+  "lat": -35.710964,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "10656",
+    "locality": "Bullatale",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

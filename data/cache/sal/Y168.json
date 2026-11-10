@@ -1,0 +1,13 @@
+{
+  "id": "Y168",
+  "lng": 144.924563,
+  "lat": -15.113274,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30675",
+    "locality": "Cooktown",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

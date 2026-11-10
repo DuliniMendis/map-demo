@@ -1,0 +1,13 @@
+{
+  "id": "Y161",
+  "lng": 145.210664,
+  "lat": -16.649676,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31945",
+    "locality": "Mount Carbine",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

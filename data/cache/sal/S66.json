@@ -1,0 +1,13 @@
+{
+  "id": "S66",
+  "lng": 151.526674,
+  "lat": -33.055058,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11432",
+    "locality": "Eraring",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

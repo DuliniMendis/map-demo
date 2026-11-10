@@ -1,0 +1,13 @@
+{
+  "id": "Y74",
+  "lng": 144.031379,
+  "lat": -15.38019,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31642",
+    "locality": "Laura (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

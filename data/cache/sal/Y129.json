@@ -1,0 +1,8 @@
+{
+  "id": "Y129",
+  "lng": 146.391953,
+  "lat": -19.147356,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "30620", "locality": "Clemant", "state": "Queensland", "stateCode": "QLD" }
+}

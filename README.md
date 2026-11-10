@@ -53,16 +53,31 @@ TypeScript is pinned to 6.0 because typescript-eslint does not support TypeScrip
 | `pnpm lint` | ESLint (typescript-eslint + react-hooks) |
 | `pnpm test` | Vitest unit tests (`src/**/*.test.ts`, `tests/unit/**`) |
 | `pnpm format` / `format:check` | Prettier write / check |
+| `pnpm data:build` | Rebuild `public/data/nations.json` and `attribution.json` from AUSTLANG, ABS and Wikidata (WS3; see `data/report.md`) |
+| `pnpm data:validate` | Validate the committed data files against the schema |
+| `pnpm build:e2e` | Production build with `VITE_E2E=1` (exposes `window.__map` for Playwright) |
+| `pnpm test:e2e` | `build:e2e`, then the Playwright suite (`tests/playwright`, see `docs/qa.md`) |
+| `pnpm size` | Bundle size budgets (`.size-limit.json`) |
+| `pnpm lhci` | Lighthouse CI against the production build |
 
-CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check and unit tests on every PR.
+CI (`.github/workflows/ci.yml`) runs typecheck, lint, format check, unit tests, bundle size and Lighthouse on
+every PR and on `main`. The Playwright e2e suite runs only on demand (Actions → CI → Run workflow): GitHub's
+runners have no GPU, so the 3D map renders in software and the suite takes 20+ minutes. Run `pnpm test:e2e`
+locally before merging changes to the map, camera or UI.
 
 ## Data
 
-Until WS3 lands `public/data/nations.json`, the dev server falls back to
-[`src/data/mock-nations.json`](src/data/mock-nations.json): 10 real AUSTLANG entries, one per state and
-territory, same schema. Production builds use it too while `.env.production` sets
-`VITE_ALLOW_MOCK_DATA=1`; WS3 deletes that file when it ships the real data, after which a missing
-`nations.json` is an error.
+`public/data/nations.json` holds 455 nations and language groups built by `pnpm data:build` from AUSTLANG
+(AIATSIS, via TLCMap), ABS 2021 suburbs and localities, and Wikidata. `public/data/attribution.json` holds the
+credits the app shows. What the build cleaned or excluded is listed in `data/report.md` and `data/cleaning.json`.
+
+The dev server falls back to [`src/data/mock-nations.json`](src/data/mock-nations.json) (10 entries, same
+schema) if `nations.json` is missing; production builds treat a missing file as an error.
+
+## Deploy
+
+`main` deploys to production on Vercel (https://map-demo-orpin.vercel.app); every PR gets a preview. Commits
+must be authored with the email on the Vercel account, or the Hobby plan skips the build.
 
 ## Notes for workers
 

@@ -1,0 +1,13 @@
+{
+  "id": "D66",
+  "lng": 148.197097,
+  "lat": -28.219527,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "30851",
+    "locality": "Dirranbandi",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "Y232",
+  "lng": 142.624092,
+  "lat": -10.683089,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "30717",
+    "locality": "Coral Sea",
+    "state": "Queensland",
+    "stateCode": "QLD",
+    "distanceKm": 3.654
+  }
+}

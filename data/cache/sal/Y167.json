@@ -1,0 +1,15 @@
+{
+  "id": "Y167",
+  "lng": 145.280104,
+  "lat": -15.253828,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "31357",
+    "locality": "Hope Vale",
+    "state": "Queensland",
+    "stateCode": "QLD",
+    "distanceKm": 0.574
+  }
+}

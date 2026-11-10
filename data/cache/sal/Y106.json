@@ -1,0 +1,13 @@
+{
+  "id": "Y106",
+  "lng": 145.508454,
+  "lat": -16.737168,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31875",
+    "locality": "Mona Mona",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

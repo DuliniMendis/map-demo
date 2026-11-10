@@ -1,0 +1,15 @@
+{
+  "id": "E82",
+  "lng": 150.966847,
+  "lat": -23.191387,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": null,
+  "nearest": {
+    "salCode": "32796",
+    "locality": "The Keppels",
+    "state": "Queensland",
+    "stateCode": "QLD",
+    "distanceKm": 0.374
+  }
+}

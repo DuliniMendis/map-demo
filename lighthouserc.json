@@ -1,0 +1,31 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./dist",
+      "url": ["/"],
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop",
+        "chromeFlags": "--headless=new --no-sandbox --use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader --ignore-gpu-blocklist",
+        "blockedUrlPatterns": [
+          "*tiles.mapterhorn.com*",
+          "*elevation-tiles-prod*",
+          "*tiles.maps.eox.at*",
+          "*tiles.openfreemap.org*"
+        ]
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:accessibility": ["error", { "minScore": 0.95, "aggregationMethod": "median" }],
+        "categories:performance": ["warn", { "minScore": 0.8, "aggregationMethod": "median" }],
+        "categories:best-practices": ["warn", { "minScore": 0.9, "aggregationMethod": "median" }],
+        "categories:seo": ["warn", { "minScore": 0.9, "aggregationMethod": "median" }]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./node_modules/.cache/lhci"
+    }
+  }
+}

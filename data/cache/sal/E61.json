@@ -1,0 +1,13 @@
+{
+  "id": "E61",
+  "lng": 147.110559,
+  "lat": -19.563569,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31363",
+    "locality": "Horseshoe Lagoon",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

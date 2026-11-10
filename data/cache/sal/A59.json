@@ -1,0 +1,13 @@
+{
+  "id": "A59",
+  "lng": 122.308659,
+  "lat": -21.241791,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51440",
+    "locality": "Telfer",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

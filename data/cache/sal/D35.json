@@ -1,0 +1,13 @@
+{
+  "id": "D35",
+  "lng": 151.248602,
+  "lat": -29.340516,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "10100",
+    "locality": "Ashford (NSW)",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

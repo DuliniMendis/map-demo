@@ -1,0 +1,13 @@
+{
+  "id": "E57",
+  "lng": 148.703782,
+  "lat": -21.298575,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32536",
+    "locality": "Septimus",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

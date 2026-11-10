@@ -1,0 +1,13 @@
+{
+  "id": "W37",
+  "lng": 117.868177,
+  "lat": -21.737661,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50289",
+    "locality": "Chichester (WA)",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "E32",
+  "lng": 151.790315,
+  "lat": -24.904801,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32718",
+    "locality": "Takilberan",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

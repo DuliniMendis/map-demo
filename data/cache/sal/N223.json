@@ -1,0 +1,13 @@
+{
+  "id": "N223",
+  "lng": 132.978249,
+  "lat": -12.312678,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70115",
+    "locality": "Gunbalanya",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

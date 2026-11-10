@@ -1,0 +1,13 @@
+{
+  "id": "Y209",
+  "lng": 141.723542,
+  "lat": -15.395142,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31575",
+    "locality": "Kowanyama",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

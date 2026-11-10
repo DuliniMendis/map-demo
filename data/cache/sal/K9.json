@@ -1,0 +1,13 @@
+{
+  "id": "K9",
+  "lng": 123.134158,
+  "lat": -17.26474,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51611",
+    "locality": "Willare",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

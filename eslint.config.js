@@ -4,7 +4,19 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist', 'coverage', 'spikes', 'public/data', 'data/raw'] },
+  {
+    ignores: [
+      'dist',
+      'coverage',
+      'spikes',
+      'public/data',
+      'data/raw',
+      '.claude',
+      '.lighthouseci',
+      'test-results',
+      'playwright-report',
+    ],
+  },
   {
     files: ['**/*.{ts,tsx}'],
     extends: [js.configs.recommended, ...tseslint.configs.recommended],

@@ -1,0 +1,13 @@
+{
+  "id": "Y66",
+  "lng": 143.566877,
+  "lat": -14.59994,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "33209",
+    "locality": "Yarraden",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

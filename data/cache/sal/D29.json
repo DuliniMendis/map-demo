@@ -1,0 +1,13 @@
+{
+  "id": "D29",
+  "lng": 151.441561,
+  "lat": -28.618861,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32998",
+    "locality": "Warroo (Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

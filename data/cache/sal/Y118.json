@@ -1,0 +1,13 @@
+{
+  "id": "Y118",
+  "lng": 145.771776,
+  "lat": -17.504781,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "33162",
+    "locality": "Wooroonooran (Cassowary Coast - Qld)",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

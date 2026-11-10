@@ -1,0 +1,13 @@
+{
+  "id": "L15",
+  "lng": 142.66888,
+  "lat": -29.175707,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13877",
+    "locality": "Tibooburra",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

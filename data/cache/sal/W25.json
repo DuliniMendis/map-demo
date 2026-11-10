@@ -1,0 +1,13 @@
+{
+  "id": "W25",
+  "lng": 116.680116,
+  "lat": -23.711566,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51579",
+    "locality": "West Lyons River",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

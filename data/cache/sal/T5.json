@@ -1,0 +1,13 @@
+{
+  "id": "T5",
+  "lng": 146.997736,
+  "lat": -43.225544,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "60655",
+    "locality": "Surges Bay",
+    "state": "Tasmania",
+    "stateCode": "TAS"
+  }
+}

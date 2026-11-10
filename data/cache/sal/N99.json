@@ -1,0 +1,13 @@
+{
+  "id": "N99",
+  "lng": 135.930683,
+  "lat": -15.708562,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70180",
+    "locality": "McArthur",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

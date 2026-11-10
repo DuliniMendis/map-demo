@@ -1,0 +1,13 @@
+{
+  "id": "Y151",
+  "lng": 146.051441,
+  "lat": -17.612271,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32130",
+    "locality": "New Harbourline",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

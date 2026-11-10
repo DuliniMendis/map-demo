@@ -1,0 +1,13 @@
+{
+  "id": "S1",
+  "lng": 138.850946,
+  "lat": -35.460005,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40342",
+    "locality": "Currency Creek",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

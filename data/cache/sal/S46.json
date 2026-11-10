@@ -1,0 +1,13 @@
+{
+  "id": "S46",
+  "lng": 148.767375,
+  "lat": -35.902188,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "10015",
+    "locality": "Adaminaby",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

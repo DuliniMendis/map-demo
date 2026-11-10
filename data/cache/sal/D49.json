@@ -1,0 +1,13 @@
+{
+  "id": "D49",
+  "lng": 146.395208,
+  "lat": -29.105453,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11429",
+    "locality": "Enngonia",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

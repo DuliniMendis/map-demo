@@ -1,0 +1,13 @@
+{
+  "id": "Y98",
+  "lng": 145.076712,
+  "lat": -16.226319,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "32636",
+    "locality": "Spurgeon",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

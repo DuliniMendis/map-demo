@@ -1,0 +1,13 @@
+{
+  "id": "S81",
+  "lng": 141.634233,
+  "lat": -37.843211,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "21091",
+    "locality": "Grassdale (Vic.)",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "A9",
+  "lng": 128.153493,
+  "lat": -31.29303,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50514",
+    "locality": "Forrest (WA)",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

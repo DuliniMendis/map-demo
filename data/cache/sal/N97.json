@@ -1,0 +1,13 @@
+{
+  "id": "N97",
+  "lng": 135.004581,
+  "lat": -12.761853,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70086",
+    "locality": "East Arnhem",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

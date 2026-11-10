@@ -1,0 +1,13 @@
+{
+  "id": "A11",
+  "lng": 122.722975,
+  "lat": -29.231154,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50777",
+    "locality": "Kookynie",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "E16.2",
+  "lng": 152.507922,
+  "lat": -28.887612,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13738",
+    "locality": "Tabulam",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "E75",
+  "lng": 153.421793,
+  "lat": -28.921505,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "12566",
+    "locality": "Meerschaum Vale",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

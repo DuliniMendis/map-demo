@@ -1,0 +1,13 @@
+{
+  "id": "A3",
+  "lng": 123.741196,
+  "lat": -32.324664,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50060",
+    "locality": "Balladonia",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

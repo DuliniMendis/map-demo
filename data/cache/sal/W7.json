@@ -1,0 +1,13 @@
+{
+  "id": "W7",
+  "lng": 117.128232,
+  "lat": -33.143047,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50634",
+    "locality": "Highbury (WA)",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

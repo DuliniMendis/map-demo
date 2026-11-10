@@ -1,0 +1,13 @@
+{
+  "id": "L53",
+  "lng": 136.025876,
+  "lat": -27.722173,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40802",
+    "locality": "Macumba",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

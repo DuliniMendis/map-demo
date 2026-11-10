@@ -1,0 +1,13 @@
+{
+  "id": "S3",
+  "lng": 139.204265,
+  "lat": -35.35172,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40735",
+    "locality": "Lake Alexandrina",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

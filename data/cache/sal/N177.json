@@ -1,0 +1,13 @@
+{
+  "id": "N177",
+  "lng": 132.359959,
+  "lat": -14.088365,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70211",
+    "locality": "Nitmiluk",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

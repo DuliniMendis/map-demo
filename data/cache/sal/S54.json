@@ -1,0 +1,13 @@
+{
+  "id": "S54",
+  "lng": 149.88544,
+  "lat": -35.823925,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "11246",
+    "locality": "Deua",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

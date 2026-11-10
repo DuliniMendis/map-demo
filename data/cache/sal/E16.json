@@ -1,0 +1,13 @@
+{
+  "id": "E16",
+  "lng": 152.228225,
+  "lat": -29.308029,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13404",
+    "locality": "Rocky River (Tenterfield - NSW)",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

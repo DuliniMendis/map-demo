@@ -1,0 +1,13 @@
+{
+  "id": "C30",
+  "lng": 130.405901,
+  "lat": -17.748535,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70041",
+    "locality": "Buchanan (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

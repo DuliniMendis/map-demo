@@ -1,0 +1,13 @@
+{
+  "id": "S90",
+  "lng": 146.634195,
+  "lat": -36.810184,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "22195",
+    "locality": "Rose River",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

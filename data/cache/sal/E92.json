@@ -1,0 +1,13 @@
+{
+  "id": "E92",
+  "lng": 152.682885,
+  "lat": -29.485675,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "13282",
+    "locality": "Pulganbar",
+    "state": "New South Wales",
+    "stateCode": "NSW"
+  }
+}

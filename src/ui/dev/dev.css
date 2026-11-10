@@ -1,0 +1,76 @@
+/* DEV ONLY layout for /src/ui/dev/dev.html — WS5 owns the real layout. */
+.dev-shell {
+  display: grid;
+  grid-template-columns: var(--side-width, 360px) 1fr;
+  height: 100%;
+}
+
+.dev-map {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: repeating-linear-gradient(45deg, #3a4048 0 2px, transparent 2px 22px), #2b3036;
+}
+
+.dev-map__tools {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  left: 12px;
+  max-width: 640px;
+  margin-left: auto;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+}
+
+.dev-map__title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.dev-map__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dev-map__row .cm-select {
+  max-width: 200px;
+}
+
+.dev-map__state {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2px 12px;
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+.dev-map__state dt {
+  color: var(--muted);
+  font-family: ui-monospace, Menlo, monospace;
+}
+.dev-map__state dd {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dev-map__state a {
+  color: var(--accent-text);
+}
+
+@media (max-width: 899.98px) {
+  .dev-shell {
+    grid-template-columns: 1fr;
+  }
+  .dev-map {
+    height: 100dvh;
+  }
+  .dev-map__tools {
+    top: 8px;
+    right: 8px;
+    left: 8px;
+  }
+}

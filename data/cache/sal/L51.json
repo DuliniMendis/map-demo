@@ -1,0 +1,13 @@
+{
+  "id": "L51",
+  "lng": 137.143856,
+  "lat": -25.730188,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70241",
+    "locality": "Simpson (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

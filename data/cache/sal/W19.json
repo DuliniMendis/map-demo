@@ -1,0 +1,13 @@
+{
+  "id": "W19",
+  "lng": 114.535819,
+  "lat": -24.945649,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "50666",
+    "locality": "Inggarda",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

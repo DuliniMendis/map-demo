@@ -1,0 +1,13 @@
+{
+  "id": "L54",
+  "lng": 137.585473,
+  "lat": -27.494532,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "40648",
+    "locality": "Kalamurina",
+    "state": "South Australia",
+    "stateCode": "SA"
+  }
+}

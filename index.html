@@ -4,11 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country — First Nations of Australia in 3D</title>
     <meta
       name="description"
-      content="3D terrain map of Australia showing approximate locations of Aboriginal and Torres Strait Islander nations and language groups."
+      content="A 3D terrain map of Australia showing the approximate locations of Aboriginal and Torres Strait Islander nations and language groups, and what each place is called today."
     />
-    <title>Country Map</title>
+    <meta name="theme-color" content="#12161b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Country — First Nations of Australia in 3D" />
+    <meta
+      property="og:description"
+      content="Fly across a 3D terrain map of Australia to the Country of Aboriginal and Torres Strait Islander nations and language groups."
+    />
+    <!-- og:image: add once a final screenshot exists (WS5 follow-up). -->
+
+    <!-- Tile hosts (MapLibre fetches with CORS, hence crossorigin). -->
+    <link rel="preconnect" href="https://tiles.mapterhorn.com" crossorigin />
+    <link rel="preconnect" href="https://tiles.maps.eox.at" crossorigin />
+    <link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin />
+    <link rel="dns-prefetch" href="https://s3.amazonaws.com" />
   </head>
   <body>
     <div id="root"></div>

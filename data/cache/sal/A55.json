@@ -1,0 +1,13 @@
+{
+  "id": "A55",
+  "lng": 120.16084,
+  "lat": -22.239089,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51165",
+    "locality": "Nullagine",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

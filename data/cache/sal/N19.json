@@ -1,0 +1,13 @@
+{
+  "id": "N19",
+  "lng": 130.542327,
+  "lat": -16.072628,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "70113",
+    "locality": "Gregory (NT)",
+    "state": "Northern Territory",
+    "stateCode": "NT"
+  }
+}

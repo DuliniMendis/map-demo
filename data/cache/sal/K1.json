@@ -1,0 +1,13 @@
+{
+  "id": "K1",
+  "lng": 122.6253,
+  "lat": -17.943893,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "51306",
+    "locality": "Roebuck",
+    "state": "Western Australia",
+    "stateCode": "WA"
+  }
+}

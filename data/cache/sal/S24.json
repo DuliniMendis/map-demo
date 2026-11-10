@@ -1,0 +1,13 @@
+{
+  "id": "S24",
+  "lng": 141.728279,
+  "lat": -34.766081,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "21843",
+    "locality": "Murray-sunset",
+    "state": "Victoria",
+    "stateCode": "VIC"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "T9",
+  "lng": 148.059323,
+  "lat": -41.082511,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "60226",
+    "locality": "Gladstone (Tas.)",
+    "state": "Tasmania",
+    "stateCode": "TAS"
+  }
+}

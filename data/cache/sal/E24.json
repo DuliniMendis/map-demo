@@ -1,0 +1,13 @@
+{
+  "id": "E24",
+  "lng": 152.928192,
+  "lat": -27.221081,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": {
+    "salCode": "31596",
+    "locality": "Kurwongbah",
+    "state": "Queensland",
+    "stateCode": "QLD"
+  }
+}

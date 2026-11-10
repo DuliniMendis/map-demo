@@ -1,0 +1,8 @@
+{
+  "id": "S28",
+  "lng": 142.838463,
+  "lat": -34.777635,
+  "source": "abs-arcgis",
+  "retrieved": "2026-11-09",
+  "within": { "salCode": "20132", "locality": "Bannerton", "state": "Victoria", "stateCode": "VIC" }
+}
