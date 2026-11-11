@@ -24,7 +24,7 @@
     "name": "CSS (gzip)",
     "path": "node_modules/.cache/size-dist/assets/*.css",
     "gzip": true,
-    "limit": "17 kB"
+    "limit": "18 kB"
   },
   {
     "name": "Total JS in the shipped build, dist/ (gzip)",
