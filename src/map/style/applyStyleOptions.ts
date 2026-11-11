@@ -2,7 +2,15 @@ import type { Map as MlMap } from 'maplibre-gl';
 import { syncContours } from './contours';
 import { installDemFallback } from './demFallback';
 import { hasFallenBack, requestDemProvider } from './demProvider';
-import { LAYER_HILLSHADE, LAYER_IMAGERY, LAYER_RELIEF, SOURCE_DEM } from './ids';
+import {
+  LAYER_BACKGROUND,
+  LAYER_HILLSHADE,
+  LAYER_IMAGERY,
+  LAYER_RELIEF,
+  LAYER_WATER,
+  SOURCE_DEM,
+} from './ids';
+import { backgroundColor } from './layers/base';
 import { LABEL_LAYER_IDS } from './layers/labels';
 import { applyLighting } from './lighting';
 import { reliefOpacity } from './layers/relief';
@@ -62,6 +70,9 @@ export function applyStyleOptions(map: MlMap, o: StyleOptions): void {
 
   setVisible(map, LAYER_IMAGERY, o.imagery);
   for (const id of STATE_IMAGERY_LAYER_IDS) setVisible(map, id, o.imagery);
+  // Without the photo: paper land and blue water, so hillshade and relief have something to sit on.
+  setVisible(map, LAYER_WATER, !o.imagery);
+  setPaint(map, LAYER_BACKGROUND, 'background-color', backgroundColor(o.imagery));
   setVisible(map, LAYER_HILLSHADE, o.hillshade);
   setVisible(map, LAYER_RELIEF, o.relief);
   for (const id of LABEL_LAYER_IDS) setVisible(map, id, o.labels);

@@ -221,8 +221,8 @@ test.describe('time-of-day light', () => {
   const DEFAULTS = {
     direction: 315,
     anchor: 'viewport',
-    exaggeration: 0.35,
-    highlight: 'rgba(255, 244, 224, 0.35)',
+    exaggeration: 0.8,
+    highlight: 'rgba(255, 244, 224, 0.45)',
     shadow: '#3a2414',
   };
 

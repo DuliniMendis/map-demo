@@ -260,6 +260,8 @@
 
 .layer-controls {
   min-width: 180px;
+  /* Notes wrap rather than stretching the panel over the map. */
+  max-width: 236px;
   font-size: 0.9rem;
 }
 .layer-controls__toggle {
@@ -311,6 +313,60 @@
 }
 .layer-controls input[type='range'] {
   accent-color: var(--flag-red);
+}
+/* A layer row, with its "Zoom in to see" hint on the right when the view can't show the layer. */
+.layer-controls__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+/* Phones: stay clear of the About and Tour buttons; hints drop under their row when needed. */
+@media (max-width: 899.98px) {
+  .layer-controls {
+    max-width: 208px;
+  }
+  .layer-controls__item .layer-controls__hint {
+    margin: -6px 0 4px 24px;
+  }
+}
+.layer-controls__section {
+  display: grid;
+  gap: 8px;
+}
+.layer-controls__hint {
+  all: unset;
+  cursor: pointer;
+  padding: 2px 0;
+  color: var(--accent-text);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: underline 2px var(--link-underline);
+  text-underline-offset: 3px;
+}
+.layer-controls__hint:hover {
+  background: var(--hover-bg);
+  color: var(--hover-fg);
+}
+.layer-controls__hint:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.layer-controls__hint:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.layer-controls__note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.layer-controls input[type='range']:disabled {
+  opacity: 0.4;
 }
 .layer-controls__slider-label {
   display: flex;

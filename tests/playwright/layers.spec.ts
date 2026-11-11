@@ -44,6 +44,31 @@ test.describe('layer controls', () => {
     await expect(page).toHaveURL(/[?&]x=2\.2(&|$)/);
   });
 
+  test('contours at the overview offer to zoom in, and draw once there', async ({ page }) => {
+    await page.goto('/');
+    await waitForMapIdle(page);
+    await page.getByTestId('layer-toggle-contours').click();
+    const hint = page.getByTestId('layer-hint-contours');
+    await expect(hint).toBeVisible();
+    await hint.click();
+    await expect(hint).toBeHidden({ timeout: 15_000 });
+    expect(await page.evaluate(() => window.__map!.getZoom())).toBeGreaterThanOrEqual(10);
+  });
+
+  test('the sun slider waits for hillshade, and exaggeration offers 3D from the flat overview', async ({
+    page,
+  }) => {
+    await page.goto('/');
+    await waitForMapIdle(page);
+    await expect(page.getByTestId('exaggeration-hint')).toBeVisible();
+    await page.getByTestId('layer-toggle-hillshade').click();
+    await expect(page.getByTestId('sun-slider')).toBeDisabled();
+    await page.getByTestId('layer-toggle-hillshade').click();
+    await expect(page.getByTestId('sun-slider')).toBeEnabled();
+    await page.getByTestId('exaggeration-hint').click();
+    await expect(page.getByTestId('exaggeration-hint')).toBeHidden({ timeout: 15_000 });
+  });
+
   test('?l= and ?x= are restored on load', async ({ page }) => {
     await page.goto('/?l=labels,relief&x=2');
     await waitForMapIdle(page);

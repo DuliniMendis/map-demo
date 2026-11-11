@@ -5,13 +5,16 @@ import { buildStyle, DEFAULT_STYLE_OPTIONS, type StyleOptions } from './buildSty
 import { getActiveDemProvider, SWAP_IDLE_TIMEOUT_MS } from './demProvider';
 import { FakeMap } from './fakeMap.testutil';
 import {
+  LAYER_BACKGROUND,
   LAYER_HILLSHADE,
   LAYER_IMAGERY,
   LAYER_LABELS_FIRST,
   LAYER_RELIEF,
+  LAYER_WATER,
   SOURCE_DEM,
   SOURCE_DEM_SHADE,
 } from './ids';
+import { OCEAN_COLOR, PAPER_COLOR } from './layers/base';
 import { LABEL_LAYER_IDS } from './layers/labels';
 import { setSunLocationHint } from './lighting';
 
@@ -59,12 +62,22 @@ describe('applyStyleOptions', () => {
   it('retunes hillshade and relief for imagery on/off', () => {
     const fm = freshMap();
     applyStyleOptions(fm.asMap(), { ...D, imagery: false });
-    expect(fm.getPaintProperty(LAYER_HILLSHADE, 'hillshade-exaggeration')).toBe(0.6);
+    expect(fm.getPaintProperty(LAYER_HILLSHADE, 'hillshade-exaggeration')).toBe(0.75);
     expect(fm.getPaintProperty(LAYER_HILLSHADE, 'hillshade-highlight-color')).toBe('#fff4e0');
     expect(fm.getPaintProperty(LAYER_RELIEF, 'color-relief-opacity')).toBe(0.85);
     applyStyleOptions(fm.asMap(), D);
-    expect(fm.getPaintProperty(LAYER_HILLSHADE, 'hillshade-exaggeration')).toBe(0.35);
+    expect(fm.getPaintProperty(LAYER_HILLSHADE, 'hillshade-exaggeration')).toBe(0.8);
     expect(fm.getPaintProperty(LAYER_RELIEF, 'color-relief-opacity')).toBe(0.25);
+  });
+
+  it('swaps the ocean background for paper land and a water fill while imagery is off', () => {
+    const fm = freshMap();
+    applyStyleOptions(fm.asMap(), { ...D, imagery: false });
+    expect(fm.getPaintProperty(LAYER_BACKGROUND, 'background-color')).toBe(PAPER_COLOR);
+    expect(fm.getLayoutProperty(LAYER_WATER, 'visibility')).toBe('visible');
+    applyStyleOptions(fm.asMap(), D);
+    expect(fm.getPaintProperty(LAYER_BACKGROUND, 'background-color')).toBe(OCEAN_COLOR);
+    expect(fm.getLayoutProperty(LAYER_WATER, 'visibility')).toBe('none');
   });
 
   it('changes exaggeration via setTerrain', () => {
@@ -129,8 +142,8 @@ describe('applyStyleOptions: time-of-day light (sunHour)', () => {
   const DEFAULT_PAINT = {
     'hillshade-illumination-direction': 315,
     'hillshade-illumination-anchor': 'viewport',
-    'hillshade-exaggeration': 0.35,
-    'hillshade-highlight-color': 'rgba(255, 244, 224, 0.35)',
+    'hillshade-exaggeration': 0.8,
+    'hillshade-highlight-color': 'rgba(255, 244, 224, 0.45)',
     'hillshade-shadow-color': '#3a2414',
   };
 
@@ -189,7 +202,7 @@ describe('applyStyleOptions: time-of-day light (sunHour)', () => {
     applyStyleOptions(fm.asMap(), { ...D, sunHour: null, imagery: false });
     expect(paint(fm, 'hillshade-illumination-direction')).toBe(315);
     expect(paint(fm, 'hillshade-illumination-anchor')).toBe('viewport');
-    expect(paint(fm, 'hillshade-exaggeration')).toBe(0.6);
+    expect(paint(fm, 'hillshade-exaggeration')).toBe(0.75);
     expect(paint(fm, 'hillshade-highlight-color')).toBe('#fff4e0');
     expect(paint(fm, 'hillshade-shadow-color')).toBe('#3a2414');
     applyStyleOptions(fm.asMap(), { ...D, sunHour: 17 });

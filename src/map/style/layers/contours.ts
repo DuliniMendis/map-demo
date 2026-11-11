@@ -83,8 +83,9 @@ export function contourSource(tileUrl: string): VectorSourceSpecification {
 }
 
 /**
- * Thin, low-contrast lines: a pale warm tint over the photo, the hillshade's dark brown over relief.
- * Major lines are a little heavier; nothing should compete with the markers or place labels.
+ * Thin lines: a pale warm tint over the photo, the hillshade's dark brown over paper and relief.
+ * Major lines are heavier and labelled. Strong enough to find on the busy photo, still under the
+ * markers and place labels.
  */
 export const CONTOUR_COLORS = {
   withImagery: { line: 'rgb(255, 246, 230)', text: '#fbf3e4', halo: 'rgba(30, 20, 12, 0.75)' },
@@ -118,16 +119,16 @@ export function contourLineLayer(visible: boolean, imagery: boolean): LineLayerS
         CONTOUR_MIN_ZOOM,
         0,
         CONTOUR_MIN_ZOOM + 0.5,
-        ['case', isMajor, 0.4, 0.2],
+        ['case', isMajor, 0.7, 0.4],
       ],
       'line-width': [
         'interpolate',
         ['linear'],
         ['zoom'],
         11,
-        ['case', isMajor, 0.7, 0.35],
+        ['case', isMajor, 0.9, 0.45],
         15,
-        ['case', isMajor, 1.4, 0.8],
+        ['case', isMajor, 1.6, 0.9],
       ],
     },
   };

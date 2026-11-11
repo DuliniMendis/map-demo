@@ -1,6 +1,6 @@
 import type { StyleSpecification } from 'maplibre-gl';
 import { SOURCE_DEM, SOURCE_DEM_SHADE, SOURCE_IMAGERY, SOURCE_LABELS } from './ids';
-import { backgroundLayer, imageryLayer } from './layers/base';
+import { backgroundLayer, imageryLayer, waterLayer } from './layers/base';
 import { hillshadeLayer } from './layers/hillshade';
 import { labelLayers } from './layers/labels';
 import { styleProjection } from './projection';
@@ -32,7 +32,8 @@ export const DEFAULT_STYLE_OPTIONS: StyleOptions = {
  * Pure: no network, no Map. After load, use `applyStyleOptions` — never `setStyle` (it would drop
  * WS2's marker layers).
  *
- * Layer order, bottom → top: background, imagery, state aerial imagery (z ≥ 13), relief, hillshade, river/border lines,
+ * Layer order, bottom → top: background, imagery, state aerial imagery (z ≥ 13), water (imagery
+ * off only), relief, hillshade, river/border lines,
  * [WS2 markers go here, before LAYER_LABELS_FIRST], label symbols.
  */
 export function buildStyle(o: StyleOptions): StyleSpecification {
@@ -48,9 +49,10 @@ export function buildStyle(o: StyleOptions): StyleSpecification {
       [SOURCE_LABELS]: labelsSource(),
     },
     layers: [
-      backgroundLayer(),
+      backgroundLayer(o.imagery),
       imageryLayer(o.imagery),
       ...stateImageryLayers(o.imagery),
+      waterLayer(o.imagery),
       reliefLayer(o.relief, o.imagery),
       hillshadeLayer(o.hillshade, o.imagery),
       ...labelLayers(o.labels),

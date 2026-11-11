@@ -2,15 +2,18 @@ import type { HillshadeLayerSpecification } from 'maplibre-gl';
 import { LAYER_HILLSHADE, SOURCE_DEM_SHADE } from '../ids';
 import { NO_TRANSITION, visibility } from './visibility';
 
-/** Subtle over imagery (which already has real shadows); stronger on its own or over colour relief. */
-export const HILLSHADE_EXAGGERATION = { withImagery: 0.35, withoutImagery: 0.6 } as const;
+/**
+ * Over imagery it adds shadow to the photo's own, so ridges and escarpments stand out when you zoom
+ * into a region (0.35 was too faint to notice switching on or off). On paper it is the main relief.
+ */
+export const HILLSHADE_EXAGGERATION = { withImagery: 0.8, withoutImagery: 0.75 } as const;
 
 /**
- * Warm highlight. Over imagery it is mostly transparent: the photo is already sunlit, and a full
+ * Warm highlight. Over imagery it is half transparent: the photo is already sunlit, and a full
  * highlight washes cliffs and ridgelines out to grey. Shadows do the work there.
  */
 export const HILLSHADE_HIGHLIGHT = {
-  withImagery: 'rgba(255, 244, 224, 0.35)',
+  withImagery: 'rgba(255, 244, 224, 0.45)',
   withoutImagery: '#fff4e0',
 } as const;
 

@@ -4,15 +4,18 @@ import { describe, expect, it } from 'vitest';
 import { buildStyle, DEFAULT_STYLE_OPTIONS, type StyleOptions } from './buildStyle';
 import {
   AUSTRALIA_BOUNDS,
+  LAYER_BACKGROUND,
   LAYER_HILLSHADE,
   LAYER_IMAGERY,
   LAYER_LABELS_FIRST,
   LAYER_RELIEF,
+  LAYER_WATER,
   SOURCE_DEM,
   SOURCE_DEM_SHADE,
   SOURCE_IMAGERY,
   SOURCE_LABELS,
 } from './ids';
+import { OCEAN_COLOR, PAPER_COLOR } from './layers/base';
 import { LABEL_LAYER_IDS } from './layers/labels';
 import { RELIEF_RAMP } from './layers/relief';
 import { ATTRIBUTION_TEXT, SOURCE_BOUNDS } from './sources';
@@ -76,11 +79,15 @@ describe('buildStyle', () => {
     }
   });
 
-  it('strengthens hillshade and relief when imagery is off', () => {
+  it('retunes hillshade and relief, and swaps in paper land and water, when imagery is off', () => {
     const on = buildStyle({ ...DEFAULT_STYLE_OPTIONS, imagery: true });
     const off = buildStyle({ ...DEFAULT_STYLE_OPTIONS, imagery: false });
-    expect(layer(on, LAYER_HILLSHADE).paint?.['hillshade-exaggeration']).toBe(0.35);
-    expect(layer(off, LAYER_HILLSHADE).paint?.['hillshade-exaggeration']).toBe(0.6);
+    expect(layer(on, LAYER_HILLSHADE).paint?.['hillshade-exaggeration']).toBe(0.8);
+    expect(layer(off, LAYER_HILLSHADE).paint?.['hillshade-exaggeration']).toBe(0.75);
+    expect(layer(on, LAYER_BACKGROUND).paint?.['background-color']).toBe(OCEAN_COLOR);
+    expect(layer(off, LAYER_BACKGROUND).paint?.['background-color']).toBe(PAPER_COLOR);
+    expect(layer(on, LAYER_WATER).layout?.visibility).toBe('none');
+    expect(layer(off, LAYER_WATER).layout?.visibility).toBe('visible');
     expect(layer(on, LAYER_RELIEF).paint?.['color-relief-opacity']).toBe(0.25);
     expect(layer(off, LAYER_RELIEF).paint?.['color-relief-opacity']).toBe(0.85);
     expect(layer(on, LAYER_HILLSHADE).paint?.['hillshade-illumination-direction']).toBe(315);
@@ -92,13 +99,14 @@ describe('buildStyle', () => {
     expect(s.sky?.['fog-ground-blend']).toBe(0.6);
   });
 
-  it('orders layers: base, relief under hillshade, lines, then LAYER_LABELS_FIRST as first symbol', () => {
+  it('orders layers: base, water, relief under hillshade, lines, then LAYER_LABELS_FIRST as first symbol', () => {
     const s = buildStyle(DEFAULT_STYLE_OPTIONS);
     const ids = s.layers.map((l) => l.id);
-    expect(ids.slice(0, 7)).toEqual([
-      'background',
+    expect(ids.slice(0, 8)).toEqual([
+      LAYER_BACKGROUND,
       LAYER_IMAGERY,
       ...STATE_IMAGERY_LAYER_IDS,
+      LAYER_WATER,
       LAYER_RELIEF,
       LAYER_HILLSHADE,
     ]);
