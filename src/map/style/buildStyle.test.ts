@@ -19,6 +19,7 @@ import { OCEAN_COLOR, PAPER_COLOR } from './layers/base';
 import { LABEL_LAYER_IDS } from './layers/labels';
 import { RELIEF_RAMP } from './layers/relief';
 import { ATTRIBUTION_TEXT, SOURCE_BOUNDS } from './sources';
+import { STATE_IMAGERY, STATE_IMAGERY_LAYER_IDS } from './stateImagery';
 
 const bools = [false, true];
 const allOptions: StyleOptions[] = bools.flatMap((imagery) =>
@@ -101,9 +102,10 @@ describe('buildStyle', () => {
   it('orders layers: base, water, relief under hillshade, lines, then LAYER_LABELS_FIRST as first symbol', () => {
     const s = buildStyle(DEFAULT_STYLE_OPTIONS);
     const ids = s.layers.map((l) => l.id);
-    expect(ids.slice(0, 5)).toEqual([
+    expect(ids.slice(0, 8)).toEqual([
       LAYER_BACKGROUND,
       LAYER_IMAGERY,
+      ...STATE_IMAGERY_LAYER_IDS,
       LAYER_WATER,
       LAYER_RELIEF,
       LAYER_HILLSHADE,
@@ -161,8 +163,18 @@ describe('buildStyle', () => {
     expect((s.sources[SOURCE_IMAGERY] as { tiles: string[] }).tiles[0]).toContain(
       's2cloudless-2024_3857/default/g/{z}/{y}/{x}.jpg',
     );
-    for (const src of Object.values(s.sources)) {
-      expect((src as { bounds?: number[] }).bounds).toEqual(SOURCE_BOUNDS);
+    const stateSources = new Set(STATE_IMAGERY.map((x) => x.sourceId));
+    for (const [id, src] of Object.entries(s.sources)) {
+      const b = (src as { bounds?: number[] }).bounds;
+      if (!stateSources.has(id)) {
+        expect(b, id).toEqual(SOURCE_BOUNDS);
+        continue;
+      }
+      // State imagery is bounded tighter, to its own state, and always inside Australia's box.
+      expect(b![0], id).toBeGreaterThanOrEqual(SOURCE_BOUNDS[0]);
+      expect(b![1], id).toBeGreaterThanOrEqual(SOURCE_BOUNDS[1]);
+      expect(b![2], id).toBeLessThanOrEqual(SOURCE_BOUNDS[2]);
+      expect(b![3], id).toBeLessThanOrEqual(SOURCE_BOUNDS[3]);
     }
     const [w, so, e, n] = SOURCE_BOUNDS;
     const [[cw, cs], [ce, cn]] = AUSTRALIA_BOUNDS;
@@ -190,7 +202,16 @@ describe('buildStyle', () => {
 
   it('never references a non-free tile host', () => {
     const json = JSON.stringify(allOptions.map(buildStyle)).toLowerCase();
-    for (const host of ['arcgis', 'esri', 'google', 'mapbox.com', 'maptiler', 'virtualearth']) {
+    // The state imagery runs on ArcGIS Server, but on government hosts; Esri's own hosting is out.
+    for (const host of [
+      'arcgisonline',
+      'arcgis.com',
+      'esri',
+      'google',
+      'mapbox.com',
+      'maptiler',
+      'virtualearth',
+    ]) {
       expect(json).not.toContain(host);
     }
   });
@@ -199,5 +220,32 @@ describe('buildStyle', () => {
     const ms = RELIEF_RAMP.map(([m]) => m);
     expect([...ms].sort((a, b) => a - b)).toEqual(ms);
     expect(RELIEF_RAMP.at(-1)?.[0]).toBe(2200);
+  });
+});
+
+describe('state aerial imagery', () => {
+  it('sits right above Sentinel-2, follows the imagery toggle and fades in from z 13', () => {
+    for (const imagery of [true, false]) {
+      const ids = buildStyle({ ...DEFAULT_STYLE_OPTIONS, imagery }).layers.map((l) => l.id);
+      const i = ids.indexOf(LAYER_IMAGERY);
+      expect(ids.slice(i + 1, i + 1 + STATE_IMAGERY_LAYER_IDS.length)).toEqual([
+        ...STATE_IMAGERY_LAYER_IDS,
+      ]);
+      for (const id of STATE_IMAGERY_LAYER_IDS) {
+        const l = buildStyle({ ...DEFAULT_STYLE_OPTIONS, imagery }).layers.find(
+          (x) => x.id === id,
+        )!;
+        expect(l.layout?.visibility).toBe(imagery ? 'visible' : 'none');
+        expect(l.minzoom).toBe(13);
+      }
+    }
+  });
+
+  it('shows the tiles unaltered (Tasmania is no-derivatives)', () => {
+    const s = buildStyle(DEFAULT_STYLE_OPTIONS);
+    for (const id of STATE_IMAGERY_LAYER_IDS) {
+      const paint = Object.keys(s.layers.find((x) => x.id === id)!.paint ?? {});
+      expect(paint.sort()).toEqual(['raster-fade-duration', 'raster-opacity']);
+    }
   });
 });

@@ -95,13 +95,19 @@ export function demSource(provider: DemProvider): RasterDEMSourceSpecification {
   };
 }
 
+/**
+ * Deepest EOX zoom with real detail. Sentinel-2 is 10 m/pixel, which z 14 already matches (~8 m/px at
+ * Australian latitudes); EOX serves z 15+ too, but those tiles are the same pixels upscaled.
+ */
+export const IMAGERY_MAX_ZOOM = 14;
+
 export function imagerySource(): RasterSourceSpecification {
   return {
     type: 'raster',
     // EOX WMTS uses {z}/{y}/{x} (row before column).
     tiles: ['https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/{z}/{y}/{x}.jpg'],
     tileSize: 256,
-    maxzoom: 14,
+    maxzoom: IMAGERY_MAX_ZOOM,
     bounds: [...SOURCE_BOUNDS],
     attribution: ATTRIBUTION_HTML.imagery,
   };

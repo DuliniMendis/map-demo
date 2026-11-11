@@ -3,7 +3,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { useEffect, useRef, useState } from 'react';
 import './setupMaplibre'; // must run before the first `new maplibregl.Map()` (worker URL)
 import { buildStyle, MapController } from '../app/integration';
-import { constrainCamera, hasWebGL, MAX_ZOOM, MIN_ZOOM } from '../app/mapSetup';
+import { constrainCamera, hasWebGL, MAX_ZOOM_ANYWHERE, maxZoomAt, MIN_ZOOM } from '../app/mapSetup';
 import { styleOptionsFrom, watchDem, wireMap } from '../app/wiring';
 import { useAppStore } from '../store/useAppStore';
 import { OVERVIEW_CAMERA } from './style/ids';
@@ -62,9 +62,12 @@ export function MapView({ onController, onMap, onDemFallback, onUnavailable }: M
         bearing: OVERVIEW_CAMERA.bearing,
         // Not maxBounds: the globe (z < 4) ignores it. See constrainCamera in mapSetup.ts.
         minZoom: MIN_ZOOM,
-        maxZoom: MAX_ZOOM,
+        // The real limit depends on where the camera is (state aerial imagery holds up closer than
+        // Sentinel-2): transformConstrain enforces it, and syncMaxZoom below keeps the + button in step.
+        maxZoom: MAX_ZOOM_ANYWHERE,
         transformConstrain: (lngLat, zoom) => {
-          const c = constrainCamera(lngLat.lng, lngLat.lat, zoom);
+          const max = maxZoomAt(lngLat.lng, lngLat.lat, store.getState().layers.imagery);
+          const c = constrainCamera(lngLat.lng, lngLat.lat, zoom, max);
           return { center: new maplibregl.LngLat(c.lng, c.lat), zoom: c.zoom };
         },
         maxPitch: 85,
@@ -78,6 +81,32 @@ export function MapView({ onController, onMap, onDemFallback, onUnavailable }: M
     if (EXPOSE_MAP) window.__map = map;
 
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bottom-right');
+
+    // The Map's own maxZoom stays at MAX_ZOOM_ANYWHERE (narrowing it would also cap a flight *into*
+    // NSW that starts somewhere else), so the zoom-in button's greying is ours to keep in step with
+    // the limit where the camera is. Registered after the control so it runs after the control's
+    // own 'zoom' handler, which would re-enable the button.
+    const zoomInButton = container.querySelector<HTMLButtonElement>('.maplibregl-ctrl-zoom-in');
+    const localMaxZoom = () => {
+      const c = map.getCenter();
+      return maxZoomAt(c.lng, c.lat, store.getState().layers.imagery);
+    };
+    const syncZoomButton = () => {
+      if (!zoomInButton) return;
+      const atMax = map.getZoom() >= localMaxZoom() - 1e-6;
+      zoomInButton.disabled = atMax;
+      zoomInButton.setAttribute('aria-disabled', String(atMax));
+    };
+    map.on('move', syncZoomButton);
+    map.on('zoom', syncZoomButton);
+    // Turning the imagery off lowers the limit; transformConstrain only runs on the next camera
+    // change, so step out to it now.
+    const unsubscribeMaxZoom = store.subscribe((s, prev) => {
+      if (s.layers.imagery === prev.layers.imagery) return;
+      const max = localMaxZoom();
+      if (map.getZoom() > max) map.setZoom(max);
+      syncZoomButton();
+    });
 
     // With a listener attached MapLibre no longer logs errors itself. Tile failures are expected
     // (ocean tiles, flaky free hosts; WS1 handles DEM fallback), so keep them out of the console.
@@ -105,6 +134,7 @@ export function MapView({ onController, onMap, onDemFallback, onUnavailable }: M
     });
 
     return () => {
+      unsubscribeMaxZoom();
       unwire?.();
       dem.dispose();
       controller?.destroy();

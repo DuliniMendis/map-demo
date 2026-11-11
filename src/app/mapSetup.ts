@@ -1,4 +1,6 @@
 import { AUSTRALIA_BOUNDS } from '../map/style/ids';
+import { IMAGERY_MAX_ZOOM } from '../map/style/sources';
+import { STATE_IMAGERY_MAX_ZOOM, stateImageryAt } from '../map/style/stateImagery';
 
 type Bounds = [[number, number], [number, number]];
 
@@ -33,17 +35,33 @@ export const CENTER_BOUNDS: Bounds = padBounds(AUSTRALIA_BOUNDS, 8, 5);
 
 /** Furthest zoom-out: the whole globe with Australia on it. */
 export const MIN_ZOOM = 2;
-/** MapLibre's default. */
-export const MAX_ZOOM = 22;
+/**
+ * Furthest zoom-in: half a level past the imagery's real resolution. Beyond that the satellite
+ * photo is just stretched and reads as a blur, so stop there.
+ */
+export const MAX_ZOOM = IMAGERY_MAX_ZOOM + 0.5;
+
+/** Furthest zoom-in anywhere: over NSW and Tasmania, whose aerial imagery holds up much closer. */
+export const MAX_ZOOM_ANYWHERE = Math.max(MAX_ZOOM, STATE_IMAGERY_MAX_ZOOM);
+
+/**
+ * Furthest zoom-in with the camera centred on `[lng, lat]`: deeper where state aerial imagery
+ * covers it (NSW, QLD, TAS), MAX_ZOOM elsewhere or with the imagery layer off.
+ */
+export function maxZoomAt(lng: number, lat: number, imagery: boolean): number {
+  if (!imagery) return MAX_ZOOM;
+  return Math.max(MAX_ZOOM, stateImageryAt(lng, lat)[0]?.cameraMaxZoom ?? MAX_ZOOM);
+}
 
 /**
  * Pure camera constraint for the Map's `transformConstrain` option: clamps the centre into
- * CENTER_BOUNDS and the zoom into MIN_ZOOM..MAX_ZOOM. (MapView wraps it to return a LngLat.)
+ * CENTER_BOUNDS and the zoom into MIN_ZOOM..`maxZoom` (see `maxZoomAt`). (MapView wraps it to return a LngLat.)
  */
 export function constrainCamera(
   lng: number,
   lat: number,
   zoom: number,
+  maxZoom: number = MAX_ZOOM,
 ): { lng: number; lat: number; zoom: number } {
   const [[w, s], [e, n]] = CENTER_BOUNDS;
   const clamp = (v: number, lo: number, hi: number) =>
@@ -51,7 +69,7 @@ export function constrainCamera(
   return {
     lng: clamp(lng, w, e),
     lat: clamp(lat, s, n),
-    zoom: Number.isFinite(zoom) ? Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, zoom)) : MIN_ZOOM,
+    zoom: Number.isFinite(zoom) ? Math.max(MIN_ZOOM, Math.min(maxZoom, zoom)) : MIN_ZOOM,
   };
 }
 

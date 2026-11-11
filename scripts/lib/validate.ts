@@ -148,6 +148,9 @@ export function validateAttribution(data: unknown): string[] {
     'mapterhorn',
     'aws-terrain',
     'eox-s2cloudless',
+    'nsw-imagery',
+    'qld-imagery',
+    'tas-imagery',
     'openmaptiles',
     'maplibre',
   ];

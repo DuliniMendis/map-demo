@@ -15,6 +15,7 @@ import { LABEL_LAYER_IDS } from './layers/labels';
 import { applyLighting } from './lighting';
 import { reliefOpacity } from './layers/relief';
 import { applyProjection } from './projection';
+import { STATE_IMAGERY_LAYER_IDS } from './stateImagery';
 import { visibility } from './layers/visibility';
 import type { StyleOptions } from './types';
 
@@ -68,6 +69,7 @@ export function applyStyleOptions(map: MlMap, o: StyleOptions): void {
   installDemFallback(map);
 
   setVisible(map, LAYER_IMAGERY, o.imagery);
+  for (const id of STATE_IMAGERY_LAYER_IDS) setVisible(map, id, o.imagery);
   // Without the photo: paper land and blue water, so hillshade and relief have something to sit on.
   setVisible(map, LAYER_WATER, !o.imagery);
   setPaint(map, LAYER_BACKGROUND, 'background-color', backgroundColor(o.imagery));

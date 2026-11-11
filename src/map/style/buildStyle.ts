@@ -7,6 +7,7 @@ import { styleProjection } from './projection';
 import { reliefLayer } from './layers/relief';
 import { sky } from './sky';
 import { demSource, GLYPHS_URL, imagerySource, labelsSource } from './sources';
+import { stateImageryLayers, stateImagerySources } from './stateImagery';
 import type { StyleOptions } from './types';
 
 export type { DemFallbackEventData, StyleOptions } from './types';
@@ -31,7 +32,8 @@ export const DEFAULT_STYLE_OPTIONS: StyleOptions = {
  * Pure: no network, no Map. After load, use `applyStyleOptions` — never `setStyle` (it would drop
  * WS2's marker layers).
  *
- * Layer order, bottom → top: background, imagery, water (imagery off only), relief, hillshade, river/border lines,
+ * Layer order, bottom → top: background, imagery, state aerial imagery (z ≥ 13), water (imagery
+ * off only), relief, hillshade, river/border lines,
  * [WS2 markers go here, before LAYER_LABELS_FIRST], label symbols.
  */
 export function buildStyle(o: StyleOptions): StyleSpecification {
@@ -43,11 +45,13 @@ export function buildStyle(o: StyleOptions): StyleSpecification {
       [SOURCE_DEM]: demSource(o.demProvider),
       [SOURCE_DEM_SHADE]: demSource(o.demProvider),
       [SOURCE_IMAGERY]: imagerySource(),
+      ...stateImagerySources(),
       [SOURCE_LABELS]: labelsSource(),
     },
     layers: [
       backgroundLayer(o.imagery),
       imageryLayer(o.imagery),
+      ...stateImageryLayers(o.imagery),
       waterLayer(o.imagery),
       reliefLayer(o.relief, o.imagery),
       hillshadeLayer(o.hillshade, o.imagery),

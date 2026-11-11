@@ -48,6 +48,35 @@ export const FALLBACK_ATTRIBUTION: AttributionEntry[] = [
     kind: 'tiles',
   },
   {
+    id: 'nsw-imagery',
+    text: 'Aerial imagery © State of New South Wales (Spatial Services, a business unit of the Department of Customer Service NSW)',
+    url: 'https://www.spatial.nsw.gov.au/',
+    licence: 'CC BY 3.0 AU',
+    licenceUrl: 'https://creativecommons.org/licenses/by/3.0/au/',
+    usedFor: 'Aerial imagery over NSW and the ACT when zoomed in (NSW Imagery web service)',
+    kind: 'tiles',
+  },
+  {
+    id: 'qld-imagery',
+    text: 'Aerial imagery © State of Queensland (Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development); © Planet Labs Netherlands B.V. reproduced under licence from Planet and Geoplex, all rights reserved, 2026',
+    url: 'https://qldspatial.information.qld.gov.au/',
+    licence: 'CC BY-SA',
+    licenceUrl:
+      'https://spatial-img.information.qld.gov.au/arcgis/rest/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/info/iteminfo',
+    usedFor:
+      'Aerial imagery over Queensland when zoomed in (Latest State Program basemap). In consideration of the State of Queensland permitting use of this data you acknowledge and agree that the State gives no warranty in relation to the data (including accuracy, reliability, completeness, currency or suitability) and accepts no liability (including without limitation, liability in negligence) for any loss, damage or costs (including consequential damage) relating to any use of the data.',
+    kind: 'tiles',
+  },
+  {
+    id: 'tas-imagery',
+    text: 'Orthophoto © State of Tasmania (theLIST)',
+    url: 'https://www.thelist.tas.gov.au/',
+    licence: 'CC BY-NC-ND 3.0 AU',
+    licenceUrl: 'https://creativecommons.org/licenses/by-nc-nd/3.0/au/',
+    usedFor: 'Aerial imagery over Tasmania when zoomed in, shown unaltered',
+    kind: 'tiles',
+  },
+  {
     id: 'openmaptiles',
     text: '© OpenMapTiles © OpenStreetMap contributors',
     url: 'https://www.openstreetmap.org/copyright',

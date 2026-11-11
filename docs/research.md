@@ -30,8 +30,16 @@ Terrarium decode: `(R*256 + G + B/256) − 32768` metres.
 |---|---|---|---|
 | **EOX Sentinel‑2 cloudless 2024** | `https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/{z}/{y}/{x}.jpg` (note `{y}/{x}` order), z0–14 | CC BY 4.0 on eox.at; a separate demo‑data page cites an EOX restricted‑use licence. Attribution: "Sentinel‑2 cloudless – https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024)" | 200 OK |
 | **OpenFreeMap** vector tiles | style `https://tiles.openfreemap.org/styles/liberty` (we will author a labels‑only style from its sources) | Free, no key; attribution "© OpenMapTiles © OpenStreetMap contributors" | 200 OK |
+| **NSW Imagery** (Spatial Services) | `https://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Imagery/MapServer/tile/{z}/{y}/{x}`, z0–23, NSW + ACT | data.nsw.gov.au lists CC BY 3.0 AU; Spatial Services' 2018 info sheet names CC BY 4.0 but links the BY‑ND licence. Copyright text "© Department of Customer Service 2020", includes AAM/Jacobs imagery | 200 OK, CORS `*`; transparent PNG outside NSW, Landsat over SE Queensland |
+| **Queensland Latest State Program** | `https://spatial-img.information.qld.gov.au/arcgis/rest/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/tile/{z}/{y}/{x}`, z0–20 | Service item info: CC BY‑SA, the copyright text must be shown, plus a fixed no‑warranty acknowledgement. Where there is no aerial, a ~3 m Planet 2017 mosaic "reproduced under licence … all rights reserved" | 200 OK, CORS; 404 outside QLD |
+| **Tasmania Orthophoto** (theLIST) | `https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Orthophoto/MapServer/tile/{z}/{y}/{x}`, z0–19 | CC BY‑NC‑ND 3.0 AU © State of Tasmania, plus the LIST Web Services T&Cs. Non‑commercial, shown unaltered | 200 OK, CORS; transparent PNG outside TAS |
 | Esri World Imagery | — | Esri staff: requires ArcGIS licence, not for commercial use | **Do not use** |
 | MapTiler satellite / terrain | — | Key + quota | Not needed |
+
+The three state services sit above Sentinel‑2 from z 13 (`src/map/style/stateImagery.ts`), and the camera may zoom
+past 14.5 only over them (`maxZoomAt` in `src/app/mapSetup.ts`). No keyless equivalent was found for WA, SA, NT or
+Victoria. Before any commercial use, re‑check all three licences (TAS is non‑commercial; QLD's Planet fill is
+all‑rights‑reserved).
 
 ## Nations / language-group data
 

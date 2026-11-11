@@ -24,8 +24,8 @@ Non-goals for v1: user accounts, editing data, native title or legal boundaries,
 | Imagery | **EOX Sentinel‑2 cloudless 2024** raster tiles | Free, no key, CC BY 4.0 for our use; verified live. Esri World Imagery is NOT freely licensed — do not use. |
 | Labels | **OpenFreeMap** vector tiles (OpenMapTiles schema), labels-only style layers over the imagery | Free, no key. Gives place names, roads, water labels at high zoom = "what the area is called today". |
 | Nations data | **AUSTLANG** (AIATSIS, CC BY 4.0) via the TLCMap GeoJSON mirror: 455 language varieties with one approximate point each | The only openly licensed, authoritative point set. AIATSIS "Map of Indigenous Australia" is copyright, no GIS data, cannot be used. |
-| Polygons | **Not in v1.** Optional phase‑2 runtime overlay from Native Land Digital (API key, non-commercial, may not be stored/redistributed) | Their treaty forbids bundling the data. |
-| Modern place names | **Precomputed at build time** from ABS ASGS 2021 Suburbs & Localities (SAL) point-in-polygon + state; shipped inside `nations.json` | No runtime geocoding, no keys, no rate limits. Verified: Uluru → "Petermann, Northern Territory". |
+| Polygons | **Not in v1.** Optional phase‑2 runtime overlay from Native Land Digital (API key, non-commercial, may not be stored/redistributed) | Their treaty forbids bundling the data. **Built 2026-11-10** as the "Whose Country?" panel, see `docs/places.md`. |
+| Modern place names | **Precomputed at build time** from ABS ASGS 2021 Suburbs & Localities (SAL) point-in-polygon + state; shipped inside `nations.json` | No runtime geocoding, no keys, no rate limits. Verified: Uluru → "Petermann, Northern Territory". (Separately, the 2026-11-10 place search box geocodes at runtime via Photon, see `docs/places.md`.) |
 | Terminology | UI says **"Nations & language groups"**, "Country", "people"; never "tribes" | Standard respectful usage in Australia; see research notes. |
 | Hosting | Static site (Vercel or GitHub Pages). No backend. | Everything is static JSON + third‑party tiles. |
 
